@@ -1,0 +1,13 @@
+_quarantine/
+.venv/
+build/
+graphify-out/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.idea/
+.pytest_cache/
+.env
+*.tmp
+*.bak

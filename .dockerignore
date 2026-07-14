@@ -1,0 +1,17 @@
+_quarantine/
+agent_skills/
+.git/
+.venv/
+build/
+graphify-out/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.idea/
+.pytest_cache/
+Journal_Factory_Graphify/
+Journal_Factory_Local_LLM/
+journal-factory-local-llm/
+SKILLS_LLM/
+_source/

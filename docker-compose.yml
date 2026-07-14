@@ -1,0 +1,21 @@
+services:
+  journal-factory:
+    build: .
+    ports:
+      - "8765:8765"
+    volumes:
+      - .:/app
+      - "${JOURNAL_INPUT_HOST:-N:/Конференції}:${JOURNAL_INPUT_CONTAINER:-/input/conferences}:ro"
+      - "${JOURNAL_OUTPUT_HOST:-./build}:${JOURNAL_OUTPUT_DIR_CONTAINER:-/app/build}"
+      - "${JOURNAL_DESKTOP_HOST:-C:/Users/Vint/Desktop}:/host/Desktop:ro"
+      - "${JOURNAL_SOURCE_PACK_HOST:-C:/Users/Vint/Downloads/_source_zip/NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX}:${JOURNAL_SOURCE_PACK_CONTAINER:-/source_pack}:ro"
+      - "./agent_skills/NAUKAINFO_Agent_Skills_v3_5:/agent_skills:ro"
+    environment:
+      JOURNAL_ARCHIVE: "${JOURNAL_ARCHIVE_CONTAINER:-/input/conferences/136}"
+      JOURNAL_OUTPUT_DIR: "${JOURNAL_OUTPUT_DIR_CONTAINER:-/app/build}"
+      JOURNAL_ETALON: "${JOURNAL_ETALON_CONTAINER:-/host/Desktop/ETALON-JOURNAL.docx}"
+      JOURNAL_TEMPLATE: "${JOURNAL_TEMPLATE_CONTAINER:-/host/Desktop/Jurnal.dotx}"
+      JOURNAL_SOURCE_PACK: "${JOURNAL_SOURCE_PACK_CONTAINER:-/source_pack}"
+      AGENT_SKILLS_ROOT: "/agent_skills"
+      OLLAMA_BASE_URL: "${OLLAMA_BASE_URL:-http://host.docker.internal:11434}"
+      OLLAMA_MODEL: "${OLLAMA_MODEL:-gemma4:e2b}"

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://naukainfo.local/schemas/agent-decisions.schema.json",
+  "title": "NAUKAINFO Agent Decision Bundle",
+  "type": "object",
+  "required": [
+    "version",
+    "run_id",
+    "decisions"
+  ],
+  "properties": {
+    "version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agent": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string"
+        },
+        "client": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "status",
+          "confidence",
+          "reason"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "article_match",
+              "service_file",
+              "header_labels",
+              "udc_suggestion",
+              "manual_exception"
+            ]
+          },
+          "status": {
+            "enum": [
+              "proposed",
+              "approved",
+              "rejected",
+              "review"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "source_file": {
+            "type": "string"
+          },
+          "excel_article_id": {
+            "type": "string"
+          },
+          "article_id": {
+            "type": "string"
+          },
+          "udc": {
+            "type": "string"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "operator_approved": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "article_match"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "source_file",
+                "excel_article_id"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "service_file"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "source_file"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "udc_suggestion"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "article_id",
+                "udc"
+              ]
+            }
+          }
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
