@@ -54,6 +54,7 @@ def _run_build() -> None:
     try:
         config = default_config()
         ensure_dirs(config)
+        _append_log(f"mode: {config.mode}")
         _append_log(f"source: {config.archive}")
         _append_log(f"output: {config.build_dir}")
         _append_log("preflight started")
@@ -85,7 +86,7 @@ def _run_build() -> None:
 
         _append_log("draft build started")
         draft = build_draft(config.etalon, config.build_dir / "journal_mvp_draft.docx", article_texts)
-        gate = release_gate(preflight, audits)
+        gate = release_gate(preflight, audits, config.mode)
         write_reports(config.reports_dir, inventory_as_dict(entries), audits, gate)
         _append_log(f"draft written: {draft}")
         _append_log(f"release gate: {gate['status']}")
@@ -221,6 +222,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json(
                 {
                     "archive": str(config.archive),
+                    "mode": config.mode,
                     "build_dir": str(config.build_dir),
                     "reports_dir": str(config.reports_dir),
                     "etalon": str(config.etalon),

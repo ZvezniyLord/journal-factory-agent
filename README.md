@@ -1,7 +1,7 @@
 # Journal Factory MVP
 
-Local diagnostic MVP for inspecting author-submission archives and producing a
-non-production DOCX text inventory draft.
+Local Journal Factory workspace with explicit mode separation between the
+diagnostic MVP and the future production skill-driven pipeline.
 
 ## Current Status
 
@@ -10,7 +10,7 @@ It does not execute the v3.5 skill modules for manifest ordering, TOC
 generation, style routing, table/figure preservation, reference renumbering,
 rendered PDF verification, or final production QA.
 
-The current code can:
+`diagnostic-mvp` can:
 
 - run preflight checks for the source archive/folder, ETALON, template, and source pack;
 - inventory DOC/DOCX submissions;
@@ -18,6 +18,10 @@ The current code can:
 - copy the ETALON and append a non-production text inventory draft;
 - expose a local browser admin panel;
 - fail closed when the MVP cannot prove production readiness.
+
+`production` is reserved for the real skill-driven pipeline. In this PR-1 state
+it intentionally returns `BUILD BLOCKED` with
+`PRODUCTION_PIPELINE_NOT_IMPLEMENTED`.
 
 ## One-Button Start
 
@@ -32,8 +36,9 @@ start the local server, and open the browser at `http://127.0.0.1:8765`.
 ## Direct CLI
 
 ```powershell
-uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli preflight --source "N:\Конференції\136"
-uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli build --source "N:\Конференції\136"
+uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli preflight --mode diagnostic-mvp --source "N:\Конференції\136"
+uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli build --mode diagnostic-mvp --source "N:\Конференції\136"
+uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli build --mode production --source "N:\Конференції\136" --agent-decisions "build\agent_decisions.json"
 uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli serve --host 127.0.0.1 --port 8765
 ```
 
@@ -41,19 +46,19 @@ uv run --no-project --with-requirements requirements.txt python -m journal_facto
 
 - ETALON: `C:\Users\Vint\Desktop\ETALON-JOURNAL.docx`
 - DOTX template: `C:\Users\Vint\Desktop\Jurnal.dotx`
-- outputs: `build/`
-- QA reports: `build/reports/`
+- diagnostic outputs: `build/diagnostic-mvp/`
+- production outputs: `build/production/`
+- QA reports: `build/<mode>/reports/`
 
 ## Release Gate
 
 `PASS` is reserved for production-ready output. In the current MVP, unreadable
 articles, missing UDC/reference markers, or unverified object fidelity prevent a
 production pass. Generated DOCX output must be treated as an inspection draft
-unless `build/reports/final_quality_gate.json` explicitly says:
+unless `build/<mode>/reports/final_quality_gate.json` explicitly says:
 
 ```json
 {
   "production_ready": true
 }
 ```
-

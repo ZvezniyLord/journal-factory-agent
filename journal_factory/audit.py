@@ -33,7 +33,7 @@ def audit_article(entry: ArchiveEntry, text: str) -> ArticleAudit:
     return ArticleAudit(entry.path, status, len(text), has_udc, has_references, "unchecked_in_mvp", issues)
 
 
-def release_gate(preflight: dict, article_audits: list[ArticleAudit]) -> dict:
+def release_gate(preflight: dict, article_audits: list[ArticleAudit], mode: str = "diagnostic-mvp") -> dict:
     critical = []
     warnings = []
     if preflight["status"] != "READY":
@@ -53,13 +53,16 @@ def release_gate(preflight: dict, article_audits: list[ArticleAudit]) -> dict:
         status = "REVIEW"
     else:
         status = "PASS"
+    if mode == "diagnostic-mvp" and status == "PASS":
+        status = "REVIEW"
+        warnings.append("diagnostic_mvp_cannot_produce_production_pass")
     return {
         "status": status,
         "critical": critical,
         "warnings": warnings,
         "article_count": len(article_audits),
-        "production_ready": status == "PASS",
-        "pipeline_mode": "mvp_text_inventory",
+        "production_ready": mode == "production" and status == "PASS",
+        "pipeline_mode": mode,
         "limitations": [
             "does_not_run_agent_skill_modules",
             "does_not_preserve_tables_or_figures",

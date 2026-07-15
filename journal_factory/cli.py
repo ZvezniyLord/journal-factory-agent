@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import argparse
 import json
+from pathlib import Path
 
 from .audit import audit_article, release_gate, write_reports
 from .config import default_config, ensure_dirs
 from .docx_builder import build_draft
 from .ingest import extract_docx_text_from_zip, inventory_archive, inventory_as_dict, is_non_article_text
 from .preflight import run_preflight, write_preflight
+from .production_pipeline import run_production_build
 from .template import style_snapshot, write_style_snapshot
 from .webapp import serve
 
@@ -17,7 +19,7 @@ def _resolve_source_path(value: str | None) -> str | None:
 
 
 def cmd_preflight(args: argparse.Namespace) -> int:
-    config = default_config(_resolve_source_path(args.source))
+    config = default_config(_resolve_source_path(args.source), args.mode)
     ensure_dirs(config)
     result = run_preflight(config)
     write_preflight(config, result)
@@ -26,8 +28,13 @@ def cmd_preflight(args: argparse.Namespace) -> int:
 
 
 def cmd_build(args: argparse.Namespace) -> int:
-    config = default_config(_resolve_source_path(args.source))
+    config = default_config(_resolve_source_path(args.source), args.mode)
     ensure_dirs(config)
+    if config.mode == "production":
+        result = run_production_build(config, args.agent_decisions)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 2
+
     preflight = run_preflight(config)
     write_preflight(config, preflight)
 
@@ -46,7 +53,7 @@ def cmd_build(args: argparse.Namespace) -> int:
     snapshot = style_snapshot(config.template)
     write_style_snapshot(snapshot, config.reports_dir / "template_style_snapshot.json")
     draft = build_draft(config.etalon, config.build_dir / "journal_mvp_draft.docx", article_texts)
-    gate = release_gate(preflight, audits)
+    gate = release_gate(preflight, audits, config.mode)
     write_reports(config.reports_dir, inventory_as_dict(entries), audits, gate)
     print(json.dumps({"draft": str(draft), "status": gate["status"], "articles": len(audits)}, ensure_ascii=False, indent=2))
     if gate["status"] == "PASS":
@@ -67,10 +74,13 @@ def main() -> int:
 
     p = sub.add_parser("preflight")
     p.add_argument("--source")
+    p.add_argument("--mode", choices=["diagnostic-mvp", "production"], default="diagnostic-mvp")
     p.set_defaults(func=cmd_preflight)
 
     b = sub.add_parser("build")
     b.add_argument("--source")
+    b.add_argument("--mode", choices=["diagnostic-mvp", "production"], default="diagnostic-mvp")
+    b.add_argument("--agent-decisions", type=Path)
     b.add_argument("--limit", type=int, default=200)
     b.set_defaults(func=cmd_build)
 
