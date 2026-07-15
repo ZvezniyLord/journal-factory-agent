@@ -42,6 +42,19 @@ uv run --no-project --with-requirements requirements.txt python -m journal_facto
 uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli serve --host 127.0.0.1 --port 8765
 ```
 
+## Verification
+
+```powershell
+uv run --no-project --with pytest --with-requirements requirements.txt pytest -q
+docker compose build --no-cache
+docker compose run --rm journal-factory pytest -q
+docker compose run --rm journal-factory python -m journal_factory.cli build --mode production --source /fixtures/minimal/input
+```
+
+In PR 2, a valid production registry must stop at
+`NEXT_PHASE_MANIFEST_NOT_IMPLEMENTED`. Invalid skills or invalid
+`--agent-decisions` contracts must stop with `SKILL_REGISTRY_INVALID`.
+
 ## Important Paths
 
 - ETALON: `C:\Users\Vint\Desktop\ETALON-JOURNAL.docx`

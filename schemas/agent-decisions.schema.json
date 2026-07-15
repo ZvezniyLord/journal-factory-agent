@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://naukainfo.local/schemas/agent-decisions.schema.json",
+  "title": "Agent Decision Bundle",
+  "type": "object",
+  "required": ["decisions"],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "decision_type",
+          "article_id",
+          "status",
+          "value",
+          "confidence",
+          "evidence",
+          "model",
+          "prompt_version",
+          "source_hash"
+        ],
+        "properties": {
+          "decision_type": {
+            "enum": [
+              "udc_proposal",
+              "article_file_match_review",
+              "frontmatter_role_classification",
+              "reference_boundary_review",
+              "caption_role_review",
+              "section_mapping_review"
+            ]
+          },
+          "article_id": { "type": "string", "minLength": 1 },
+          "status": {
+            "enum": ["accepted", "rejected", "needs_operator_review", "blocked"]
+          },
+          "value": {},
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "model": { "type": "string", "minLength": 1 },
+          "prompt_version": { "type": "string", "minLength": 1 },
+          "source_hash": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

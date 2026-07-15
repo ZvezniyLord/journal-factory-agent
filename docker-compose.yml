@@ -5,6 +5,7 @@ services:
       - "8765:8765"
     volumes:
       - .:/app
+      - ./fixtures:/fixtures:ro
       - "${JOURNAL_INPUT_HOST:-N:/Конференції}:${JOURNAL_INPUT_CONTAINER:-/input/conferences}:ro"
       - "${JOURNAL_OUTPUT_HOST:-./build}:${JOURNAL_OUTPUT_DIR_CONTAINER:-/app/build}"
       - "${JOURNAL_DESKTOP_HOST:-C:/Users/Vint/Desktop}:/host/Desktop:ro"

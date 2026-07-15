@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://naukainfo.local/schemas/active-skill-manifest.schema.json",
+  "title": "Active Skill Manifest",
+  "type": "object",
+  "required": [
+    "master_skill",
+    "version",
+    "source_path",
+    "sha256",
+    "modules",
+    "module_count",
+    "required_modules",
+    "missing_required_modules",
+    "loaded_at",
+    "registry_status"
+  ],
+  "properties": {
+    "master_skill": { "type": ["string", "null"] },
+    "version": { "type": ["string", "null"] },
+    "source_path": { "type": ["string", "null"] },
+    "sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "source_path", "sha256", "internal_only"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "source_path": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "version": { "type": ["string", "null"] },
+          "internal_only": { "const": true }
+        },
+        "additionalProperties": false
+      }
+    },
+    "module_count": { "type": "integer", "minimum": 0 },
+    "required_modules": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "missing_required_modules": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "loaded_at": { "type": "string", "minLength": 1 },
+    "registry_status": { "enum": ["PASS", "BLOCKED"] },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}
