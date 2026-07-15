@@ -11,7 +11,7 @@ def build_draft(etalon: Path, output: Path, articles: list[tuple[str, str]]) -> 
     copyfile(etalon, output)
     doc = Document(str(output))
     doc.add_page_break()
-    doc.add_heading("MVP ARTICLE INVENTORY DRAFT", level=1)
+    doc.add_heading("NON-PRODUCTION MVP TEXT INVENTORY DRAFT", level=1)
     for title, text in articles:
         doc.add_page_break()
         doc.add_heading(Path(title).stem[:180], level=2)
@@ -20,4 +20,3 @@ def build_draft(etalon: Path, output: Path, articles: list[tuple[str, str]]) -> 
                 doc.add_paragraph(paragraph.strip())
     doc.save(str(output))
     return output
-

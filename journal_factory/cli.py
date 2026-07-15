@@ -49,7 +49,11 @@ def cmd_build(args: argparse.Namespace) -> int:
     gate = release_gate(preflight, audits)
     write_reports(config.reports_dir, inventory_as_dict(entries), audits, gate)
     print(json.dumps({"draft": str(draft), "status": gate["status"], "articles": len(audits)}, ensure_ascii=False, indent=2))
-    return 2 if gate["status"] == "BUILD BLOCKED" else (1 if gate["status"] == "FAIL" else 0)
+    if gate["status"] == "PASS":
+        return 0
+    if gate["status"] == "BUILD BLOCKED":
+        return 2
+    return 1
 
 
 def cmd_serve(args: argparse.Namespace) -> int:

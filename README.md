@@ -1,44 +1,44 @@
 # Journal Factory MVP
 
-Local application for assembling a scientific journal from an archive of author submissions.
+Local diagnostic MVP for inspecting author-submission archives and producing a
+non-production DOCX text inventory draft.
 
 ## Current Status
 
-MVP is implemented with a strict preflight gate:
+This repository is not the production NAUKAINFO Journal Factory pipeline yet.
+It does not execute the v3.5 skill modules for manifest ordering, TOC
+generation, style routing, table/figure preservation, reference renumbering,
+rendered PDF verification, or final production QA.
 
-- required files are checked before any release build;
-- missing mandatory requirements produce `BUILD BLOCKED`;
-- archive inventory, DOC/DOCX detection, article audit, style snapshot, draft DOCX, QA reports, and release gate JSON are produced;
-- the browser admin panel runs locally from the Python standard library.
+The current code can:
 
-## One-button start
+- run preflight checks for the source archive/folder, ETALON, template, and source pack;
+- inventory DOC/DOCX submissions;
+- extract text and write article audit reports;
+- copy the ETALON and append a non-production text inventory draft;
+- expose a local browser admin panel;
+- fail closed when the MVP cannot prove production readiness.
+
+## One-Button Start
 
 ```powershell
 Set-Location 'C:\Users\Vint\Desktop\Галенко_Віталій_304ТН_варіант_5'
 .\RUN_JOURNAL_FACTORY.ps1
 ```
 
-This opens a small launcher window. Press `Start` to:
+This opens the launcher. Press `Start` to start Docker Compose where available,
+start the local server, and open the browser at `http://127.0.0.1:8765`.
 
-1. try to start Docker Desktop and `docker compose up -d`;
-2. start the local server;
-3. open the browser at `http://127.0.0.1:8765`.
-
-You can choose either a ZIP archive or a folder as the input source.
-
-## Direct CLI start
-
-Use this when you want to run the pipeline manually:
+## Direct CLI
 
 ```powershell
-uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli preflight --archive "N:\Конференції\136.zip"
-uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli build --archive "N:\Конференції\136.zip"
+uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli preflight --source "N:\Конференції\136"
+uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli build --source "N:\Конференції\136"
 uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli serve --host 127.0.0.1 --port 8765
 ```
 
 ## Important Paths
 
-- source archive: `N:\Конференції\136.zip`
 - ETALON: `C:\Users\Vint\Desktop\ETALON-JOURNAL.docx`
 - DOTX template: `C:\Users\Vint\Desktop\Jurnal.dotx`
 - outputs: `build/`
@@ -46,4 +46,14 @@ uv run --no-project --with-requirements requirements.txt python -m journal_facto
 
 ## Release Gate
 
-`PASS` requires no critical preflight issues and no critical QA issues. If any mandatory file is absent, output is still generated for inspection where safe, but the release status remains `BUILD BLOCKED`.
+`PASS` is reserved for production-ready output. In the current MVP, unreadable
+articles, missing UDC/reference markers, or unverified object fidelity prevent a
+production pass. Generated DOCX output must be treated as an inspection draft
+unless `build/reports/final_quality_gate.json` explicitly says:
+
+```json
+{
+  "production_ready": true
+}
+```
+
