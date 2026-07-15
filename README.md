@@ -68,12 +68,15 @@ docker compose build journal-factory
 docker compose run --rm journal-factory python -m journal_factory.cli build --mode production-preview --source /input/138.zip --limit 3
 ```
 
-Preview artifacts are written to:
+Preview V2 artifacts are written to:
 
-- `build/production-preview/JOURNAL_SMOKE.docx`
-- `build/production-preview/JOURNAL_SMOKE.pdf`
-- `build/production-preview/reports/SMOKE_AUDIT.json`
-- `build/production-preview/render/contact_sheet.png`
+- `build/production-preview/JOURNAL_SMOKE_V2.docx`
+- `build/production-preview/JOURNAL_SMOKE_V2.pdf`
+- `build/production-preview/reports/SMOKE_AUDIT_V2.json`
+- `build/production-preview/reports/identifier_audit.json`
+- `build/production-preview/reports/frontmatter_metadata_audit.json`
+- `build/production-preview/reports/toc_export.tsv`
+- `build/production-preview/render_v2/contact_sheet.png`
 
 ## Important Paths
 
