@@ -51,9 +51,24 @@ docker compose run --rm journal-factory pytest -q
 docker compose run --rm journal-factory python -m journal_factory.cli build --mode production --source /fixtures/minimal/input
 ```
 
-In PR 2, a valid production registry must stop at
-`NEXT_PHASE_MANIFEST_NOT_IMPLEMENTED`. Invalid skills or invalid
-`--agent-decisions` contracts must stop with `SKILL_REGISTRY_INVALID`.
+In PR 2, a valid production registry stops at the next not-yet-implemented
+phase. Invalid skills stop with `SKILL_REGISTRY_INVALID`; invalid
+`--agent-decisions` contracts stop with `AGENT_DECISIONS_INVALID`.
+
+In PR 3, production also builds the evidence manifest and immutable source
+snapshots. A valid synthetic fixture stops at
+`NEXT_PHASE_FRONTMATTER_NOT_IMPLEMENTED`:
+
+```powershell
+uv run --no-project --with-requirements requirements.txt python -m journal_factory.cli build --mode production --source fixtures\manifest
+docker compose run --rm journal-factory python -m journal_factory.cli build --mode production --source /fixtures/manifest
+```
+
+PR 3 reports:
+
+- `build/production/reports/archive_inventory.json`
+- `build/production/reports/article_manifest.json`
+- `build/production/snapshots/<article_id>/source_snapshot.json`
 
 ## Important Paths
 

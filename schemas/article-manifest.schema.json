@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://naukainfo.local/schemas/article-manifest.schema.json",
+  "type": "object",
+  "required": [
+    "manifest_source",
+    "manifest_sha256",
+    "articles",
+    "article_count",
+    "free_listeners",
+    "free_listener_count",
+    "blockers",
+    "warnings",
+    "manifest_status"
+  ],
+  "properties": {
+    "manifest_source": { "type": "string" },
+    "manifest_sha256": { "type": "string" },
+    "articles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "article_id",
+          "journal_order",
+          "section_id",
+          "section_raw",
+          "participation_type",
+          "source_path",
+          "source_extension",
+          "source_sha256",
+          "application_path",
+          "application_sha256",
+          "authors_manifest",
+          "authors_detected",
+          "title_manifest",
+          "title_detected",
+          "language",
+          "article_candidate",
+          "match_status",
+          "match_score",
+          "author_score",
+          "title_score",
+          "evidence",
+          "blockers",
+          "warnings"
+        ],
+        "properties": {
+          "article_id": { "type": "string" },
+          "journal_order": { "type": ["integer", "null"] },
+          "section_id": { "type": "string" },
+          "section_raw": { "type": "string" },
+          "participation_type": { "type": "string" },
+          "source_path": { "type": "string" },
+          "source_extension": { "type": "string" },
+          "source_sha256": { "type": "string" },
+          "application_path": { "type": "string" },
+          "application_sha256": { "type": "string" },
+          "authors_manifest": { "type": "array", "items": { "type": "string" } },
+          "authors_detected": { "type": "array", "items": { "type": "string" } },
+          "title_manifest": { "type": "string" },
+          "title_detected": { "type": "string" },
+          "language": { "type": "string" },
+          "article_candidate": { "type": "boolean" },
+          "match_status": { "enum": ["MATCHED", "REVIEW", "BLOCKED"] },
+          "match_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "author_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "title_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "evidence": { "type": "object" },
+          "blockers": { "type": "array", "items": { "type": "string" } },
+          "warnings": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "article_count": { "type": "integer", "minimum": 0 },
+    "free_listeners": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["listener_id", "full_name", "application_path", "source_sha256", "evidence", "status"],
+        "properties": {
+          "listener_id": { "type": "string" },
+          "full_name": { "type": "string" },
+          "application_path": { "type": "string" },
+          "source_sha256": { "type": "string" },
+          "evidence": { "type": "array", "items": { "type": "string" } },
+          "status": { "enum": ["PASS", "REVIEW", "BLOCKED"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "free_listener_count": { "type": "integer", "minimum": 0 },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "manifest_status": { "enum": ["PASS", "BLOCKED"] }
+  },
+  "additionalProperties": false
+}

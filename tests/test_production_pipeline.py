@@ -36,9 +36,8 @@ def _write_valid_skill(root: Path) -> None:
         )
 
 
-def test_production_pipeline_reaches_next_phase_after_valid_registry(tmp_path: Path, monkeypatch) -> None:
-    source = tmp_path / "source"
-    source.mkdir()
+def test_production_pipeline_reaches_frontmatter_after_valid_manifest_and_snapshots(tmp_path: Path, monkeypatch) -> None:
+    source = Path("fixtures/manifest")
     etalon = tmp_path / "ETALON-JOURNAL.docx"
     template = tmp_path / "Jurnal.dotx"
     source_pack = tmp_path / "source_pack"
@@ -67,7 +66,9 @@ def test_production_pipeline_reaches_next_phase_after_valid_registry(tmp_path: P
     assert result["status"] == "BUILD BLOCKED"
     assert gate["production_ready"] is False
     assert gate["skill_registry_status"] == "PASS"
-    assert "NEXT_PHASE_MANIFEST_NOT_IMPLEMENTED" in gate["critical"]
+    assert gate["manifest_status"] == "PASS"
+    assert gate["source_snapshot_status"] == "PASS"
+    assert "NEXT_PHASE_FRONTMATTER_NOT_IMPLEMENTED" in gate["critical"]
     Draft202012Validator(schema).validate(manifest)
 
 
@@ -99,5 +100,5 @@ def test_production_pipeline_blocks_invalid_agent_decisions(tmp_path: Path, monk
     run_production_build(config, decisions)
     gate = json.loads((config.reports_dir / "final_quality_gate.json").read_text(encoding="utf-8"))
 
-    assert "SKILL_REGISTRY_INVALID" in gate["critical"]
+    assert "AGENT_DECISIONS_INVALID" in gate["critical"]
     assert gate["agent_decisions_errors"]

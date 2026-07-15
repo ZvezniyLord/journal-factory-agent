@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://naukainfo.local/schemas/archive-inventory.schema.json",
+  "type": "object",
+  "required": ["source", "source_type", "workspace_source", "file_count", "files"],
+  "properties": {
+    "source": { "type": "string" },
+    "source_type": { "enum": ["zip", "directory"] },
+    "workspace_source": { "type": "string" },
+    "file_count": { "type": "integer", "minimum": 0 },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "size", "extension", "sha256", "article_candidate", "service_file"],
+        "properties": {
+          "path": { "type": "string" },
+          "size": { "type": "integer", "minimum": 0 },
+          "extension": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "article_candidate": { "type": "boolean" },
+          "service_file": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
