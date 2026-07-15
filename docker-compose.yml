@@ -1,4 +1,11 @@
 services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+
   journal-factory:
     build: .
     ports:
@@ -6,6 +13,7 @@ services:
     volumes:
       - .:/app
       - ./fixtures:/fixtures:ro
+      - "${JOURNAL_138_ZIP_HOST:-N:/Конференції/138.zip}:/input/138.zip:ro"
       - "${JOURNAL_INPUT_HOST:-N:/Конференції}:${JOURNAL_INPUT_CONTAINER:-/input/conferences}:ro"
       - "${JOURNAL_OUTPUT_HOST:-./build}:${JOURNAL_OUTPUT_DIR_CONTAINER:-/app/build}"
       - "${JOURNAL_DESKTOP_HOST:-C:/Users/Vint/Desktop}:/host/Desktop:ro"
@@ -18,5 +26,8 @@ services:
       JOURNAL_TEMPLATE: "${JOURNAL_TEMPLATE_CONTAINER:-/host/Desktop/Jurnal.dotx}"
       JOURNAL_SOURCE_PACK: "${JOURNAL_SOURCE_PACK_CONTAINER:-/source_pack}"
       AGENT_SKILLS_ROOT: "/agent_skills"
-      OLLAMA_BASE_URL: "${OLLAMA_BASE_URL:-http://host.docker.internal:11434}"
-      OLLAMA_MODEL: "${OLLAMA_MODEL:-gemma4:e2b}"
+      OLLAMA_BASE_URL: "${OLLAMA_BASE_URL:-http://ollama:11434}"
+      OLLAMA_MODEL: "${OLLAMA_MODEL:-gemma2:2b}"
+
+volumes:
+  ollama:

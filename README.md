@@ -55,6 +55,26 @@ In PR 2, a valid production registry must stop at
 `NEXT_PHASE_MANIFEST_NOT_IMPLEMENTED`. Invalid skills or invalid
 `--agent-decisions` contracts must stop with `SKILL_REGISTRY_INVALID`.
 
+## Production Preview Smoke
+
+`production-preview` is the only mode allowed to create a partial journal
+artifact before the production pipeline is complete. Its status is always
+`REVIEW`, never `PASS`.
+
+```powershell
+docker compose up -d ollama
+docker compose exec ollama ollama pull gemma2:2b
+docker compose build journal-factory
+docker compose run --rm journal-factory python -m journal_factory.cli build --mode production-preview --source /input/138.zip --limit 3
+```
+
+Preview artifacts are written to:
+
+- `build/production-preview/JOURNAL_SMOKE.docx`
+- `build/production-preview/JOURNAL_SMOKE.pdf`
+- `build/production-preview/reports/SMOKE_AUDIT.json`
+- `build/production-preview/render/contact_sheet.png`
+
 ## Important Paths
 
 - ETALON: `C:\Users\Vint\Desktop\ETALON-JOURNAL.docx`

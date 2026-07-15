@@ -6,7 +6,7 @@ import os
 
 
 ROOT = Path.cwd()
-VALID_MODES = {"diagnostic-mvp", "production"}
+VALID_MODES = {"diagnostic-mvp", "production", "production-preview"}
 
 
 @dataclass(frozen=True)
