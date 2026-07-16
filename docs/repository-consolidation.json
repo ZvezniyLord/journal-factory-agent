@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "updated": "2026-07-16",
+  "canonical_repository": "ZvezniyLord/journal-factory-agent",
+  "canonical_branch": "main",
+  "policy": {
+    "delete_before_migration_complete": false,
+    "prefer_archive_for_historical_repositories": true,
+    "generated_or_private_artifacts_must_not_migrate": true,
+    "one_deterministic_pipeline": true,
+    "one_runtime_skill_bundle": true
+  },
+  "repositories": [
+    {
+      "name": "ZvezniyLord/journal-factory-agent",
+      "role": "canonical",
+      "status": "keep",
+      "action": "merge consolidation branch after review"
+    },
+    {
+      "name": "univer-2/Jurnali_Skills",
+      "role": "canonical-skill-source",
+      "status": "access_required",
+      "action": "compare skill history and merge any version newer than 3.5.0"
+    },
+    {
+      "name": "ZvezniyLord/NAUKA_iNFO_Jornal",
+      "role": "validated-fix-workflow-and-run-history",
+      "status": "migrating",
+      "action": "import reusable workflow, protocols, acceptance criteria, and unique tests; then archive"
+    },
+    {
+      "name": "ZvezniyLord/journal-factory-local-llm",
+      "role": "local-llm-reference-implementation",
+      "status": "pending_inventory",
+      "action": "merge unique adapters, schemas, compiler behavior, Docker integration, and tests; then archive"
+    },
+    {
+      "name": "ZvezniyLord/journal-factory-graphify",
+      "role": "optional-architecture-memory-tool",
+      "status": "pending_design_decision",
+      "action": "integrate under tools/graphify or document as external dependency; then archive standalone repo"
+    },
+    {
+      "name": "ZvezniyLord/AIEditor",
+      "role": "legacy-production-predecessor",
+      "status": "pending_unique-value-audit",
+      "action": "extract proven Word COM, matching, TOC, and integrity behavior; then archive"
+    },
+    {
+      "name": "ZvezniyLord/Release-AI-Editor-5.5",
+      "role": "legacy-release-predecessor",
+      "status": "pending_unique-value-audit",
+      "action": "extract unique tests and design decisions; then archive"
+    },
+    {
+      "name": "ZvezniyLord/Release-AI-Editor-5.5-Public",
+      "role": "public-release-copy",
+      "status": "candidate_for_retirement",
+      "action": "verify no unique public documentation or release assets; archive or delete after canonical replacement exists"
+    },
+    {
+      "name": "ZvezniyLord/REDAKTTOR_1.0.5",
+      "role": "legacy-editor",
+      "status": "candidate_for_retirement",
+      "action": "audit unique code; archive if historically meaningful, otherwise delete after checksum inventory"
+    },
+    {
+      "name": "ZvezniyLord/AI_redacktor",
+      "role": "legacy-editor",
+      "status": "candidate_for_retirement",
+      "action": "audit unique code; archive if historically meaningful, otherwise delete after checksum inventory"
+    },
+    {
+      "name": "ZvezniyLord/AI_Redaktor",
+      "role": "small-legacy-or-duplicate",
+      "status": "high-priority-retirement-candidate",
+      "action": "verify no unique commits or files; delete only after preserved inventory"
+    },
+    {
+      "name": "ZvezniyLord/Konvector_WORD",
+      "role": "legacy-word-tool",
+      "status": "pending_unique-value-audit",
+      "action": "extract unique conversion behavior and tests; then archive"
+    }
+  ],
+  "retirement_gate": [
+    "unique responsibilities inventoried",
+    "source commit provenance recorded",
+    "canonical tests added and passing",
+    "private and generated artifacts excluded",
+    "active consumers repointed",
+    "canonical pull request merged",
+    "archive or checksum bundle preserved when required"
+  ]
+}
