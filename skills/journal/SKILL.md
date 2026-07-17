@@ -1,11 +1,11 @@
 ---
 name: journal
-description: Єдиний проєктний скіл для повного циклу NAUKAINFO Journal Builder у проєкті «Дирежор»: приймання матеріалів, підготовка статей, збирання журналу в ETALON, збереження авторського тексту/форматування/об'єктів, зміст, нумерація сторінок, рендер, published-reference parity, глибокий аудит і реліз.
+description: Єдиний проєктний скіл для повного циклу NAUKAINFO Journal Builder у проєкті «Дирежор»: приймання матеріалів, підготовка статей, збирання журналу в ETALON, збереження авторського тексту/форматування/об'єктів, зміст, нумерація сторінок, рендер, body-parity з опублікованими журналами, глибокий аудит і реліз.
 license: Proprietary project skill
 compatibility: Windows 11; Python 3.11+; python-docx; lxml; LibreOffice; NAUKAINFO Journal Builder.
 metadata:
   author: naukainfo
-  version: "3.3.0"
+  version: "3.3.1"
   priority: "0-critical"
   scope: "Дирежор / NAUKAINFO Journal Builder only"
 ---
@@ -33,14 +33,24 @@ metadata:
 - знімати авторське bold/italic/underline, індекси або вирівнювання підзаголовків;
 - приймати «візуально схоже» або однакову кількість об'єктів як доказ цілісності.
 
-Дозволені лише затверджені службові правки: UDC/УДК, очищення шапки від контактів, AUTOR/pip, назва, стандартні мітки annotation/keywords/references, канонічні підписи, службові blanks, розриви та стилі без зміни змісту.
+Дозволені лише затверджені службові правки: UDC/УДК, очищення шапки від контактів, нормалізація PIP, назва, стандартні мітки annotation/keywords/references, канонічні підписи, службові blanks, розриви та стилі без зміни змісту.
 
 ## Двоцільова модель якості
 
 1. **Hard constraint:** нуль непогоджених текстових або об'єктних втрат.
-2. **Optimization target:** серед безпечних варіантів мінімізувати структурно-верстальну відстань до реально опублікованого корпусу NAUKAINFO.
+2. **Optimization target:** серед безпечних варіантів мінімізувати структурно-верстальну відстань саме до **внутрішнього змісту** реально опублікованих журналів NAUKAINFO.
 
 Fidelity має пріоритет над parity. Published parity не дозволяє переписувати автора.
+
+## Межі published-body parity
+
+Для референсів Conference 136/137:
+
+- обкладинка, титульно-службові сторінки до `TABLE OF CONTENTS` і фінальна рекламно-службова сторінка **не входять** до body-parity score;
+- порівняння починається з `TABLE OF CONTENTS` і охоплює всі статті до завершення останнього списку джерел;
+- піксельний вигляд рисунків не оцінюється;
+- наявність, порядок, розмір, підпис і вплив рисунка/таблиці на потік та пагінацію контролюються;
+- ETALON є сирою геометрично-стильовою заготовкою, а не джерелом істини для змісту чи пунктуації.
 
 ## Нульовий gate: обов'язкові активи
 
@@ -49,74 +59,16 @@ Fidelity має пріоритет над parity. Published parity не дозв
 - `02_TEMPLATES_REQUIRED/ETALON-JOURNAL.docx`;
 - `02_TEMPLATES_REQUIRED/Jurnal.dotx`;
 - цей `skills/journal/SKILL.md`;
-- `03_REFERENCE_RELEASES/JOURNAL_136_FINAL_RELEASE_v33.docx` як regression source, не як publication truth;
-- опубліковані `Conference136.pdf` і `Conference137.pdf` як layout/publication references;
+- опубліковані `Conference136.pdf` і `Conference137.pdf` як body-layout references;
 - `05_TESTS_QA_AND_SCHEMAS/FILE_MANIFEST.json`;
 - вхідний архів/папку статей;
-- `publication_manifest.json`.
+- article/participant manifest із порядком секцій, статей та авторів.
 
-Якщо ETALON, DOTX, journal skill, article manifest або publication manifest відсутні/невалідні:
+Якщо ETALON, DOTX, journal skill або article manifest відсутні/невалідні:
 
 `BUILD BLOCKED: REQUIRED_ASSET_MISSING`
 
 Не створювати master shell приблизно або з пам'яті.
-
-Перевірити ETALON:
-
-- рівно 3 `w:sectPr`;
-- друга секція має `w:pgNumType w:start="1"`;
-- footer relationship основного тексту існує;
-- наявні canonical style IDs.
-
-## Publication manifest — єдине джерело службових даних
-
-`publication_manifest.json` обов'язково містить:
-
-- `conference_number`;
-- `conference_title`;
-- `date_range`;
-- `city`;
-- `country`;
-- `conference_url`;
-- `conference_doi`;
-- `isbn`;
-- `approval_date`;
-- `bibliographic_page_count`;
-- `recommended_citation`;
-- `final_service_page_text`.
-
-Заборонено брати ці дані з тексту ETALON або попереднього релізу. ETALON дає геометрію/стилі, manifest дає факти.
-
-### Placeholder gate
-
-Реліз блокується при наявності в front matter або tail:
-
-- `0000000`;
-- `assignment pending`;
-- `Author. Article title`;
-- порожнього ISBN/DOI/page count;
-- чернеткових дат або generic citation.
-
-### Stale-template fingerprint gate
-
-Сканувати front matter і tail на інші conference IDs, DOI, titles, dates, cities, countries, ISBN і approval dates. Будь-який токен чужої конференції = `BLOCKED`.
-
-## Обкладинка та ілюстрації в parity-оцінці
-
-За явним редакторським правилом для корпусу 136/137:
-
-- перша сторінка/обкладинка не входить у style-parity score;
-- піксельний вигляд авторських ілюстрацій не входить у style-parity score.
-
-Однак fidelity-gates все одно захищають:
-
-- наявність і порядок object cluster;
-- media bytes/hash, якщо доступні;
-- anchor/inline, extent, crop;
-- підпис і source note;
-- вплив object cluster на потік і пагінацію.
-
-Ігнорувати вигляд зображення не означає дозволити його втрату або переміщення.
 
 ## Єдиний конвеєр
 
@@ -137,48 +89,82 @@ Fidelity має пріоритет над parity. Published parity не дозв
 - images/media relationships, extents, crop, anchor/inline, order;
 - shapes, SmartArt, charts, equations, OLE, captions, source notes;
 - section/page-break signature;
-- semantic author-header line signature.
+- semantic author-header signature;
+- reference-block numbering signature.
 
 ### 2. Підготовка статті
 
+Канонічний порядок внутрішньої статті:
+
+`SECTION → optional DOI → UDC/УДК → author/PIP block → optional ORCID → title → annotation/body`
+
 Застосувати лише підтверджені правила:
 
-- DOI/UDC → author/PIP block → blank → title → blank → body;
 - email/phone/messenger видаляються лише з шапки; ORCID зберігається;
 - annotation/abstract і keywords labels нормалізуються без зміни тексту;
 - table/figure/caption/source blocks не мають first-line indent;
 - nested content обробляється recursively;
-- legacy `.doc` спочатку render/convert/audit.
+- legacy `.doc` спочатку render/convert/audit;
+- не вставляти порожні абзаци для керування відступом: використовувати paragraph spacing.
 
-### PIP segmentation gate
+### 3. Author-header composition gate
 
-Заборонено автоматично зливати в один paragraph:
+Шапка не нормалізується механічним правилом «кожне поле в один рядок» або «все об'єднати комами». Потрібна семантична композиція, як в опублікованому корпусі.
 
-- degree/title;
-- role/position;
-- institution;
-- city/country;
-- supervisor name;
-- supervisor degree/role.
+Обов'язкові правила:
 
-Якщо ці рядки окремі у source або manifest, вони окремі у final. Порівнювати semantic line signature `source → normalized → final`.
+- кожен автор починається окремим абзацом;
+- не можна зливати кінець одного авторського блоку з наступним автором;
+- degree/title, role, department, institution і location можуть складатися з одного або кількох абзаців залежно від довжини й синтаксичної цілісності;
+- короткі пов'язані фрагменти можна об'єднати лише якщо так зберігається граматика й published profile;
+- довгі institution/department chains переносити по природних синтаксичних межах, а не посеред назви;
+- порядок semantic tokens має збігатися `source → normalized → final`;
+- авторський блок у журнальному тілі має канонічне праве вирівнювання, як у 136/137;
+- section heading і title мають зберігати published alignment/weight/spacing profile.
 
-### Reference-label preservation gate
+Golden fixtures для regression tests:
 
-- Existing `URL:` і `DOI:` labels зберігати.
-- Не змінювати `URL:` на `DOI:` лише тому, що адреса містить `doi.org`.
-- Відсутню мітку можна додати за canonical rule.
-- Semantic reclassification дозволена тільки через explicit editorial decision bundle.
+- 136: Гнисюк / Сімкова — supervisor chain із продовжувальними комами;
+- 136: Матвієнко / Бобиль — кафедра й факультет як окремі продовжувальні рядки;
+- 137: Живко та співавтори — п'ять незалежних author blocks;
+- 137: Злакоман — degree, `Independent Researcher`, location, ORCID окремими рядками;
+- 137: Маєр — компактне об'єднання ролі з короткою назвою ЗДО та природні переноси адміністративної назви;
+- 137: Александрова — qualification/department/institution/location без злиття в один довгий рядок.
 
-### 3. Вставка в ETALON
+### 4. Header punctuation gate
 
-- ETALON є master shell.
-- Зберегти sections, footer, page fields, front/tail pages.
+Пунктуація в шапці є частиною верстальної логіки.
+
+- ім'я автора — без кінцевої коми або крапки;
+- location (`м. Київ, Україна`, `Kyiv, Ukraine`) — без кінцевої коми/крапки;
+- рядок отримує кінцеву кому лише коли синтаксичний metadata chain продовжується в наступному рядку;
+- останній рядок degree/role chain — без зайвої кінцевої коми;
+- не видаляти внутрішні коми у ступенях і посадах;
+- не додавати крапку з комою між авторами в шапці або TOC;
+- `DOI: `, `URL: `, `ORCID: ` мають рівно один пробіл після двокрапки;
+- подвійні розділові знаки та склеювання `DOI:https`, `URL:https` блокують реліз.
+
+### 5. Вставка в ETALON
+
+- ETALON є master shell для секцій, footer, page fields і базових стилів.
 - Статті й sections ідуть лише в manifest order.
 - Article boundary реалізується canonical `pageBreakBefore`, без dummy blank paragraph.
 - Author body не переписується для ущільнення сторінок.
+- Попередня стаття має завершитися повністю до SECTION/DOI/UDC наступної.
 
-### 4. Per-article audit
+### 6. Article-boundary gate
+
+Для кожної межі статей довести:
+
+- завершено останній reference item попередньої статті;
+- наступна SECTION/DOI/UDC починається в новому paragraph і на новій сторінці;
+- немає склеювань на кшталт `...pdfУДК`, `...#Text.УДК`, `...URL:...DOI:`;
+- немає page number, section title або DOI всередині тексту попереднього reference item;
+- один article start marker відповідає одній manifest article.
+
+Unknown boundary = `BLOCKED`.
+
+### 7. Per-article audit
 
 Для кожної статті порівнювати `raw source → normalized article → final region`:
 
@@ -189,22 +175,24 @@ Fidelity має пріоритет над parity. Published parity не дозв
 5. tables;
 6. objects/media/order;
 7. nested content;
-8. author count;
-9. PIP semantic line signature;
-10. article start page.
+8. author count/order;
+9. header semantic tokens, line composition і punctuation;
+10. article start page;
+11. reference numbering restart;
+12. article boundary.
 
 Unknown diff = `BLOCKED`.
 
-### 5. TOC
+### 8. TOC gate
 
 TOC створюється лише після стабілізації тіла.
 
-Кожна manifest article має рівно один row із:
+Кожна manifest article має рівно один entry із:
 
 - canonical English section;
-- global ordinal (`1.`, `2.`, ...);
-- authors only;
-- comma + space як canonical author separator;
+- global article ordinal (`1.`, `2.`, ...);
+- усіма й тільки авторами;
+- comma + space як separator між авторами;
 - title;
 - rendered start page.
 
@@ -213,64 +201,92 @@ TOC створюється лише після стабілізації тіла
 - degrees, roles, institutions, city/country;
 - DOI/UDC;
 - annotation/body text;
-- semicolon як автоматичний separator;
-- missing ordinal або page.
+- semicolon як separator;
+- пропущений автор;
+- missing/duplicate ordinal або page;
+- неправильна section assignment;
+- нумерація учасників `SPECIAL THANKS` / free listeners як статей.
+
+`SPECIAL THANKS` — окремий ненумерований блок після останньої article entry.
+
+TOC parity перевіряє не лише дані, а й геометрію:
+
+- кількість TOC-сторінок;
+- шрифт/міжрядковий інтервал;
+- відступ між section heading та entries;
+- висячі відступи ordinal/authors/title;
+- праву позицію page number;
+- перенос довгих author lists і titles.
 
 Після матеріалізації TOC виконати повторний render і повторно визначити page starts. Якщо сторінки змінилися — перебудувати TOC до convergence або блокувати run.
 
-### 6. Per-article pagination gate
+### 9. Reference-block gate
+
+Для кожної статті:
+
+- heading відповідає мові статті: `СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ:` або `REFERENCES`;
+- heading не відокремлений від item 1 порожніми абзацами;
+- paragraph spacing задається стилем, а не blank paragraphs;
+- numbering починається з `1.` заново для кожної статті;
+- використовується окремий numbering instance або доведений restart override;
+- format — `%1.`; item order і текст незмінні;
+- hanging indent, tab stop, line spacing і after/before spacing відповідають published body profile;
+- наявний `URL:` або `DOI:` не перекласифіковувати лише через вигляд адреси;
+- два різні джерела не можуть злитися в один numbered paragraph;
+- reference list не може захопити початок наступної статті.
+
+### 10. Caption and object-flow gate
+
+Порівнювати не пікселі рисунка, а його функцію в макеті:
+
+- canonical punctuation: `Рис. 1.`, `Таблиця 1.`, `Fig. 1.`, `Table 1` відповідно до мови й published fixture;
+- пробіл після скорочення та номера;
+- caption/source note не відриваються від об'єкта;
+- object extent/crop/anchor не створює зайвої або відсутньої сторінки;
+- таблиця чи рисунок не перекриває page number і не розриває шапку наступної статті.
+
+### 11. Per-article pagination gate
 
 Зберігати `article_start_page_vector.json`.
 
-- Для реконструкції 136/137 вектор має точно відповідати published PDF.
-- Для нових конференцій використовувати corpus profile для anomaly detection: blank pages, detached captions, collapsed PIP, надмірні пусті зони, несподівані article-length outliers.
+- Для реконструкції 136/137 вектор має відповідати published PDF після однакового виключення обкладинки/службових сторінок.
+- Першопричину дрейфу шукати в TOC geometry, header composition, blank paragraphs, references spacing, captions і article boundaries.
 - Загальна кількість сторінок не замінює per-article vector.
 
-### 7. Published-reference parity gate
+### 12. Published-body parity gate
 
-Побудувати reference profile з опублікованих 136/137 після виключення cover та image pixels.
+Побудувати reference profile з опублікованих 136/137 для регіону `TOC → last references`.
 
 Порівнювати:
 
-- front-matter text і paragraph geometry;
-- section heading placement;
+- TOC content і geometry;
+- section assignment і section-heading geometry;
 - DOI/UDC/author/title/annotation sequence;
-- PIP paragraph segmentation;
+- праве вирівнювання й line composition шапки;
+- коми, двокрапки, пробіли після labels;
 - paragraph spacing, indents, line density;
 - table/caption/source-note geometry;
-- TOC structure;
-- article start-page vector;
-- tail isolation;
-- last numbered page і bibliographic page count.
+- reference headings, restart numbering і spacing;
+- article-boundary cleanliness;
+- article start-page vector.
 
 Parity report має розділяти:
 
 - hard fidelity failures;
-- publication metadata failures;
+- structural/content mismatches;
+- punctuation/line-composition mismatches;
 - layout deviations;
 - intentional exceptions.
 
-### 8. Tail isolation gate
-
-Фінальна службова сторінка:
-
-- починається з нової сторінки;
-- перебуває в захищеній останній секції;
-- не приєднана до references;
-- не має page number основного тіла;
-- повністю відповідає `final_service_page_text` і publication manifest.
-
-Будь-який tail paragraph у region останньої статті = `BLOCKED`.
-
-### 9. Render gate
+### 13. Render gate
 
 Після кожної значущої серії змін:
 
 1. render DOCX → PDF/PNG;
-2. переглянути кожну сторінку при 100%;
-3. перевірити tables, clipping, captions, page numbers, section transitions, blank pages;
+2. переглянути кожну сторінку body region при 100%;
+3. перевірити TOC, шапки, коми, tables, clipping, captions, references, page numbers, article transitions і blank pages;
 4. після TOC/page updates — повторний render;
-5. окремо перевірити front matter без cover і standalone tail.
+5. порівняти regression fixtures 136/137 сторінка-в-сторінку від TOC до останніх references.
 
 ## Фінальний fail-closed gate
 
@@ -279,20 +295,20 @@ Parity report має розділяти:
 - всі articles mapped;
 - unapproved text changes = 0;
 - missing paragraphs/tables/objects/captions/formulas = 0;
-- author count mismatches = 0;
+- author count/order mismatches = 0;
 - run-emphasis mismatches = 0;
 - numbering-definition mismatches = 0;
-- PIP merged semantic lines = 0;
-- stale-template tokens = 0;
-- placeholders = 0;
-- publication metadata mismatches = 0;
+- header semantic-token mismatches = 0;
+- header punctuation mismatches = 0;
 - missing/duplicate TOC rows = 0;
-- TOC ordinal/page mismatches = 0;
-- tail isolation failures = 0;
-- unknown reference-label changes = 0;
-- ETALON section/page-number signature preserved;
-- published-reference parity reviewed;
-- full render review passed.
+- TOC author/section/ordinal/page mismatches = 0;
+- special-thanks entries misnumbered as articles = 0;
+- reference restart failures = 0;
+- blank paragraphs after reference headings = 0;
+- article-boundary concatenations = 0;
+- caption punctuation mismatches = 0;
+- published-body parity reviewed;
+- full body render review passed.
 
 Якщо будь-який пункт не доведений, статус `REVIEW` або `BLOCKED`, але не `PASS`.
 
@@ -300,17 +316,18 @@ Parity report має розділяти:
 
 - final journal DOCX;
 - final rendered PDF;
-- publication manifest JSON;
 - final QA JSON;
 - per-article text/run/table/object audits;
-- PIP segmentation report;
-- TOC row audit;
+- author-header composition and punctuation report;
+- TOC entry/geometry audit;
+- reference restart/spacing audit;
+- article-boundary audit;
+- caption/object-flow audit;
 - article start-page vector;
-- published-reference parity JSON;
-- tail isolation report;
+- published-body parity JSON;
 - render evidence summary;
 - versioned skills ZIP + changelog.
 
 ## Done when
 
-Реліз доведено на рівні кожної статті та всієї publication shell: нуль непогоджених втрат, нуль stale metadata/placeholders, повний TOC з точними сторінками, правильна semantic segmentation шапки, ізольована фінальна сторінка і внутрішня верстка, максимально наближена до опублікованого корпусу 136/137 без зміни авторського змісту.
+Реліз доведено на рівні кожної статті та всього body region: нуль непогоджених втрат, повний TOC із правильними авторами, секціями, нумерацією й сторінками, шапки перенесені з правильною композицією рядків і пунктуацією, references перезапускаються з 1 без зайвих blank paragraphs, межі статей чисті, а внутрішня верстка максимально наближена до опублікованих 136/137 без зміни авторського змісту.
