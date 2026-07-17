@@ -1,6 +1,7 @@
 # GPT Classic sync manifest
 
-Sync date: 2026-07-17
+Sync date: 2026-07-17  
+Revision: body-parity correction 3.3.1
 
 ## GitHub target
 
@@ -28,8 +29,16 @@ Sync date: 2026-07-17
 - `drive_sync/GPT_CLASSIC_SYNC_MANIFEST.md`
 - `GPT_CLASSIC.md`
 
-## Scope note
+## Corrected scope
 
-This sync mirrors the active journal instructions and the new published-reference parity findings. It does not duplicate all binary templates, PDFs, DOCX fixtures, archives, or generated releases into GitHub. Those remain authoritative on Google Drive and are referenced by immutable IDs above.
+Published-reference comparison is restricted to the body region:
+
+`TABLE OF CONTENTS → last article references`
+
+The cover and service/front pages are raw shell material and are not used to judge journal-skill parity. The synchronized rules now focus on TOC numbering and geometry, author-header line composition and commas, references restart/spacing, caption punctuation, article boundaries and per-article pagination.
+
+## Binary scope
+
+This sync does not duplicate all binary templates, PDFs, DOCX fixtures, archives, or generated releases into GitHub. Those remain authoritative on Google Drive and are referenced by immutable IDs above.
 
 Binary mirroring should be implemented later with a checksum manifest and Git LFS/release assets. Blindly committing every Drive binary is prohibited because it would duplicate large generated files and mix authoritative inputs with outputs.
