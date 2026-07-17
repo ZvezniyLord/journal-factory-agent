@@ -1,258 +1,278 @@
-# Самоаналіз збірок 136 і 137 проти опублікованих версій
+# Body-parity аналіз збірок 136 і 137
 
-Дата аналізу: 2026-07-17
+Дата аналізу: 2026-07-17  
+Виправлена редакція: 3.3.1
 
 ## Межі аналізу
 
-- Перша сторінка/обкладинка виключена з оцінки.
-- Піксельний вигляд самих ілюстрацій не оцінювався.
-- Враховувалися: внутрішня верстка, службові сторінки, зміст, стилі, порядок і сегментація авторського блоку, пагінація, розміщення таблиць/рисунків у потоці, підписи, references, секційні заголовки та фінальна службова сторінка.
-- Авторська текстова й об'єктна цілісність залишається жорстким обмеженням. Наближення до опублікованого вигляду не може виправдовувати втрату змісту.
+Цей документ оцінює тільки те, що формує зміст журналу й робить journal skill:
+
+- `TABLE OF CONTENTS`;
+- нумерацію статей і сторінок;
+- секційні заголовки;
+- DOI/UDC;
+- авторські шапки, переноси, вирівнювання та пунктуацію;
+- назви, annotation/keywords;
+- основний текст;
+- таблиці/рисунки як елементи потоку, без оцінювання пікселів зображення;
+- captions/source notes;
+- списки джерел;
+- межі між статтями;
+- стартові сторінки статей.
+
+Не оцінюються обкладинка, титульно-службові сторінки до TOC і фінальна службова сторінка. ETALON у цій зоні є сирою заготовкою, а не publication reference.
 
 ## Порівнювані матеріали
 
 ### Конференція 136
 
-- Опублікований еталон: `Conference136.pdf`, 96 PDF-сторінок.
-- Наш результат: `JOURNAL_136_FINAL_RELEASE_v33.docx`.
+- Published: `Conference136.pdf`.
+- Our build: `JOURNAL_136_FINAL_RELEASE_v33.docx`, render 96 pages.
 
 ### Конференція 137
 
-- Опублікований еталон: `Conference137.pdf`, 84 PDF-сторінки.
-- Наш основний результат: `JOURNAL_137_CAMBRIDGE_CORRECTED_V7_TOC_CORE55.docx`, 90 сторінок після рендеру.
-- Ранні smoke-збірки розглядалися лише як негативні regression fixtures.
+- Published: `Conference137.pdf`.
+- Our builds: `137.docx`, `JOURNAL_137_CAMBRIDGE_CORRECTED_V7_TOC_CORE55.docx` і ранні smoke fixtures.
 
-## Загальний висновок
+## Головний висновок
 
-Найслабшим місцем наших збірок було не перенесення основного тексту, а **release parity**: службові дані, реальний зміст, семантичне розбиття шапки, точна пагінація, ізоляція фінальної сторінки й відсутність залишків старого ETALON. Наявні fidelity-gates добре захищають авторське тіло, але ще не доводять, що документ схожий на фактично опубліковану серію.
+Внутрішнє тіло 136 значно ближче до published reference, ніж показував попередній висновок. Основні регресії лежать не в загальній структурі статті, а в деталях, які безпосередньо створює skill:
 
-Потрібна двоцільова модель:
+1. TOC geometry і класифікація записів;
+2. повнота авторів і правильність секції;
+3. композиція рядків author header;
+4. кінцеві коми в продовжувальних metadata lines;
+5. пробіли в captions і labels;
+6. reference hanging indent/spacing;
+7. чисті межі між останнім джерелом і наступною статтею.
 
-1. **Hard constraint:** нуль непогоджених втрат або переписування авторського матеріалу.
-2. **Optimization target:** серед усіх безпечних варіантів обирати той, що мінімізує структурно-верстальну відстань до опублікованого корпусу NAUKAINFO.
+Тому parity має бути corpus-driven і granular: не «документ схожий загалом», а row-by-row, author-by-author, paragraph-by-paragraph.
 
-## Конференція 136: критичні розбіжності
+# Conference 136
 
-### 1. Повне протікання метаданих старого ETALON
+## 1. TOC: головне джерело зсуву пагінації
 
-У `JOURNAL_136_FINAL_RELEASE_v33.docx` залишилися чужі службові дані:
+Published TOC займає три сторінки. Наш TOC займає дві сторінки, бо entries ущільнені сильніше. Через це перша стаття має printed page 4 у нашій збірці та page 5 у published PDF, хоча саме тіло першої статті далі йде майже синхронно.
 
-- `SCIENCE IN THE MODERN WORLD` замість `SCIENCE AND GLOBAL DEVELOPMENT`;
-- January 19-21, 2026 замість June 28-30, 2026;
-- Cambridge замість Barcelona;
-- `conference?id=91` замість `conference?id=136`;
-- DOI `conf-91-2026` замість `conf-136-2026`;
-- старий ISBN;
-- `0000000 p.` замість фінального обсягу;
-- інша дата затвердження.
+### Виявлені content mismatches
 
-Це означає, що перевірка наявності ETALON недостатня. Потрібен **stale-template fingerprint gate**, який сканує всю передню й фінальну службову частину та блокує реліз при будь-якому токені іншої конференції.
+- У нашому entry 8 вказано лише `Косинський П. І.`, тоді як published entry містить `Косинський П. І., Тимонін Ю. О.`.
+- Наш entry 10 опинився в `PHYSICAL CULTURE, SPORTS AND PHYSICAL THERAPY`, тоді як published reference має `PHILOLOGY AND JOURNALISM`.
+- Наші free listeners / special-thanks participants продовжують article numbering як 25–30. У published reference article numbering завершується на 24, а подяки оформлено окремим ненумерованим блоком.
+- Заголовки, author rows і titles у нашому TOC мають менші вертикальні інтервали, тому на першій сторінці вміщується 13 entries замість 9.
 
-### 2. Зміст фактично не був матеріалізований як опублікований TOC
+### Правило
 
-Після `TABLE OF CONTENTS` у нашому DOCX одразу з'являються УДК, авторська шапка й тіло першої статті. В опублікованій версії 136 зміст містить:
+TOC entry будується тільки з manifest article record. Participants, special thanks, reports without full article status і службові згадки не можуть отримувати article ordinal.
 
-- англомовні секційні заголовки;
-- наскрізний номер статті;
-- тільки імена авторів;
-- назву статті;
-- фактичний номер стартової сторінки.
+## 2. Author header: загальна схема правильна, деталі відрізняються
 
-Отже, TOC-gate має перевіряти не лише наявність таблиці/стилів, а повноту кожного рядка й відсутність body-параграфів у TOC-регіоні.
+У першій статті 136 наш build правильно відтворює базову геометрію published reference:
 
-### 3. Release shell не був зв'язаний з одним manifest
+- centered uppercase section heading;
+- UDC зліва;
+- author/PIP block справа;
+- centered title;
+- annotation і keywords нижче.
 
-Правильний авторський вміст співіснував із чужою конференційною оболонкою. Це свідчить, що article manifest і publication manifest були незалежними. Потрібен один immutable `publication_manifest.json`, з якого беруться title, dates, city, country, conference id, conference DOI, ISBN, approval date, bibliographic page count і рекомендоване цитування.
+Тобто змінювати шапку на ліве вирівнювання або робити іншу глобальну схему не потрібно.
 
-## Конференція 137: вимірювані розбіжності
+### Точні відмінності на fixture Гнисюк / Сімкова
 
-### 1. Розмір і пагінація
+Published:
 
-- Наш рендер: 90 сторінок.
-- Опублікований PDF: 84 сторінки.
-- У нашому бібліографічному блоці було `84 p.`; у публікації — `81 p.`.
+```text
+Гнисюк Анастасія Олексіївна
+здобувачка вищої освіти
+Сімкова Тетяна Олексіївна
+науковий керівник,
+к.е.н., доцент,
+Національний університет «Київський авіаційний інститут»
+м. Київ, Україна
+```
 
-Загальна кількість сторінок не є достатнім показником. Потрібно порівнювати **вектор стартових сторінок статей**. Наприклад:
+Our build:
 
-- стаття Мінькова: наша версія починалася на сторінці 17, опублікована — на 18;
-- стаття Злакомана: обидві версії починалися на 26.
+```text
+Гнисюк Анастасія Олексіївна
+здобувачка вищої освіти
+Сімкова Тетяна Олексіївна
+науковий керівник
+к.е.н., доцент
+Національний університет
+«Київський авіаційний інститут»
+м. Київ, Україна
+```
 
-Отже, дрейф локальний і спричинений сегментацією та щільністю окремих блоків, а не одним глобальним масштабом.
+Різниця:
 
-### 2. Службова сторінка
+- пропущено кінцеві коми на двох продовжувальних рядках;
+- цілісну назву установи штучно розбито на два paragraphs;
+- зайвий paragraph додає вертикальну висоту шапки.
 
-У нашому результаті були:
+### Fixture Матвієнко / Бобиль
 
-- `This edition was prepared for publication on July 12, 2026`;
-- `ISBN: assignment pending`;
-- `Author. Article title` у рекомендованому цитуванні;
-- 84 p.
+Published зберігає:
 
-В опублікованому результаті:
+```text
+кафедра математичної інформатики,
+факультет комп’ютерних наук та кібернетики,
+Київський національний університет імені Тараса Шевченка
+м. Київ, Україна
+```
 
-- затвердження July 16, 2026;
-- ISBN `978-617-8680-82-4`;
-- конкретний зразок цитування;
-- 81 p.
+Тут коми означають, що metadata chain граматично продовжується. Skill не повинен ані видаляти ці коми, ані перетворювати всі рядки на речення з крапками.
 
-Будь-які `pending`, `0000000`, generic author/title placeholders або невідповідні дати мають бути release blockers.
+## 3. Caption punctuation
 
-### 3. TOC
+У published fixture використано `Рис. 1.`. У нашій збірці — `Рис.1.`. Потрібен один пробіл після скорочення й після номера згідно з published pattern.
 
-Наш V7 TOC містив авторів і назви, але не мав стабільно матеріалізованих номерів статей та сторінок. Також застосовувалися крапки з комою між авторами.
+Це малий дефект, але він легко перевіряється детерміновано й має входити до caption gate.
 
-Опублікований TOC має:
+## 4. References
 
-- `1.`, `2.`, ... перед авторами;
-- page number для кожної статті;
-- коми між авторами;
-- відсутність ступенів, посад та установ;
-- секційні заголовки тільки англійською.
+Позитивне: у 136 кожен список джерел перезапускається з `1.` і мовні headings загалом правильні.
 
-Потрібен row-level gate: `section + ordinal + authors + title + page` для кожної статті.
+Відмінність у spacing/numbering geometry:
 
-### 4. Семантичне розбиття авторського блоку
+- на першій references page нашої збірки вміщується 3 items;
+- у published reference на відповідній сторінці вміщується 4 items;
+- у нашому DOCX після references heading є зайві blank paragraphs;
+- hanging indent/tab stop і line spacing дещо ширші.
 
-У нашій версії окремі рядки зливалися:
+Правило: після heading не створювати пустих paragraphs; використовувати style spacing. Кожна стаття отримує окремий numbering instance або доведений restart override з `start=1`.
 
-- `кандидат юридичних наук Independent Researcher м. Одеса, Україна`;
-- `юридичний консультант ТОВ «Укргазнафта» м. Слов'янськ, Україна`.
+# Conference 137
 
-В опублікованому PDF ці елементи стоять окремими абзацами. Це не просто косметика: злиття змінює ритм сторінки, перенос назви й старт наступної статті.
+## 1. TOC punctuation і numbering
 
-Правило: короткі PIP-рядки не можна конкатенувати. Degree/role, institution і city/country — окремі paragraphs, якщо вони окремі у джерелі або manifest.
+Published TOC має для кожної статті:
 
-### 5. Over-normalization references
+```text
+ordinal + authors separated by comma + title + rendered page
+```
 
-У нашому V7 частина DOI-посилань була семантично перейменована з `URL:` на `DOI:`. Опублікований корпус допускає обидва варіанти й часто зберігає авторську мітку навіть для `https://doi.org/...`.
+Наприклад, кілька авторів перелічуються через `, `, а не через `; `.
 
-Правило: не перекласифіковувати label лише за виглядом URL. Додавати відсутню мітку можна, але змінювати наявну `URL:` на `DOI:` — тільки за явним редакторським рішенням.
+У V7 fixture автори подекуди розділялися крапками з комою, а ordinals/pages не були повністю матеріалізовані. Це має блокувати release незалежно від того, чи всі назви присутні.
 
-### 6. Фінальна службова сторінка
+## 2. Author-header composition не зводиться до одного шаблону
 
-В одному з наших результатів tail-текст приєднувався одразу після останнього reference block. В опублікованій версії це окрема фінальна сторінка.
+Опублікований корпус показує кілька допустимих композицій.
 
-Потрібен gate:
+### Злакоман
 
-- tail починається з нової сторінки;
-- перебуває у захищеній останній секції;
-- не містить page number основного тіла;
-- остання стаття не захоплює tail-параграфи;
-- tail metadata дорівнює publication manifest.
+Published і пізня `137.docx` близькі:
 
-## Що вже було правильним
+```text
+Злакоман Ігор Миколайович
+кандидат юридичних наук
+Independent Researcher
+м. Одеса, Україна
+ORCID: ...
+```
 
-- Перехід до ETALON як master shell правильний.
-- Пріоритет lexical/object fidelity правильний і має залишатися абсолютним.
-- Ідея двопрохідного TOC і повторного рендеру правильна.
-- Окремі article starts у V7 вже наблизилися до опублікованої пагінації.
-- DOI/UDC → author block → title → annotation відповідає опублікованому 137, якщо PIP не зливається.
-- Канонічні англомовні section headings відповідають серії.
+Ранній V7 зливав degree, researcher status і location. Це regression fixture для заборони cross-field concatenation.
 
-## Нові обов'язкові gates
+### Живко та співавтори
 
-### A. Publication manifest gate
+Published використовує окремий блок для кожного з п’яти авторів: name → qualification/role → institution → location. У нашій `137.docx` частина qualification, institution і location зібрана в один довгий paragraph через коми.
 
-Обов'язкові поля:
+Проблема не в самих комах, а в тому, що paragraph стає надто довгим і втрачає published line rhythm. Авторські межі та синтаксичні групи мають бути явними.
 
-- conference_number;
-- conference_title;
-- date_range;
-- city;
-- country;
-- conference_url;
-- conference_doi;
-- isbn;
-- approval_date;
-- bibliographic_page_count;
-- recommended_citation;
-- final_service_page_text.
+### Маєр
 
-Жодне поле не можна брати із залишкового ETALON-тексту.
+Published компактно поєднує:
 
-### B. Stale-template fingerprint gate
+```text
+вихователь-методист ЗДО «Казковий світ»
+Зимноводівської сільської ради
+Львівського району Львівської області
+```
 
-Сканувати front matter і tail на:
+Наш build розбиває role і коротку назву ЗДО на окремі paragraphs, а район/область дробить сильніше. Отже, blanket rule «кожне поле окремо» теж неправильне.
 
-- інші conference id/DOI;
-- інші дати/міста/назви;
-- старі ISBN;
-- `0000000`, `pending`, `Author. Article title`;
-- старі approval dates.
+### Александрова та Сергієнко / Волкова
 
-Будь-який збіг = `BLOCKED`.
+Пізня `137.docx` уже ближча до published reference: qualification, department, institution і location розділено по природних межах; автори не зливаються. Цю поведінку слід зберегти як позитивний fixture.
 
-### C. Published-reference parity gate
+## 3. Article-boundary concatenation
 
-Порівняння з corpus profile 136/137 після виключення:
+У `137.docx` трапляються структурні склеювання:
 
-- першої сторінки;
-- піксельного вмісту авторських ілюстрацій.
+- останній URL попередньої статті одразу переходить у `УДК`;
+- `...#Text.УДК...`;
+- URL попереднього reference переходить у `DOI:` наступної статті;
+- `DOI:https://...` без пробілу.
 
-Але зберігаються в оцінці:
+У published PDF наступна стаття починається окремим блоком і на окремій сторінці. Це має бути hard blocker, бо проблема змінює і текстову цілісність, і пагінацію.
 
-- місце, розмір і обтікання object cluster;
-- підпис і source note;
-- вплив object cluster на пагінацію.
+## 4. Reference normalization
 
-### D. TOC row completeness gate
+Published corpus не вимагає перетворювати кожне `https://doi.org/...` на label `DOI:`. В окремих references URL залишається bare link або з авторським `URL:`.
 
-Для кожної manifest article:
+Правило:
 
-- рівно один TOC row;
-- правильний ordinal;
-- автори без ролей/установ;
-- canonical comma separator;
+- зберігати наявний label;
+- не перекласифіковувати за доменом;
+- додавати label лише за окремим canonical/editorial rule;
+- не зливати два bibliography records в один numbered paragraph.
+
+# Нові обов’язкові gates
+
+## A. Body-only parity boundary
+
+Порівнювати `TABLE OF CONTENTS → last article references`. Обкладинка й службова оболонка не впливають на body-parity score.
+
+## B. TOC record gate
+
+Для кожної article record:
+
+- одна правильна section;
+- один global ordinal;
+- повний author list;
+- comma separator;
 - title;
-- rendered start page;
-- жодних UDC/DOI/body paragraphs у TOC.
+- rendered page;
+- жодних numbered special-thanks participants.
 
-### E. Per-article pagination gate
+## C. Header composition and punctuation gate
 
-Зберігати `article_start_page_vector.json`. Для відтворення 136/137 він має точно збігатися з published reference. Для нових конференцій виявляти аномалії за профілем: надмірні порожні зони, випадкові blank pages, злиті header paragraphs, detached captions.
+- right-aligned PIP block;
+- author boundaries immutable;
+- corpus-driven grouping of degree/role/department/institution/location;
+- trailing comma тільки для продовження metadata chain;
+- no final punctuation after name or location;
+- one space after `DOI:`, `URL:`, `ORCID:`.
 
-### F. PIP segmentation gate
+## D. Reference restart and spacing gate
 
-Заборонити автоматичне об'єднання degree/role, institution, city/country, supervisor lines. Порівнювати semantic line signature source → normalized → final.
+- new numbering instance/restart at 1 per article;
+- no blank paragraph after references heading;
+- published hanging indent/tab/line-spacing profile;
+- no merged bibliography items.
 
-### G. Tail isolation gate
+## E. Article-boundary lexical gate
 
-Фінальна службова сторінка окрема, незмішана з references і синхронізована з publication manifest.
+Block patterns where SECTION/DOI/UDC begins in the same paragraph or token stream as the final reference of the previous article.
 
-### H. Reference-label preservation gate
+## F. Caption punctuation gate
 
-Existing `URL:`/`DOI:` labels зберігаються. Автоматичне reclassification за regex заборонене.
+Corpus fixtures validate `Рис. 1.`, `Таблиця 1.`, `Fig. 1.`, `Table 1` and the surrounding spacing.
 
-## Рекомендовані технічні артефакти
+## G. Per-article start-page vector
 
-- `schemas/publication-manifest.schema.json`;
-- `schemas/published-reference-profile.schema.json`;
-- `scripts/build_published_reference_profile.py`;
-- `scripts/audit_publication_metadata.py`;
-- `scripts/audit_toc_rows.py`;
-- `scripts/compare_article_start_pages.py`;
-- `scripts/audit_pip_segmentation.py`;
-- `scripts/audit_tail_isolation.py`;
-- regression fixtures для Conference136 і Conference137;
-- один JSON-звіт `published_reference_parity.json`.
+The vector is interpreted only after TOC geometry is stabilized. For 136 the first body-page mismatch is primarily a TOC-page-count mismatch, not evidence that the first article body is globally malformed.
 
-## Мінімальні критерії PASS
+# Corrected assessment
 
-- stale-template tokens = 0;
-- placeholders = 0;
-- publication metadata mismatches = 0;
-- missing/duplicate TOC rows = 0;
-- TOC page mismatches = 0;
-- merged PIP semantic lines = 0;
-- tail isolation failures = 0;
-- unknown reference-label changes = 0;
-- непогоджені text/object diffs = 0;
-- full render review пройдено після останньої матеріалізації TOC.
+The strongest part of our pipeline is article-body preservation. The weakest part is deterministic editorial composition around it:
 
-## Головний урок
+- TOC record classification and geometry;
+- exact author list;
+- semantic line composition;
+- continuation commas;
+- references spacing and restart;
+- article boundaries.
 
-ETALON і fidelity audit є необхідними, але не достатніми. Реліз має доводити три речі одночасно:
-
-1. авторський матеріал не пошкоджено;
-2. publication metadata належить саме цій конференції;
-3. внутрішня верстка й пагінаційна поведінка відповідають реально опублікованому корпусу 136/137, а не лише формальним стилям DOCX.
+The next implementation should encode these as structural data and deterministic tests rather than asking an LLM to imitate a page visually.
