@@ -1,0 +1,13 @@
+{
+  "conference_id": 95,
+  "build_mode": "GOLDEN_RECONSTRUCTION",
+  "typography_profile": "legacy_14pt",
+  "typography_source": "editorial_rule_from_owner",
+  "body_font_size_pt": 14,
+  "new_publication_default": "standard_11pt",
+  "notes": [
+    "Профіль 14 pt використовується для відтворення старішого Conference 95",
+    "Нові журнали за новим стандартом використовують 11 pt",
+    "Профіль задається manifest/config і не визначається прихованою умовою за conference_id"
+  ]
+}
