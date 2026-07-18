@@ -87,6 +87,8 @@ def cmd_build_journal(args: argparse.Namespace) -> int:
         template=args.template,
         source_pack=args.source_pack,
         output_root=args.output,
+        typography_profile=args.typography_profile,
+        typography_profiles_path=args.typography_profiles,
     )
     print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
     return 0 if result["status"] == "DRAFT_BUILT" else 2
@@ -138,6 +140,17 @@ def main() -> int:
     journal.add_argument("--etalon", type=Path, required=True)
     journal.add_argument("--template", type=Path, required=True)
     journal.add_argument("--source-pack", type=Path, required=True)
+    journal.add_argument(
+        "--typography-profile",
+        choices=["legacy_14pt", "standard_11pt"],
+        required=True,
+        help="Explicit editorial typography profile; never inferred from conference id",
+    )
+    journal.add_argument(
+        "--typography-profiles",
+        type=Path,
+        default=Path("config/typography_profiles.json"),
+    )
     journal.add_argument("--output", type=Path, default=Path("build/journal_builder"))
     journal.set_defaults(func=cmd_build_journal)
 
