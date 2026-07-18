@@ -108,7 +108,7 @@ def run_journal_builder(
         reports_dir / "style_bridge_report.json",
     )
     if style_report["status"] != "PASS":
-        blockers.extend(f"style:{item}" for item in style_report["missing_required_style_ids"])
+        blockers.extend(f"style:{item}" for item in style_report["missing_required_style_names"])
         return _finish(config, conference_id, blockers, manifest, style_report, None, None)
 
     output_docx = build_dir / f"Conference{conference_id}_generated.docx"
