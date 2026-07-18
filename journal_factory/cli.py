@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from .audit import audit_article, release_gate, write_reports
+from .builder_pipeline import run_journal_builder
 from .config import default_config, ensure_dirs
 from .corpus_cycle import run_conference_cycle, run_series
 from .corpus_llm import LLMConfig
@@ -47,7 +48,6 @@ def cmd_build(args: argparse.Namespace) -> int:
 
     preflight = run_preflight(config)
     write_preflight(config, preflight)
-
     entries = inventory_archive(config.archive)
     candidates = [entry for entry in entries if entry.article_candidate]
     article_texts = []
@@ -77,6 +77,19 @@ def cmd_build(args: argparse.Namespace) -> int:
     if gate["status"] == "BUILD BLOCKED":
         return 2
     return 1
+
+
+def cmd_build_journal(args: argparse.Namespace) -> int:
+    result = run_journal_builder(
+        conference_id=args.conference_id,
+        source=args.source,
+        etalon=args.etalon,
+        template=args.template,
+        source_pack=args.source_pack,
+        output_root=args.output,
+    )
+    print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
+    return 0 if result["status"] == "DRAFT_BUILT" else 2
 
 
 def cmd_analyze_conference(args: argparse.Namespace) -> int:
@@ -118,6 +131,15 @@ def main() -> int:
     build.add_argument("--agent-decisions", type=Path)
     build.add_argument("--limit", type=int, default=200)
     build.set_defaults(func=cmd_build)
+
+    journal = sub.add_parser("build-journal")
+    journal.add_argument("--conference-id", type=int, required=True)
+    journal.add_argument("--source", type=Path, required=True)
+    journal.add_argument("--etalon", type=Path, required=True)
+    journal.add_argument("--template", type=Path, required=True)
+    journal.add_argument("--source-pack", type=Path, required=True)
+    journal.add_argument("--output", type=Path, default=Path("build/journal_builder"))
+    journal.set_defaults(func=cmd_build_journal)
 
     analyze = sub.add_parser("analyze-conference")
     analyze.add_argument("--conference-id", type=int, required=True)
