@@ -1,0 +1,18 @@
+{
+  "article_markers": [
+    "УДК 001.1",
+    "Анотація: перевірочний структурний маркер.",
+    "Ключові слова: автоматизація, журнал.",
+    "СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ:"
+  ],
+  "service_classes": [
+    "participant_application",
+    "payment_pdf",
+    "compiled_journal",
+    "duplicate_variant",
+    "embedded_application_tail"
+  ],
+  "fail_closed_classes": [
+    "multiple_non_equivalent_articles_in_participant_group"
+  ]
+}

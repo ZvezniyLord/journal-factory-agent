@@ -5,6 +5,8 @@
   "required": [
     "manifest_source",
     "manifest_sha256",
+    "generation_mode",
+    "evidence_report",
     "articles",
     "article_count",
     "free_listeners",
@@ -16,6 +18,8 @@
   "properties": {
     "manifest_source": { "type": "string" },
     "manifest_sha256": { "type": "string" },
+    "generation_mode": { "enum": ["EXPLICIT_MANIFEST", "AUTO_INVENTORY_V1", "INVALID"] },
+    "evidence_report": { "type": "string" },
     "articles": {
       "type": "array",
       "items": {
@@ -41,6 +45,8 @@
           "match_score",
           "author_score",
           "title_score",
+          "confidence",
+          "provenance",
           "evidence",
           "blockers",
           "warnings"
@@ -66,6 +72,8 @@
           "match_score": { "type": "number", "minimum": 0, "maximum": 1 },
           "author_score": { "type": "number", "minimum": 0, "maximum": 1 },
           "title_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "provenance": { "type": "object" },
           "evidence": { "type": "object" },
           "blockers": { "type": "array", "items": { "type": "string" } },
           "warnings": { "type": "array", "items": { "type": "string" } }

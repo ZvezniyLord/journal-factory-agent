@@ -6,6 +6,7 @@ from typing import Any
 import json
 
 from .archive_workspace import prepare_archive_workspace, sha256_file
+from .article_preparation import prepare_article_source
 from .builder_fidelity import audit_sources_in_final
 from .config import AppConfig, ensure_dirs
 from .document_composer import compose_articles_into_etalon
@@ -65,7 +66,9 @@ def run_journal_builder(
     )
     source_snapshots: list[dict[str, Any]] = []
     compose_jobs: list[dict[str, Any]] = []
+    preparation_reports: list[dict[str, Any]] = []
     snapshots_root = build_dir / "snapshots"
+    prepared_root = build_dir / "prepared_articles"
 
     for article in ordered_articles:
         if article.get("match_status") != "MATCHED":
@@ -76,30 +79,59 @@ def run_journal_builder(
             blockers.append(f"legacy_or_unsupported_article:{article['source_path']}")
             continue
         try:
-            snapshot = create_source_snapshot(
+            raw_snapshot = create_source_snapshot(
                 source_file,
                 article["article_id"],
                 snapshots_root,
                 workspace_source,
             )
+            prepared_file, preparation_report = prepare_article_source(
+                source_file,
+                article,
+                prepared_root,
+            )
         except Exception as exc:  # noqa: BLE001
             blockers.append(f"snapshot_exception:{article['article_id']}:{type(exc).__name__}:{exc}")
             continue
-        source_snapshots.append(snapshot)
-        if snapshot.get("snapshot_status") != "PASS":
+        preparation_reports.append(preparation_report)
+        if raw_snapshot.get("snapshot_status") != "PASS":
             blockers.extend(
                 f"snapshot:{article['article_id']}:{item}"
-                for item in snapshot.get("blockers", [])
+                for item in raw_snapshot.get("blockers", [])
             )
+        if preparation_report["status"] != "PASS":
+            blockers.extend(
+                f"preparation:{article['article_id']}:{item}"
+                for item in preparation_report.get("blockers", [])
+            )
+        if prepared_file == source_file:
+            fidelity_snapshot = raw_snapshot
+        else:
+            fidelity_snapshot = create_source_snapshot(
+                prepared_file,
+                f"{article['article_id']}-prepared",
+                snapshots_root,
+                prepared_root,
+            )
+            fidelity_snapshot["source_path"] = f"{article['source_path']}#prepared"
+        source_snapshots.append(fidelity_snapshot)
         compose_jobs.append(
             {
                 "article_id": article["article_id"],
-                "source_file": str(source_file),
+                "source_file": str(prepared_file),
                 "section": article.get("section_raw") or article.get("section_id") or "",
                 "journal_order": article.get("journal_order"),
             }
         )
 
+    _write_json(
+        reports_dir / "article_preparation_report.json",
+        {
+            "status": "PASS" if not any(item["status"] != "PASS" for item in preparation_reports) else "BLOCKED",
+            "articles": preparation_reports,
+            "article_count": len(preparation_reports),
+        },
+    )
     if blockers:
         return _finish(config, conference_id, blockers, manifest, None, None, None)
 
