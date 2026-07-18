@@ -5,12 +5,10 @@ from typing import Any
 
 from docx import Document
 from docx.enum.text import WD_BREAK
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 from docx.oxml.section import CT_SectPr
 from docxcompose.composer import Composer
-
-
-W_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-NS = {"w": W_NS}
 
 
 def compose_articles_into_etalon(
@@ -93,12 +91,12 @@ def find_article_insert_index(document: Document) -> int:
     for index, element in enumerate(document.element.body):
         if isinstance(element, CT_SectPr):
             continue
-        text = "".join(element.xpath(".//w:t/text()", namespaces=NS))
+        text = "".join(element.xpath(".//w:t/text()"))
         normalized = " ".join(text.upper().split())
         if "TABLE OF CONTENTS" in normalized:
             toc_seen = True
             continue
-        if toc_seen and element.xpath("./w:pPr/w:sectPr", namespaces=NS):
+        if toc_seen and element.xpath("./w:pPr/w:sectPr"):
             return index
     raise ValueError("ETALON insertion anchor after TABLE OF CONTENTS was not found")
 
@@ -110,9 +108,10 @@ def _separator_document(add_page_break: bool, section_title: str | None) -> Docu
         paragraph.add_run().add_break(WD_BREAK.PAGE)
     if section_title:
         heading = separator.add_paragraph(section_title)
-        style_ids = {style.style_id for style in separator.styles}
-        if "SECTION" in style_ids:
-            heading.style = "SECTION"
+        ppr = heading._p.get_or_add_pPr()
+        pstyle = OxmlElement("w:pStyle")
+        pstyle.set(qn("w:val"), "SECTION")
+        ppr.insert(0, pstyle)
     return separator
 
 
