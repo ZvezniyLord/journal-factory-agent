@@ -1,9 +1,11 @@
 {
   "request_id": "REQ-20260719-CONF95-REAL-BUILD",
   "branch": "agent/journal-builder-95",
-  "minimum_commit": "147a89fc58e775f265977f42ec4fb5ec379048b7",
+  "minimum_commit": "afc9137751f9744b7671447a149b8616b4fdcdbd",
   "conference_id": 95,
   "purpose": "Перший реальний RAW-to-DOCX build Conference 95 і збір точних blocker",
+  "build_profile": "fixtures/conferences/095/build_profile.json",
+  "typography_profile": "legacy_14pt",
   "required_files": [
     "95.zip",
     "ETALON-JOURNAL.docx",
@@ -23,12 +25,14 @@
     "git pull --ff-only origin agent/journal-builder-95",
     "py -3.11 -m venv .venv",
     ".\\.venv\\Scripts\\python -m pip install -r requirements.txt",
-    ".\\.venv\\Scripts\\python -m journal_factory.cli build-journal --conference-id 95 --source <PATH_TO_95_ZIP> --etalon <PATH_TO_ETALON> --template <PATH_TO_JURNAL_DOTX> --source-pack <PATH_TO_CLEAN_SOURCE_PACK> --output build\\journal_builder"
+    ".\\.venv\\Scripts\\python -m journal_factory.cli build-journal --conference-id 95 --source <PATH_TO_95_ZIP> --etalon <PATH_TO_ETALON> --template <PATH_TO_JURNAL_DOTX> --source-pack <PATH_TO_CLEAN_SOURCE_PACK> --typography-profile legacy_14pt --output build\\journal_builder"
   ],
   "expected_outputs": [
     "build/journal_builder/Conference95/Conference95_generated.docx",
     "build/journal_builder/Conference95/reports/preflight.json",
     "build/journal_builder/Conference95/reports/article_manifest.json",
+    "build/journal_builder/Conference95/reports/style_bridge_report.json",
+    "build/journal_builder/Conference95/reports/typography_profile_report.json",
     "build/journal_builder/Conference95/reports/compose_report.json",
     "build/journal_builder/Conference95/reports/fidelity_report.json",
     "build/journal_builder/Conference95/reports/journal_builder_gate.json"
@@ -36,6 +40,7 @@
   "pass_conditions": [
     "command completes without unhandled exception",
     "all input SHA-256 values are recorded",
+    "typography_profile_report confirms legacy_14pt and 14 pt default body size",
     "generated DOCX opens without repair if DRAFT_BUILT",
     "every blocker is present in a machine-readable report",
     "no source file is modified"
