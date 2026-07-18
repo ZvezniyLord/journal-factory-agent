@@ -15,7 +15,7 @@
     "compose_status": null,
     "fidelity_status": null,
     "blockers": [
-      "preflight:archive"
+      "manifest:manifest_source_missing"
     ],
     "required_next_gates": [
       "HEADER_NORMALIZATION_PLAN",
@@ -29,7 +29,7 @@
   },
   "config": {
     "mode": "production",
-    "archive": "C:\\Users\\Vint\\Downloads\\95.zip",
+    "archive": "N:\\Конференції\\Конференції_zip\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року.zip",
     "etalon": "ETALON-JOURNAL.docx",
     "template": "Jurnal.dotx",
     "source_pack": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX",

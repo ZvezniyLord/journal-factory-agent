@@ -1,10 +1,10 @@
 {
-  "status": "BUILD BLOCKED",
+  "status": "READY",
   "checks": [
     {
       "name": "archive",
-      "path": "C:\\Users\\Vint\\Downloads\\95.zip",
-      "ok": false,
+      "path": "N:\\Конференції\\Конференції_zip\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року.zip",
+      "ok": true,
       "required": true,
       "message": "Author submissions ZIP or folder"
     },
@@ -79,13 +79,5 @@
       "message": "Acceptance tests, QA schemas, or quality gate controls"
     }
   ],
-  "blockers": [
-    {
-      "name": "archive",
-      "path": "C:\\Users\\Vint\\Downloads\\95.zip",
-      "ok": false,
-      "required": true,
-      "message": "Author submissions ZIP or folder"
-    }
-  ]
+  "blockers": []
 }

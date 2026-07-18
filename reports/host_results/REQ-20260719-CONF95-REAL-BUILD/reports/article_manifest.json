@@ -1,0 +1,13 @@
+{
+  "manifest_source": "",
+  "manifest_sha256": "",
+  "articles": [],
+  "article_count": 0,
+  "free_listeners": [],
+  "free_listener_count": 0,
+  "blockers": [
+    "manifest_source_missing"
+  ],
+  "warnings": [],
+  "manifest_status": "BLOCKED"
+}

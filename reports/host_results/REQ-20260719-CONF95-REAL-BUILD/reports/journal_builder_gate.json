@@ -11,7 +11,7 @@
   "compose_status": null,
   "fidelity_status": null,
   "blockers": [
-    "preflight:archive"
+    "manifest:manifest_source_missing"
   ],
   "required_next_gates": [
     "HEADER_NORMALIZATION_PLAN",

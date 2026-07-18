@@ -1,14 +1,19 @@
 ﻿{
     "request_id":  "REQ-20260719-CONF95-REAL-BUILD",
-    "git_head":  "79dc7130ef370d2dc8faa2502d6fafaa108add98",
+    "git_head":  "3a41e18fea7f4bb3122288e0f9d56022d4dd1a62",
     "branch":  "agent/journal-builder-95",
     "python":  "Python 3.12.13",
+    "pytest":  "52 passed in 5.62s",
     "libreoffice":  "NOT_FOUND",
     "font_inventory_summary":  {
                                    "windows_fonts_file_count":  547
                                },
     "typography_profile_requested":  "legacy_14pt",
-    "raw_archive_path":  "C:\\Users\\Vint\\Downloads\\95.zip",
-    "raw_archive_present":  false,
-    "conference95_pdf_present":  false
+    "raw_archive_path":  "N:\\Конференції\\Конференції_zip\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року.zip",
+    "raw_archive_present":  true,
+    "conference95_pdf_present":  false,
+    "official_conference95_docx_path":  "N:\\Конференції\\Конференції\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року\\95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року\\Збірник\\Conference95.docx",
+    "official_conference95_docx_present":  true,
+    "extracted_source_pack_path":  "N:\\Конференції\\Конференції\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року\\95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року",
+    "extracted_source_pack_present":  true
 }
