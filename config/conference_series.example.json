@@ -1,0 +1,13 @@
+[
+  {
+    "conference_id": 95,
+    "raw_source": "../input/95.zip",
+    "golden_pdf": "../input/Conference95.pdf",
+    "expected_articles": 34
+  },
+  {
+    "conference_id": 96,
+    "raw_source": "../input/96.zip",
+    "golden_pdf": "../input/Conference96.pdf"
+  }
+]
