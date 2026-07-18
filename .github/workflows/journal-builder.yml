@@ -28,6 +28,7 @@ jobs:
         run: >-
           python -m py_compile
           journal_factory/style_bridge.py
+          journal_factory/typography_profile.py
           journal_factory/document_composer.py
           journal_factory/builder_fidelity.py
           journal_factory/builder_pipeline.py
@@ -36,5 +37,6 @@ jobs:
         run: >-
           pytest -q
           tests/test_style_bridge.py
+          tests/test_typography_profile.py
           tests/test_document_composer.py
           tests/test_builder_fidelity.py
