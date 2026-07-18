@@ -45,6 +45,20 @@ python -m journal_factory.cli analyze-conference \
   --output build/corpus_cycles
 ```
 
+Windows one-command launcher after placing both files in `input`:
+
+```powershell
+.\RUN_CONFERENCE_95.ps1 -InstallDependencies
+```
+
+Custom paths are also supported:
+
+```powershell
+.\RUN_CONFERENCE_95.ps1 `
+  -Raw "D:\JournalCorpus\95.zip" `
+  -Golden "D:\JournalCorpus\Conference95.pdf"
+```
+
 Series regression:
 
 ```bash
