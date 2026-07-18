@@ -103,7 +103,7 @@ def find_article_insert_index(document: Document) -> int:
 
 def _separator_document(add_page_break: bool, section_title: str | None) -> Document:
     separator = Document()
-    paragraph = separator.paragraphs[0]
+    paragraph = separator.add_paragraph()
     if add_page_break:
         paragraph.add_run().add_break(WD_BREAK.PAGE)
     if section_title:
