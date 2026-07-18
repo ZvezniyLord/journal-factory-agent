@@ -13,6 +13,7 @@ from .manifest import build_article_manifest
 from .preflight import run_preflight, write_preflight
 from .source_snapshot import create_source_snapshot, snapshot_docx
 from .style_bridge import merge_template_styles
+from .typography_profile import apply_typography_profile
 
 
 def run_journal_builder(
@@ -22,6 +23,8 @@ def run_journal_builder(
     template: Path,
     source_pack: Path,
     output_root: Path,
+    typography_profile: str,
+    typography_profiles_path: Path = Path("config/typography_profiles.json"),
 ) -> dict[str, Any]:
     """Build a real DOCX draft from RAW articles with fail-closed fidelity gates."""
     build_dir = output_root / f"Conference{conference_id}"
@@ -111,9 +114,23 @@ def run_journal_builder(
         blockers.extend(f"style:{item}" for item in style_report["missing_required_style_names"])
         return _finish(config, conference_id, blockers, manifest, style_report, None, None)
 
+    typography_master = build_dir / "workspace" / "ETALON_WITH_TYPOGRAPHY_PROFILE.docx"
+    try:
+        typography_report = apply_typography_profile(
+            styled_master,
+            typography_master,
+            typography_profiles_path,
+            typography_profile,
+            reports_dir / "typography_profile_report.json",
+        )
+        style_report["typography"] = typography_report
+    except Exception as exc:  # noqa: BLE001
+        blockers.append(f"typography_profile_exception:{type(exc).__name__}:{exc}")
+        return _finish(config, conference_id, blockers, manifest, style_report, None, None)
+
     output_docx = build_dir / f"Conference{conference_id}_generated.docx"
     try:
-        compose_report = compose_articles_into_etalon(styled_master, compose_jobs, output_docx)
+        compose_report = compose_articles_into_etalon(typography_master, compose_jobs, output_docx)
     except Exception as exc:  # noqa: BLE001
         blockers.append(f"compose_exception:{type(exc).__name__}:{exc}")
         return _finish(config, conference_id, blockers, manifest, style_report, None, None)
@@ -159,6 +176,7 @@ def _finish(
 ) -> dict[str, Any]:
     build_succeeded = output_docx is not None and output_docx.is_file() and not blockers
     status = "DRAFT_BUILT" if build_succeeded else "BUILD BLOCKED"
+    typography_report = style_report.get("typography") if style_report else None
     gate = {
         "conference_id": conference_id,
         "status": status,
@@ -167,11 +185,14 @@ def _finish(
         "output_sha256": sha256_file(output_docx) if output_docx and output_docx.is_file() else None,
         "article_count": manifest.get("article_count", 0) if manifest else 0,
         "style_status": style_report.get("status") if style_report else None,
+        "typography_profile": typography_report.get("profile") if typography_report else None,
+        "body_font_size_pt": typography_report.get("body_font_size_pt") if typography_report else None,
         "compose_status": compose_report.get("status") if compose_report else None,
         "fidelity_status": fidelity_report.get("status") if fidelity_report else None,
         "blockers": blockers,
         "required_next_gates": [
             "HEADER_NORMALIZATION_PLAN",
+            "DIRECT_RUN_FONT_SIZE_AUDIT",
             "TOC_GENERATION",
             "DOCX_TO_PDF_RENDER",
             "PAGINATION_CONVERGENCE",
