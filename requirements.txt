@@ -4,3 +4,5 @@ jsonschema==4.23.0
 pypdf>=5.0,<7
 rapidfuzz>=3.9,<4
 striprtf>=0.0.28,<1
+docxcompose==2.2.0
+lxml>=5,<7
