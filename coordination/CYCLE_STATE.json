@@ -1,38 +1,64 @@
 {
   "protocol_version": 1,
   "conference_id": 95,
-  "iteration": 1,
-  "state": "READY_FOR_CODEX",
+  "iteration": 2,
+  "state": "CHANGES_REQUESTED",
   "owner": "CODEX",
   "work_branch": "agent/journal-builder-95",
   "typography_profile": "legacy_14pt",
   "golden_pdf_required": false,
-  "goal": "Зібрати з RAW Conference 95 готові DOCX і PDF та довести builder до проходження внутрішніх fidelity, structure, render, TOC і pagination gates.",
+  "goal": "Зібрати з реального RAW Conference 95 готові DOCX і PDF та довести builder до внутрішніх fidelity, structure, render, TOC і pagination gates.",
+  "last_codex_commit": "057025f54886053f07fd00f97582a57240a4b084",
+  "review_findings": [
+    {
+      "severity": "BLOCKER",
+      "code": "MANIFEST_SOURCE_MISSING",
+      "evidence": "Реальний ZIP успішно розпаковано; archive_inventory містить 139 файлів, але article_manifest порожній і має blocker manifest_source_missing.",
+      "required_fix": "Builder повинен автоматично створювати article manifest із RAW, коли готового manifest.json немає."
+    },
+    {
+      "severity": "HIGH",
+      "code": "CANDIDATE_CLASSIFICATION_TOO_BROAD",
+      "evidence": "Інформаційні листи та анкети .doc/.docx позначаються як article_candidate.",
+      "required_fix": "Додати детерміновану класифікацію службових документів, анкет, квитанцій, дублікатів і справжніх статей."
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "REPOSITORY_CLEANUP_REQUIRED",
+      "evidence": "У локальному checkout залишаються сторонні release-каталоги та накопичені тимчасові файли.",
+      "required_fix": "Виконати контрольовану чистку за coordination/CLEANUP_POLICY.md без видалення потрібних компонентів."
+    }
+  ],
   "next_action": {
-    "id": "CONF95-ITER-001",
+    "id": "CONF95-ITER-002",
     "instructions": [
-      "Запушити локальний коміт 3a41e18, якщо він ще існує і не запушений.",
-      "Знайти реальний 95.zip у дозволених локальних або підключених сховищах. Офіційний Conference95.pdf не є blocker для розробки.",
-      "Запустити build-journal з профілем legacy_14pt.",
-      "Якщо build падає, виправляти загальні Python/OpenXML правила, додавати regression-тести й повторювати цикл.",
-      "Створити generated DOCX і PDF через Word або LibreOffice без ручного редагування результату.",
-      "Запушити артефакти та машинні звіти в artifacts/conferences/095/iteration-001/.",
-      "Оновити цей state до READY_FOR_REVIEW і передати owner REVIEWER."
+      "Прочитати coordination/LOOP.md і coordination/CLEANUP_POLICY.md з upstream/agent/journal-control.",
+      "Оновити agent/journal-builder-95 та підтвердити commit 057025f як базу реального RAW-запуску.",
+      "Реалізувати auto-manifest fallback: коли явного manifest немає, інвентаризувати RAW і сформувати ordered article manifest із доказами confidence/provenance.",
+      "Відсіяти анкети, інформаційні листи, квитанції, сертифікати, службові PDF/DOC, тимчасові файли й дублікати. Не використовувати filename як єдиний доказ.",
+      "Використати структуру папок учасників, витягнутий текст, авторів, назви, маркери УДК/DOI/анотації/джерел та наявний Conference95.docx лише як локальний QA reference, не як джерело для копіювання журналу.",
+      "Для неоднозначних пар повертати REVIEW/BLOCKED, а не вгадувати. Додати fixtures і regression-тести для реальних failure classes Conference 95.",
+      "Виконати контрольовану чистку репозиторію: спочатку створити reports/repository_cleanup_inventory.json, потім видалити тільки доведено сторонні/тимчасові файли; окремий український commit.",
+      "Повторювати build із реальним ZIP і legacy_14pt, доки pipeline не перейде за manifest gate або не виявить наступний точний blocker.",
+      "Якщо manifest проходить, продовжити автоматичне складання DOCX і рендер PDF без ручного редагування.",
+      "Запушити код, тести та дозволені generated artifacts/reports. RAW zip і сирі статті не комітити.",
+      "Оновити CYCLE_STATE.json до READY_FOR_REVIEW, owner REVIEWER, додати commit SHA, тести, артефакти, blockers і метрики manifest."
     ]
   },
   "required_artifacts": [
-    "Conference95_generated.docx",
-    "Conference95_generated.pdf",
-    "ITERATION_RESULT.json",
-    "REVIEW_PACKET.md",
-    "reports/journal_builder_gate.json",
-    "reports/fidelity_report.json",
-    "reports/render_report.json",
-    "reports/toc_pagination_report.json",
-    "reports/FILES.sha256"
+    "artifacts/conferences/095/iteration-002/ITERATION_RESULT.json",
+    "artifacts/conferences/095/iteration-002/REVIEW_PACKET.md",
+    "artifacts/conferences/095/iteration-002/reports/archive_inventory.json",
+    "artifacts/conferences/095/iteration-002/reports/article_manifest.json",
+    "artifacts/conferences/095/iteration-002/reports/manifest_evidence.json",
+    "artifacts/conferences/095/iteration-002/reports/journal_builder_gate.json",
+    "reports/repository_cleanup_inventory.json"
   ],
   "acceptance_gates": {
+    "manifest_created_automatically": true,
     "all_articles_once": true,
+    "service_documents_excluded": true,
+    "ambiguous_items_fail_closed": true,
     "author_body_changed": false,
     "object_loss": 0,
     "docx_opens_without_repair": true,
@@ -43,7 +69,17 @@
     "tests_green": true,
     "clean_rebuild": true
   },
-  "review_findings": [],
-  "codex_result": null,
-  "reviewer_result": null
+  "codex_result": {
+    "commit": "057025f54886053f07fd00f97582a57240a4b084",
+    "tests": "52 passed in 5.62s",
+    "raw_archive_found": true,
+    "golden_pdf_found": false,
+    "official_docx_found": true,
+    "status": "BUILD BLOCKED",
+    "blocker": "manifest:manifest_source_missing"
+  },
+  "reviewer_result": {
+    "decision": "CHANGES_REQUESTED",
+    "reason": "Потрібен загальний auto-manifest і точніша класифікація RAW; відсутність golden PDF не блокує ітерацію."
+  }
 }
