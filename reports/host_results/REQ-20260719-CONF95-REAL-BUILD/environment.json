@@ -1,0 +1,14 @@
+﻿{
+    "request_id":  "REQ-20260719-CONF95-REAL-BUILD",
+    "git_head":  "79dc7130ef370d2dc8faa2502d6fafaa108add98",
+    "branch":  "agent/journal-builder-95",
+    "python":  "Python 3.12.13",
+    "libreoffice":  "NOT_FOUND",
+    "font_inventory_summary":  {
+                                   "windows_fonts_file_count":  547
+                               },
+    "typography_profile_requested":  "legacy_14pt",
+    "raw_archive_path":  "C:\\Users\\Vint\\Downloads\\95.zip",
+    "raw_archive_present":  false,
+    "conference95_pdf_present":  false
+}
