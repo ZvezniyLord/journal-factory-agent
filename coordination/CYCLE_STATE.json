@@ -1,0 +1,49 @@
+{
+  "protocol_version": 1,
+  "conference_id": 95,
+  "iteration": 1,
+  "state": "READY_FOR_CODEX",
+  "owner": "CODEX",
+  "work_branch": "agent/journal-builder-95",
+  "typography_profile": "legacy_14pt",
+  "golden_pdf_required": false,
+  "goal": "Зібрати з RAW Conference 95 готові DOCX і PDF та довести builder до проходження внутрішніх fidelity, structure, render, TOC і pagination gates.",
+  "next_action": {
+    "id": "CONF95-ITER-001",
+    "instructions": [
+      "Запушити локальний коміт 3a41e18, якщо він ще існує і не запушений.",
+      "Знайти реальний 95.zip у дозволених локальних або підключених сховищах. Офіційний Conference95.pdf не є blocker для розробки.",
+      "Запустити build-journal з профілем legacy_14pt.",
+      "Якщо build падає, виправляти загальні Python/OpenXML правила, додавати regression-тести й повторювати цикл.",
+      "Створити generated DOCX і PDF через Word або LibreOffice без ручного редагування результату.",
+      "Запушити артефакти та машинні звіти в artifacts/conferences/095/iteration-001/.",
+      "Оновити цей state до READY_FOR_REVIEW і передати owner REVIEWER."
+    ]
+  },
+  "required_artifacts": [
+    "Conference95_generated.docx",
+    "Conference95_generated.pdf",
+    "ITERATION_RESULT.json",
+    "REVIEW_PACKET.md",
+    "reports/journal_builder_gate.json",
+    "reports/fidelity_report.json",
+    "reports/render_report.json",
+    "reports/toc_pagination_report.json",
+    "reports/FILES.sha256"
+  ],
+  "acceptance_gates": {
+    "all_articles_once": true,
+    "author_body_changed": false,
+    "object_loss": 0,
+    "docx_opens_without_repair": true,
+    "pdf_rendered": true,
+    "toc_and_pages_consistent": true,
+    "manual_output_edits": false,
+    "conference_id_patches": false,
+    "tests_green": true,
+    "clean_rebuild": true
+  },
+  "review_findings": [],
+  "codex_result": null,
+  "reviewer_result": null
+}
