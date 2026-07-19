@@ -1,186 +1,216 @@
 # AGENTS.md — Journal Factory
 
-## Purpose
+## Mandatory navigation for every new agent chat
+
+This file is the starting point and reading router for the repository.
+
+Do not rely on chat memory, a copied prompt, prior success messages, or commit titles. Repository documents are the persistent source of truth.
+
+Follow this sequence exactly:
+
+1. Read this `AGENTS.md` completely.
+2. Open and read `docs/NEW_CHAT_START.md` completely.
+3. Return to this file.
+4. Open and read `docs/BUSINESS_LOGIC_AND_ROADMAP.md` completely.
+5. Return to this file.
+6. Open and read `CODEX_INSTRUCTION.md` completely.
+7. Return to this file.
+8. Open and read `skills/repository_acceptance/SKILL.md` completely.
+9. Return to this file.
+10. Perform the repository acceptance audit before modifying code.
+11. Begin only the currently approved development cycle.
+
+No referenced document may be replaced by a summary. Do not skip ahead.
+
+## Document responsibilities
+
+- `docs/NEW_CHAT_START.md` — canonical startup protocol for a fresh Codex/Sol chat, current Phase 1 cycle order, testing, real-run, user-testing, and reporting rules.
+- `docs/BUSINESS_LOGIC_AND_ROADMAP.md` — complete product business logic, all cores, system workflow, quality rules, and long-term roadmap.
+- `CODEX_INSTRUCTION.md` — technical implementation contract, cleanup rules, current classes, APIs, tests, and phase gates.
+- `skills/repository_acceptance/SKILL.md` — mandatory independent verification after every cleanup, cycle, migration, or implementation stage.
+
+When documents appear to conflict, stop with `BLOCKED`, quote the conflicting requirements, and request resolution. Do not silently choose one.
+
+## Product purpose
 
 Journal Factory is a local, browser-driven system for discovering conference source files, matching Excel registry records to article documents, transforming each article independently, assembling the final journal, rendering it, and validating the result.
 
-The architecture must follow OOP, SOLID, dependency inversion, explicit interfaces, and test-first development. A monolithic linear script is forbidden.
+The architecture must follow OOP, SOLID, dependency inversion, explicit ports and adapters, typed errors, deterministic core logic, and test-first development. A monolithic linear script is forbidden.
 
-## Universal formatting invariant
+## Non-negotiable universal document invariant
 
-The first document-editing operation after the dashboard and workspace are created is universal normalization.
+After the dashboard and workspace are created, the first document-editing operation is universal normalization.
 
-Every editable text element in every transformed article and in the assembled journal must use:
+Every editable text element in every transformed article and assembled journal must use:
 
 - font size: **11 pt**;
-- line spacing: **1.0 (single)**.
+- line spacing: **1.0 / single**.
 
-This applies without exception to body text, author blocks, affiliations, UDC, annotations, keywords, headings, table text, captions, figure labels stored as editable text, references, bibliography entries, headers, footers, notes, and service text.
+This applies without exception to body text, article headers, authors, affiliations, UDC, titles, annotations, keywords, headings, table cells, captions, figure labels stored as editable text, references, bibliography entries, headers, footers, notes, and service text.
 
-Rasterized text inside an image cannot be reformatted, but its caption and all editable surrounding text must follow the rule. Any editable 14 pt text in production output is a hard failure.
+Rasterized text inside an image cannot be reformatted, but its caption and every editable surrounding object must follow the rule. Any editable production text violating 11 pt or 1.0 is a hard `FAIL`.
 
 ## Single human entry point
 
-The single human entry point is the root `index.html` opened in a supported browser.
+The root `index.html`, served by a local backend on `127.0.0.1`, is the only normal human-facing entry point.
 
-The interface must let the operator:
+The browser interface must eventually allow the operator to:
 
-1. choose the source folder containing raw conference files;
-2. choose the output parent folder;
-3. see a default output proposal on the Desktop named by journal/conference number;
-4. review the detected journal number before start;
-5. start, pause where supported, inspect, and resume the pipeline;
-6. inspect every core, article, warning, LLM call, match score, report, and final quality gate.
+- select the source folder;
+- select the output parent;
+- use a Desktop default named by journal/conference number;
+- review the journal number;
+- start, inspect, pause where supported, and resume the pipeline;
+- inspect every core, article, warning, LLM call, match score, report, and final quality gate.
 
-A plain browser page cannot safely read arbitrary local paths by text input alone. The implementation must use a local backend/desktop bridge while preserving `index.html` as the only human-facing entry point.
+Business logic must not live in HTML.
 
-## Core architecture
+## Core architecture summary
 
-### 1. Workspace Driver Core
+The detailed contracts live in `docs/BUSINESS_LOGIC_AND_ROADMAP.md`.
 
-This is a dedicated kernel and class family responsible only for paths, run identity, workspace creation, action history, and report locations.
+Approved cores include:
 
-Recommended primary class name:
+1. Workspace Driver Core
+2. Browser UI Core
+3. Source Discovery Core
+4. Source Snapshot Core
+5. Excel Registry Core
+6. Retrieval and Matching Core
+7. Article Processing Coordinator
+8. Marker Knowledge Core
+9. Article Segmentation Core
+10. Header Core
+11. Document Normalization Core
+12. Table Core
+13. Figure Core
+14. Reference Core
+15. Assembly Core
+16. Rendering Core
+17. QA Core
+18. Reporting and Dashboard Core
 
-`WorkspaceDriver`
+Each core must expose an explicit interface and machine-readable reports. Deterministic Python logic is primary. A local LLM is allowed only for unresolved ambiguity through a logged decision contract.
 
-Responsibilities:
+## Workspace authority
 
-- accept the source path selected by the operator;
-- accept or derive the output parent path;
-- detect or receive the journal number;
-- default the output path to `<Desktop>/<journal_number>`;
-- create a collision-safe run directory when needed;
-- create and expose canonical subdirectories;
-- remember every resolved path used during the run;
-- record every material action in chronological order;
-- generate machine-readable and human-readable run reports;
-- never parse DOCX, Excel, or article semantics itself.
+`WorkspaceDriver` and its class family own only:
 
-Required canonical directories inside a run:
-
-- `source_snapshot/` — immutable copied source files;
-- `articles_raw/` — discovered article files copied as separate originals;
-- `articles_transformed/` — one independently transformed article per file;
-- `reports/` — JSON, JSONL, CSV, and HTML reports;
-- `logs/` — operational logs;
-- `database/` — local retrieval/index data;
-- `rendered/pdf/` — PDFs;
-- `rendered/png/` — page images;
-- `final/` — final DOCX and approved outputs;
-- `temp/` — disposable working files.
+- source and output paths;
+- run identity;
+- journal number;
+- canonical directory creation;
+- path registry;
+- run context;
+- action history;
+- report registry;
+- persisted run state.
 
 Required abstractions:
 
-- `WorkspaceConfig` — immutable input configuration;
-- `WorkspaceLayout` — immutable resolved paths;
-- `RunContext` — run id, timestamps, journal number, mode, and current state;
-- `ActionRecord` — timestamped event with core, action, status, inputs, outputs, and error data;
-- `PathRegistry` — canonical path keys mapped to absolute normalized paths;
-- `ReportRegistry` — report names, formats, producers, and paths;
-- `WorkspaceDriver` — orchestrates only workspace/path lifecycle;
-- `WorkspaceDriverPort` — interface consumed by other cores;
-- `FileSystemAdapter` — platform-specific filesystem implementation.
+- `WorkspaceConfig`
+- `WorkspaceLayout`
+- `RunContext`
+- `ActionRecord`
+- `ReportRecord`
+- `PathRegistry`
+- `ReportRegistry`
+- `WorkspaceDriverPort`
+- `WorkspaceDriver`
+- `FileSystemAdapter`
 
-The driver must persist at minimum:
+All other cores receive paths through `WorkspaceDriverPort`. They must not construct ad-hoc absolute workspace paths.
 
-- `reports/run_manifest.json`;
-- `reports/action_log.jsonl`;
-- `reports/path_registry.json`;
-- `reports/report_registry.json`;
-- `reports/run_summary.html`.
+Canonical workspace directories:
 
-All cores receive paths through `WorkspaceDriverPort`; they must not construct ad-hoc absolute paths.
+```text
+source_snapshot/
+articles_raw/
+articles_transformed/
+reports/
+logs/
+database/
+rendered/pdf/
+rendered/png/
+final/
+temp/
+```
 
-### 2. Browser UI Core
+Required persisted reports:
 
-Owns `index.html`, UI state, visual pipeline map, progress, warnings, article cards, and operator decisions. It does not contain business logic.
+- `reports/run_manifest.json`
+- `reports/action_log.jsonl`
+- `reports/path_registry.json`
+- `reports/report_registry.json`
+- `reports/run_summary.html`
 
-### 3. Source Discovery Core
+## Current approved scope
 
-Recursively discovers Excel files, DOC/DOCX articles, templates, archives, and supporting assets. It reports candidates and never guesses silently.
+The current approved scope is **Phase 1 only**.
 
-### 4. Excel Registry Core
+Phase 1 includes:
 
-Reads and normalizes conference metadata, journal number, sections, authors, titles, ordering, and identifiers.
+- root `index.html`;
+- local backend and launcher;
+- source-folder selection or bridge;
+- output-parent selection or bridge;
+- journal number;
+- Desktop default;
+- computed workspace path;
+- Workspace Driver class family;
+- defaults, validate, create, and status APIs;
+- canonical workspace creation;
+- deterministic JSON/JSONL reports;
+- automated tests;
+- real launch and user manual testing.
 
-### 5. Retrieval and Matching Core
+Do not implement before Phase 1 is accepted:
 
-Uses deterministic normalization first, then a local retrieval database/RAG-equivalent layer for multilingual author matching, transliteration, aliases, weighted comparison, and confidence scores.
+- Excel parsing;
+- DOC/DOCX parsing or editing;
+- Header Core;
+- marker detection;
+- article transformation;
+- retrieval/RAG;
+- embeddings;
+- local LLM integration;
+- journal assembly;
+- document formatting implementation;
+- PDF/PNG rendering;
+- production document QA.
 
-A small local LLM may be called only for ambiguous cases through an explicit decision contract. Every call must be logged with inputs, output, confidence, and reason.
+The detailed Phase 1 cycles and fresh-chat first action are defined in `docs/NEW_CHAT_START.md` and `CODEX_INSTRUCTION.md`.
 
-### 6. Article Segmentation Core
+## Mandatory development loop
 
-Processes each article independently so that its content fits local LLM context limits. It detects recurring structural markers such as:
+Every cycle uses:
 
-- UDC / УДК;
-- annotation / abstract / анотація;
-- keywords / key words / ключові слова;
-- table / таблиця;
-- figure / рисунок / рис.;
-- references / bibliography / список використаних джерел / література;
-- other repeated multilingual heading-like markers found in the journal corpus.
+`PLAN -> FAILING TEST -> MINIMAL IMPLEMENTATION -> FOCUSED TEST -> FULL TEST SUITE -> REAL RUN -> ARTIFACT INSPECTION -> ARCHITECTURE REVIEW -> REPOSITORY ACCEPTANCE -> FIX -> REPEAT`
 
-### 7. Header Core
+After every cycle apply `skills/repository_acceptance/SKILL.md`.
 
-A separate dedicated kernel responsible only for the article header (“шапка”): UDC, authors, degrees, positions, affiliations, city/country, title, ordering, language variants, and boundaries between header and article body.
+Never proceed while status is `BLOCKED`.
 
-It must combine deterministic rules, marker evidence, visual/style evidence, Excel evidence, retrieval matches, and LLM arbitration only when ambiguity remains.
-
-### 8. Document Normalization Core
-
-Applies the universal 11 pt / 1.0 invariant to every editable text element before further style routing. It must verify the result after writing.
-
-### 9. Assembly Core
-
-Combines transformed articles in Excel order and builds front matter, sections, TOC, pagination, and final DOCX.
-
-### 10. Rendering and QA Core
-
-Renders DOCX to PDF and PNG, performs structural and visual checks, and emits `PASS`, `PASS WITH WARNINGS`, or `FAIL`.
-
-A violation of 11 pt or 1.0 in any editable production text is always `FAIL`.
-
-## Dashboard timing
-
-The dashboard/workspace is created before document normalization and remains available through the entire run. It must show live state from the action log and report registry.
-
-## Development order
-
-Development proceeds in small test-driven stages.
-
-Phase 1 is only:
-
-1. `index.html` as the visible entry point;
-2. source-folder selection;
-3. output-parent selection;
-4. default output proposal `<Desktop>/<journal_number>`;
-5. `WorkspaceDriver` creation;
-6. canonical directory creation;
-7. path/action/report persistence;
-8. tests for all of the above.
-
-Do not implement article parsing, DOCX editing, matching, RAG, LLM calls, or assembly before Phase 1 tests pass.
-
-## Phase 1 acceptance tests
-
-At minimum, tests must prove:
-
-- an explicit source path is normalized and stored;
-- an explicit output path overrides the default;
-- with no explicit output path, Desktop plus journal number is used;
-- missing journal number blocks creation or requests operator confirmation;
-- unsafe journal numbers are sanitized deterministically;
-- repeated runs never overwrite an existing run silently;
-- every canonical directory is created;
-- all paths are absolute and represented in `path_registry.json`;
-- every creation step produces an `ActionRecord` in `action_log.jsonl`;
-- report paths are registered in `report_registry.json`;
-- filesystem failures return a typed failure and are visible in the UI;
-- UI state can be reconstructed from persisted run reports;
-- no other core constructs its own absolute workspace paths.
+After every externally visible cycle, provide exact manual-test instructions and stop with `STATUS: WAITING FOR USER` until the user reports the result.
 
 ## Output quality gate
 
-Production output is not ready unless the final quality report explicitly marks it ready. Draft DOCX files must never be presented as final without the quality gate.
+Production output is not ready unless the final quality report explicitly marks it ready.
+
+Allowed final states:
+
+- `PASS`
+- `PASS WITH WARNINGS`
+- `FAIL`
+
+A draft DOCX must never be presented as final without the quality gate.
+
+## First instruction to a fresh Codex/Sol chat
+
+The only message needed from the user is:
+
+```text
+Open AGENTS.md in the repository and follow its mandatory navigation exactly. Start only the currently approved cycle, perform all tests and real-run checks, give me the manual test, then stop and wait for my result.
+```
+
+Everything else must be loaded from the repository documents.
