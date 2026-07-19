@@ -64,14 +64,17 @@ cores:
       - "Projects per-core state, progress, warnings, reports, files, final results, and structured failures for browser adapters."
       - "Recovers persisted dashboard state after process restart."
       - "Uses deterministic test adapters for unavailable cores and demonstrates a real loopback backend run with temporary folders."
-    status: planned
-    in_progress: false
-    lock_owner: null
-    lock_session: null
-    claimed_at_utc: null
-    branch: null
-    work_item: null
-    allowed_write_scope: []
+    status: in_progress
+    in_progress: true
+    lock_owner: "codex-root-dashboard"
+    lock_session: "dashboard-core-20260719T202651Z-019f7c08"
+    claimed_at_utc: "2026-07-19T20:26:51Z"
+    branch: "main"
+    work_item: "Create the Dashboard Core passport and detailed plan, then implement and verify its port-driven backend execution center with deterministic test adapters."
+    allowed_write_scope:
+      - "cores/dashboard_core/**"
+      - "journal_factory/dashboard_core/**"
+      - "tests/dashboard_core/**"
     last_result: null
     last_commit: null
     completed_at_utc: null
