@@ -106,23 +106,18 @@ cores:
       - "Keeps LLM access behind a future explicit LLM Core port and structured request/response contract."
       - "Provides only a thin root HTML command menu for start and Orchestrator state presentation."
       - "Includes automated tests, a real smoke launch, artifact inspection, and manual test instructions."
-    status: in_progress
-    in_progress: true
-    lock_owner: "codex-root"
-    lock_session: "orchestrator-core-20260719T202446Z-0edc8fe"
-    claimed_at_utc: "2026-07-19T20:24:46Z"
-    branch: "main"
-    work_item: "Create the Orchestrator passport and detailed plan, then implement and smoke-test the deterministic conductor plus its thin root command menu."
-    allowed_write_scope:
-      - "cores/orchestrator_core/CORE.md"
-      - "cores/orchestrator_core/DEVELOPMENT_PLAN.md"
-      - "journal_factory/orchestrator_core/**"
-      - "tests/orchestrator_core/**"
-      - "index.html"
-    last_result: null
-    last_commit: null
-    completed_at_utc: null
-    notes: "Registered as a Phase 1 deterministic foundation. Dashboard Core and LLM Core remain separate."
+    status: completed
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: "PASS WITH WARNINGS"
+    last_commit: "13b020f4a0d3fa2b0050a50edc2940a538c2e09c"
+    completed_at_utc: "2026-07-19T20:45:35Z"
+    notes: "Implemented deterministic registration, dependency validation, run states/transitions, typed invocation contracts/results, bounded retries, pause/resume, three failure routes, append-only action logging, explicit future LLM Core port/contracts, loopback API, and thin root command menu. Full local suite: 19 passed, 0 failed, 0 skipped. Real smoke: idle to completed, bootstrap complete, 6 actions, clean shutdown. Desktop and 390x844 browser artifacts passed visual inspection. Dashboard implementation files and LLM runtime were untouched. Warning: the user-visible checkout retained a pre-existing staged reset that prevented a safe branch fast-forward; new Orchestrator files were hash-mirrored and the same tests/smoke passed there."
 
   workspace_driver:
     display_name: "Workspace Driver Core"
