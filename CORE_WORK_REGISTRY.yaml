@@ -39,6 +39,14 @@ selection_aliases:
   "dashboard": dashboard_core
   "dashboard core": dashboard_core
   "reporting and dashboard": dashboard_core
+  "llm": llm_core
+  "llm core": llm_core
+  "local llm": llm_core
+  "lm studio": llm_core
+  "ollama": llm_core
+  "локальна модель": llm_core
+  "ядро llm": llm_core
+  "ядро локальної моделі": llm_core
   "udc": udc_detection
   "удк": udc_detection
   "ядро удк": udc_detection
@@ -153,6 +161,39 @@ cores:
     last_commit: null
     completed_at_utc: null
     notes: null
+
+  llm_core:
+    display_name: "LLM Core"
+    description: "Separate callable reasoning service that discovers and validates local or containerized model runtimes, normalizes structured requests and responses, applies bounded retry and fallback policy, and records provenance."
+    roadmap_reference: "docs/CORE_DEVELOPMENT_PROTOCOL.md#core-architecture-separation"
+    phase: future
+    development_case: "Build the provider-neutral LLM integration boundary for LM Studio, Ollama native API, Ollama OpenAI-compatible API, Docker-host and Docker-network connectivity, custom OpenAI-compatible endpoints, deterministic endpoint discovery, model selection, health checks, structured JSON validation, bounded retry/fallback, diagnostics, security, and provenance."
+    depends_on:
+      - workspace_driver
+      - orchestrator_core
+    passport_path: "cores/llm_core/CORE.md"
+    development_plan_path: "cores/llm_core/DEVELOPMENT_PLAN.md"
+    acceptance_outline:
+      - "Exposes one typed LLM Core port; no other core embeds or invokes model runtimes directly."
+      - "Supports LM Studio, Ollama native, Ollama OpenAI-compatible, and explicitly configured OpenAI-compatible endpoints through replaceable adapters."
+      - "Discovers only a deterministic allowlist of configured, local, Docker service, host.docker.internal, and Docker-gateway endpoints; broad network scanning is forbidden."
+      - "Performs DNS, TCP, HTTP, API, model-list, inference, and structured-JSON checks with normalized results and masked secrets."
+      - "Uses deterministic provider/model priority, bounded retries, cooldown/circuit-breaking, and explicit fallback provenance."
+      - "Works for host-to-host, container-to-host, host-to-container, and same-network Compose deployments without hard-coded magic IP addresses."
+      - "Provides unit tests with HTTP mocks, separate integration smoke tests, Docker Compose validation, machine-readable diagnostics, and real-run evidence."
+      - "Does not download large models or expose services externally without explicit user approval."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: "Registered on 2026-07-19. Implementation remains blocked by the current Phase 1 gate until explicit user approval. Read cores/llm_core/CORE.md and cores/llm_core/DEVELOPMENT_PLAN.md before any claim."
 
   udc_detection:
     display_name: "UDC Detection Core"
