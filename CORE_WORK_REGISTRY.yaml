@@ -72,21 +72,18 @@ cores:
       - "Projects per-core state, progress, warnings, reports, files, final results, and structured failures for browser adapters."
       - "Recovers persisted dashboard state after process restart."
       - "Uses deterministic test adapters for unavailable cores and demonstrates a real loopback backend run with temporary folders."
-    status: in_progress
-    in_progress: true
-    lock_owner: "codex-root-dashboard"
-    lock_session: "dashboard-core-20260719T202651Z-019f7c08"
-    claimed_at_utc: "2026-07-19T20:26:51Z"
-    branch: "main"
-    work_item: "Create the Dashboard Core passport and detailed plan, then implement and verify its port-driven backend execution center with deterministic test adapters."
-    allowed_write_scope:
-      - "cores/dashboard_core/**"
-      - "journal_factory/dashboard_core/**"
-      - "tests/dashboard_core/**"
-    last_result: null
-    last_commit: null
-    completed_at_utc: null
-    notes: "User-approved Phase 1 foundation; root HTML and Orchestrator implementation remain owned by separate cores."
+    status: completed
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: "PASS WITH WARNINGS"
+    last_commit: "10463eabea4fbcf0fc310922873713a09de53b4f"
+    completed_at_utc: "2026-07-19T20:49:17Z"
+    notes: "Implemented typed Dashboard models/ports, start/read/resume service, recursive discovery requests, separate Excel/article locator calls, Orchestrator submission/event projection, warnings/reports/files/final-result collection, atomic JSON recovery, and loopback HTTP adapter. Dashboard suite: 31 passed; integrated Orchestrator regressions: 19 passed; 0 failed/skipped. Real run: 4 recursive files, Excel 1, articles 2, 5 completed core projections, persisted restart recovery/resume, and sanitized discovery failure. Acceptance plan commit: 4992835ed1f3cd34bcf5a24a183e320d971c7ae6. Root HTML and Orchestrator implementation were untouched. Warning: the user-visible checkout retains a pre-existing staged reset and cannot be safely fast-forwarded; all 15 Dashboard files were hash-mirrored there with 0 mismatches and the same tests/real run passed."
 
   orchestrator_core:
     display_name: "Orchestrator Core"
