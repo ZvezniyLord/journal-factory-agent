@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -728,34 +729,52 @@ def _extract_legacy_doc_texts(paths: list[Path]) -> tuple[dict[str, str], str, l
     with tempfile.TemporaryDirectory(prefix="journal-manifest-") as temp_dir:
         input_path = Path(temp_dir) / "input.json"
         output_path = Path(temp_dir) / "output.json"
+        read_requests: list[dict[str, str]] = []
+        copy_errors: list[str] = []
+        for index, path in enumerate(paths):
+            source = path.resolve()
+            short_path = Path(temp_dir) / f"legacy_{index:04d}{path.suffix.lower()}"
+            try:
+                shutil.copyfile(source, short_path)
+            except OSError as exc:
+                copy_errors.append(f"{source}|copy_failed:{type(exc).__name__}:{exc}")
+                continue
+            read_requests.append({"source": str(source), "read": str(short_path)})
         input_path.write_text(
-            json.dumps([str(path.resolve()) for path in paths], ensure_ascii=False),
+            json.dumps(read_requests, ensure_ascii=False),
             encoding="utf-8",
         )
         script = r"""
 $ErrorActionPreference = 'Stop'
-$paths = Get-Content -Raw -Encoding UTF8 $env:JF_LEGACY_INPUT | ConvertFrom-Json
+$requests = Get-Content -Raw -Encoding UTF8 $env:JF_LEGACY_INPUT | ConvertFrom-Json
 $results = @{}
-$word = New-Object -ComObject Word.Application
-$word.Visible = $false
-$word.DisplayAlerts = 0
-$word.AutomationSecurity = 3
-try {
-  foreach ($path in $paths) {
-    $document = $null
-    try {
-      $document = $word.Documents.Open([string]$path)
-      $results[[string]$path] = [string]$document.Content.Text
-    } catch {
-      $results[[string]$path] = ''
-    } finally {
-      if ($null -ne $document) { $document.Close(0) }
-    }
+$errors = @()
+foreach ($request in $requests) {
+  $source = [string]$request.source
+  $path = [string]$request.read
+  $word = $null
+  $document = $null
+  try {
+    # A malformed legacy file can poison a shared Word COM session. Isolating
+    # each read keeps later evidence extraction deterministic.
+    $word = New-Object -ComObject Word.Application
+    $word.Visible = $false
+    $word.DisplayAlerts = 0
+    $word.AutomationSecurity = 3
+    $document = $word.Documents.Open([string]$path, $false, $true, $false)
+    $results[$source] = [string]$document.Content.Text
+  } catch {
+    $results[$source] = ''
+    $errors += "${source}|$($_.Exception.Message)"
+  } finally {
+    if ($null -ne $document) { $document.Close(0) }
+    if ($null -ne $word) { $word.Quit() }
   }
-  $results | ConvertTo-Json -Depth 3 | Set-Content -Encoding UTF8 $env:JF_LEGACY_OUTPUT
-} finally {
-  $word.Quit()
 }
+[pscustomobject]@{
+  results = $results
+  errors = $errors
+} | ConvertTo-Json -Depth 4 | Set-Content -Encoding UTF8 $env:JF_LEGACY_OUTPUT
 """
         env = dict(os.environ)
         env["JF_LEGACY_INPUT"] = str(input_path)
@@ -786,4 +805,12 @@ try {
             raw = json.loads(output_path.read_text(encoding="utf-8-sig"))
         except (OSError, json.JSONDecodeError) as exc:
             return {}, "word_com_failed", [f"legacy_output_invalid:{type(exc).__name__}:{exc}"]
-        return {str(Path(key)): str(value or "") for key, value in raw.items()}, "word_com_read_only", []
+        values = raw.get("results", {}) if isinstance(raw, dict) else {}
+        errors = raw.get("errors", []) if isinstance(raw, dict) else []
+        if isinstance(errors, str):
+            errors = [errors]
+        return (
+            {str(Path(key)): str(value or "") for key, value in values.items()},
+            "word_com_read_only_isolated",
+            [*copy_errors, *(str(item) for item in errors)],
+        )

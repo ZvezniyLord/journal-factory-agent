@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+import sys
 
 from .audit import audit_article, release_gate, write_reports
 from .builder_pipeline import run_journal_builder
@@ -15,6 +16,7 @@ from .preflight import run_preflight, write_preflight
 from .production_pipeline import run_production_build
 from .template import style_snapshot, write_style_snapshot
 from .webapp import serve
+from .word_render import render_docx_to_pdf
 
 
 def _resolve_source_path(value: str | None) -> str | None:
@@ -107,6 +109,12 @@ def cmd_analyze_conference(args: argparse.Namespace) -> int:
     return 0 if result["status"] == "PASS_ANALYSIS" else 1
 
 
+def cmd_render_journal(args: argparse.Namespace) -> int:
+    result = render_docx_to_pdf(args.docx, args.pdf, args.report)
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0 if result["status"] == "PASS" else 2
+
+
 def cmd_analyze_series(args: argparse.Namespace) -> int:
     result = run_series(args.manifest, args.output, _llm_config(args))
     print(json.dumps(result, ensure_ascii=False, indent=2))
@@ -119,6 +127,8 @@ def cmd_serve(args: argparse.Namespace) -> int:
 
 
 def main() -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
     parser = argparse.ArgumentParser(prog="journal_factory")
     sub = parser.add_subparsers(required=True)
 
@@ -153,6 +163,12 @@ def main() -> int:
     )
     journal.add_argument("--output", type=Path, default=Path("build/journal_builder"))
     journal.set_defaults(func=cmd_build_journal)
+
+    render = sub.add_parser("render-journal")
+    render.add_argument("--docx", type=Path, required=True)
+    render.add_argument("--pdf", type=Path, required=True)
+    render.add_argument("--report", type=Path, required=True)
+    render.set_defaults(func=cmd_render_journal)
 
     analyze = sub.add_parser("analyze-conference")
     analyze.add_argument("--conference-id", type=int, required=True)
