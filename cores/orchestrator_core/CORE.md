@@ -90,6 +90,7 @@ database, Docker, Ollama, or browser packages.
 - `CORE_ID_INVALID`
 - `CORE_ALREADY_REGISTERED`
 - `CORE_NOT_REGISTERED`
+- `CORE_RETRY_LIMIT_INVALID`
 - `CORE_DEPENDENCY_UNKNOWN`
 - `CORE_DEPENDENCY_CYCLE`
 - `PIPELINE_EMPTY`
@@ -101,6 +102,7 @@ database, Docker, Ollama, or browser packages.
 - `RUN_TRANSITION_INVALID`
 - `RUN_NOT_PAUSED`
 - `CORE_RESULT_INVALID`
+- `CORE_INVOCATION_EXCEPTION` (typed invocation failure)
 - `ACTION_LOG_WRITE_FAILED`
 
 Domain failures returned by invoked cores remain structured `InvocationError`
@@ -152,7 +154,9 @@ ports. Action records are append-only and sequence ordered.
    unless it appears in `pre_satisfied_dependencies`.
 5. One `advance` command invokes at most one pipeline core, including its bounded
    retry attempts.
-6. Retry count is `max_retries`; total attempts are `1 + max_retries`.
+6. Retry count is `max_retries`; one uninterrupted advance cycle performs at
+   most `1 + max_retries` attempts. A manual resume after a `pause_run` route
+   starts a new bounded cycle and keeps attempt IDs monotonic.
 7. Only a typed retryable failure may be retried.
 8. Pause is cooperative and is acknowledged before the next invocation.
 9. Resume is legal only from `paused` for the same run ID.

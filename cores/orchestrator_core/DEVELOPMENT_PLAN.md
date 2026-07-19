@@ -351,24 +351,91 @@ Python traceback, or external network request appears.
 - [x] Claim only `orchestrator_core` and verify remote ownership.
 - [x] Create the passport before implementation.
 - [x] Create this detailed plan before implementation.
-- [ ] Add failing tests for contracts, registry, and state machine.
-- [ ] Implement contracts, registry, and state machine.
-- [ ] Add failing tests for conductor behavior.
-- [ ] Implement routing, retries, failure routes, and pause/resume.
-- [ ] Add failing HTTP/HTML tests.
-- [ ] Implement the thin adapter and root command menu.
-- [ ] Run focused and full automated tests.
-- [ ] Run and inspect the real smoke launch.
-- [ ] Perform architecture and repository acceptance reviews.
-- [ ] Update actual progress, evidence, next action, and blockers.
+- [x] Add failing tests for contracts, registry, and state machine.
+- [x] Implement contracts, registry, and state machine.
+- [x] Add failing tests for conductor behavior.
+- [x] Implement routing, retries, failure routes, and pause/resume.
+- [x] Add failing HTTP/HTML tests.
+- [x] Implement the thin adapter and root command menu.
+- [x] Run focused and full automated tests.
+- [x] Run and inspect the real smoke launch.
+- [x] Perform architecture review and initial repository acceptance checks.
+- [x] Update actual progress, evidence, next action, and blockers.
 - [ ] Push implementation and verify remote state.
 - [ ] Record result and release only the Orchestrator lock.
 
+## Actual Progress and Evidence
+
+Failing test evidence:
+
+- `python -m unittest discover -s tests/orchestrator_core -p 'test_*.py' -v`
+  initially ran five failed test-module imports because the intentionally absent
+  `journal_factory.orchestrator_core` package did not exist.
+
+Implemented under the declared scope:
+
+- immutable structured invocation, action, snapshot, and future LLM contracts;
+- stable Orchestrator errors;
+- port protocols;
+- core registry and deterministic dependency checks;
+- legal run-state machine;
+- conductor with ordered invocation, bounded retries, three failure routes,
+  cooperative pause/resume, exception suppression, and append-only actions;
+- in-memory and bootstrap smoke adapters;
+- loopback HTTP state/start adapter;
+- root command menu;
+- 19 automated tests across contracts, registry, state, conductor, recovery, and
+  real HTTP behavior.
+
+Verification evidence:
+
+- focused suite with `-W error::ResourceWarning`: 19 passed, 0 failed, 0 skipped,
+  1.030 seconds;
+- repository discovery suite: 19 passed, 0 failed, 0 skipped, 1.029 seconds;
+- `python -m compileall -q journal_factory/orchestrator_core
+  tests/orchestrator_core`: PASS;
+- real `python -m journal_factory.orchestrator_core.smoke`: initial `idle`, final
+  `completed`, `bootstrap` completed, six actions, 7,292 HTML bytes, clean server
+  shutdown;
+- live loopback launch: health and state endpoints returned valid JSON;
+- completed-state browser artifact at 1280 x 800: run ID visible, state
+  `COMPLETED`, `1 / 1` cores, six actions, zero warnings;
+- mobile device-emulated artifact at 390 x 844: no clipping, overlap, or text
+  overflow;
+- scope/forbidden-import scan found no Dashboard implementation, LLM runtime,
+  DOCX, Excel, cloud API, subprocess, public bind, or shell execution code.
+
+User-visible local workspace evidence:
+
+- resolved repository path:
+  `C:\Users\Vint\Desktop\Галенко_Віталій_304ТН_варіант_5`;
+- the checkout contained a pre-existing staged clean-reset change and could not be
+  safely fast-forwarded without altering user work;
+- only new Orchestrator scope paths and the current registry were mirrored into
+  that checkout; representative SHA-256 hashes matched the canonical local clone;
+- from that exact visible path, full discovery passed 19 tests with 0 failures and
+  0 skipped in 1.032 seconds, compileall passed, and the real smoke reached
+  `completed` with six actions and clean shutdown;
+- no reset, stash, checkout replacement, or Dashboard path modification was used.
+
+Architecture review:
+
+- domain modules have no HTTP, filesystem, document, or model dependency;
+- HTTP path resolution exists only in the static adapter;
+- all core calls and action writes use injected ports;
+- HTML contains only presentation and API commands;
+- Dashboard Core remains separately locked by another session with disjoint paths;
+- the LLM boundary is a protocol and structured contract only.
+
 ## Current State
 
-Status: passport and detailed plan prepared under the verified lock; no
-implementation exists yet.
+Status: implementation and local verification are complete under the verified
+lock. Initial architecture and artifact reviews pass.
 
-Next exact action: commit these documents, then create the Cycle 1 failing tests.
+Next exact action: fetch current remote main, integrate disjoint concurrent work,
+rerun the combined full suite and smoke, commit/push the implementation, perform
+final repository acceptance, then record the result and release the lock.
 
-Blockers: none.
+Blockers: none for the Orchestrator release. Strict branch synchronization of the
+pre-existing dirty checkout remains a repository warning; its staged user work was
+preserved and the approved Orchestrator files are present and locally verified.

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Journal Factory | Orchestrator</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #171a1f;
+      --muted: #5d646d;
+      --line: #cfd4d8;
+      --canvas: #f2f4f5;
+      --surface: #ffffff;
+      --accent: #176a46;
+      --accent-hover: #105438;
+      --warning: #9a5600;
+      --danger: #a12b2b;
+      --focus: #1771b8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 15px/1.45 "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .header-inner,
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .header-inner { padding: 22px 0 18px; }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 650;
+    }
+
+    .core-label {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main { padding: 28px 0; }
+
+    .command-panel {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      padding: 22px;
+    }
+
+    .panel-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 650;
+    }
+
+    .state-badge {
+      min-width: 112px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 5px 9px;
+      background: #f7f8f8;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 650;
+      text-transform: uppercase;
+    }
+
+    .state-badge[data-state="completed"] { border-color: #7db799; color: var(--accent); background: #eef8f2; }
+    .state-badge[data-state="failed"] { border-color: #d7a0a0; color: var(--danger); background: #fff3f3; }
+    .state-badge[data-state="running"] { border-color: #d9b47e; color: var(--warning); background: #fff8ed; }
+
+    dl {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 0;
+      margin: 0 0 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    dt,
+    dd {
+      margin: 0;
+      min-width: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 8px;
+      overflow-wrap: anywhere;
+    }
+
+    dt { color: var(--muted); }
+    dd { font-family: Consolas, "Courier New", monospace; }
+
+    .commands {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    button {
+      min-height: 40px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    button:focus-visible { outline: 3px solid color-mix(in srgb, var(--focus) 35%, transparent); outline-offset: 2px; }
+    button:disabled { cursor: wait; opacity: .62; }
+    .primary { background: var(--accent); color: #fff; }
+    .primary:hover:not(:disabled) { background: var(--accent-hover); }
+    .secondary { border-color: var(--line); background: #f7f8f8; color: var(--ink); }
+    .secondary:hover:not(:disabled) { background: #eceff0; }
+
+    .error {
+      min-height: 22px;
+      margin: 14px 0 0;
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    @media (max-width: 560px) {
+      .header-inner,
+      main { width: min(100% - 20px, 760px); }
+      main { padding-top: 16px; }
+      .command-panel { padding: 16px; }
+      .panel-heading { align-items: flex-start; flex-direction: column; }
+      dl { grid-template-columns: 1fr; }
+      dt { border-bottom: 0; padding-bottom: 2px; }
+      dd { padding-top: 2px; }
+      .commands button { flex: 1 1 140px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Journal Factory</h1>
+      <p class="core-label">Orchestrator Command</p>
+    </div>
+  </header>
+  <main>
+    <section class="command-panel" aria-labelledby="command-heading">
+      <div class="panel-heading">
+        <h2 id="command-heading">Run state</h2>
+        <output id="run-state" class="state-badge" data-state="idle">Connecting</output>
+      </div>
+      <dl>
+        <dt>Run ID</dt><dd id="run-id">-</dd>
+        <dt>Current core</dt><dd id="current-core">-</dd>
+        <dt>Completed</dt><dd id="completed-cores">0 / 0</dd>
+        <dt>Actions</dt><dd id="action-count">0</dd>
+        <dt>Warnings</dt><dd id="warning-count">0</dd>
+      </dl>
+      <div class="commands">
+        <button id="start-run" class="primary" type="button">Start run</button>
+        <button id="refresh-state" class="secondary" type="button">Refresh</button>
+      </div>
+      <p id="command-error" class="error" role="alert" aria-live="polite"></p>
+    </section>
+  </main>
+  <script>
+    const fields = {
+      state: document.querySelector('#run-state'),
+      runId: document.querySelector('#run-id'),
+      currentCore: document.querySelector('#current-core'),
+      completed: document.querySelector('#completed-cores'),
+      actions: document.querySelector('#action-count'),
+      warnings: document.querySelector('#warning-count'),
+      error: document.querySelector('#command-error'),
+      start: document.querySelector('#start-run'),
+      refresh: document.querySelector('#refresh-state')
+    };
+
+    function present(snapshot) {
+      fields.state.textContent = snapshot.state.replaceAll('_', ' ');
+      fields.state.dataset.state = snapshot.state;
+      fields.runId.textContent = snapshot.run_id || '-';
+      fields.currentCore.textContent = snapshot.current_core || snapshot.next_core || '-';
+      fields.completed.textContent = `${snapshot.completed_cores.length} / ${snapshot.pipeline.length}`;
+      fields.actions.textContent = snapshot.action_count;
+      fields.warnings.textContent = snapshot.warnings.length;
+    }
+
+    async function request(path, options) {
+      const response = await fetch(path, options);
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.error?.message || 'Command failed.');
+      return payload;
+    }
+
+    async function refresh() {
+      fields.error.textContent = '';
+      try {
+        present(await request('/api/orchestrator/state'));
+      } catch (error) {
+        fields.error.textContent = error.message;
+      }
+    }
+
+    fields.start.addEventListener('click', async () => {
+      fields.start.disabled = true;
+      fields.error.textContent = '';
+      try {
+        present(await request('/api/orchestrator/start', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: '{}'
+        }));
+      } catch (error) {
+        fields.error.textContent = error.message;
+      } finally {
+        fields.start.disabled = false;
+      }
+    });
+
+    fields.refresh.addEventListener('click', refresh);
+    refresh();
+  </script>
+</body>
+</html>
