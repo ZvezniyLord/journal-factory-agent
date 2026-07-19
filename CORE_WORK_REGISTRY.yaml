@@ -39,6 +39,9 @@ selection_aliases:
   "dashboard": dashboard_core
   "dashboard core": dashboard_core
   "reporting and dashboard": dashboard_core
+  "phase 1 browser acceptance": phase1_browser_acceptance
+  "browser acceptance": phase1_browser_acceptance
+  "workspace browser integration": phase1_browser_acceptance
   "llm": llm_core
   "llm core": llm_core
   "local llm": llm_core
@@ -53,6 +56,37 @@ selection_aliases:
   "виявлення удк": udc_detection
 
 cores:
+  phase1_browser_acceptance:
+    display_name: "Phase 1 Browser Acceptance"
+    description: "Narrow integration work item joining Browser UI, Workspace Driver, Dashboard, and Orchestrator through real local APIs for Phase 1 acceptance."
+    roadmap_reference: "docs/NEXT_CHAT_MANIFEST_DASHBOARD_ACCEPTANCE.md"
+    phase: 1
+    development_case: "Replace the rejected diagnostic menu with the real local workspace and run workflow, verify the canonical conference archive, and expose generated report/output paths without moving business logic into HTML."
+    depends_on:
+      - dashboard_core
+      - orchestrator_core
+    passport_path: "cores/phase1_browser_acceptance/CORE.md"
+    development_plan_path: "cores/phase1_browser_acceptance/DEVELOPMENT_PLAN.md"
+    acceptance_outline:
+      - "Provides editable source and output paths plus real native folder/file selection APIs."
+      - "Provides journal number, server-computed workspace path, validation, workspace creation, start, refresh, and resume controls."
+      - "Creates every canonical workspace directory and required JSON, JSONL, and HTML report through Workspace Driver interfaces."
+      - "Projects Dashboard and Orchestrator state and exposes existing report/output paths through browser-safe local APIs."
+      - "Runs against the canonical local Conference 95 archive without modifying it and verifies every generated artifact."
+      - "Passes focused, full-suite, browser viewport, real-run, architecture, and repository acceptance checks."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: "Registered after the user rejected the diagnostic-only root menu. This work item is the only owner of the cross-core Phase 1 acceptance fix."
+
   dashboard_core:
     display_name: "Dashboard Core"
     description: "Operational execution center that creates or restores runs, requests source discovery and candidate location through ports, submits work to Orchestrator Core, and projects live run state for browser adapters."
