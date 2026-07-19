@@ -1,0 +1,336 @@
+{
+  "status": "PASS",
+  "output": "build\\iteration-003-final-d\\Conference95\\Conference95_generated.docx",
+  "toc_tail_insert_index": 74,
+  "inserted": [
+    {
+      "position": 1,
+      "article_id": "article-001",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-001.docx",
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "title_bookmark": "JF_ARTICLE_001_START",
+      "inserted_body_elements": 38
+    },
+    {
+      "position": 2,
+      "article_id": "article-002",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-002.docx",
+      "section": "PSYCHOLOGY AND PSYCHIATRY",
+      "title_bookmark": "JF_ARTICLE_002_START",
+      "inserted_body_elements": 107
+    },
+    {
+      "position": 3,
+      "article_id": "article-003",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-003.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_003_START",
+      "inserted_body_elements": 30
+    },
+    {
+      "position": 4,
+      "article_id": "article-004",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-004.docx",
+      "section": "PHYSICAL AND MATHEMATICAL SCIENCES",
+      "title_bookmark": "JF_ARTICLE_004_START",
+      "inserted_body_elements": 21
+    },
+    {
+      "position": 5,
+      "article_id": "article-005",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-005.docx",
+      "section": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "title_bookmark": "JF_ARTICLE_005_START",
+      "inserted_body_elements": 39
+    },
+    {
+      "position": 6,
+      "article_id": "article-006",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-006.docx",
+      "section": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY",
+      "title_bookmark": "JF_ARTICLE_006_START",
+      "inserted_body_elements": 31
+    },
+    {
+      "position": 7,
+      "article_id": "article-007",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-007.docx",
+      "section": "PHILOLOGY AND JOURNALISM",
+      "title_bookmark": "JF_ARTICLE_007_START",
+      "inserted_body_elements": 19
+    },
+    {
+      "position": 8,
+      "article_id": "article-008",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-008.docx",
+      "section": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "title_bookmark": "JF_ARTICLE_008_START",
+      "inserted_body_elements": 48
+    },
+    {
+      "position": 9,
+      "article_id": "article-009",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-009.docx",
+      "section": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY",
+      "title_bookmark": "JF_ARTICLE_009_START",
+      "inserted_body_elements": 44
+    },
+    {
+      "position": 10,
+      "article_id": "article-010",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-010.docx",
+      "section": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "title_bookmark": "JF_ARTICLE_010_START",
+      "inserted_body_elements": 42
+    },
+    {
+      "position": 11,
+      "article_id": "article-011",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-011.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_011_START",
+      "inserted_body_elements": 110
+    },
+    {
+      "position": 12,
+      "article_id": "article-012",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-012.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_012_START",
+      "inserted_body_elements": 75
+    },
+    {
+      "position": 13,
+      "article_id": "article-013",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-013.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_013_START",
+      "inserted_body_elements": 21
+    },
+    {
+      "position": 14,
+      "article_id": "article-014",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-014.docx",
+      "section": "ECONOMIC THEORY, MACRO- AND REGIONAL ECONOMY",
+      "title_bookmark": "JF_ARTICLE_014_START",
+      "inserted_body_elements": 25
+    },
+    {
+      "position": 15,
+      "article_id": "article-015",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-015.docx",
+      "section": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "title_bookmark": "JF_ARTICLE_015_START",
+      "inserted_body_elements": 49
+    },
+    {
+      "position": 16,
+      "article_id": "article-016",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-016.docx",
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "title_bookmark": "JF_ARTICLE_016_START",
+      "inserted_body_elements": 53
+    },
+    {
+      "position": 17,
+      "article_id": "article-017",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-017.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_017_START",
+      "inserted_body_elements": 59
+    },
+    {
+      "position": 18,
+      "article_id": "article-018",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-018.docx",
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "title_bookmark": "JF_ARTICLE_018_START",
+      "inserted_body_elements": 65
+    },
+    {
+      "position": 19,
+      "article_id": "article-019",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-019.docx",
+      "section": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "title_bookmark": "JF_ARTICLE_019_START",
+      "inserted_body_elements": 30
+    },
+    {
+      "position": 20,
+      "article_id": "article-020",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-020.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_020_START",
+      "inserted_body_elements": 56
+    },
+    {
+      "position": 21,
+      "article_id": "article-021",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-021.docx",
+      "section": "PSYCHOLOGY AND PSYCHIATRY",
+      "title_bookmark": "JF_ARTICLE_021_START",
+      "inserted_body_elements": 101
+    },
+    {
+      "position": 22,
+      "article_id": "article-022",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-022.docx",
+      "section": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "title_bookmark": "JF_ARTICLE_022_START",
+      "inserted_body_elements": 34
+    },
+    {
+      "position": 23,
+      "article_id": "article-023",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-023.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_023_START",
+      "inserted_body_elements": 30
+    },
+    {
+      "position": 24,
+      "article_id": "article-024",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-024.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_024_START",
+      "inserted_body_elements": 56
+    },
+    {
+      "position": 25,
+      "article_id": "article-025",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-025.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_025_START",
+      "inserted_body_elements": 33
+    },
+    {
+      "position": 26,
+      "article_id": "article-026",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-026.docx",
+      "section": "LAW AND INTERNATIONAL LAW",
+      "title_bookmark": "JF_ARTICLE_026_START",
+      "inserted_body_elements": 43
+    },
+    {
+      "position": 27,
+      "article_id": "article-027",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-027.docx",
+      "section": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "title_bookmark": "JF_ARTICLE_027_START",
+      "inserted_body_elements": 40
+    },
+    {
+      "position": 28,
+      "article_id": "article-028",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-028.docx",
+      "section": "LAW AND INTERNATIONAL LAW",
+      "title_bookmark": "JF_ARTICLE_028_START",
+      "inserted_body_elements": 29
+    },
+    {
+      "position": 29,
+      "article_id": "article-029",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-029.docx",
+      "section": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "title_bookmark": "JF_ARTICLE_029_START",
+      "inserted_body_elements": 33
+    },
+    {
+      "position": 30,
+      "article_id": "article-030",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-030.docx",
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "title_bookmark": "JF_ARTICLE_030_START",
+      "inserted_body_elements": 102
+    },
+    {
+      "position": 31,
+      "article_id": "article-031",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-031.docx",
+      "section": "PSYCHOLOGY AND PSYCHIATRY",
+      "title_bookmark": "JF_ARTICLE_031_START",
+      "inserted_body_elements": 33
+    },
+    {
+      "position": 32,
+      "article_id": "article-032",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-032.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_032_START",
+      "inserted_body_elements": 27
+    },
+    {
+      "position": 33,
+      "article_id": "article-033",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-033.docx",
+      "section": "SOCIAL WORK AND SOCIAL WELFARE",
+      "title_bookmark": "JF_ARTICLE_033_START",
+      "inserted_body_elements": 23
+    },
+    {
+      "position": 34,
+      "article_id": "article-034",
+      "source_file": "build\\iteration-003-final-d\\Conference95\\prepared_articles\\article-034.docx",
+      "section": "PEDAGOGY AND EDUCATION",
+      "title_bookmark": "JF_ARTICLE_034_START",
+      "inserted_body_elements": 39
+    }
+  ],
+  "inserted_count": 34,
+  "structure": {
+    "status": "PASS",
+    "toc_instruction": "TOC \\h \\z \\t \"SECTION;1;Назва1;2\"",
+    "toc_style_mapping": {
+      "SECTION": 1,
+      "Назва1": 2
+    },
+    "toc_style_separator": ";",
+    "title_style_id": "11",
+    "title_styles_applied": 34,
+    "article_bookmarks": [
+      "JF_ARTICLE_001_START",
+      "JF_ARTICLE_002_START",
+      "JF_ARTICLE_003_START",
+      "JF_ARTICLE_004_START",
+      "JF_ARTICLE_005_START",
+      "JF_ARTICLE_006_START",
+      "JF_ARTICLE_007_START",
+      "JF_ARTICLE_008_START",
+      "JF_ARTICLE_009_START",
+      "JF_ARTICLE_010_START",
+      "JF_ARTICLE_011_START",
+      "JF_ARTICLE_012_START",
+      "JF_ARTICLE_013_START",
+      "JF_ARTICLE_014_START",
+      "JF_ARTICLE_015_START",
+      "JF_ARTICLE_016_START",
+      "JF_ARTICLE_017_START",
+      "JF_ARTICLE_018_START",
+      "JF_ARTICLE_019_START",
+      "JF_ARTICLE_020_START",
+      "JF_ARTICLE_021_START",
+      "JF_ARTICLE_022_START",
+      "JF_ARTICLE_023_START",
+      "JF_ARTICLE_024_START",
+      "JF_ARTICLE_025_START",
+      "JF_ARTICLE_026_START",
+      "JF_ARTICLE_027_START",
+      "JF_ARTICLE_028_START",
+      "JF_ARTICLE_029_START",
+      "JF_ARTICLE_030_START",
+      "JF_ARTICLE_031_START",
+      "JF_ARTICLE_032_START",
+      "JF_ARTICLE_033_START",
+      "JF_ARTICLE_034_START"
+    ],
+    "section_count": 3,
+    "page_number_policy": {
+      "first_section_start": 1,
+      "title_page_number_hidden": true,
+      "later_sections_continue": true,
+      "footer_field": "PAGE"
+    },
+    "blockers": []
+  },
+  "blockers": []
+}

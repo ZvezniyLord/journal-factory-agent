@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-07-19T00:00:00+03:00",
+  "policy_source": "upstream/agent/journal-control:coordination/CLEANUP_POLICY.md",
+  "workspace_root": "C:/Users/Vint/Desktop/Галенко_Віталій_304ТН_варіант_5",
+  "keep": [
+    {
+      "path": "journal_factory/",
+      "evidence": "Production Python package imported by tests and CLI."
+    },
+    {
+      "path": "tests/",
+      "evidence": "Active regression suite; 57 tests passed before cleanup."
+    },
+    {
+      "path": "fixtures/",
+      "evidence": "Regression inputs used by active tests."
+    },
+    {
+      "path": "schemas/",
+      "evidence": "Production JSON schemas validated by the pipeline."
+    },
+    {
+      "path": "config/",
+      "evidence": "Conference and typography configuration."
+    },
+    {
+      "path": ".github/",
+      "evidence": "Active CI workflows."
+    },
+    {
+      "path": "agent_skills/",
+      "evidence": "Canonical skill package referenced by preflight and Docker."
+    },
+    {
+      "path": "skills/",
+      "evidence": "Canonical Journal Factory skill contract."
+    },
+    {
+      "path": "docs/",
+      "evidence": "Current host, architecture, and operator protocols."
+    },
+    {
+      "path": "reports/",
+      "evidence": "Machine reports and host request/result history required by the workflow."
+    },
+    {
+      "path": "ETALON-JOURNAL.docx",
+      "evidence": "Required production geometry template."
+    },
+    {
+      "path": "Jurnal.dotx",
+      "evidence": "Required article style template."
+    },
+    {
+      "path": ".venv/",
+      "evidence": "Ignored local interpreter used for the verified test and build commands."
+    }
+  ],
+  "delete": [
+    {
+      "path": "Release-AI-Editor-5.5/",
+      "evidence": "Untracked external release tree; 150 files, 673707 bytes, no tracked or source-pack references, not a reparse point."
+    },
+    {
+      "path": "Release-AI-Editor-5.5-Public-src/",
+      "evidence": "Untracked external release tree; 343 files, 1656004 bytes, no tracked or source-pack references, not a reparse point."
+    },
+    {
+      "path": ".idea/",
+      "evidence": "Ignored local IDE state."
+    },
+    {
+      "path": ".pytest_cache/",
+      "evidence": "Ignored disposable pytest cache."
+    },
+    {
+      "path": "journal_factory/__pycache__/",
+      "evidence": "Ignored compiled Python cache."
+    },
+    {
+      "path": "tests/__pycache__/",
+      "evidence": "Ignored compiled test cache."
+    },
+    {
+      "path": "agent_skills/NAUKAINFO_Agent_Skills_v3_5/scripts/__pycache__/",
+      "evidence": "Ignored compiled Python cache inside the canonical source tree."
+    },
+    {
+      "path": "agent_skills/NAUKAINFO_Agent_Skills_v3_5/tests/__pycache__/",
+      "evidence": "Ignored compiled test cache inside the canonical source tree."
+    }
+  ],
+  "move": [],
+  "uncertain": [
+    {
+      "path": "_quarantine/",
+      "evidence": "Historical cleanup quarantine is ignored; retention intent is not proven, so it is not touched."
+    },
+    {
+      "path": "build/",
+      "evidence": "Contains active Conference 95 inputs/probes and historical local outputs; only explicit cache children are deleted."
+    },
+    {
+      "path": ".agents/",
+      "evidence": "Local agent metadata is untracked and ignored status/ownership is not established."
+    },
+    {
+      "path": "build/.pytest_cache/",
+      "evidence": "Disposable cache, but local ACL denies enumeration/deletion; left untouched rather than bypassing host ownership."
+    },
+    {
+      "path": "build/__pycache__/",
+      "evidence": "Disposable cache, but local ACL denies enumeration/deletion; left untouched rather than bypassing host ownership."
+    }
+  ],
+  "external_boundaries": [
+    {
+      "path": "N:/",
+      "action": "not_touched",
+      "evidence": "Cleanup is restricted to the resolved checkout root."
+    }
+  ]
+}

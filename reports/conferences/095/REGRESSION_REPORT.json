@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source": "artifacts/conferences/095/iteration-004/reports/regression_report.json",
+  "builds": [
+    "build/iteration-004-m/Conference95",
+    "build/iteration-004-clean-final-2/Conference95"
+  ],
+  "pdf_text_sha256": "70aa919249f55f58e3b32476fa7d9fc1e91f1c82573a084e3dddb5e5270534e8",
+  "pages_compared": 248,
+  "article_starts_matched": 34,
+  "special_thanks_physical_page": 7,
+  "maximum_changed_channel_ratio": 0.000003539772888171495,
+  "tolerance": 0.00001,
+  "blockers": []
+}

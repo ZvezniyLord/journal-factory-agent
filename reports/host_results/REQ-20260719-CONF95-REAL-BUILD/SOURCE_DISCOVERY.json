@@ -1,0 +1,19 @@
+﻿{
+    "raw_zip_candidates":  [
+                               "N:\\Конференції\\Конференції_zip\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року.zip"
+                           ],
+    "selected_raw_zip":  "N:\\Конференції\\Конференції_zip\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року.zip",
+    "exact_95_zip_found":  false,
+    "conference95_pdf_candidates":  [
+
+                                    ],
+    "conference95_pdf_found":  false,
+    "official_docx_candidates":  [
+                                     "N:\\Конференції\\Конференції\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року\\95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року\\Збірник\\Conference95.docx"
+                                 ],
+    "notes":  [
+                  "No synthetic fixtures used",
+                  "Conference95.pdf was not found on searched host paths",
+                  "Build executed with real Conference 95 zip and legacy_14pt"
+              ]
+}

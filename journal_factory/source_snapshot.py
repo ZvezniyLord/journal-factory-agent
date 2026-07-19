@@ -50,6 +50,18 @@ def snapshot_docx(path: Path, workspace_source: Path) -> dict:
             for name in sorted(names)
             if name.startswith("word/media/") and not name.endswith("/")
         }
+        chart_payload_hashes = {
+            name: _sha256_bytes(package.read(name))
+            for name in sorted(names)
+            if name.startswith("word/charts/")
+            and "/_rels/" not in name
+            and not name.endswith("/")
+        }
+        embedding_hashes = {
+            name: _sha256_bytes(package.read(name))
+            for name in sorted(names)
+            if name.startswith("word/embeddings/") and not name.endswith("/")
+        }
         paragraphs = _extract_paragraphs(document_xml)
         tables = _extract_tables(document_xml)
         textboxes = _extract_textboxes(document_xml)
@@ -86,8 +98,10 @@ def snapshot_docx(path: Path, workspace_source: Path) -> dict:
             "shapes": _count_elements(document_xml, ".//v:shape"),
             "textboxes": textboxes,
             "charts": sorted(name for name in names if name.startswith("word/charts/")),
+            "chart_payload_hashes": chart_payload_hashes,
             "equations": _count_elements(document_xml, ".//m:oMath"),
             "OLE": sorted(name for name in names if name.startswith("word/embeddings/")),
+            "embedding_hashes": embedding_hashes,
             "section_breaks": _count_elements(document_xml, ".//w:sectPr"),
             "page_breaks": len(document_xml.findall(".//w:br[@w:type='page']", NS)),
             "object_risk": object_risk,
@@ -117,8 +131,10 @@ def snapshot_legacy_doc(path: Path, workspace_source: Path) -> dict:
         "shapes": 0,
         "textboxes": [],
         "charts": [],
+        "chart_payload_hashes": {},
         "equations": 0,
         "OLE": [],
+        "embedding_hashes": {},
         "section_breaks": 0,
         "page_breaks": 0,
         "object_risk": "unverified",

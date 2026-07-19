@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "selection_policy": "EXPLICIT_PROFILE_IN_CONFERENCE_MANIFEST",
+  "profiles": {
+    "legacy_14pt": {
+      "description": "Старіший стандарт журналу",
+      "body_font_size_pt": 14,
+      "source": "editorial_rule",
+      "status": "ACTIVE"
+    },
+    "standard_11pt": {
+      "description": "Новий стандарт журналу",
+      "body_font_size_pt": 11,
+      "source": "editorial_rule",
+      "status": "ACTIVE"
+    }
+  },
+  "rules": [
+    "Профіль задається явно у manifest або build config",
+    "Заборонено визначати профіль лише за conference_id",
+    "Зміна кегля є службовою форматною операцією і не змінює текст",
+    "Авторські локальні bold, italic, underline, superscript і subscript зберігаються",
+    "PASS блокується, якщо профіль не задано або не підтверджено"
+  ]
+}

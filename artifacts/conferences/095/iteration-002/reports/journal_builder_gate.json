@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-07-19T03:13:03+03:00",
+  "conference_id": 95,
+  "iteration": 2,
+  "status": "REVIEW_ARTIFACTS_READY",
+  "production_ready": false,
+  "typography_profile": "legacy_14pt",
+  "article_count": 34,
+  "stages": {
+    "archive_inventory": "PASS",
+    "auto_manifest": "PASS",
+    "article_preparation": "PASS",
+    "style_bridge": "PASS",
+    "typography_profile": "PASS",
+    "compose_docx": "PASS",
+    "source_to_final_fidelity": "PASS",
+    "word_pdf_render": "PASS",
+    "visual_render_qa": "BLOCKED",
+    "toc": "BLOCKED",
+    "pagination": "BLOCKED",
+    "front_matter": "BLOCKED",
+    "clean_rebuild": "PASS",
+    "publication_parity": "NOT_REQUIRED"
+  },
+  "artifacts": {
+    "docx": "artifacts/conferences/095/iteration-002/Conference95_generated.docx",
+    "docx_sha256": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
+    "pdf": "artifacts/conferences/095/iteration-002/Conference95_generated.pdf",
+    "pdf_sha256": "2d1948c1c3d4d77a07da0e13051efab4f07857eacfb2a0524c08aa36119d3645"
+  },
+  "blockers": [
+    "front_matter_not_parameterized_for_conference_95",
+    "toc_field_missing",
+    "toc_entries_missing:34",
+    "continuous_pagination_missing_for_pdf_pages_1_89"
+  ],
+  "required_next_gates": [
+    "SERVICE_FRONT_MATTER_PARAMETERIZATION",
+    "TOC_GENERATION",
+    "CONTINUOUS_PAGINATION",
+    "DIRECT_RUN_FONT_SIZE_AUDIT"
+  ]
+}

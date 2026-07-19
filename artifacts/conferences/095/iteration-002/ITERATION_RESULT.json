@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-07-19T03:13:03+03:00",
+  "conference_id": 95,
+  "iteration": 2,
+  "outcome": "REVIEW_ARTIFACTS_READY_WITH_BLOCKERS",
+  "review_state": "READY_FOR_REVIEW",
+  "review_owner": "REVIEWER",
+  "accepted": false,
+  "implementation_commits": [
+    "a5406de",
+    "7fdfa47",
+    "104358f"
+  ],
+  "tests": {
+    "status": "PASS",
+    "passed": 61,
+    "failed": 0,
+    "command": ".venv\\Scripts\\python -m pytest -p no:cacheprovider",
+    "compile_check": "PASS"
+  },
+  "inputs": {
+    "raw_zip_sha256": "d86c0c33b96b321f2980993ecc6f3f91d1d67dea1b5cb21588984ec581b0c2a2",
+    "etalon_sha256": "1cb62ff47a5145663270e616e722ba7a64131a4acf9e03df2376920f582c1409",
+    "jurnal_dotx_sha256": "cd0978c8aa4521822351fecc3bb9ae05082ecc50bc8abf8bd325f92d6ae430a3",
+    "official_pdf_required": false
+  },
+  "manifest_metrics": {
+    "status": "PASS",
+    "generation_mode": "AUTO_INVENTORY_V1",
+    "inventory_files": 139,
+    "article_count": 34,
+    "matched_articles": 34,
+    "classification_counts": {
+      "ARTICLE": 34,
+      "DUPLICATE": 6,
+      "NON_ARTICLE": 99
+    },
+    "legacy_doc_requested": 14,
+    "legacy_doc_extracted": 14,
+    "manifest_sha256": "4d96467f7809e681874ad243e023b1b8748c4925758a0a70d6d32d3930351c0c"
+  },
+  "outputs": {
+    "docx": "artifacts/conferences/095/iteration-002/Conference95_generated.docx",
+    "docx_sha256": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
+    "pdf": "artifacts/conferences/095/iteration-002/Conference95_generated.pdf",
+    "pdf_sha256": "2d1948c1c3d4d77a07da0e13051efab4f07857eacfb2a0524c08aa36119d3645"
+  },
+  "quality": {
+    "fidelity": "PASS",
+    "technical_render": "PASS",
+    "pdf_pages": 241,
+    "article_start_pages_resolved": 34,
+    "clean_rebuild": "PASS",
+    "overall_gate": "REVIEW_ARTIFACTS_READY"
+  },
+  "blockers": [
+    "front_matter_not_parameterized_for_conference_95",
+    "toc_field_missing",
+    "toc_entries_missing:34",
+    "continuous_pagination_missing_for_pdf_pages_1_89"
+  ],
+  "known_defects": [
+    "Front matter contains mutually inconsistent stale conference metadata.",
+    "TOC page contains only its heading and the following page is blank.",
+    "Visible page numbering begins on PDF page 90 as printed page 1 instead of covering the journal continuously.",
+    "Section heading numbering and spacing are inconsistent because raw section labels are not normalized."
+  ]
+}

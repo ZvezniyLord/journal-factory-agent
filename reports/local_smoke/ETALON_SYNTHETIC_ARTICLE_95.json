@@ -1,0 +1,21 @@
+{
+  "test_id": "ETALON_SYNTHETIC_ARTICLE_95",
+  "date": "2026-07-19",
+  "inputs": {
+    "etalon": "ETALON-JOURNAL.docx",
+    "template": "Jurnal.dotx",
+    "article": "synthetic DOCX with text, table and PNG"
+  },
+  "result": {
+    "output_opens_with_python_docx": true,
+    "section_count": 3,
+    "table_count": 1,
+    "package_media_count": 9,
+    "article_inserted_after_toc": true,
+    "article_inserted_before_tail": true,
+    "required_styles_already_present_in_etalon": true,
+    "paragraph_count": 102
+  },
+  "scope": "Architecture smoke only; not evidence that real Conference 95 RAW has been built",
+  "status": "PASS"
+}

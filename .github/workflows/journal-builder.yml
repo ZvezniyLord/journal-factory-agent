@@ -1,0 +1,42 @@
+name: Journal builder tests
+
+on:
+  push:
+    branches:
+      - "agent/journal-builder-*"
+      - "agent/conference-*"
+  pull_request:
+    branches:
+      - "agent/journal-builder-integration"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile builder modules
+        run: >-
+          python -m py_compile
+          journal_factory/style_bridge.py
+          journal_factory/typography_profile.py
+          journal_factory/document_composer.py
+          journal_factory/builder_fidelity.py
+          journal_factory/builder_pipeline.py
+          journal_factory/cli.py
+      - name: Run builder regression tests
+        run: >-
+          pytest -q
+          tests/test_style_bridge.py
+          tests/test_typography_profile.py
+          tests/test_document_composer.py
+          tests/test_builder_fidelity.py

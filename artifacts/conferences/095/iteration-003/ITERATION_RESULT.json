@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-07-19T05:08:32+03:00",
+  "conference_id": 95,
+  "iteration": 3,
+  "outcome": "REVIEW_ARTIFACTS_READY",
+  "review_state": "READY_FOR_REVIEW",
+  "review_owner": "REVIEWER",
+  "accepted": false,
+  "implementation_commits": [
+    "5477cdc"
+  ],
+  "tests": {
+    "status": "PASS",
+    "passed": 73,
+    "failed": 0,
+    "command": ".venv\\Scripts\\python -m pytest -q",
+    "compile_check": "PASS"
+  },
+  "inputs": {
+    "raw_zip_sha256": "d86c0c33b96b321f2980993ecc6f3f91d1d67dea1b5cb21588984ec581b0c2a2",
+    "etalon_sha256": "1cb62ff47a5145663270e616e722ba7a64131a4acf9e03df2376920f582c1409",
+    "jurnal_dotx_sha256": "cd0978c8aa4521822351fecc3bb9ae05082ecc50bc8abf8bd325f92d6ae430a3",
+    "official_pdf_required": false
+  },
+  "manifest_metrics": {
+    "status": "PASS",
+    "generation_mode": "AUTO_INVENTORY_V1",
+    "inventory_files": 139,
+    "article_count": 34,
+    "matched_articles": 34,
+    "classification_counts": {
+      "ARTICLE": 34,
+      "DUPLICATE": 6,
+      "NON_ARTICLE": 99
+    },
+    "review_or_blocked": 0,
+    "manifest_sha256": "4d96467f7809e681874ad243e023b1b8748c4925758a0a70d6d32d3930351c0c"
+  },
+  "outputs": {
+    "docx": "artifacts/conferences/095/iteration-003/Conference95_generated.docx",
+    "docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
+    "pdf": "artifacts/conferences/095/iteration-003/Conference95_generated.pdf",
+    "pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203"
+  },
+  "quality": {
+    "front_matter": "PASS",
+    "stale_front_matter_markers": 0,
+    "toc": "PASS",
+    "word_toc_count": 1,
+    "toc_article_entries": 34,
+    "toc_pages_match_article_starts": true,
+    "pagination": "PASS",
+    "first_article_physical_page": 6,
+    "first_article_printed_page": 6,
+    "visible_footer_numbers": "236/236",
+    "section_labels": "PASS",
+    "typography": "PASS",
+    "typography_profile": "legacy_14pt",
+    "sampled_typography_paragraphs": 1581,
+    "sampled_typography_runs": 7583,
+    "effective_14pt_body_runs": 7532,
+    "allowed_typography_exceptions": 51,
+    "fidelity": "PASS",
+    "object_loss": 0,
+    "pdf_pages": 237,
+    "all_pages_raster_audited": true,
+    "blank_pages": [],
+    "clean_rebuild": "PASS",
+    "overall_gate": "PASS_PENDING_REVIEW"
+  },
+  "qa_notes": {
+    "microsoft_word_render": "PASS",
+    "pymupdf_all_pages": "PASS",
+    "manual_contact_sheet_review": "PASS",
+    "packaged_libreoffice_renderer": "SKIPPED_HOST_MISSING_SOFFICE",
+    "manual_output_edits": false,
+    "cloud_llm_used": false
+  },
+  "blockers": [],
+  "known_defects": []
+}

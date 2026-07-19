@@ -6,6 +6,7 @@ import re
 from typing import Any
 
 from .archive_workspace import inventory_workspace, sha256_file
+from .auto_manifest import build_auto_manifest
 from .source_snapshot import extract_docx_evidence_text
 
 
@@ -19,7 +20,7 @@ MANIFEST_CANDIDATES = [
 def build_article_manifest(workspace_source: Path, reports_dir: Path) -> dict[str, Any]:
     manifest_path = _find_manifest_source(workspace_source)
     if manifest_path is None:
-        result = _empty_invalid_manifest("manifest_source_missing")
+        result = build_auto_manifest(workspace_source, reports_dir)
         _write_manifest(reports_dir, result)
         return result
     try:
@@ -84,6 +85,8 @@ def build_article_manifest(workspace_source: Path, reports_dir: Path) -> dict[st
     result = {
         "manifest_source": manifest_path.relative_to(workspace_source).as_posix(),
         "manifest_sha256": sha256_file(manifest_path),
+        "generation_mode": "EXPLICIT_MANIFEST",
+        "evidence_report": "",
         "articles": entries,
         "article_count": len(entries),
         "free_listeners": free_listeners,
@@ -156,6 +159,12 @@ def _match_record(index: int, record: dict[str, Any], workspace_source: Path, ar
         "match_score": min(author_score, title_score),
         "author_score": author_score,
         "title_score": title_score,
+        "confidence": min(author_score, title_score),
+        "provenance": {
+            "generation": "EXPLICIT_MANIFEST",
+            "manifest_record_index": index,
+            "identity_sources": ["explicit_manifest", "article_visible_text"],
+        },
         "evidence": {
             "author_match": author_score >= 1,
             "title_match": title_score >= 1,
@@ -229,6 +238,8 @@ def _empty_invalid_manifest(blocker: str) -> dict[str, Any]:
     return {
         "manifest_source": "",
         "manifest_sha256": "",
+        "generation_mode": "INVALID",
+        "evidence_report": "",
         "articles": [],
         "article_count": 0,
         "free_listeners": [],

@@ -1,0 +1,3000 @@
+{
+  "status": "PASS",
+  "renderer": "Microsoft Word COM",
+  "word_version": "16.0",
+  "input_docx": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\Conference95_generated.docx",
+  "input_docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
+  "output_pdf": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\Conference95_generated.pdf",
+  "output_pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203",
+  "word_field_count": 222,
+  "word_toc_count": 1,
+  "word_page_count": 237,
+  "pdf_page_count": 237,
+  "stable_measurements_required": 2,
+  "stable_measurements_achieved": 2,
+  "stable_measurements": [
+    {
+      "iteration": 1,
+      "page_count": 237,
+      "toc_count": 1,
+      "toc_text_length": 4382,
+      "toc_start_page": 4,
+      "toc_end_page": 5,
+      "stable_streak": 1
+    },
+    {
+      "iteration": 2,
+      "page_count": 237,
+      "toc_count": 1,
+      "toc_text_length": 4382,
+      "toc_start_page": 4,
+      "toc_end_page": 5,
+      "stable_streak": 2
+    }
+  ],
+  "toc_entries": [
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t6",
+      "page_number": 6
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES\t6",
+      "page_number": 6
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PSYCHOLOGY AND PSYCHIATRY\t10",
+      "page_number": 10
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "Арттерапія: творчість як засіб психологічної підтримки  учасників освітнього процесу\t10",
+      "page_number": 10
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION\t17",
+      "page_number": 17
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "Specifics of the Methodology of Teaching English to Foreign Students in Primary Schools of the Karlovy Vary Region\t17",
+      "page_number": 17
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PHYSICAL AND MATHEMATICAL SCIENCES\t20",
+      "page_number": 20
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ\t20",
+      "page_number": 20
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES\t24",
+      "page_number": 24
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ\t24",
+      "page_number": 24
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY\t36",
+      "page_number": 36
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ\t36",
+      "page_number": 36
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PHILOLOGY AND JOURNALISM\t40",
+      "page_number": 40
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL\t40",
+      "page_number": 40
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE\t44",
+      "page_number": 44
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ\t44",
+      "page_number": 44
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY\t50",
+      "page_number": 50
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА\t50",
+      "page_number": 50
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES\t56",
+      "page_number": 56
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 РР.)\t56",
+      "page_number": 56
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION\t62",
+      "page_number": 62
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ\t62",
+      "page_number": 62
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ\t75",
+      "page_number": 75
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "Підземна школа: безпечний простір для дітей з особливими освітніми потребами.\t85",
+      "page_number": 85
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "ECONOMIC THEORY, MACRO- AND REGIONAL ECONOMY\t89",
+      "page_number": 89
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises\t89",
+      "page_number": 89
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PHILOSOPHY AND POLITICAL SCIENCE\t96",
+      "page_number": 96
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ\t96",
+      "page_number": 96
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t103",
+      "page_number": 103
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ\t103",
+      "page_number": 103
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION\t112",
+      "page_number": 112
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "Особливості організації психолого-педагогічної підтримки дітей з особливими освітніми потребами в сучасній освіті\t112",
+      "page_number": 112
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t122",
+      "page_number": 122
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "PULMONARY HEMORRHAGE: DIAGNOSTIC AND SURGICAL TACTICS AT THE MODERN LEVEL\t122",
+      "page_number": 122
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PHILOSOPHY AND POLITICAL SCIENCE\t130",
+      "page_number": 130
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM\t130",
+      "page_number": 130
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION\t134",
+      "page_number": 134
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ\t134",
+      "page_number": 134
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PSYCHOLOGY AND PSYCHIATRY\t143",
+      "page_number": 143
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ.\t143",
+      "page_number": 143
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE\t154",
+      "page_number": 154
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ\t154",
+      "page_number": 154
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION\t159",
+      "page_number": 159
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА  ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»\t159",
+      "page_number": 159
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ\t164",
+      "page_number": 164
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "Писанкарство: тиха сила предків\t176",
+      "page_number": 176
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "LAW AND INTERNATIONAL LAW\t180",
+      "page_number": 180
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАОВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ\t180",
+      "page_number": 180
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING\t188",
+      "page_number": 188
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ\t188",
+      "page_number": 188
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "LAW AND INTERNATIONAL LAW\t193",
+      "page_number": 193
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ\t193",
+      "page_number": 193
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING\t198",
+      "page_number": 198
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ\t198",
+      "page_number": 198
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t205",
+      "page_number": 205
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ\t205",
+      "page_number": 205
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PSYCHOLOGY AND PSYCHIATRY\t219",
+      "page_number": 219
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH\t219",
+      "page_number": 219
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION\t225",
+      "page_number": 225
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ЗАКОРДОННИЙ ДОСВІД  ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ  У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ\t225",
+      "page_number": 225
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "SOCIAL WORK AND SOCIAL WELFARE\t228",
+      "page_number": 228
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ\t228",
+      "page_number": 228
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION\t231",
+      "page_number": 231
+    },
+    {
+      "level": 2,
+      "style": "Зміст 2",
+      "text": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ\t231",
+      "page_number": 231
+    }
+  ],
+  "toc_style_names": {
+    "2": "Зміст 2",
+    "1": "Зміст 1"
+  },
+  "toc_level_counts": {
+    "1": 30,
+    "2": 34
+  },
+  "article_bookmarks": [
+    {
+      "name": "JF_ARTICLE_001_START",
+      "printed_page": 6,
+      "physical_page": 6
+    },
+    {
+      "name": "JF_ARTICLE_002_START",
+      "printed_page": 10,
+      "physical_page": 10
+    },
+    {
+      "name": "JF_ARTICLE_003_START",
+      "printed_page": 17,
+      "physical_page": 17
+    },
+    {
+      "name": "JF_ARTICLE_004_START",
+      "printed_page": 20,
+      "physical_page": 20
+    },
+    {
+      "name": "JF_ARTICLE_005_START",
+      "printed_page": 24,
+      "physical_page": 24
+    },
+    {
+      "name": "JF_ARTICLE_006_START",
+      "printed_page": 36,
+      "physical_page": 36
+    },
+    {
+      "name": "JF_ARTICLE_007_START",
+      "printed_page": 40,
+      "physical_page": 40
+    },
+    {
+      "name": "JF_ARTICLE_008_START",
+      "printed_page": 44,
+      "physical_page": 44
+    },
+    {
+      "name": "JF_ARTICLE_009_START",
+      "printed_page": 50,
+      "physical_page": 50
+    },
+    {
+      "name": "JF_ARTICLE_010_START",
+      "printed_page": 56,
+      "physical_page": 56
+    },
+    {
+      "name": "JF_ARTICLE_011_START",
+      "printed_page": 62,
+      "physical_page": 62
+    },
+    {
+      "name": "JF_ARTICLE_012_START",
+      "printed_page": 75,
+      "physical_page": 75
+    },
+    {
+      "name": "JF_ARTICLE_013_START",
+      "printed_page": 85,
+      "physical_page": 85
+    },
+    {
+      "name": "JF_ARTICLE_014_START",
+      "printed_page": 89,
+      "physical_page": 89
+    },
+    {
+      "name": "JF_ARTICLE_015_START",
+      "printed_page": 96,
+      "physical_page": 96
+    },
+    {
+      "name": "JF_ARTICLE_016_START",
+      "printed_page": 103,
+      "physical_page": 103
+    },
+    {
+      "name": "JF_ARTICLE_017_START",
+      "printed_page": 112,
+      "physical_page": 112
+    },
+    {
+      "name": "JF_ARTICLE_018_START",
+      "printed_page": 122,
+      "physical_page": 122
+    },
+    {
+      "name": "JF_ARTICLE_019_START",
+      "printed_page": 130,
+      "physical_page": 130
+    },
+    {
+      "name": "JF_ARTICLE_020_START",
+      "printed_page": 134,
+      "physical_page": 134
+    },
+    {
+      "name": "JF_ARTICLE_021_START",
+      "printed_page": 143,
+      "physical_page": 143
+    },
+    {
+      "name": "JF_ARTICLE_022_START",
+      "printed_page": 154,
+      "physical_page": 154
+    },
+    {
+      "name": "JF_ARTICLE_023_START",
+      "printed_page": 159,
+      "physical_page": 159
+    },
+    {
+      "name": "JF_ARTICLE_024_START",
+      "printed_page": 164,
+      "physical_page": 164
+    },
+    {
+      "name": "JF_ARTICLE_025_START",
+      "printed_page": 176,
+      "physical_page": 176
+    },
+    {
+      "name": "JF_ARTICLE_026_START",
+      "printed_page": 180,
+      "physical_page": 180
+    },
+    {
+      "name": "JF_ARTICLE_027_START",
+      "printed_page": 188,
+      "physical_page": 188
+    },
+    {
+      "name": "JF_ARTICLE_028_START",
+      "printed_page": 193,
+      "physical_page": 193
+    },
+    {
+      "name": "JF_ARTICLE_029_START",
+      "printed_page": 198,
+      "physical_page": 198
+    },
+    {
+      "name": "JF_ARTICLE_030_START",
+      "printed_page": 205,
+      "physical_page": 205
+    },
+    {
+      "name": "JF_ARTICLE_031_START",
+      "printed_page": 219,
+      "physical_page": 219
+    },
+    {
+      "name": "JF_ARTICLE_032_START",
+      "printed_page": 225,
+      "physical_page": 225
+    },
+    {
+      "name": "JF_ARTICLE_033_START",
+      "printed_page": 228,
+      "physical_page": 228
+    },
+    {
+      "name": "JF_ARTICLE_034_START",
+      "printed_page": 231,
+      "physical_page": 231
+    }
+  ],
+  "visual_qa": {
+    "status": "PASS",
+    "renderer": "PyMuPDF raster inspection of Microsoft Word PDF",
+    "pdf": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\Conference95_generated.pdf",
+    "pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203",
+    "inspected_page_count": 237,
+    "expected_page_count": 237,
+    "all_pages_inspected": true,
+    "representative_full_resolution_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      59,
+      118,
+      177,
+      237
+    ],
+    "blank_pages": [],
+    "footer_page_numbers_expected": 236,
+    "footer_page_numbers_present": 236,
+    "missing_footer_numbers": [],
+    "title_page_number_hidden": true,
+    "pages": [
+      {
+        "physical_page": 1,
+        "text_character_count": 269,
+        "content_character_count": 214,
+        "nonwhite_channel_ratio": 0.997306,
+        "footer_numbers": [],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 2,
+        "text_character_count": 749,
+        "content_character_count": 680,
+        "nonwhite_channel_ratio": 0.094884,
+        "footer_numbers": [
+          2
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 3,
+        "text_character_count": 1676,
+        "content_character_count": 1575,
+        "nonwhite_channel_ratio": 0.141083,
+        "footer_numbers": [
+          3
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 4,
+        "text_character_count": 11625,
+        "content_character_count": 11472,
+        "nonwhite_channel_ratio": 0.300834,
+        "footer_numbers": [
+          4
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 5,
+        "text_character_count": 663,
+        "content_character_count": 644,
+        "nonwhite_channel_ratio": 0.01485,
+        "footer_numbers": [
+          5
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 6,
+        "text_character_count": 1473,
+        "content_character_count": 1412,
+        "nonwhite_channel_ratio": 0.139895,
+        "footer_numbers": [
+          6
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 7,
+        "text_character_count": 2116,
+        "content_character_count": 2055,
+        "nonwhite_channel_ratio": 0.18383,
+        "footer_numbers": [
+          7
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 8,
+        "text_character_count": 1495,
+        "content_character_count": 1438,
+        "nonwhite_channel_ratio": 0.127581,
+        "footer_numbers": [
+          8
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 9,
+        "text_character_count": 985,
+        "content_character_count": 934,
+        "nonwhite_channel_ratio": 0.161812,
+        "footer_numbers": [
+          9
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 10,
+        "text_character_count": 1450,
+        "content_character_count": 1368,
+        "nonwhite_channel_ratio": 0.141673,
+        "footer_numbers": [
+          10
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 11,
+        "text_character_count": 2179,
+        "content_character_count": 2098,
+        "nonwhite_channel_ratio": 0.214948,
+        "footer_numbers": [
+          11
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 12,
+        "text_character_count": 1737,
+        "content_character_count": 1675,
+        "nonwhite_channel_ratio": 0.188461,
+        "footer_numbers": [
+          12
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 13,
+        "text_character_count": 1053,
+        "content_character_count": 988,
+        "nonwhite_channel_ratio": 0.093768,
+        "footer_numbers": [
+          13
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 14,
+        "text_character_count": 1409,
+        "content_character_count": 1345,
+        "nonwhite_channel_ratio": 0.12817,
+        "footer_numbers": [
+          14
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 15,
+        "text_character_count": 1048,
+        "content_character_count": 983,
+        "nonwhite_channel_ratio": 0.092971,
+        "footer_numbers": [
+          15
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 16,
+        "text_character_count": 807,
+        "content_character_count": 765,
+        "nonwhite_channel_ratio": 0.07949,
+        "footer_numbers": [
+          16
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 17,
+        "text_character_count": 1845,
+        "content_character_count": 1755,
+        "nonwhite_channel_ratio": 0.173213,
+        "footer_numbers": [
+          17
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 18,
+        "text_character_count": 1421,
+        "content_character_count": 1319,
+        "nonwhite_channel_ratio": 0.189091,
+        "footer_numbers": [
+          18
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 19,
+        "text_character_count": 1199,
+        "content_character_count": 1094,
+        "nonwhite_channel_ratio": 0.108554,
+        "footer_numbers": [
+          19
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 20,
+        "text_character_count": 1614,
+        "content_character_count": 1550,
+        "nonwhite_channel_ratio": 0.161624,
+        "footer_numbers": [
+          20
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 21,
+        "text_character_count": 2137,
+        "content_character_count": 2074,
+        "nonwhite_channel_ratio": 0.200657,
+        "footer_numbers": [
+          21
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 22,
+        "text_character_count": 1993,
+        "content_character_count": 1931,
+        "nonwhite_channel_ratio": 0.184293,
+        "footer_numbers": [
+          22
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 23,
+        "text_character_count": 1588,
+        "content_character_count": 1497,
+        "nonwhite_channel_ratio": 0.149325,
+        "footer_numbers": [
+          23
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 24,
+        "text_character_count": 1495,
+        "content_character_count": 1425,
+        "nonwhite_channel_ratio": 0.152585,
+        "footer_numbers": [
+          24
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 25,
+        "text_character_count": 2177,
+        "content_character_count": 2062,
+        "nonwhite_channel_ratio": 0.199477,
+        "footer_numbers": [
+          25
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 26,
+        "text_character_count": 2153,
+        "content_character_count": 2073,
+        "nonwhite_channel_ratio": 0.198497,
+        "footer_numbers": [
+          26
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 27,
+        "text_character_count": 2219,
+        "content_character_count": 2147,
+        "nonwhite_channel_ratio": 0.2085,
+        "footer_numbers": [
+          27
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 28,
+        "text_character_count": 2252,
+        "content_character_count": 2188,
+        "nonwhite_channel_ratio": 0.211234,
+        "footer_numbers": [
+          28
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 29,
+        "text_character_count": 2194,
+        "content_character_count": 2123,
+        "nonwhite_channel_ratio": 0.205471,
+        "footer_numbers": [
+          29
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 30,
+        "text_character_count": 2183,
+        "content_character_count": 2113,
+        "nonwhite_channel_ratio": 0.20516,
+        "footer_numbers": [
+          30
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 31,
+        "text_character_count": 2200,
+        "content_character_count": 2107,
+        "nonwhite_channel_ratio": 0.206954,
+        "footer_numbers": [
+          31
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 32,
+        "text_character_count": 2115,
+        "content_character_count": 2053,
+        "nonwhite_channel_ratio": 0.199892,
+        "footer_numbers": [
+          32
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 33,
+        "text_character_count": 2109,
+        "content_character_count": 1984,
+        "nonwhite_channel_ratio": 0.1933,
+        "footer_numbers": [
+          33
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 34,
+        "text_character_count": 1950,
+        "content_character_count": 1863,
+        "nonwhite_channel_ratio": 0.17782,
+        "footer_numbers": [
+          34
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 35,
+        "text_character_count": 909,
+        "content_character_count": 868,
+        "nonwhite_channel_ratio": 0.076838,
+        "footer_numbers": [
+          35
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 36,
+        "text_character_count": 1653,
+        "content_character_count": 1589,
+        "nonwhite_channel_ratio": 0.172137,
+        "footer_numbers": [
+          36
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 37,
+        "text_character_count": 2000,
+        "content_character_count": 1937,
+        "nonwhite_channel_ratio": 0.189075,
+        "footer_numbers": [
+          37
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 38,
+        "text_character_count": 1985,
+        "content_character_count": 1878,
+        "nonwhite_channel_ratio": 0.182515,
+        "footer_numbers": [
+          38
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 39,
+        "text_character_count": 1174,
+        "content_character_count": 1104,
+        "nonwhite_channel_ratio": 0.115818,
+        "footer_numbers": [
+          39
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 40,
+        "text_character_count": 1510,
+        "content_character_count": 1435,
+        "nonwhite_channel_ratio": 0.275407,
+        "footer_numbers": [
+          40
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 41,
+        "text_character_count": 2252,
+        "content_character_count": 2161,
+        "nonwhite_channel_ratio": 0.189936,
+        "footer_numbers": [
+          41
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 42,
+        "text_character_count": 2192,
+        "content_character_count": 2094,
+        "nonwhite_channel_ratio": 0.183703,
+        "footer_numbers": [
+          42
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 43,
+        "text_character_count": 300,
+        "content_character_count": 288,
+        "nonwhite_channel_ratio": 0.025666,
+        "footer_numbers": [
+          43
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 44,
+        "text_character_count": 1041,
+        "content_character_count": 982,
+        "nonwhite_channel_ratio": 0.112572,
+        "footer_numbers": [
+          44
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 45,
+        "text_character_count": 2105,
+        "content_character_count": 2041,
+        "nonwhite_channel_ratio": 0.196074,
+        "footer_numbers": [
+          45
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 46,
+        "text_character_count": 2106,
+        "content_character_count": 2026,
+        "nonwhite_channel_ratio": 0.206643,
+        "footer_numbers": [
+          46
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 47,
+        "text_character_count": 1955,
+        "content_character_count": 1868,
+        "nonwhite_channel_ratio": 0.188884,
+        "footer_numbers": [
+          47
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 48,
+        "text_character_count": 1702,
+        "content_character_count": 1594,
+        "nonwhite_channel_ratio": 0.155797,
+        "footer_numbers": [
+          48
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 49,
+        "text_character_count": 262,
+        "content_character_count": 246,
+        "nonwhite_channel_ratio": 0.022111,
+        "footer_numbers": [
+          49
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 50,
+        "text_character_count": 1131,
+        "content_character_count": 1050,
+        "nonwhite_channel_ratio": 0.118534,
+        "footer_numbers": [
+          50
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 51,
+        "text_character_count": 1920,
+        "content_character_count": 1856,
+        "nonwhite_channel_ratio": 0.177446,
+        "footer_numbers": [
+          51
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 52,
+        "text_character_count": 2190,
+        "content_character_count": 2126,
+        "nonwhite_channel_ratio": 0.197955,
+        "footer_numbers": [
+          52
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 53,
+        "text_character_count": 1911,
+        "content_character_count": 1848,
+        "nonwhite_channel_ratio": 0.174696,
+        "footer_numbers": [
+          53
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 54,
+        "text_character_count": 1680,
+        "content_character_count": 1590,
+        "nonwhite_channel_ratio": 0.147531,
+        "footer_numbers": [
+          54
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 55,
+        "text_character_count": 592,
+        "content_character_count": 562,
+        "nonwhite_channel_ratio": 0.050447,
+        "footer_numbers": [
+          55
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 56,
+        "text_character_count": 1413,
+        "content_character_count": 1349,
+        "nonwhite_channel_ratio": 0.19483,
+        "footer_numbers": [
+          56
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 57,
+        "text_character_count": 1929,
+        "content_character_count": 1858,
+        "nonwhite_channel_ratio": 0.235473,
+        "footer_numbers": [
+          57
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 58,
+        "text_character_count": 1974,
+        "content_character_count": 1902,
+        "nonwhite_channel_ratio": 0.239188,
+        "footer_numbers": [
+          58
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 59,
+        "text_character_count": 2077,
+        "content_character_count": 2013,
+        "nonwhite_channel_ratio": 0.250028,
+        "footer_numbers": [
+          59
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 60,
+        "text_character_count": 1962,
+        "content_character_count": 1875,
+        "nonwhite_channel_ratio": 0.236167,
+        "footer_numbers": [
+          60
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 61,
+        "text_character_count": 1333,
+        "content_character_count": 1240,
+        "nonwhite_channel_ratio": 0.162939,
+        "footer_numbers": [
+          61
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 62,
+        "text_character_count": 1687,
+        "content_character_count": 966,
+        "nonwhite_channel_ratio": 0.15877,
+        "footer_numbers": [
+          62
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 63,
+        "text_character_count": 2058,
+        "content_character_count": 1981,
+        "nonwhite_channel_ratio": 0.245939,
+        "footer_numbers": [
+          63
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 64,
+        "text_character_count": 1961,
+        "content_character_count": 1878,
+        "nonwhite_channel_ratio": 0.232404,
+        "footer_numbers": [
+          64
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 65,
+        "text_character_count": 1925,
+        "content_character_count": 1848,
+        "nonwhite_channel_ratio": 0.231305,
+        "footer_numbers": [
+          65
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 66,
+        "text_character_count": 1927,
+        "content_character_count": 1845,
+        "nonwhite_channel_ratio": 0.233074,
+        "footer_numbers": [
+          66
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 67,
+        "text_character_count": 1933,
+        "content_character_count": 1832,
+        "nonwhite_channel_ratio": 0.232293,
+        "footer_numbers": [
+          67
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 68,
+        "text_character_count": 1464,
+        "content_character_count": 1402,
+        "nonwhite_channel_ratio": 0.190486,
+        "footer_numbers": [
+          68
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 69,
+        "text_character_count": 1955,
+        "content_character_count": 1881,
+        "nonwhite_channel_ratio": 0.229535,
+        "footer_numbers": [
+          69
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 70,
+        "text_character_count": 1834,
+        "content_character_count": 1747,
+        "nonwhite_channel_ratio": 0.223023,
+        "footer_numbers": [
+          70
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 71,
+        "text_character_count": 1801,
+        "content_character_count": 1734,
+        "nonwhite_channel_ratio": 0.202115,
+        "footer_numbers": [
+          71
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 72,
+        "text_character_count": 1957,
+        "content_character_count": 1885,
+        "nonwhite_channel_ratio": 0.222138,
+        "footer_numbers": [
+          72
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 73,
+        "text_character_count": 2014,
+        "content_character_count": 1945,
+        "nonwhite_channel_ratio": 0.190741,
+        "footer_numbers": [
+          73
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 74,
+        "text_character_count": 270,
+        "content_character_count": 259,
+        "nonwhite_channel_ratio": 0.035064,
+        "footer_numbers": [
+          74
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 75,
+        "text_character_count": 1524,
+        "content_character_count": 1428,
+        "nonwhite_channel_ratio": 0.147308,
+        "footer_numbers": [
+          75
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 76,
+        "text_character_count": 2025,
+        "content_character_count": 1951,
+        "nonwhite_channel_ratio": 0.19051,
+        "footer_numbers": [
+          76
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 77,
+        "text_character_count": 2044,
+        "content_character_count": 1982,
+        "nonwhite_channel_ratio": 0.190685,
+        "footer_numbers": [
+          77
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 78,
+        "text_character_count": 1912,
+        "content_character_count": 1852,
+        "nonwhite_channel_ratio": 0.18124,
+        "footer_numbers": [
+          78
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 79,
+        "text_character_count": 1644,
+        "content_character_count": 1564,
+        "nonwhite_channel_ratio": 0.169658,
+        "footer_numbers": [
+          79
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 80,
+        "text_character_count": 1723,
+        "content_character_count": 1627,
+        "nonwhite_channel_ratio": 0.170989,
+        "footer_numbers": [
+          80
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 81,
+        "text_character_count": 1875,
+        "content_character_count": 1802,
+        "nonwhite_channel_ratio": 0.175342,
+        "footer_numbers": [
+          81
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 82,
+        "text_character_count": 1862,
+        "content_character_count": 1790,
+        "nonwhite_channel_ratio": 0.176202,
+        "footer_numbers": [
+          82
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 83,
+        "text_character_count": 1803,
+        "content_character_count": 1692,
+        "nonwhite_channel_ratio": 0.171069,
+        "footer_numbers": [
+          83
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 84,
+        "text_character_count": 617,
+        "content_character_count": 581,
+        "nonwhite_channel_ratio": 0.057262,
+        "footer_numbers": [
+          84
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 85,
+        "text_character_count": 1287,
+        "content_character_count": 1204,
+        "nonwhite_channel_ratio": 0.122176,
+        "footer_numbers": [
+          85
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 86,
+        "text_character_count": 2205,
+        "content_character_count": 2130,
+        "nonwhite_channel_ratio": 0.203885,
+        "footer_numbers": [
+          86
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 87,
+        "text_character_count": 1985,
+        "content_character_count": 1871,
+        "nonwhite_channel_ratio": 0.179603,
+        "footer_numbers": [
+          87
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 88,
+        "text_character_count": 351,
+        "content_character_count": 331,
+        "nonwhite_channel_ratio": 0.031453,
+        "footer_numbers": [
+          88
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 89,
+        "text_character_count": 1564,
+        "content_character_count": 1509,
+        "nonwhite_channel_ratio": 0.151031,
+        "footer_numbers": [
+          89
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 90,
+        "text_character_count": 2177,
+        "content_character_count": 2103,
+        "nonwhite_channel_ratio": 0.187473,
+        "footer_numbers": [
+          90
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 91,
+        "text_character_count": 2275,
+        "content_character_count": 2214,
+        "nonwhite_channel_ratio": 0.195747,
+        "footer_numbers": [
+          91
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 92,
+        "text_character_count": 2439,
+        "content_character_count": 2367,
+        "nonwhite_channel_ratio": 0.207575,
+        "footer_numbers": [
+          92
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 93,
+        "text_character_count": 2326,
+        "content_character_count": 2267,
+        "nonwhite_channel_ratio": 0.201039,
+        "footer_numbers": [
+          93
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 94,
+        "text_character_count": 2074,
+        "content_character_count": 1986,
+        "nonwhite_channel_ratio": 0.176829,
+        "footer_numbers": [
+          94
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 95,
+        "text_character_count": 152,
+        "content_character_count": 145,
+        "nonwhite_channel_ratio": 0.012466,
+        "footer_numbers": [
+          95
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 96,
+        "text_character_count": 1285,
+        "content_character_count": 1212,
+        "nonwhite_channel_ratio": 0.132698,
+        "footer_numbers": [
+          96
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 97,
+        "text_character_count": 2104,
+        "content_character_count": 2039,
+        "nonwhite_channel_ratio": 0.195938,
+        "footer_numbers": [
+          97
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 98,
+        "text_character_count": 2070,
+        "content_character_count": 2006,
+        "nonwhite_channel_ratio": 0.193842,
+        "footer_numbers": [
+          98
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 99,
+        "text_character_count": 2047,
+        "content_character_count": 1969,
+        "nonwhite_channel_ratio": 0.190837,
+        "footer_numbers": [
+          99
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 100,
+        "text_character_count": 2031,
+        "content_character_count": 1963,
+        "nonwhite_channel_ratio": 0.190669,
+        "footer_numbers": [
+          100
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 101,
+        "text_character_count": 1638,
+        "content_character_count": 1543,
+        "nonwhite_channel_ratio": 0.166438,
+        "footer_numbers": [
+          101
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 102,
+        "text_character_count": 938,
+        "content_character_count": 891,
+        "nonwhite_channel_ratio": 0.093707,
+        "footer_numbers": [
+          102
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 103,
+        "text_character_count": 1141,
+        "content_character_count": 1081,
+        "nonwhite_channel_ratio": 0.122216,
+        "footer_numbers": [
+          103
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 104,
+        "text_character_count": 1935,
+        "content_character_count": 1869,
+        "nonwhite_channel_ratio": 0.180204,
+        "footer_numbers": [
+          104
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 105,
+        "text_character_count": 2004,
+        "content_character_count": 1944,
+        "nonwhite_channel_ratio": 0.187736,
+        "footer_numbers": [
+          105
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 106,
+        "text_character_count": 1679,
+        "content_character_count": 1608,
+        "nonwhite_channel_ratio": 0.165219,
+        "footer_numbers": [
+          106
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 107,
+        "text_character_count": 1146,
+        "content_character_count": 1075,
+        "nonwhite_channel_ratio": 0.116023,
+        "footer_numbers": [
+          107
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 108,
+        "text_character_count": 1014,
+        "content_character_count": 966,
+        "nonwhite_channel_ratio": 0.122973,
+        "footer_numbers": [
+          108
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 109,
+        "text_character_count": 1263,
+        "content_character_count": 1206,
+        "nonwhite_channel_ratio": 0.152306,
+        "footer_numbers": [
+          109
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 110,
+        "text_character_count": 1802,
+        "content_character_count": 1711,
+        "nonwhite_channel_ratio": 0.169783,
+        "footer_numbers": [
+          110
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 111,
+        "text_character_count": 681,
+        "content_character_count": 640,
+        "nonwhite_channel_ratio": 0.059983,
+        "footer_numbers": [
+          111
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 112,
+        "text_character_count": 1345,
+        "content_character_count": 1259,
+        "nonwhite_channel_ratio": 0.133519,
+        "footer_numbers": [
+          112
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 113,
+        "text_character_count": 2016,
+        "content_character_count": 1942,
+        "nonwhite_channel_ratio": 0.185823,
+        "footer_numbers": [
+          113
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 114,
+        "text_character_count": 2017,
+        "content_character_count": 1945,
+        "nonwhite_channel_ratio": 0.187712,
+        "footer_numbers": [
+          114
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 115,
+        "text_character_count": 1709,
+        "content_character_count": 1600,
+        "nonwhite_channel_ratio": 0.171595,
+        "footer_numbers": [
+          115
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 116,
+        "text_character_count": 1224,
+        "content_character_count": 1083,
+        "nonwhite_channel_ratio": 0.138277,
+        "footer_numbers": [
+          116
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 117,
+        "text_character_count": 1741,
+        "content_character_count": 1638,
+        "nonwhite_channel_ratio": 0.174226,
+        "footer_numbers": [
+          117
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 118,
+        "text_character_count": 1400,
+        "content_character_count": 1312,
+        "nonwhite_channel_ratio": 0.154904,
+        "footer_numbers": [
+          118
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 119,
+        "text_character_count": 1981,
+        "content_character_count": 1887,
+        "nonwhite_channel_ratio": 0.184165,
+        "footer_numbers": [
+          119
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 120,
+        "text_character_count": 1951,
+        "content_character_count": 1844,
+        "nonwhite_channel_ratio": 0.178485,
+        "footer_numbers": [
+          120
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 121,
+        "text_character_count": 832,
+        "content_character_count": 783,
+        "nonwhite_channel_ratio": 0.077094,
+        "footer_numbers": [
+          121
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 122,
+        "text_character_count": 911,
+        "content_character_count": 844,
+        "nonwhite_channel_ratio": 0.088707,
+        "footer_numbers": [
+          122
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 123,
+        "text_character_count": 2263,
+        "content_character_count": 2198,
+        "nonwhite_channel_ratio": 0.190645,
+        "footer_numbers": [
+          123
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 124,
+        "text_character_count": 2162,
+        "content_character_count": 2097,
+        "nonwhite_channel_ratio": 0.182675,
+        "footer_numbers": [
+          124
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 125,
+        "text_character_count": 2374,
+        "content_character_count": 2309,
+        "nonwhite_channel_ratio": 0.201844,
+        "footer_numbers": [
+          125
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 126,
+        "text_character_count": 2405,
+        "content_character_count": 2340,
+        "nonwhite_channel_ratio": 0.204539,
+        "footer_numbers": [
+          126
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 127,
+        "text_character_count": 2344,
+        "content_character_count": 2279,
+        "nonwhite_channel_ratio": 0.19801,
+        "footer_numbers": [
+          127
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 128,
+        "text_character_count": 2243,
+        "content_character_count": 2178,
+        "nonwhite_channel_ratio": 0.190024,
+        "footer_numbers": [
+          128
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 129,
+        "text_character_count": 1871,
+        "content_character_count": 1796,
+        "nonwhite_channel_ratio": 0.16105,
+        "footer_numbers": [
+          129
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 130,
+        "text_character_count": 1433,
+        "content_character_count": 1370,
+        "nonwhite_channel_ratio": 0.13253,
+        "footer_numbers": [
+          130
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 131,
+        "text_character_count": 2329,
+        "content_character_count": 2264,
+        "nonwhite_channel_ratio": 0.197277,
+        "footer_numbers": [
+          131
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 132,
+        "text_character_count": 2380,
+        "content_character_count": 2315,
+        "nonwhite_channel_ratio": 0.19856,
+        "footer_numbers": [
+          132
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 133,
+        "text_character_count": 1962,
+        "content_character_count": 1906,
+        "nonwhite_channel_ratio": 0.168248,
+        "footer_numbers": [
+          133
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 134,
+        "text_character_count": 1386,
+        "content_character_count": 1313,
+        "nonwhite_channel_ratio": 0.14251,
+        "footer_numbers": [
+          134
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 135,
+        "text_character_count": 2045,
+        "content_character_count": 1960,
+        "nonwhite_channel_ratio": 0.19043,
+        "footer_numbers": [
+          135
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 136,
+        "text_character_count": 2071,
+        "content_character_count": 2005,
+        "nonwhite_channel_ratio": 0.190574,
+        "footer_numbers": [
+          136
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 137,
+        "text_character_count": 2095,
+        "content_character_count": 2029,
+        "nonwhite_channel_ratio": 0.19365,
+        "footer_numbers": [
+          137
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 138,
+        "text_character_count": 2132,
+        "content_character_count": 2049,
+        "nonwhite_channel_ratio": 0.195229,
+        "footer_numbers": [
+          138
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 139,
+        "text_character_count": 2102,
+        "content_character_count": 2027,
+        "nonwhite_channel_ratio": 0.193523,
+        "footer_numbers": [
+          139
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 140,
+        "text_character_count": 1915,
+        "content_character_count": 1823,
+        "nonwhite_channel_ratio": 0.177629,
+        "footer_numbers": [
+          140
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 141,
+        "text_character_count": 1857,
+        "content_character_count": 1782,
+        "nonwhite_channel_ratio": 0.175121,
+        "footer_numbers": [
+          141
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 142,
+        "text_character_count": 1518,
+        "content_character_count": 1424,
+        "nonwhite_channel_ratio": 0.147096,
+        "footer_numbers": [
+          142
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 143,
+        "text_character_count": 1825,
+        "content_character_count": 1742,
+        "nonwhite_channel_ratio": 0.208452,
+        "footer_numbers": [
+          143
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 144,
+        "text_character_count": 2093,
+        "content_character_count": 2031,
+        "nonwhite_channel_ratio": 0.214964,
+        "footer_numbers": [
+          144
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 145,
+        "text_character_count": 1837,
+        "content_character_count": 1749,
+        "nonwhite_channel_ratio": 0.21497,
+        "footer_numbers": [
+          145
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 146,
+        "text_character_count": 1501,
+        "content_character_count": 1420,
+        "nonwhite_channel_ratio": 0.136277,
+        "footer_numbers": [
+          146
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 147,
+        "text_character_count": 1314,
+        "content_character_count": 1252,
+        "nonwhite_channel_ratio": 0.135408,
+        "footer_numbers": [
+          147
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 148,
+        "text_character_count": 1888,
+        "content_character_count": 1823,
+        "nonwhite_channel_ratio": 0.174736,
+        "footer_numbers": [
+          148
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 149,
+        "text_character_count": 1771,
+        "content_character_count": 1692,
+        "nonwhite_channel_ratio": 0.206608,
+        "footer_numbers": [
+          149
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 150,
+        "text_character_count": 1865,
+        "content_character_count": 1785,
+        "nonwhite_channel_ratio": 0.171699,
+        "footer_numbers": [
+          150
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 151,
+        "text_character_count": 1898,
+        "content_character_count": 1831,
+        "nonwhite_channel_ratio": 0.172679,
+        "footer_numbers": [
+          151
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 152,
+        "text_character_count": 1731,
+        "content_character_count": 1667,
+        "nonwhite_channel_ratio": 0.158938,
+        "footer_numbers": [
+          152
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 153,
+        "text_character_count": 830,
+        "content_character_count": 797,
+        "nonwhite_channel_ratio": 0.077285,
+        "footer_numbers": [
+          153
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 154,
+        "text_character_count": 1355,
+        "content_character_count": 1291,
+        "nonwhite_channel_ratio": 0.145642,
+        "footer_numbers": [
+          154
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 155,
+        "text_character_count": 2058,
+        "content_character_count": 1967,
+        "nonwhite_channel_ratio": 0.192351,
+        "footer_numbers": [
+          155
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 156,
+        "text_character_count": 2053,
+        "content_character_count": 1988,
+        "nonwhite_channel_ratio": 0.193459,
+        "footer_numbers": [
+          156
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 157,
+        "text_character_count": 2043,
+        "content_character_count": 1959,
+        "nonwhite_channel_ratio": 0.193858,
+        "footer_numbers": [
+          157
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 158,
+        "text_character_count": 894,
+        "content_character_count": 854,
+        "nonwhite_channel_ratio": 0.079349,
+        "footer_numbers": [
+          158
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 159,
+        "text_character_count": 1415,
+        "content_character_count": 1341,
+        "nonwhite_channel_ratio": 0.14624,
+        "footer_numbers": [
+          159
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 160,
+        "text_character_count": 2104,
+        "content_character_count": 2018,
+        "nonwhite_channel_ratio": 0.203694,
+        "footer_numbers": [
+          160
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 161,
+        "text_character_count": 2094,
+        "content_character_count": 2026,
+        "nonwhite_channel_ratio": 0.193595,
+        "footer_numbers": [
+          161
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 162,
+        "text_character_count": 2083,
+        "content_character_count": 1996,
+        "nonwhite_channel_ratio": 0.195213,
+        "footer_numbers": [
+          162
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 163,
+        "text_character_count": 1468,
+        "content_character_count": 1387,
+        "nonwhite_channel_ratio": 0.155082,
+        "footer_numbers": [
+          163
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 164,
+        "text_character_count": 1685,
+        "content_character_count": 1614,
+        "nonwhite_channel_ratio": 0.15661,
+        "footer_numbers": [
+          164
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 165,
+        "text_character_count": 2024,
+        "content_character_count": 1936,
+        "nonwhite_channel_ratio": 0.18568,
+        "footer_numbers": [
+          165
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 166,
+        "text_character_count": 2053,
+        "content_character_count": 1989,
+        "nonwhite_channel_ratio": 0.188493,
+        "footer_numbers": [
+          166
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 167,
+        "text_character_count": 2217,
+        "content_character_count": 2138,
+        "nonwhite_channel_ratio": 0.203231,
+        "footer_numbers": [
+          167
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 168,
+        "text_character_count": 2146,
+        "content_character_count": 2080,
+        "nonwhite_channel_ratio": 0.198895,
+        "footer_numbers": [
+          168
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 169,
+        "text_character_count": 2147,
+        "content_character_count": 2082,
+        "nonwhite_channel_ratio": 0.196384,
+        "footer_numbers": [
+          169
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 170,
+        "text_character_count": 2178,
+        "content_character_count": 2113,
+        "nonwhite_channel_ratio": 0.197724,
+        "footer_numbers": [
+          170
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 171,
+        "text_character_count": 2165,
+        "content_character_count": 2090,
+        "nonwhite_channel_ratio": 0.199884,
+        "footer_numbers": [
+          171
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 172,
+        "text_character_count": 2211,
+        "content_character_count": 2146,
+        "nonwhite_channel_ratio": 0.202777,
+        "footer_numbers": [
+          172
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 173,
+        "text_character_count": 1856,
+        "content_character_count": 1778,
+        "nonwhite_channel_ratio": 0.171478,
+        "footer_numbers": [
+          173
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 174,
+        "text_character_count": 2007,
+        "content_character_count": 1928,
+        "nonwhite_channel_ratio": 0.18492,
+        "footer_numbers": [
+          174
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 175,
+        "text_character_count": 554,
+        "content_character_count": 533,
+        "nonwhite_channel_ratio": 0.051709,
+        "footer_numbers": [
+          175
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 176,
+        "text_character_count": 1585,
+        "content_character_count": 1515,
+        "nonwhite_channel_ratio": 0.147476,
+        "footer_numbers": [
+          176
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 177,
+        "text_character_count": 2027,
+        "content_character_count": 1961,
+        "nonwhite_channel_ratio": 0.18344,
+        "footer_numbers": [
+          177
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 178,
+        "text_character_count": 2016,
+        "content_character_count": 1950,
+        "nonwhite_channel_ratio": 0.182085,
+        "footer_numbers": [
+          178
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 179,
+        "text_character_count": 359,
+        "content_character_count": 336,
+        "nonwhite_channel_ratio": 0.03433,
+        "footer_numbers": [
+          179
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 180,
+        "text_character_count": 1410,
+        "content_character_count": 1335,
+        "nonwhite_channel_ratio": 0.146782,
+        "footer_numbers": [
+          180
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 181,
+        "text_character_count": 2145,
+        "content_character_count": 2078,
+        "nonwhite_channel_ratio": 0.202785,
+        "footer_numbers": [
+          181
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 182,
+        "text_character_count": 2165,
+        "content_character_count": 2063,
+        "nonwhite_channel_ratio": 0.203128,
+        "footer_numbers": [
+          182
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 183,
+        "text_character_count": 2113,
+        "content_character_count": 2046,
+        "nonwhite_channel_ratio": 0.198624,
+        "footer_numbers": [
+          183
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 184,
+        "text_character_count": 2128,
+        "content_character_count": 2025,
+        "nonwhite_channel_ratio": 0.197588,
+        "footer_numbers": [
+          184
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 185,
+        "text_character_count": 1999,
+        "content_character_count": 1912,
+        "nonwhite_channel_ratio": 0.18776,
+        "footer_numbers": [
+          185
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 186,
+        "text_character_count": 1752,
+        "content_character_count": 1644,
+        "nonwhite_channel_ratio": 0.166165,
+        "footer_numbers": [
+          186
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 187,
+        "text_character_count": 1324,
+        "content_character_count": 1229,
+        "nonwhite_channel_ratio": 0.128104,
+        "footer_numbers": [
+          187
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 188,
+        "text_character_count": 1349,
+        "content_character_count": 1272,
+        "nonwhite_channel_ratio": 0.141019,
+        "footer_numbers": [
+          188
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 189,
+        "text_character_count": 2101,
+        "content_character_count": 2036,
+        "nonwhite_channel_ratio": 0.197429,
+        "footer_numbers": [
+          189
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 190,
+        "text_character_count": 2034,
+        "content_character_count": 1957,
+        "nonwhite_channel_ratio": 0.189864,
+        "footer_numbers": [
+          190
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 191,
+        "text_character_count": 1365,
+        "content_character_count": 1244,
+        "nonwhite_channel_ratio": 0.238797,
+        "footer_numbers": [
+          191
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 192,
+        "text_character_count": 1617,
+        "content_character_count": 1544,
+        "nonwhite_channel_ratio": 0.150127,
+        "footer_numbers": [
+          192
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 193,
+        "text_character_count": 1260,
+        "content_character_count": 1187,
+        "nonwhite_channel_ratio": 0.132323,
+        "footer_numbers": [
+          193
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 194,
+        "text_character_count": 2027,
+        "content_character_count": 1940,
+        "nonwhite_channel_ratio": 0.188549,
+        "footer_numbers": [
+          194
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 195,
+        "text_character_count": 2179,
+        "content_character_count": 2101,
+        "nonwhite_channel_ratio": 0.20308,
+        "footer_numbers": [
+          195
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 196,
+        "text_character_count": 2095,
+        "content_character_count": 2030,
+        "nonwhite_channel_ratio": 0.195922,
+        "footer_numbers": [
+          196
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 197,
+        "text_character_count": 868,
+        "content_character_count": 810,
+        "nonwhite_channel_ratio": 0.104601,
+        "footer_numbers": [
+          197
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 198,
+        "text_character_count": 1340,
+        "content_character_count": 1277,
+        "nonwhite_channel_ratio": 0.139784,
+        "footer_numbers": [
+          198
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 199,
+        "text_character_count": 1377,
+        "content_character_count": 1304,
+        "nonwhite_channel_ratio": 0.142972,
+        "footer_numbers": [
+          199
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 200,
+        "text_character_count": 1374,
+        "content_character_count": 1316,
+        "nonwhite_channel_ratio": 0.189872,
+        "footer_numbers": [
+          200
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 201,
+        "text_character_count": 1539,
+        "content_character_count": 1490,
+        "nonwhite_channel_ratio": 0.144088,
+        "footer_numbers": [
+          201
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 202,
+        "text_character_count": 979,
+        "content_character_count": 912,
+        "nonwhite_channel_ratio": 0.110172,
+        "footer_numbers": [
+          202
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 203,
+        "text_character_count": 2198,
+        "content_character_count": 2123,
+        "nonwhite_channel_ratio": 0.207799,
+        "footer_numbers": [
+          203
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 204,
+        "text_character_count": 707,
+        "content_character_count": 656,
+        "nonwhite_channel_ratio": 0.068565,
+        "footer_numbers": [
+          204
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 205,
+        "text_character_count": 1453,
+        "content_character_count": 1389,
+        "nonwhite_channel_ratio": 0.149939,
+        "footer_numbers": [
+          205
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 206,
+        "text_character_count": 1951,
+        "content_character_count": 1874,
+        "nonwhite_channel_ratio": 0.181001,
+        "footer_numbers": [
+          206
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 207,
+        "text_character_count": 2004,
+        "content_character_count": 1939,
+        "nonwhite_channel_ratio": 0.179199,
+        "footer_numbers": [
+          207
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 208,
+        "text_character_count": 2109,
+        "content_character_count": 2043,
+        "nonwhite_channel_ratio": 0.191172,
+        "footer_numbers": [
+          208
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 209,
+        "text_character_count": 2085,
+        "content_character_count": 1994,
+        "nonwhite_channel_ratio": 0.193116,
+        "footer_numbers": [
+          209
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 210,
+        "text_character_count": 1997,
+        "content_character_count": 1909,
+        "nonwhite_channel_ratio": 0.184667,
+        "footer_numbers": [
+          210
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 211,
+        "text_character_count": 2077,
+        "content_character_count": 1983,
+        "nonwhite_channel_ratio": 0.192391,
+        "footer_numbers": [
+          211
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 212,
+        "text_character_count": 2013,
+        "content_character_count": 1946,
+        "nonwhite_channel_ratio": 0.186883,
+        "footer_numbers": [
+          212
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 213,
+        "text_character_count": 1881,
+        "content_character_count": 1807,
+        "nonwhite_channel_ratio": 0.17519,
+        "footer_numbers": [
+          213
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 214,
+        "text_character_count": 1373,
+        "content_character_count": 1264,
+        "nonwhite_channel_ratio": 0.134754,
+        "footer_numbers": [
+          214
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 215,
+        "text_character_count": 1821,
+        "content_character_count": 1736,
+        "nonwhite_channel_ratio": 0.165282,
+        "footer_numbers": [
+          215
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 216,
+        "text_character_count": 2060,
+        "content_character_count": 1978,
+        "nonwhite_channel_ratio": 0.183695,
+        "footer_numbers": [
+          216
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 217,
+        "text_character_count": 1919,
+        "content_character_count": 1789,
+        "nonwhite_channel_ratio": 0.167004,
+        "footer_numbers": [
+          217
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 218,
+        "text_character_count": 1823,
+        "content_character_count": 1745,
+        "nonwhite_channel_ratio": 0.158571,
+        "footer_numbers": [
+          218
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 219,
+        "text_character_count": 1406,
+        "content_character_count": 1346,
+        "nonwhite_channel_ratio": 0.136014,
+        "footer_numbers": [
+          219
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 220,
+        "text_character_count": 2225,
+        "content_character_count": 2166,
+        "nonwhite_channel_ratio": 0.185927,
+        "footer_numbers": [
+          220
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 221,
+        "text_character_count": 1162,
+        "content_character_count": 1090,
+        "nonwhite_channel_ratio": 0.109782,
+        "footer_numbers": [
+          221
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 222,
+        "text_character_count": 2120,
+        "content_character_count": 2059,
+        "nonwhite_channel_ratio": 0.179973,
+        "footer_numbers": [
+          222
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 223,
+        "text_character_count": 1956,
+        "content_character_count": 1879,
+        "nonwhite_channel_ratio": 0.166885,
+        "footer_numbers": [
+          223
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 224,
+        "text_character_count": 29,
+        "content_character_count": 16,
+        "nonwhite_channel_ratio": 0.002001,
+        "footer_numbers": [
+          224
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 225,
+        "text_character_count": 2077,
+        "content_character_count": 1968,
+        "nonwhite_channel_ratio": 0.242623,
+        "footer_numbers": [
+          225
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 226,
+        "text_character_count": 3133,
+        "content_character_count": 3027,
+        "nonwhite_channel_ratio": 0.369901,
+        "footer_numbers": [
+          226
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 227,
+        "text_character_count": 1864,
+        "content_character_count": 1785,
+        "nonwhite_channel_ratio": 0.200168,
+        "footer_numbers": [
+          227
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 228,
+        "text_character_count": 1784,
+        "content_character_count": 1700,
+        "nonwhite_channel_ratio": 0.19715,
+        "footer_numbers": [
+          228
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 229,
+        "text_character_count": 2121,
+        "content_character_count": 2051,
+        "nonwhite_channel_ratio": 0.256309,
+        "footer_numbers": [
+          229
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 230,
+        "text_character_count": 2331,
+        "content_character_count": 2221,
+        "nonwhite_channel_ratio": 0.282597,
+        "footer_numbers": [
+          230
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 231,
+        "text_character_count": 1613,
+        "content_character_count": 1543,
+        "nonwhite_channel_ratio": 0.173835,
+        "footer_numbers": [
+          231
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 232,
+        "text_character_count": 2035,
+        "content_character_count": 1958,
+        "nonwhite_channel_ratio": 0.186724,
+        "footer_numbers": [
+          232
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 233,
+        "text_character_count": 2134,
+        "content_character_count": 2070,
+        "nonwhite_channel_ratio": 0.197357,
+        "footer_numbers": [
+          233
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 234,
+        "text_character_count": 1851,
+        "content_character_count": 1735,
+        "nonwhite_channel_ratio": 0.167267,
+        "footer_numbers": [
+          234
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 235,
+        "text_character_count": 2009,
+        "content_character_count": 1922,
+        "nonwhite_channel_ratio": 0.18458,
+        "footer_numbers": [
+          235
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 236,
+        "text_character_count": 663,
+        "content_character_count": 633,
+        "nonwhite_channel_ratio": 0.06234,
+        "footer_numbers": [
+          236
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 237,
+        "text_character_count": 1112,
+        "content_character_count": 1038,
+        "nonwhite_channel_ratio": 0.11686,
+        "footer_numbers": [
+          237
+        ],
+        "visually_blank": false
+      }
+    ],
+    "blockers": []
+  },
+  "toc_pagination_report": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\reports\\toc_pagination_report.json",
+  "blockers": []
+}

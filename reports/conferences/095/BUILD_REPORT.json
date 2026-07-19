@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-07-19T08:14:35+03:00",
+  "conference_id": 95,
+  "iteration": 4,
+  "status": "PASS_PENDING_REVIEW",
+  "production_ready": false,
+  "article_count": 34,
+  "section_count": 14,
+  "stages": {
+    "archive_inventory": "PASS",
+    "auto_manifest": "PASS",
+    "official_toc_resolution": "PASS",
+    "official_corpus_parity": "PASS",
+    "article_preparation": "PASS",
+    "front_matter": "PASS",
+    "section_normalization": "PASS",
+    "compose_docx": "PASS",
+    "source_to_final_fidelity": "PASS",
+    "word_toc": "PASS",
+    "official_page_parity": "PASS",
+    "special_thanks_parity": "PASS",
+    "word_pdf_render": "PASS",
+    "all_pages_visual_qa": "PASS",
+    "post_render_typography_audit": "PASS",
+    "clean_rebuild": "PASS"
+  },
+  "artifacts": {
+    "docx": "artifacts/conferences/095/iteration-004/Conference95_generated.docx",
+    "docx_sha256": "20db8e79ad55fbe2df98383e646a5617e1a2e59b335274e132d8a71c6d0e93b5",
+    "pdf": "artifacts/conferences/095/iteration-004/Conference95_generated.pdf",
+    "pdf_sha256": "eb6c3209ec96e65574dbffae7a501c49fb89ee82c84b39231db72ffc544c8eee"
+  },
+  "metrics": {
+    "pdf_pages": 248,
+    "official_article_starts": "34/34",
+    "toc_sections": 14,
+    "toc_articles": 34,
+    "special_thanks_physical_page": 7,
+    "first_article_physical_page": 8,
+    "first_article_printed_page": 6,
+    "visible_footer_numbers": "246/246",
+    "tests_passed": 80
+  },
+  "blockers": []
+}

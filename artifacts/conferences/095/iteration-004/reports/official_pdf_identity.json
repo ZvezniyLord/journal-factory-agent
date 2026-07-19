@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "source_url": "https://naukainfo.com/jurnaly/Conference95.pdf",
+  "sha256": "fd16720e1573b4d95073b1f9a9cfc5823342dca26fb9a6ba2841136bde12e2d7",
+  "size_bytes": 3797732,
+  "physical_page_count": 248,
+  "bibliographic_page_count": 245,
+  "golden_pdf_required": true
+}

@@ -1,0 +1,24 @@
+{
+  "conference_id": 95,
+  "status": "DRAFT_BUILT",
+  "production_ready": false,
+  "output_docx": "build\\iteration-004-m\\Conference95\\Conference95_generated.docx",
+  "output_sha256": "53bc45b397fe9e0eccccb587885d0537976a76ae6f36c0bb9f14d998bb6bc246",
+  "article_count": 34,
+  "style_status": "PASS",
+  "typography_profile": "legacy_14pt",
+  "body_font_size_pt": 14,
+  "compose_status": "PASS",
+  "fidelity_status": "PASS",
+  "front_matter_status": "PASS",
+  "section_normalization_status": "PASS",
+  "typography_audit_status": "PASS",
+  "publication_order_status": "PASS",
+  "blockers": [],
+  "required_next_gates": [
+    "DOCX_TO_PDF_RENDER",
+    "PAGINATION_CONVERGENCE",
+    "PUBLICATION_PARITY",
+    "CLEAN_REBUILD"
+  ]
+}

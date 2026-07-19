@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "conference_id": 95,
+  "status": "PASS",
+  "extractor": "OFFICIAL_TOC_V1",
+  "source": {
+    "source_url": "https://naukainfo.com/jurnaly/Conference95.pdf",
+    "sha256": "fd16720e1573b4d95073b1f9a9cfc5823342dca26fb9a6ba2841136bde12e2d7",
+    "size_bytes": 3797732,
+    "physical_page_count": 248,
+    "bibliographic_page_count": 245,
+    "title": "OXFORD INTERNATIONAL SCIENCE FORUM",
+    "isbn": "978-617-8680-40-4",
+    "collection_doi": "10.64828/conf-95-2026"
+  },
+  "toc_physical_start_page": 4,
+  "toc_physical_end_page": 7,
+  "article_count": 34,
+  "section_count": 14,
+  "sections": [
+    {
+      "ordinal": 1,
+      "title": "ECONOMIC THEORY, MACRO-AND REGIONAL ECONOMY",
+      "first_article_ordinal": 1
+    },
+    {
+      "ordinal": 2,
+      "title": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "first_article_ordinal": 2
+    },
+    {
+      "ordinal": 3,
+      "title": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "first_article_ordinal": 4
+    },
+    {
+      "ordinal": 4,
+      "title": "SOCIAL WORK AND SOCIAL WELFARE",
+      "first_article_ordinal": 6
+    },
+    {
+      "ordinal": 5,
+      "title": "LAW AND INTERNATIONAL LAW",
+      "first_article_ordinal": 7
+    },
+    {
+      "ordinal": 6,
+      "title": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY",
+      "first_article_ordinal": 9
+    },
+    {
+      "ordinal": 7,
+      "title": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY",
+      "first_article_ordinal": 10
+    },
+    {
+      "ordinal": 8,
+      "title": "PHYSICAL AND MATHEMATICAL SCIENCES",
+      "first_article_ordinal": 11
+    },
+    {
+      "ordinal": 9,
+      "title": "PHILOLOGY AND JOURNALISM",
+      "first_article_ordinal": 12
+    },
+    {
+      "ordinal": 10,
+      "title": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "first_article_ordinal": 13
+    },
+    {
+      "ordinal": 11,
+      "title": "PEDAGOGY AND EDUCATION",
+      "first_article_ordinal": 15
+    },
+    {
+      "ordinal": 12,
+      "title": "PSYCHOLOGY AND PSYCHIATRY",
+      "first_article_ordinal": 26
+    },
+    {
+      "ordinal": 13,
+      "title": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "first_article_ordinal": 29
+    },
+    {
+      "ordinal": 14,
+      "title": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "first_article_ordinal": 33
+    }
+  ],
+  "articles": [
+    {
+      "ordinal": 1,
+      "section": "ECONOMIC THEORY, MACRO-AND REGIONAL ECONOMY",
+      "authors": [
+        "Резніков Роман Борисович"
+      ],
+      "authors_display": "Резніков Роман Борисович",
+      "title": "METHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
+      "printed_start_page": 6,
+      "toc_physical_page": 4,
+      "physical_start_page": 8,
+      "physical_end_page": 14,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 2,
+      "section": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "authors": [
+        "Львович Арсеній Вячеславович"
+      ],
+      "authors_display": "Львович Арсеній Вячеславович",
+      "title": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "printed_start_page": 13,
+      "toc_physical_page": 4,
+      "physical_start_page": 15,
+      "physical_end_page": 21,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 3,
+      "section": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "authors": [
+        "Ганзюк Світлана Михайлівна"
+      ],
+      "authors_display": "Ганзюк Світлана Михайлівна",
+      "title": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ",
+      "printed_start_page": 20,
+      "toc_physical_page": 4,
+      "physical_start_page": 22,
+      "physical_end_page": 26,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 4,
+      "section": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "authors": [
+        "Федорак Володимир Васильович",
+        "Качмар Олександра Василівна",
+        "Стратієнко Іван Іванович"
+      ],
+      "authors_display": "Федорак Володимир Васильович, Качмар Олександра Василівна, Стратієнко Іван Іванович",
+      "title": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+      "printed_start_page": 25,
+      "toc_physical_page": 4,
+      "physical_start_page": 27,
+      "physical_end_page": 32,
+      "body_title_score": 0.0
+    },
+    {
+      "ordinal": 5,
+      "section": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "authors": [
+        "Долгальова Олена Вячеславівна",
+        "Туровський Ігор Володимирович"
+      ],
+      "authors_display": "Долгальова Олена Вячеславівна, Туровський Ігор Володимирович",
+      "title": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "printed_start_page": 31,
+      "toc_physical_page": 4,
+      "physical_start_page": 33,
+      "physical_end_page": 37,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 6,
+      "section": "SOCIAL WORK AND SOCIAL WELFARE",
+      "authors": [
+        "Ординович Віктор Андрійович"
+      ],
+      "authors_display": "Ординович Віктор Андрійович",
+      "title": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ",
+      "printed_start_page": 36,
+      "toc_physical_page": 4,
+      "physical_start_page": 38,
+      "physical_end_page": 41,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 7,
+      "section": "LAW AND INTERNATIONAL LAW",
+      "authors": [
+        "Цьось Юлія Станіславівна"
+      ],
+      "authors_display": "Цьось Юлія Станіславівна",
+      "title": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "printed_start_page": 40,
+      "toc_physical_page": 4,
+      "physical_start_page": 42,
+      "physical_end_page": 50,
+      "body_title_score": 0.996169
+    },
+    {
+      "ordinal": 8,
+      "section": "LAW AND INTERNATIONAL LAW",
+      "authors": [
+        "Ягмуров Єгор Костянтинович"
+      ],
+      "authors_display": "Ягмуров Єгор Костянтинович",
+      "title": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "printed_start_page": 49,
+      "toc_physical_page": 4,
+      "physical_start_page": 51,
+      "physical_end_page": 55,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 9,
+      "section": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY",
+      "authors": [
+        "Нігальчук Єва Романівна"
+      ],
+      "authors_display": "Нігальчук Єва Романівна",
+      "title": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "printed_start_page": 54,
+      "toc_physical_page": 5,
+      "physical_start_page": 56,
+      "physical_end_page": 60,
+      "body_title_score": 0.99422
+    },
+    {
+      "ordinal": 10,
+      "section": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY",
+      "authors": [
+        "Ящук Петро Володимирович"
+      ],
+      "authors_display": "Ящук Петро Володимирович",
+      "title": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "printed_start_page": 59,
+      "toc_physical_page": 5,
+      "physical_start_page": 61,
+      "physical_end_page": 66,
+      "body_title_score": 0.991453
+    },
+    {
+      "ordinal": 11,
+      "section": "PHYSICAL AND MATHEMATICAL SCIENCES",
+      "authors": [
+        "Нігальчук Єва Романівна"
+      ],
+      "authors_display": "Нігальчук Єва Романівна",
+      "title": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "printed_start_page": 65,
+      "toc_physical_page": 5,
+      "physical_start_page": 67,
+      "physical_end_page": 71,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 12,
+      "section": "PHILOLOGY AND JOURNALISM",
+      "authors": [
+        "Мартинюк Світлана Євгенівна"
+      ],
+      "authors_display": "Мартинюк Світлана Євгенівна",
+      "title": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL",
+      "printed_start_page": 70,
+      "toc_physical_page": 5,
+      "physical_start_page": 72,
+      "physical_end_page": 75,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 13,
+      "section": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "authors": [
+        "Шаповалова Алла Миколаївна"
+      ],
+      "authors_display": "Шаповалова Алла Миколаївна",
+      "title": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ",
+      "printed_start_page": 74,
+      "toc_physical_page": 5,
+      "physical_start_page": 76,
+      "physical_end_page": 82,
+      "body_title_score": 0.987013
+    },
+    {
+      "ordinal": 14,
+      "section": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "authors": [
+        "Donii Nataliia Yevgeniivna",
+        "Honcharenko Oksana Hrygorivna"
+      ],
+      "authors_display": "Donii Nataliia Yevgeniivna, Honcharenko Oksana Hrygorivna",
+      "title": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "printed_start_page": 81,
+      "toc_physical_page": 5,
+      "physical_start_page": 83,
+      "physical_end_page": 86,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 15,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Bc. Oleksandra Lavrivska"
+      ],
+      "authors_display": "Bc. Oleksandra Lavrivska",
+      "title": "SPECIFICS OF THE METHODOLOGY OF TEACHING ENGLISH TO FOREIGN STUDENTS IN PRIMARY SCHOOLS OF THE KARLOVY VARY REGION",
+      "printed_start_page": 85,
+      "toc_physical_page": 5,
+      "physical_start_page": 87,
+      "physical_end_page": 90,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 16,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Стрельченко Олена Олексіївна"
+      ],
+      "authors_display": "Стрельченко Олена Олексіївна",
+      "title": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+      "printed_start_page": 89,
+      "toc_physical_page": 5,
+      "physical_start_page": 91,
+      "physical_end_page": 102,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 17,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Сидоренко Сергій Юрійович"
+      ],
+      "authors_display": "Сидоренко Сергій Юрійович",
+      "title": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "printed_start_page": 101,
+      "toc_physical_page": 5,
+      "physical_start_page": 103,
+      "physical_end_page": 112,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 18,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Пилипенко Наталія Вікторівна",
+        "Чібірєва Людмила Вікторівна"
+      ],
+      "authors_display": "Пилипенко Наталія Вікторівна, Чібірєва Людмила Вікторівна",
+      "title": "ПІДЗЕМНА ШКОЛА: БЕЗПЕЧНИЙ ПРОСТІР ДЛЯ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ",
+      "printed_start_page": 111,
+      "toc_physical_page": 6,
+      "physical_start_page": 113,
+      "physical_end_page": 116,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 19,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Башкірова Наталія",
+        "Краус Орина"
+      ],
+      "authors_display": "Башкірова Наталія, Краус Орина",
+      "title": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»",
+      "printed_start_page": 115,
+      "toc_physical_page": 6,
+      "physical_start_page": 117,
+      "physical_end_page": 121,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 20,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Панчук Ольга Іванівна"
+      ],
+      "authors_display": "Панчук Ольга Іванівна",
+      "title": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "printed_start_page": 120,
+      "toc_physical_page": 6,
+      "physical_start_page": 122,
+      "physical_end_page": 133,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 21,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Іванчикова Людмила Іванівна"
+      ],
+      "authors_display": "Іванчикова Людмила Іванівна",
+      "title": "ПИСАНКАРСТВО: ТИХА СИЛА ПРЕДКІВ",
+      "printed_start_page": 132,
+      "toc_physical_page": 6,
+      "physical_start_page": 134,
+      "physical_end_page": 137,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 22,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Олексюк Наталія Степанівна",
+        "Гукалюк Андрій Ігорович"
+      ],
+      "authors_display": "Олексюк Наталія Степанівна, Гукалюк Андрій Ігорович",
+      "title": "ЗАКОРДОННИЙ ДОСВІД ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+      "printed_start_page": 136,
+      "toc_physical_page": 6,
+      "physical_start_page": 138,
+      "physical_end_page": 141,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 23,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Савіщенко Вікторія Миколаївна"
+      ],
+      "authors_display": "Савіщенко Вікторія Миколаївна",
+      "title": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ",
+      "printed_start_page": 140,
+      "toc_physical_page": 6,
+      "physical_start_page": 142,
+      "physical_end_page": 147,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 24,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Спиридонова Олександра Олександрівна",
+        "Зозуля Оксана Василівна"
+      ],
+      "authors_display": "Спиридонова Олександра Олександрівна, Зозуля Оксана Василівна",
+      "title": "ОСОБЛИВОСТІ ОРГАНІЗАЦІЇ ПСИХОЛОГО-ПЕДАГОГІЧНОЇ ПІДТРИМКИ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ В СУЧАСНІЙ ОСВІТІ",
+      "printed_start_page": 146,
+      "toc_physical_page": 6,
+      "physical_start_page": 148,
+      "physical_end_page": 157,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 25,
+      "section": "PEDAGOGY AND EDUCATION",
+      "authors": [
+        "Добридень Алла Володимирівна",
+        "Самборко Інна Миколаївна"
+      ],
+      "authors_display": "Добридень Алла Володимирівна, Самборко Інна Миколаївна",
+      "title": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "printed_start_page": 156,
+      "toc_physical_page": 6,
+      "physical_start_page": 158,
+      "physical_end_page": 167,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 26,
+      "section": "PSYCHOLOGY AND PSYCHIATRY",
+      "authors": [
+        "Наталія Губа"
+      ],
+      "authors_display": "Наталія Губа",
+      "title": "АРТТЕРАПІЯ: ТВОРЧІСТЬ ЯК ЗАСІБ ПСИХОЛОГІЧНОЇ ПІДТРИМКИ УЧАСНИКІВ ОСВІТНЬОГО ПРОЦЕСУ",
+      "printed_start_page": 166,
+      "toc_physical_page": 6,
+      "physical_start_page": 168,
+      "physical_end_page": 174,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 27,
+      "section": "PSYCHOLOGY AND PSYCHIATRY",
+      "authors": [
+        "Костишина Світлана Павлівна"
+      ],
+      "authors_display": "Костишина Світлана Павлівна",
+      "title": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ",
+      "printed_start_page": 173,
+      "toc_physical_page": 6,
+      "physical_start_page": 175,
+      "physical_end_page": 186,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 28,
+      "section": "PSYCHOLOGY AND PSYCHIATRY",
+      "authors": [
+        "Paios Yelyzaveta",
+        "Olena Lykholat"
+      ],
+      "authors_display": "Paios Yelyzaveta, Olena Lykholat",
+      "title": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "printed_start_page": 185,
+      "toc_physical_page": 6,
+      "physical_start_page": 187,
+      "physical_end_page": 191,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 29,
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "authors": [
+        "Bohdan Kravchenko"
+      ],
+      "authors_display": "Bohdan Kravchenko",
+      "title": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES",
+      "printed_start_page": 190,
+      "toc_physical_page": 6,
+      "physical_start_page": 192,
+      "physical_end_page": 196,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 30,
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "authors": [
+        "Євтушенко Віталій Вячеславович",
+        "Серякова Ірина Юріївна",
+        "Крамарьов Сергій Олександрович",
+        "Палатна Людмила Олександрівна",
+        "Шпак Ірина Володимирівна",
+        "Воронов Олександр Олександрович"
+      ],
+      "authors_display": "Євтушенко Віталій Вячеславович, Серякова Ірина Юріївна, Крамарьов Сергій Олександрович, Палатна Людмила Олександрівна, Шпак Ірина Володимирівна, Воронов Олександр Олександрович",
+      "title": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ",
+      "printed_start_page": 195,
+      "toc_physical_page": 7,
+      "physical_start_page": 197,
+      "physical_end_page": 205,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 31,
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "authors": [
+        "Petro Zamіatin",
+        "Vasyl Kritsak",
+        "Denis Zamіatin",
+        "Daria Lazebna",
+        "Аlina Vаkulenkо"
+      ],
+      "authors_display": "Petro Zamіatin, Vasyl Kritsak, Denis Zamіatin, Daria Lazebna, Аlina Vаkulenkо",
+      "title": "PULMONARY HEMORRHAGE: DIAGNOSTIC AND SURGICAL TACTICS AT THE MODERN LEVEL",
+      "printed_start_page": 204,
+      "toc_physical_page": 7,
+      "physical_start_page": 206,
+      "physical_end_page": 214,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 32,
+      "section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "authors": [
+        "Обозна Вікторія Василівна",
+        "Красовська Катерина Олександрівна"
+      ],
+      "authors_display": "Обозна Вікторія Василівна, Красовська Катерина Олександрівна",
+      "title": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ",
+      "printed_start_page": 213,
+      "toc_physical_page": 7,
+      "physical_start_page": 215,
+      "physical_end_page": 229,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 33,
+      "section": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "authors": [
+        "Лисенко Ілля Сергійович"
+      ],
+      "authors_display": "Лисенко Ілля Сергійович",
+      "title": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "printed_start_page": 228,
+      "toc_physical_page": 7,
+      "physical_start_page": 230,
+      "physical_end_page": 241,
+      "body_title_score": 1.0
+    },
+    {
+      "ordinal": 34,
+      "section": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "authors": [
+        "Прибитько Іван Олександрович",
+        "Івкова Вікторія Юріївна"
+      ],
+      "authors_display": "Прибитько Іван Олександрович, Івкова Вікторія Юріївна",
+      "title": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 рр.)",
+      "printed_start_page": 240,
+      "toc_physical_page": 7,
+      "physical_start_page": 242,
+      "physical_end_page": 248,
+      "body_title_score": 1.0
+    }
+  ],
+  "special_thanks": {
+    "present": true,
+    "heading": "SPECIAL THANKS FOR ACTIVE PARTICIPATION IN THE SCIENTIFIC AND PRACTICAL CONFERENCE ARE EXTENDED TO THE FOLLOWING PARTICIPANTS:",
+    "participants": [
+      "Oksana Lavrus",
+      "Natalya Bud",
+      "Vladyslav Bilous",
+      "Tetiana Tolkova",
+      "Oleksandra Stroganova",
+      "Olena Rybachuk",
+      "Maryna Melnichuk",
+      "Sviatoslav Bortsevych",
+      "Polyakh Oleksandr",
+      "Andrii Shevchuk",
+      "Iryna Melnyk",
+      "Oleh Bondar",
+      "Tatiana Smirnova",
+      "Mykola Kovalchuk",
+      "Svitlana Moroz",
+      "Yaroslav Petryk",
+      "Liudmyla Savchuk",
+      "Sergey Ivanov",
+      "Nadiia Polianska",
+      "Volodymyr Marchuk",
+      "Oksana Lysenko",
+      "Roman Kravets",
+      "Halyna Danyliuk",
+      "Denys Ostapchuk",
+      "Kateryna Boiko",
+      "Dmitry Sokolov",
+      "Mariia Rudko",
+      "Viktor Horbatiuk"
+    ],
+    "participants_display": "Oksana Lavrus, Natalya Bud, Vladyslav Bilous, Tetiana Tolkova, Oleksandra Stroganova, Olena Rybachuk, Maryna Melnichuk, Sviatoslav Bortsevych, Polyakh Oleksandr, Andrii Shevchuk, Iryna Melnyk, Oleh Bondar, Tatiana Smirnova, Mykola Kovalchuk, Svitlana Moroz, Yaroslav Petryk, Liudmyla Savchuk, Sergey Ivanov, Nadiia Polianska, Volodymyr Marchuk, Oksana Lysenko, Roman Kravets, Halyna Danyliuk, Denys Ostapchuk, Kateryna Boiko, Dmitry Sokolov, Mariia Rudko, Viktor Horbatiuk",
+    "physical_page": 7
+  },
+  "page_numbering": {
+    "physical_to_printed_offset": 2,
+    "first_numbered_physical_page": 3,
+    "first_printed_page": 1,
+    "numbered_section_index": 2,
+    "hide_numbers_before_numbered_section": true
+  },
+  "toc_layout": {
+    "line_spacing_twips": 265,
+    "special_thanks_line_spacing_twips": 265,
+    "provenance": "Conference95.pdf physical pages 4-7"
+  },
+  "layout_adjustments": [
+    {
+      "ordinal": 7,
+      "official_physical_page": 50,
+      "page_break_before_anchor": "судових рішень. URL: https://reyestr.court.gov.ua/Review/122522303 (дата",
+      "provenance": "Conference95.pdf physical page 50"
+    },
+    {
+      "ordinal": 9,
+      "official_physical_page": 60,
+      "page_break_before_anchor": "https://hudoc.echr.coe.int/eng?i=001-71547 (дата звернення: 10.11.2025)",
+      "provenance": "Conference95.pdf physical page 60"
+    },
+    {
+      "ordinal": 11,
+      "official_physical_page": 71,
+      "page_break_before_anchor": "k_2025_fe6fd.pdf#page=17 (дата звернення: 23.01.2026).",
+      "provenance": "Conference95.pdf physical page 71"
+    },
+    {
+      "ordinal": 15,
+      "official_physical_page": 90,
+      "page_break_before_anchor": "classrooms. Charles University.",
+      "provenance": "Conference95.pdf physical page 90"
+    },
+    {
+      "ordinal": 16,
+      "trim_right_aligned_padding": true,
+      "collapse_redundant_pre_title_empty_paragraphs": true,
+      "paragraph_styles_to_normal": [
+        "Normal (Web)",
+        "font_8",
+        "First Paragraph"
+      ],
+      "normalize_paragraph_spacing": true,
+      "normalize_character_spacing": true,
+      "provenance": "Conference95.pdf pages 91-102 and editorial DOCX geometry reference"
+    },
+    {
+      "ordinal": 22,
+      "official_physical_page": 141,
+      "page_break_before_anchor": "європейський та американський дискурс. Український педагогічний",
+      "provenance": "Conference95.pdf physical page 141"
+    },
+    {
+      "ordinal": 25,
+      "official_physical_page": 167,
+      "page_break_before_anchor": "Всеосвіта. 2024. URL: https://vseosvita.ua/library/mentalne-zdorovia (Дата",
+      "provenance": "Conference95.pdf physical page 167"
+    },
+    {
+      "ordinal": 27,
+      "official_physical_page": 186,
+      "page_break_before_anchor": "https://esu.com.ua/search_articles.php?id=18248",
+      "provenance": "Conference95.pdf physical page 186"
+    },
+    {
+      "ordinal": 28,
+      "normalize_paragraph_spacing": true,
+      "provenance": "Conference95.pdf pages 187-191 and editorial DOCX geometry reference"
+    },
+    {
+      "ordinal": 30,
+      "official_physical_page": 205,
+      "page_break_before_anchor": "https://doi.org/10.1002/art.42094",
+      "provenance": "Conference95.pdf physical page 205"
+    },
+    {
+      "ordinal": 31,
+      "official_physical_page": 214,
+      "page_break_before_anchor": "Khuda M, Hrubnik V, Severhin V, Dubenko D. Maloinvazyvni metody",
+      "provenance": "Conference95.pdf physical page 214"
+    }
+  ],
+  "body_parser_warnings": [
+    {
+      "page": 27,
+      "code": "TITLE_NOT_DETECTED"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "BODY_TITLE_NOT_DETECTED",
+      "ordinal": 4
+    }
+  ],
+  "blockers": []
+}

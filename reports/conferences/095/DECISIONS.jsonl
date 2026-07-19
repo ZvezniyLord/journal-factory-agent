@@ -1,0 +1,6 @@
+{"timestamp":"2026-07-19T08:14:35+03:00","decision":"OFFICIAL_GOLDEN_REQUIRED","reason":"iteration-004 contract requires Conference95.pdf identity and publication parity","conference_specific_rule":false}
+{"timestamp":"2026-07-19T08:14:35+03:00","decision":"OFFICIAL_TOC_PUBLICATION_ORDER","reason":"fail-closed resolver matched 34 raw articles to 34 official TOC entries and 14 editorial sections","conference_specific_rule":false}
+{"timestamp":"2026-07-19T08:14:35+03:00","decision":"EXPLICIT_LAYOUT_EVIDENCE","reason":"content-anchored page breaks and style normalization are fixture data with golden-page provenance; core code contains no conference-id condition","conference_specific_rule":false}
+{"timestamp":"2026-07-19T08:14:35+03:00","decision":"LOCKED_OFFICIAL_TOC","reason":"PAGEREF fields preserve official 14-section/34-article structure while Word updates page references","conference_specific_rule":false}
+{"timestamp":"2026-07-19T08:14:35+03:00","decision":"SPECIAL_THANKS_PAGE_GATE","reason":"dedicated bookmark verifies special-thanks on official physical page 7","conference_specific_rule":false}
+{"timestamp":"2026-07-19T08:14:35+03:00","decision":"READY_FOR_REVIEW_NOT_ACCEPTED","reason":"all iteration-004 gates pass; final acceptance remains owned by Reviewer","conference_specific_rule":false}

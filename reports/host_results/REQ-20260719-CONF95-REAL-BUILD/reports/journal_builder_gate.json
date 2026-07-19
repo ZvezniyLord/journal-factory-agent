@@ -1,0 +1,25 @@
+{
+  "conference_id": 95,
+  "status": "BUILD BLOCKED",
+  "production_ready": false,
+  "output_docx": null,
+  "output_sha256": null,
+  "article_count": 0,
+  "style_status": null,
+  "typography_profile": null,
+  "body_font_size_pt": null,
+  "compose_status": null,
+  "fidelity_status": null,
+  "blockers": [
+    "manifest:manifest_source_missing"
+  ],
+  "required_next_gates": [
+    "HEADER_NORMALIZATION_PLAN",
+    "DIRECT_RUN_FONT_SIZE_AUDIT",
+    "TOC_GENERATION",
+    "DOCX_TO_PDF_RENDER",
+    "PAGINATION_CONVERGENCE",
+    "PUBLICATION_PARITY",
+    "CLEAN_REBUILD"
+  ]
+}
