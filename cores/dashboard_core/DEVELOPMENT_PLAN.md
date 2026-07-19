@@ -323,16 +323,16 @@ Record provenance:
 - [x] Architecture review passes.
 - [x] Repository acceptance completed locally before integration push.
 - [x] Passport and plan updated with final evidence.
-- [ ] Implementation pushed.
+- [x] Implementation pushed and verified on canonical `origin/main`.
 - [ ] Dashboard lock released and remotely verified free.
 
 ## Current State
 
-Cycles 0 through 5 are implemented and locally verified under the Dashboard lock. The package contains only Dashboard domain/application code and its JSON/HTTP adapters. Recursive discovery and candidate classification remain test-only deterministic adapters. The current verification result is 31 tests passing with warnings treated as errors, plus a successful real backend run and artifact parse.
+Cycles 0 through 5 are implemented, locally verified, and pushed under the Dashboard lock. Canonical local `HEAD` and `origin/main` both resolved to implementation commit `10463eabea4fbcf0fc310922873713a09de53b4f`. The package contains only Dashboard domain/application code and its JSON/HTTP adapters. Recursive discovery and candidate classification remain test-only deterministic adapters. The final integrated verification result is 31 Dashboard tests and 19 Orchestrator regression tests passing, plus a successful real backend run and artifact parse in both the canonical clone and user-visible checkout.
 
 ## Next Exact Action
 
-Commit the verified Dashboard files, fetch and integrate current `origin/main`, rerun the available focused/full suites and real-run harness on the integrated tree, push the implementation, record the commit in the registry, release the Dashboard lock, and verify `in_progress: false` on remote main.
+Push this final acceptance-plan update, record implementation commit `10463eabea4fbcf0fc310922873713a09de53b4f` in the registry, release the Dashboard lock, and verify `in_progress: false` on remote main.
 
 ## Blockers
 
@@ -352,3 +352,4 @@ None for this isolated foundation. Production composition remains intentionally 
 - User-visible checkout: all 15 Dashboard files were mirrored without modifying staged reset work, Orchestrator files, or root HTML at `C:\Users\Vint\Desktop\Галенко_Віталій_304ТН_варіант_5`; source/destination SHA-256 comparison reported 0 mismatches.
 - User-visible test repetition: Dashboard 31 passed in 4.182 seconds; integrated Orchestrator regressions 19 passed in 1.032 seconds; total 50 passed, 0 failed, 0 skipped; combined compileall passed.
 - User-visible real run: exit 0 on `127.0.0.1`; the same 4 recursive files, 1 Excel candidate, 2 article candidates, 5 completed core projections, report/file collection, persisted JSON recovery, resume, and sanitized failure were observed; the temporary evidence directory was removed by the harness after inspection.
+- Remote implementation verification: push succeeded; subsequent fetch reported local `HEAD` and `origin/main` both at `10463eabea4fbcf0fc310922873713a09de53b4f` with no diff.
