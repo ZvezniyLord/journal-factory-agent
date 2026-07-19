@@ -74,14 +74,23 @@ cores:
       - "Projects Dashboard and Orchestrator state and exposes existing report/output paths through browser-safe local APIs."
       - "Runs against the canonical local Conference 95 archive without modifying it and verifies every generated artifact."
       - "Passes focused, full-suite, browser viewport, real-run, architecture, and repository acceptance checks."
-    status: planned
-    in_progress: false
-    lock_owner: null
-    lock_session: null
-    claimed_at_utc: null
-    branch: null
-    work_item: null
-    allowed_write_scope: []
+    status: in_progress
+    in_progress: true
+    lock_owner: "Codex /root"
+    lock_session: "phase1-browser-acceptance-20260719T211027Z-7b93e4d1"
+    claimed_at_utc: "2026-07-19T21:10:27Z"
+    branch: "codex/phase1-browser-acceptance"
+    work_item: "Replace the rejected diagnostic menu with the real API-backed Phase 1 workspace, dashboard, run, and report workflow and verify it against the canonical Conference 95 archive."
+    allowed_write_scope:
+      - "CORE_WORK_REGISTRY.yaml"
+      - "cores/phase1_browser_acceptance/**"
+      - "index.html"
+      - "README.md"
+      - "journal_factory/workspace_driver/**"
+      - "journal_factory/phase1_app/**"
+      - "tests/workspace_driver/**"
+      - "tests/phase1_app/**"
+      - "build/phase1_acceptance/**"
     last_result: null
     last_commit: null
     completed_at_utc: null
