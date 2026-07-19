@@ -13,3 +13,5 @@ __pycache__/
 *.bak
 /Release-AI-Editor-5.5/
 /Release-AI-Editor-5.5-Public-src/
+/input/
+/tmp/

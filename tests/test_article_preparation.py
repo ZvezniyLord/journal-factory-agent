@@ -114,7 +114,7 @@ def test_split_manifest_title_is_merged_without_changing_visible_text(tmp_path: 
     assert normalize_visible_text(extract_docx_evidence_text(prepared)) == original_text
 
 
-def test_trailing_empty_paragraph_is_removed_without_changing_visible_text(tmp_path: Path) -> None:
+def test_trailing_empty_paragraph_is_preserved_for_source_layout(tmp_path: Path) -> None:
     source = tmp_path / "trailing-empty.docx"
     document = Document()
     document.add_paragraph("ARTICLE TITLE")
@@ -135,5 +135,5 @@ def test_trailing_empty_paragraph_is_removed_without_changing_visible_text(tmp_p
     )
 
     assert report["status"] == "PASS"
-    assert report["removed_trailing_empty_paragraphs"] >= 1
-    assert Document(prepared).paragraphs[-1].text == "BODY"
+    assert report["removed_trailing_empty_paragraphs"] == 0
+    assert Document(prepared).paragraphs[-1].text == ""

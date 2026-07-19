@@ -12,6 +12,7 @@ from .corpus_cycle import run_conference_cycle, run_series
 from .corpus_llm import LLMConfig
 from .docx_builder import build_draft
 from .ingest import extract_docx_text_from_zip, inventory_archive, inventory_as_dict, is_non_article_text
+from .official_toc import extract_official_toc
 from .preflight import run_preflight, write_preflight
 from .production_pipeline import run_production_build
 from .template import style_snapshot, write_style_snapshot
@@ -111,6 +112,23 @@ def cmd_analyze_conference(args: argparse.Namespace) -> int:
     return 0 if result["status"] == "PASS_ANALYSIS" else 1
 
 
+def cmd_extract_official_toc(args: argparse.Namespace) -> int:
+    result = extract_official_toc(
+        args.pdf,
+        args.conference_id,
+        expected_articles=args.expected_articles,
+        expected_sections=args.expected_sections,
+        source_url=args.source_url,
+    )
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(
+        json.dumps(result, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0 if result["status"] == "PASS" else 2
+
+
 def cmd_render_journal(args: argparse.Namespace) -> int:
     result = render_docx_to_pdf(
         args.docx,
@@ -118,6 +136,7 @@ def cmd_render_journal(args: argparse.Namespace) -> int:
         args.report,
         expected_article_count=args.expected_articles,
         expected_first_article_page=args.expected_first_article_page,
+        official_toc_path=args.official_toc,
     )
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if result["status"] == "PASS" else 2
@@ -189,6 +208,7 @@ def main() -> int:
     render.add_argument("--report", type=Path, required=True)
     render.add_argument("--expected-articles", type=int)
     render.add_argument("--expected-first-article-page", type=int)
+    render.add_argument("--official-toc", type=Path)
     render.set_defaults(func=cmd_render_journal)
 
     analyze = sub.add_parser("analyze-conference")
@@ -200,6 +220,15 @@ def main() -> int:
     analyze.add_argument("--llm-endpoint", help="OpenAI-compatible local endpoint")
     analyze.add_argument("--llm-model", help="Local model; REVIEW suggestions only")
     analyze.set_defaults(func=cmd_analyze_conference)
+
+    extract_toc = sub.add_parser("extract-official-toc")
+    extract_toc.add_argument("--conference-id", type=int, required=True)
+    extract_toc.add_argument("--pdf", type=Path, required=True)
+    extract_toc.add_argument("--output", type=Path, required=True)
+    extract_toc.add_argument("--expected-articles", type=int)
+    extract_toc.add_argument("--expected-sections", type=int)
+    extract_toc.add_argument("--source-url", default="")
+    extract_toc.set_defaults(func=cmd_extract_official_toc)
 
     series = sub.add_parser("analyze-series")
     series.add_argument("--manifest", type=Path, required=True)

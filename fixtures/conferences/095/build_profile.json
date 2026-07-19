@@ -5,6 +5,10 @@
   "typography_source": "editorial_rule_from_owner",
   "body_font_size_pt": 14,
   "new_publication_default": "standard_11pt",
+  "golden_pdf_required": true,
+  "publication_reference": "official_toc.json",
+  "expected_physical_pages": 248,
+  "expected_bibliographic_pages": 245,
   "notes": [
     "Профіль 14 pt використовується для відтворення старішого Conference 95",
     "Нові журнали за новим стандартом використовують 11 pt",

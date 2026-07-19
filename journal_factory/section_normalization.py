@@ -120,6 +120,7 @@ def _load_participant_titles(workspace_source: Path) -> dict[str, list[dict[str,
 def _normalize_label(value: str) -> str:
     value = value.replace("\u00a0", " ")
     value = re.sub(r"^\s*\d+\s*[.)-]?\s*", "", value)
+    value = re.sub(r"\s*-\s*", "-", value)
     return re.sub(r"\s+", " ", value).strip().casefold()
 
 

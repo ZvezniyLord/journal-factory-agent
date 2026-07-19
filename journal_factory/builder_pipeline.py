@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 import json
@@ -12,6 +13,7 @@ from .conference_metadata import load_conference_metadata
 from .config import AppConfig, ensure_dirs
 from .document_composer import compose_articles_into_etalon
 from .manifest import build_article_manifest
+from .official_toc import load_official_toc, resolve_publication_order
 from .preflight import run_preflight, write_preflight
 from .source_snapshot import create_source_snapshot, snapshot_docx
 from .section_normalization import resolve_article_sections
@@ -80,6 +82,36 @@ def run_journal_builder(
     if manifest["manifest_status"] != "PASS":
         blockers.extend(f"manifest:{item}" for item in manifest.get("blockers", []))
         return _finish(config, conference_id, blockers, manifest, None, None, None)
+
+    official_toc: dict[str, Any] | None = None
+    publication_report: dict[str, Any] | None = None
+    publication_config = conference_metadata.get("publication_reference")
+    if publication_config:
+        reference_value = str(publication_config.get("official_toc") or "").strip()
+        if not reference_value:
+            blockers.append("publication_reference_official_toc_missing")
+            return _finish(config, conference_id, blockers, manifest, None, None, None)
+        reference_path = Path(reference_value)
+        if not reference_path.is_absolute():
+            reference_path = conference_config_path.parent / reference_path
+        try:
+            official_toc = load_official_toc(reference_path)
+            if int(official_toc.get("conference_id") or 0) != conference_id:
+                raise ValueError(
+                    f"official_toc_conference_id:{official_toc.get('conference_id')}:{conference_id}"
+                )
+            manifest, publication_report = resolve_publication_order(manifest, official_toc)
+        except Exception as exc:  # noqa: BLE001
+            blockers.append(f"publication_order_exception:{type(exc).__name__}:{exc}")
+            return _finish(config, conference_id, blockers, manifest, None, None, None)
+        _write_json(reports_dir / "official_toc.json", official_toc)
+        _write_json(reports_dir / "official_corpus_parity.json", publication_report)
+        _write_json(reports_dir / "article_manifest.json", manifest)
+        if publication_report["status"] != "PASS":
+            blockers.extend(
+                f"publication_order:{item}" for item in publication_report["blockers"]
+            )
+            return _finish(config, conference_id, blockers, manifest, None, None, None)
 
     ordered_articles = sorted(
         manifest["articles"],
@@ -202,10 +234,13 @@ def run_journal_builder(
 
     service_master = build_dir / "workspace" / "ETALON_WITH_CONFERENCE_METADATA.docx"
     try:
+        service_metadata = deepcopy(conference_metadata)
+        if official_toc is not None:
+            service_metadata["official_toc"] = official_toc
         front_matter_report = materialize_service_pages(
             typography_master,
             service_master,
-            conference_metadata,
+            service_metadata,
             reports_dir / "front_matter_materialization_report.json",
         )
     except Exception as exc:  # noqa: BLE001
@@ -217,7 +252,18 @@ def run_journal_builder(
 
     output_docx = build_dir / f"Conference{conference_id}_generated.docx"
     try:
-        compose_report = compose_articles_into_etalon(service_master, compose_jobs, output_docx)
+        pagination_policy = deepcopy((official_toc or {}).get("page_numbering") or {})
+        if publication_config and publication_config.get("word_compatibility_mode") is not None:
+            pagination_policy["word_compatibility_mode"] = int(
+                publication_config["word_compatibility_mode"]
+            )
+        compose_report = compose_articles_into_etalon(
+            service_master,
+            compose_jobs,
+            output_docx,
+            pagination_policy=pagination_policy or None,
+            layout_adjustments=(official_toc or {}).get("layout_adjustments"),
+        )
     except Exception as exc:  # noqa: BLE001
         blockers.append(f"compose_exception:{type(exc).__name__}:{exc}")
         return _finish(config, conference_id, blockers, manifest, style_report, None, None)
@@ -229,7 +275,7 @@ def run_journal_builder(
 
     final_front_matter_report = audit_front_matter(
         output_docx,
-        conference_metadata,
+        service_metadata,
         reports_dir / "front_matter_audit.json",
     )
     if final_front_matter_report["status"] != "PASS":
@@ -269,6 +315,7 @@ def run_journal_builder(
             "front_matter": final_front_matter_report,
             "sections": section_report,
             "typography": typography_audit,
+            "publication": publication_report or {},
         },
     )
 
@@ -302,6 +349,7 @@ def _finish(
         "front_matter_status": (quality_reports or {}).get("front_matter", {}).get("status"),
         "section_normalization_status": (quality_reports or {}).get("sections", {}).get("status"),
         "typography_audit_status": (quality_reports or {}).get("typography", {}).get("status"),
+        "publication_order_status": (quality_reports or {}).get("publication", {}).get("status"),
         "blockers": blockers,
         "required_next_gates": [
             "DOCX_TO_PDF_RENDER",

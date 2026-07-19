@@ -2,6 +2,7 @@ from pathlib import Path
 import zipfile
 
 from docx import Document
+from docx.enum.section import WD_SECTION
 
 from journal_factory.conference_metadata import load_conference_metadata
 from journal_factory.service_pages import materialize_service_pages
@@ -89,3 +90,58 @@ def test_service_materialization_trims_only_unprotected_trailing_empty_paragraph
     assert report["status"] == "PASS"
     assert report["layout_adjustment_counts"]["trailing_empty_paragraphs"] >= 1
     assert Document(output).paragraphs[-1].text == "Oxford"
+
+
+def test_service_materialization_builds_locked_official_toc_and_special_thanks(
+    tmp_path: Path,
+) -> None:
+    source = tmp_path / "source.docx"
+    output = tmp_path / "output.docx"
+    document = Document()
+    document.add_paragraph("OLD EVENT")
+    document.add_paragraph("TABLE OF CONTENTS")
+    document.add_paragraph("placeholder")
+    document.add_section(WD_SECTION.NEW_PAGE)
+    document.add_paragraph("tail")
+    document.save(source)
+    metadata = {
+        "conference_id": 95,
+        "event_title": "New Event",
+        "template_replacements": [{"source": "OLD EVENT", "target": "{event_title}"}],
+        "required_markers": ["{event_title}"],
+        "stale_markers": ["OLD EVENT"],
+        "official_toc": {
+            "toc_layout": {
+                "line_spacing_twips": 240,
+                "special_thanks_line_spacing_twips": 240,
+            },
+            "articles": [
+                {
+                    "ordinal": 1,
+                    "section": "ECONOMIC THEORY",
+                    "authors_display": "Roman Reznikov",
+                    "title": "FIRST ARTICLE TITLE",
+                    "printed_start_page": 6,
+                }
+            ],
+            "special_thanks": {
+                "present": True,
+                "heading": "SPECIAL THANKS TO PARTICIPANTS:",
+                "participants_display": "One Person, Two Person",
+            },
+        },
+    }
+
+    report = materialize_service_pages(source, output, metadata)
+
+    assert report["status"] == "PASS"
+    assert report["layout_adjustment_counts"]["official_toc_articles"] == 1
+    assert report["layout_adjustment_counts"]["official_toc_sections"] == 1
+    assert report["audit"]["special_thanks_present"] is True
+    with zipfile.ZipFile(output) as package:
+        xml = package.read("word/document.xml").decode("utf-8")
+    assert 'w:fldLock="true"' in xml
+    assert "PAGEREF JF_ARTICLE_001_START" in xml
+    assert "SPECIAL THANKS TO PARTICIPANTS:" in xml
+    assert 'w:name="JF_SPECIAL_THANKS"' in xml
+    assert 'w:line="240"' in xml

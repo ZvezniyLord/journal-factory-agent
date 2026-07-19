@@ -82,9 +82,9 @@ def prepare_article_source(
     if removed_section_properties:
         transformations.append("remove_article_section_properties")
 
-    removed_trailing_empty_paragraphs = _trim_trailing_empty_paragraphs(document)
-    if removed_trailing_empty_paragraphs:
-        transformations.append("remove_trailing_empty_paragraphs")
+    # Empty author paragraphs affect pagination and are part of the source layout.
+    # Preserve them even though they do not contribute visible text.
+    removed_trailing_empty_paragraphs = 0
 
     title_paragraph_index: int | None = None
     if title:
@@ -134,25 +134,6 @@ def prepare_article_source(
 
 def _text_sha256(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
-
-
-def _trim_trailing_empty_paragraphs(document: Document) -> int:
-    removed = 0
-    for element in list(reversed(document.element.body)):
-        if isinstance(element, CT_SectPr):
-            continue
-        if element.tag != qn("w:p"):
-            break
-        text = "".join(element.xpath(".//w:t/text()")).strip()
-        protected = element.xpath(
-            ".//w:br | .//w:instrText | .//w:fldSimple | .//w:drawing | .//w:pict | "
-            ".//w:object | .//w:bookmarkStart | ./w:pPr/w:sectPr"
-        )
-        if text or protected:
-            break
-        element.getparent().remove(element)
-        removed += 1
-    return removed
 
 
 def _bookmark_name(article_id: str) -> str:

@@ -46,6 +46,11 @@
     {
       "source": "978-617-8680-36-7",
       "target": "{isbn}"
+    },
+    {
+      "source": "February 8, 2026",
+      "target": "February 22, 2026",
+      "preserve_case": true
     }
   ],
   "dynamic_fields": [
@@ -69,7 +74,8 @@
     "{location}",
     "{conference_url}",
     "{doi_url}",
-    "{isbn}"
+    "{isbn}",
+    "February 22, 2026"
   ],
   "stale_markers": [
     "Science in the Modern World",
@@ -79,8 +85,19 @@
     "Cambridge, United Kingdom",
     "conference?id=91",
     "conf-91-2026",
-    "978-617-8680-36-7"
+    "978-617-8680-36-7",
+    "February 8, 2026"
   ],
+  "publication_reference": {
+    "official_toc": "official_toc.json",
+    "official_pdf_url": "https://naukainfo.com/jurnaly/Conference95.pdf",
+    "golden_pdf_required": true,
+    "expected_articles": 34,
+    "expected_sections": 14,
+    "expected_physical_pages": 248,
+    "expected_bibliographic_pages": 245,
+    "word_compatibility_mode": 14
+  },
   "provenance": [
     {
       "field": "event_title,dates,location,conference_url,isbn",
@@ -100,6 +117,16 @@
     {
       "field": "typography_profile",
       "source": "owner editorial rule in fixtures/conferences/095/build_profile.json",
+      "confidence": 1.0
+    },
+    {
+      "field": "publication_reference,publication_order,sections,pagination,special_thanks",
+      "source": "https://naukainfo.com/jurnaly/Conference95.pdf",
+      "confidence": 1.0
+    },
+    {
+      "field": "publication_reference.word_compatibility_mode",
+      "source": "OK_Conference95.docx editorial geometry reference; word/settings.xml compatibilityMode",
       "confidence": 1.0
     }
   ]

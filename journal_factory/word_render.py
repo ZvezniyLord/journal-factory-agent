@@ -10,7 +10,12 @@ import sys
 from pypdf import PdfReader
 
 from .archive_workspace import sha256_file
-from .publication_audit import audit_pdf_pages, build_toc_pagination_report
+from .official_toc import load_official_toc
+from .publication_audit import (
+    audit_pdf_pages,
+    build_toc_pagination_report,
+    expected_first_article_pages,
+)
 
 
 def render_docx_to_pdf(
@@ -19,11 +24,20 @@ def render_docx_to_pdf(
     report_path: Path,
     expected_article_count: int | None = None,
     expected_first_article_page: int | None = None,
+    official_toc_path: Path | None = None,
 ) -> dict[str, Any]:
     docx_path = docx_path.resolve()
     pdf_path = pdf_path.resolve()
     report_path = report_path.resolve()
     blockers: list[str] = []
+    official_toc: dict[str, Any] | None = None
+    if official_toc_path is not None:
+        try:
+            official_toc = load_official_toc(official_toc_path.resolve())
+        except Exception as exc:  # noqa: BLE001
+            blockers.append(f"official_toc_invalid:{type(exc).__name__}:{exc}")
+            return _write_report(report_path, _blocked_report(docx_path, pdf_path, blockers))
+        expected_article_count = expected_article_count or len(official_toc["articles"])
     if sys.platform != "win32":
         blockers.append("word_com_requires_windows")
         return _write_report(report_path, _blocked_report(docx_path, pdf_path, blockers))
@@ -44,8 +58,14 @@ try {
   $document = $word.Documents.Open($env:JF_RENDER_DOCX)
   $listSeparator = (Get-Culture).TextInfo.ListSeparator
   $tocStyleMapping = "SECTION${listSeparator}1${listSeparator}Назва1${listSeparator}2"
+  $manualToc = $false
   foreach ($toc in $document.TablesOfContents) {
-    $toc.Range.Fields.Item(1).Code.Text = " TOC \h \z \t `"${tocStyleMapping}`" "
+    $tocField = $toc.Range.Fields.Item(1)
+    if ($tocField.Locked) {
+      $manualToc = $true
+    } else {
+      $tocField.Code.Text = " TOC \h \z \t `"${tocStyleMapping}`" "
+    }
   }
   $measurements = @()
   $stableCount = 0
@@ -53,16 +73,23 @@ try {
   for ($iteration = 1; $iteration -le 6; $iteration++) {
     [void]$document.Repaginate()
     foreach ($field in $document.Fields) {
-      # Do not update author-supplied HYPERLINK fields: Word can block while
-      # resolving external targets. TOC is updated through its own collection.
-      if ($field.Type -eq 26) { [void]$field.Update() }
+      $fieldCode = [string]$field.Code.Text
+      if ($manualToc) {
+        if ($fieldCode -match '(?i)^\s*(?:PAGEREF|PAGE|NUMPAGES)\b') {
+          [void]$field.Update()
+        }
+      } elseif ($field.Type -eq 26) {
+        [void]$field.Update()
+      }
     }
-    foreach ($toc in $document.TablesOfContents) { [void]$toc.Update() }
+    if (-not $manualToc) {
+      foreach ($toc in $document.TablesOfContents) { [void]$toc.Update() }
+    }
     foreach ($builtinStyle in @(-20, -21)) {
       try {
         $tocStyle = $document.Styles.Item($builtinStyle)
         $tocStyle.Font.Name = 'Times New Roman'
-        $tocStyle.Font.Size = 8
+        $tocStyle.Font.Size = $(if ($manualToc) { 14 } else { 8 })
         $tocStyle.ParagraphFormat.SpaceBefore = 0
         $tocStyle.ParagraphFormat.SpaceAfter = 0
         $tocStyle.ParagraphFormat.LineSpacingRule = 0
@@ -114,8 +141,11 @@ try {
         if ($tocStyleNames[[string]$candidateLevel] -eq $styleName) { $level = $candidateLevel }
       }
       if ($level -eq 0 -and $styleName -match '(?i)(?:toc|зміст)\s*(\d+)') { $level = [int]$Matches[1] }
+      if ($manualToc -and $level -eq 0) {
+        $level = $(if ($entryText -match '^\d{1,3}\.\s+') { 2 } else { 1 })
+      }
       $pageNumber = 0
-      if ($entryText -match "`t(\d+)\s*$") { $pageNumber = [int]$Matches[1] }
+      if ($entryText -match "`t(\d+)") { $pageNumber = [int]$Matches[1] }
       if ($entryText) {
         $tocEntries += [pscustomobject]@{
           level = $level
@@ -137,18 +167,25 @@ try {
       }
     }
   }
+  $specialThanksPage = 0
+  if ($document.Bookmarks.Exists('JF_SPECIAL_THANKS')) {
+    $specialThanksRange = $document.Bookmarks.Item('JF_SPECIAL_THANKS').Range
+    $specialThanksPage = [int]$specialThanksRange.Information(3)
+  }
   $document.ExportAsFixedFormat($env:JF_RENDER_PDF, 17)
   $pageCount = $document.ComputeStatistics(2)
   [pscustomobject]@{
     word_version = $word.Version
     field_count = $document.Fields.Count
     toc_count = $document.TablesOfContents.Count
+    manual_toc = $manualToc
     page_count = $pageCount
     stable_measurements = $measurements
     stable_measurements_achieved = $stableCount
     toc_entries = $tocEntries
     toc_style_names = $tocStyleNames
     article_bookmarks = $articleBookmarks
+    special_thanks_physical_page = $specialThanksPage
   } | ConvertTo-Json -Depth 8 | Set-Content -Encoding UTF8 $env:JF_RENDER_HOST_REPORT
 } finally {
   if ($null -ne $document) { $document.Close(0) }
@@ -232,14 +269,56 @@ try {
     if expected_first_article_page is not None and article_bookmarks:
         first_printed = int(article_bookmarks[0].get("printed_page") or 0)
         first_physical = int(article_bookmarks[0].get("physical_page") or 0)
-        if first_printed != expected_first_article_page or first_physical != expected_first_article_page:
+        expected_physical, expected_printed = expected_first_article_pages(
+            expected_first_article_page,
+            official_toc,
+        )
+        if first_printed != expected_printed or first_physical != expected_physical:
             blockers.append(
-                f"first_article_page:{first_physical}:{first_printed}:expected={expected_first_article_page}"
+                f"first_article_page:{first_physical}:{first_printed}:"
+                f"expected={expected_physical}:{expected_printed}"
             )
-    for bookmark in article_bookmarks:
+    page_numbering = (official_toc or {}).get("page_numbering")
+    official_articles = (official_toc or {}).get("articles") or []
+    special_thanks = (official_toc or {}).get("special_thanks") or {}
+    special_thanks_page = int(host.get("special_thanks_physical_page") or 0)
+    expected_special_thanks_page = int(special_thanks.get("physical_page") or 0)
+    special_thanks_matched = (
+        not special_thanks.get("present")
+        or special_thanks_page == expected_special_thanks_page
+    )
+    if not special_thanks_matched:
+        blockers.append(
+            f"official_special_thanks_page:{special_thanks_page}:"
+            f"expected={expected_special_thanks_page}"
+        )
+    page_mappings: list[dict[str, Any]] = []
+    for index, bookmark in enumerate(article_bookmarks, start=1):
         physical = int(bookmark.get("physical_page") or 0)
         printed = int(bookmark.get("printed_page") or 0)
-        if physical != printed:
+        official = official_articles[index - 1] if index <= len(official_articles) else None
+        if official:
+            expected_physical = int(official.get("physical_start_page") or 0)
+            expected_printed = int(official.get("printed_start_page") or 0)
+            matched = physical == expected_physical and printed == expected_printed
+            if not matched:
+                blockers.append(
+                    f"official_article_start:{index}:{physical}:{printed}:"
+                    f"expected={expected_physical}:{expected_printed}"
+                )
+            page_mappings.append(
+                {
+                    "ordinal": index,
+                    "bookmark": bookmark.get("name"),
+                    "official_title": official.get("title"),
+                    "official_physical_page": expected_physical,
+                    "generated_physical_page": physical,
+                    "official_printed_page": expected_printed,
+                    "generated_printed_page": printed,
+                    "matched": matched,
+                }
+            )
+        elif physical != printed:
             blockers.append(
                 f"page_number_discontinuity:{bookmark.get('name')}:{physical}:{printed}"
             )
@@ -252,13 +331,53 @@ try {
                     f"toc_page_mismatch:{bookmark.get('name')}:{toc_page}:{printed}"
                 )
 
-    visual_report = audit_pdf_pages(pdf_path, expected_page_count=pdf_pages) if pdf_path.is_file() else {
+    expected_pdf_pages = int(
+        (official_toc or {}).get("source", {}).get("physical_page_count") or pdf_pages
+    )
+    if official_toc and pdf_pages != expected_pdf_pages:
+        blockers.append(f"official_pdf_page_count:{pdf_pages}:expected={expected_pdf_pages}")
+    visual_report = audit_pdf_pages(
+        pdf_path,
+        expected_page_count=expected_pdf_pages,
+        page_numbering=page_numbering,
+    ) if pdf_path.is_file() else {
         "status": "BLOCKED",
         "blockers": ["pdf_missing"],
     }
     if visual_report.get("status") != "PASS":
         blockers.extend(f"visual_qa:{item}" for item in visual_report.get("blockers") or [])
     toc_pagination_path = report_path.with_name("toc_pagination_report.json")
+    official_page_parity_path = report_path.with_name("official_page_parity.json")
+    official_page_parity = {
+        "schema_version": 1,
+        "status": (
+            "PASS"
+            if official_toc
+            and pdf_pages == expected_pdf_pages
+            and len(page_mappings) == len(official_articles)
+            and all(item["matched"] for item in page_mappings)
+            and special_thanks_matched
+            else ("NOT_REQUIRED" if not official_toc else "REVIEW")
+        ),
+        "official_pdf_sha256": (official_toc or {}).get("source", {}).get("sha256"),
+        "official_physical_page_count": expected_pdf_pages if official_toc else None,
+        "generated_physical_page_count": pdf_pages,
+        "physical_to_printed_offset": (page_numbering or {}).get(
+            "physical_to_printed_offset"
+        ),
+        "article_start_pages_match_official": bool(page_mappings)
+        and len(page_mappings) == len(official_articles)
+        and all(item["matched"] for item in page_mappings),
+        "special_thanks": {
+            "required": bool(special_thanks.get("present")),
+            "official_physical_page": expected_special_thanks_page or None,
+            "generated_physical_page": special_thanks_page or None,
+            "matched": special_thanks_matched,
+        },
+        "mappings": page_mappings,
+    }
+    if official_toc:
+        _write_report(official_page_parity_path, official_page_parity)
     report = {
         "status": "PASS" if not blockers else "BLOCKED",
         "renderer": "Microsoft Word COM",
@@ -269,6 +388,7 @@ try {
         "output_pdf_sha256": sha256_file(pdf_path) if pdf_path.is_file() else "",
         "word_field_count": int(host.get("field_count") or 0),
         "word_toc_count": toc_count,
+        "manual_official_toc": bool(host.get("manual_toc")),
         "word_page_count": word_pages,
         "pdf_page_count": pdf_pages,
         "stable_measurements_required": 2,
@@ -281,8 +401,28 @@ try {
             for level in (1, 2)
         },
         "article_bookmarks": article_bookmarks,
+        "official_page_parity": official_page_parity,
+        "golden_publication_parity": {
+            "required": bool(official_toc),
+            "status": official_page_parity["status"],
+        },
+        "internal_consistency": {
+            "toc_article_entry_count": len(level_two_entries),
+            "article_bookmark_count": len(article_bookmarks),
+            "toc_pages_match_generated_bookmarks": (
+                len(level_two_entries) == len(article_bookmarks)
+                and all(
+                    int(entry.get("page_number") or 0)
+                    == int(bookmark.get("printed_page") or 0)
+                    for entry, bookmark in zip(level_two_entries, article_bookmarks)
+                )
+            ),
+        },
         "visual_qa": visual_report,
         "toc_pagination_report": str(toc_pagination_path),
+        "official_page_parity_report": (
+            str(official_page_parity_path) if official_toc else None
+        ),
         "blockers": blockers,
     }
     _write_report(report_path, report)
@@ -293,6 +433,7 @@ try {
         toc_pagination_path,
         expected_article_count=expected_article_count,
         expected_first_article_page=expected_first_article_page,
+        official_toc=official_toc,
     )
     return report
 

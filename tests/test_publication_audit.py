@@ -2,7 +2,10 @@ from pathlib import Path
 
 import fitz
 
-from journal_factory.publication_audit import audit_pdf_pages
+from journal_factory.publication_audit import (
+    audit_pdf_pages,
+    expected_first_article_pages,
+)
 
 
 def _write_numbered_pdf(path: Path, footer_numbers: list[int | None]) -> None:
@@ -37,3 +40,13 @@ def test_pdf_page_audit_blocks_missing_footer_number(tmp_path: Path) -> None:
 
     assert report["status"] == "BLOCKED"
     assert report["missing_footer_numbers"] == [3]
+
+
+def test_expected_first_article_page_uses_official_printed_number() -> None:
+    official_toc = {
+        "page_numbering": {"physical_to_printed_offset": 2},
+        "articles": [{"physical_start_page": 8, "printed_start_page": 6}],
+    }
+
+    assert expected_first_article_pages(8, official_toc) == (8, 6)
+    assert expected_first_article_pages(8) == (8, 8)

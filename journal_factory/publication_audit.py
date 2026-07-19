@@ -15,12 +15,37 @@ WORD_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 NS = {"w": WORD_NS}
 
 
-def audit_pdf_pages(pdf_path: Path, expected_page_count: int | None = None) -> dict[str, Any]:
+def expected_first_article_pages(
+    expected_physical_page: int,
+    official_toc: dict[str, Any] | None = None,
+) -> tuple[int, int]:
+    """Return the expected physical and printed page for the first article."""
+    official_articles = (official_toc or {}).get("articles") or []
+    if official_articles:
+        first = official_articles[0]
+        return (
+            expected_physical_page,
+            int(first.get("printed_start_page") or expected_physical_page),
+        )
+    offset = int(
+        (official_toc or {}).get("page_numbering", {}).get(
+            "physical_to_printed_offset"
+        )
+        or 0
+    )
+    return expected_physical_page, expected_physical_page - offset
+
+
+def audit_pdf_pages(
+    pdf_path: Path,
+    expected_page_count: int | None = None,
+    page_numbering: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     blockers: list[str] = []
     pages: list[dict[str, Any]] = []
     blank_pages: list[int] = []
     missing_footer_numbers: list[int] = []
-    unexpected_title_page_number = False
+    unexpected_footer_numbers: list[int] = []
     try:
         import fitz
     except ImportError:
@@ -71,9 +96,11 @@ def audit_pdf_pages(pdf_path: Path, expected_page_count: int | None = None) -> d
             visually_blank = content_character_count < 10 and nonwhite_channel_ratio < 0.002
             if visually_blank:
                 blank_pages.append(physical_page)
-            if physical_page == 1:
-                unexpected_title_page_number = 1 in footer_numbers
-            elif physical_page not in footer_numbers:
+            expected_footer = _expected_footer_number(physical_page, page_numbering)
+            if expected_footer is None:
+                if footer_numbers:
+                    unexpected_footer_numbers.append(physical_page)
+            elif expected_footer not in footer_numbers:
                 missing_footer_numbers.append(physical_page)
             pages.append(
                 {
@@ -94,8 +121,14 @@ def audit_pdf_pages(pdf_path: Path, expected_page_count: int | None = None) -> d
         blockers.append(
             "missing_visible_footer_numbers:" + ",".join(map(str, missing_footer_numbers))
         )
-    if unexpected_title_page_number:
-        blockers.append("title_page_number_not_hidden")
+    if unexpected_footer_numbers:
+        blockers.append(
+            "unexpected_visible_footer_numbers:"
+            + ",".join(map(str, unexpected_footer_numbers))
+        )
+    first_numbered_physical = int(
+        (page_numbering or {}).get("first_numbered_physical_page") or 2
+    )
     representative_pages = sorted(
         {
             page
@@ -113,10 +146,18 @@ def audit_pdf_pages(pdf_path: Path, expected_page_count: int | None = None) -> d
         "all_pages_inspected": len(pages) == page_count,
         "representative_full_resolution_pages": representative_pages,
         "blank_pages": blank_pages,
-        "footer_page_numbers_expected": max(page_count - 1, 0),
-        "footer_page_numbers_present": max(page_count - 1 - len(missing_footer_numbers), 0),
+        "page_numbering": page_numbering or {
+            "first_numbered_physical_page": 2,
+            "physical_to_printed_offset": 0,
+        },
+        "footer_page_numbers_expected": max(page_count - first_numbered_physical + 1, 0),
+        "footer_page_numbers_present": max(
+            page_count - first_numbered_physical + 1 - len(missing_footer_numbers),
+            0,
+        ),
         "missing_footer_numbers": missing_footer_numbers,
-        "title_page_number_hidden": not unexpected_title_page_number,
+        "unexpected_footer_numbers": unexpected_footer_numbers,
+        "title_page_number_hidden": 1 not in unexpected_footer_numbers,
         "pages": pages,
         "blockers": blockers,
     }
@@ -129,8 +170,12 @@ def build_toc_pagination_report(
     output_path: Path,
     expected_article_count: int | None = None,
     expected_first_article_page: int | None = None,
+    official_toc: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    structure = _docx_pagination_structure(docx_path)
+    structure = _docx_pagination_structure(
+        docx_path,
+        (official_toc or {}).get("page_numbering"),
+    )
     toc_entries = render_report.get("toc_entries") or []
     article_entries = [item for item in toc_entries if int(item.get("level") or 0) == 2]
     bookmarks = render_report.get("article_bookmarks") or []
@@ -150,11 +195,19 @@ def build_toc_pagination_report(
             blockers.append(
                 f"article_bookmark_count:{len(bookmarks)}:expected={expected_article_count}"
             )
+    official_articles = (official_toc or {}).get("articles") or []
     for index, (entry, bookmark) in enumerate(zip(article_entries, bookmarks), start=1):
         toc_page = int(entry.get("page_number") or 0)
         physical_page = int(bookmark.get("physical_page") or 0)
         printed_page = int(bookmark.get("printed_page") or 0)
-        matched = toc_page == physical_page == printed_page
+        official = official_articles[index - 1] if index <= len(official_articles) else None
+        if official:
+            matched = (
+                toc_page == printed_page == int(official.get("printed_start_page") or 0)
+                and physical_page == int(official.get("physical_start_page") or 0)
+            )
+        else:
+            matched = toc_page == physical_page == printed_page
         if not matched:
             blockers.append(f"article_page_mapping:{index}:{toc_page}:{physical_page}:{printed_page}")
         mappings.append(
@@ -164,14 +217,28 @@ def build_toc_pagination_report(
                 "toc_page": toc_page,
                 "physical_page": physical_page,
                 "printed_page": printed_page,
+                "official_physical_page": (
+                    int(official.get("physical_start_page") or 0) if official else None
+                ),
+                "official_printed_page": (
+                    int(official.get("printed_start_page") or 0) if official else None
+                ),
                 "matched": matched,
             }
         )
     if expected_first_article_page is not None and mappings:
         first = mappings[0]
-        if first["physical_page"] != expected_first_article_page or first["printed_page"] != expected_first_article_page:
+        expected_physical, expected_printed = expected_first_article_pages(
+            expected_first_article_page,
+            official_toc,
+        )
+        if (
+            first["physical_page"] != expected_physical
+            or first["printed_page"] != expected_printed
+        ):
             blockers.append(
-                f"first_article_page:{first['physical_page']}:{first['printed_page']}:expected={expected_first_article_page}"
+                f"first_article_page:{first['physical_page']}:{first['printed_page']}:"
+                f"expected={expected_physical}:{expected_printed}"
             )
     if structure.get("blockers"):
         blockers.extend(structure["blockers"])
@@ -203,7 +270,9 @@ def build_toc_pagination_report(
             "footer_page_numbers_expected": visual_report.get("footer_page_numbers_expected"),
             "footer_page_numbers_present": visual_report.get("footer_page_numbers_present"),
             "missing_footer_numbers": visual_report.get("missing_footer_numbers") or [],
+            "unexpected_footer_numbers": visual_report.get("unexpected_footer_numbers") or [],
         },
+        "golden_publication_parity": bool(official_toc),
         "blockers": blockers,
     }
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -211,7 +280,10 @@ def build_toc_pagination_report(
     return report
 
 
-def _docx_pagination_structure(docx_path: Path) -> dict[str, Any]:
+def _docx_pagination_structure(
+    docx_path: Path,
+    page_numbering: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     blockers: list[str] = []
     with zipfile.ZipFile(docx_path) as archive:
         root = etree.fromstring(archive.read("word/document.xml"))
@@ -241,8 +313,37 @@ def _docx_pagination_structure(docx_path: Path) -> dict[str, Any]:
             instructions = " ".join(footer.xpath(".//w:instrText/text()", namespaces=NS))
             footer_field_count += len(re.findall(r"\bPAGE\b", instructions, flags=re.IGNORECASE))
 
+    restarted: list[int] = []
     if not section_data:
         blockers.append("section_properties_missing")
+    elif page_numbering:
+        numbered_index = int(page_numbering.get("numbered_section_index") or 1)
+        first_printed = int(page_numbering.get("first_printed_page") or 1)
+        if not 1 <= numbered_index <= len(section_data):
+            blockers.append(
+                f"numbered_section_index:{numbered_index}:sections={len(section_data)}"
+            )
+        else:
+            numbered = section_data[numbered_index - 1]
+            if numbered["page_number_start"] != first_printed:
+                blockers.append(
+                    f"numbered_section_page_start:{numbered['page_number_start']}:expected={first_printed}"
+                )
+            unexpected_before = [
+                item["section_index"]
+                for item in section_data[: numbered_index - 1]
+                if item["page_number_start"] is not None
+            ]
+            if unexpected_before:
+                blockers.append(
+                    "page_starts_before_numbered_section:"
+                    + ",".join(map(str, unexpected_before))
+                )
+            restarted = [
+                item["section_index"]
+                for item in section_data[numbered_index:]
+                if item["page_number_start"] is not None
+            ]
     else:
         if section_data[0]["page_number_start"] != 1:
             blockers.append(f"first_section_page_start:{section_data[0]['page_number_start']}:expected=1")
@@ -253,8 +354,8 @@ def _docx_pagination_structure(docx_path: Path) -> dict[str, Any]:
             for item in section_data[1:]
             if item["page_number_start"] is not None
         ]
-        if restarted:
-            blockers.append("later_section_page_restarts:" + ",".join(map(str, restarted)))
+    if restarted:
+        blockers.append("later_section_page_restarts:" + ",".join(map(str, restarted)))
     if footer_field_count < 1:
         blockers.append("page_footer_field_missing")
     return {
@@ -262,5 +363,19 @@ def _docx_pagination_structure(docx_path: Path) -> dict[str, Any]:
         "section_count": len(section_data),
         "sections": section_data,
         "page_footer_field_count": footer_field_count,
+        "page_numbering": page_numbering,
         "blockers": blockers,
     }
+
+
+def _expected_footer_number(
+    physical_page: int,
+    page_numbering: dict[str, Any] | None,
+) -> int | None:
+    if page_numbering:
+        first = int(page_numbering.get("first_numbered_physical_page") or 1)
+        if physical_page < first:
+            return None
+        offset = int(page_numbering.get("physical_to_printed_offset") or 0)
+        return physical_page - offset
+    return None if physical_page == 1 else physical_page

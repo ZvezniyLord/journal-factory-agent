@@ -37,6 +37,7 @@ def materialize_service_pages(
     ]
     with zipfile.ZipFile(input_docx) as package:
         parts = {name: package.read(name) for name in package.namelist()}
+    toc_style_ids = _toc_style_ids(parts.get("word/styles.xml", b""))
 
     replacement_counts: dict[str, int] = {item["source"]: 0 for item in replacements}
     dynamic_counts: dict[str, int] = {}
@@ -95,6 +96,15 @@ def materialize_service_pages(
                 if count:
                     changed = True
                     layout_counts["trailing_empty_paragraphs"] = count
+            if name == "word/document.xml" and metadata.get("official_toc"):
+                toc_counts = _replace_toc_with_official(
+                    root,
+                    metadata["official_toc"],
+                    toc_style_ids,
+                )
+                if toc_counts:
+                    changed = True
+                    layout_counts.update(toc_counts)
         if changed:
             parts[name] = etree.tostring(
                 root,
@@ -169,6 +179,14 @@ def audit_front_matter(
         *(f"stale_front_matter_marker:{marker}:{count}" for marker, count in stale.items()),
         *(f"foreign_conference_identifier:{value}" for value in foreign_ids),
     ]
+    official_toc = metadata.get("official_toc") or {}
+    special_thanks = official_toc.get("special_thanks") or {}
+    if official_toc:
+        heading = str(special_thanks.get("heading") or "")
+        if special_thanks.get("present") and heading.casefold() not in folded:
+            blockers.append("special_thanks_heading_missing")
+        if len(official_toc.get("articles") or []) == 0:
+            blockers.append("official_toc_articles_missing")
     report = {
         "status": "PASS" if not blockers else "BLOCKED",
         "conference_id": metadata["conference_id"],
@@ -178,6 +196,11 @@ def audit_front_matter(
         "stale_marker_counts": stale,
         "stale_marker_count": sum(stale.values()),
         "foreign_conference_identifiers": foreign_ids,
+        "official_toc_article_count": len(official_toc.get("articles") or []),
+        "special_thanks_present": bool(
+            special_thanks.get("present")
+            and str(special_thanks.get("heading") or "").casefold() in folded
+        ),
         "blockers": blockers,
     }
     if report_path is not None:
@@ -362,6 +385,304 @@ def _trim_trailing_empty_paragraphs(root: etree._Element) -> int:
         body.remove(element)
         removed += 1
     return removed
+
+
+def _replace_toc_with_official(
+    root: etree._Element,
+    official_toc: dict[str, Any],
+    toc_style_ids: dict[int, str],
+) -> dict[str, int]:
+    articles = official_toc.get("articles") or []
+    if not articles:
+        raise ValueError("Official TOC has no articles")
+    heading = next(
+        (
+            paragraph
+            for paragraph in root.xpath(".//w:body/w:p", namespaces=NS)
+            if " ".join(
+                "".join(paragraph.xpath(".//w:t/text()", namespaces=NS)).upper().split()
+            )
+            == "TABLE OF CONTENTS"
+        ),
+        None,
+    )
+    if heading is None:
+        raise ValueError("TABLE OF CONTENTS heading was not found")
+    anchor = heading.getnext()
+    while anchor is not None and not anchor.xpath("./w:pPr/w:sectPr", namespaces=NS):
+        following = anchor.getnext()
+        anchor.getparent().remove(anchor)
+        anchor = following
+    if anchor is None:
+        raise ValueError("TOC section-break anchor was not found")
+
+    toc_paragraphs: list[etree._Element] = []
+    toc_layout = official_toc.get("toc_layout") or {}
+    toc_line_spacing = str(int(toc_layout.get("line_spacing_twips") or 280))
+    special_line_spacing = str(
+        int(toc_layout.get("special_thanks_line_spacing_twips") or toc_line_spacing)
+    )
+    previous_section = ""
+    section_count = 0
+    for article in articles:
+        section = str(article.get("section") or "").strip()
+        if section and section != previous_section:
+            toc_paragraphs.append(
+                _official_toc_section(
+                    section,
+                    toc_style_ids.get(1),
+                    toc_line_spacing,
+                )
+            )
+            section_count += 1
+            previous_section = section
+        toc_paragraphs.append(
+            _official_toc_article(
+                article,
+                toc_style_ids.get(2),
+                toc_line_spacing,
+            )
+        )
+
+    _prepend_locked_toc_field(toc_paragraphs[0])
+    _append_toc_field_end(toc_paragraphs[-1])
+    for paragraph in toc_paragraphs:
+        anchor.addprevious(paragraph)
+
+    special = official_toc.get("special_thanks") or {}
+    special_count = 0
+    if special.get("present"):
+        anchor.addprevious(_official_special_thanks(special, special_line_spacing))
+        special_count = 1
+    return {
+        "official_toc_articles": len(articles),
+        "official_toc_sections": section_count,
+        "special_thanks_blocks": special_count,
+    }
+
+
+def _official_toc_section(
+    value: str,
+    style_id: str | None,
+    line_spacing: str,
+) -> etree._Element:
+    paragraph = etree.Element(f"{{{W_NS}}}p")
+    ppr = etree.SubElement(paragraph, f"{{{W_NS}}}pPr")
+    if style_id:
+        _set_paragraph_style(ppr, style_id)
+    _set_spacing(ppr, before="80", after="0", line=line_spacing)
+    _set_alignment(ppr, "center")
+    etree.SubElement(ppr, f"{{{W_NS}}}keepNext")
+    etree.SubElement(ppr, f"{{{W_NS}}}keepLines")
+    paragraph.append(_text_run(value, bold=True, size_half_points=28))
+    return paragraph
+
+
+def _official_toc_article(
+    article: dict[str, Any],
+    style_id: str | None,
+    line_spacing: str,
+) -> etree._Element:
+    paragraph = etree.Element(f"{{{W_NS}}}p")
+    ppr = etree.SubElement(paragraph, f"{{{W_NS}}}pPr")
+    if style_id:
+        _set_paragraph_style(ppr, style_id)
+    _set_spacing(ppr, before="0", after="0", line=line_spacing)
+    indent = etree.SubElement(ppr, f"{{{W_NS}}}ind")
+    indent.set(f"{{{W_NS}}}left", "567")
+    indent.set(f"{{{W_NS}}}hanging", "567")
+    tabs = etree.SubElement(ppr, f"{{{W_NS}}}tabs")
+    tab = etree.SubElement(tabs, f"{{{W_NS}}}tab")
+    tab.set(f"{{{W_NS}}}val", "right")
+    tab.set(f"{{{W_NS}}}pos", "9072")
+    etree.SubElement(ppr, f"{{{W_NS}}}keepLines")
+
+    ordinal = int(article["ordinal"])
+    paragraph.append(_text_run(f"{ordinal}.  ", size_half_points=28))
+    paragraph.append(
+        _text_run(
+            str(article.get("authors_display") or ""),
+            bold=True,
+            italic=True,
+            size_half_points=28,
+        )
+    )
+    paragraph.append(_text_run("\t", size_half_points=28))
+    _append_page_reference(
+        paragraph,
+        f"JF_ARTICLE_{ordinal:03d}_START",
+        int(article.get("printed_start_page") or 0),
+    )
+    break_run = _text_run("", size_half_points=28)
+    etree.SubElement(break_run, f"{{{W_NS}}}br")
+    paragraph.append(break_run)
+    paragraph.append(
+        _text_run(str(article.get("title") or ""), size_half_points=28)
+    )
+    return paragraph
+
+
+def _official_special_thanks(
+    special: dict[str, Any],
+    line_spacing: str,
+) -> etree._Element:
+    paragraph = etree.Element(f"{{{W_NS}}}p")
+    ppr = etree.SubElement(paragraph, f"{{{W_NS}}}pPr")
+    _set_spacing(ppr, before="240", after="0", line=line_spacing)
+    _set_alignment(ppr, "both")
+    etree.SubElement(ppr, f"{{{W_NS}}}keepLines")
+    bookmark_start = etree.SubElement(paragraph, f"{{{W_NS}}}bookmarkStart")
+    bookmark_start.set(f"{{{W_NS}}}id", "3900")
+    bookmark_start.set(f"{{{W_NS}}}name", "JF_SPECIAL_THANKS")
+    paragraph.append(
+        _text_run(str(special.get("heading") or ""), size_half_points=28)
+    )
+    break_run = _text_run("", size_half_points=28)
+    etree.SubElement(break_run, f"{{{W_NS}}}br")
+    paragraph.append(break_run)
+    paragraph.append(
+        _text_run(
+            str(special.get("participants_display") or ""),
+            bold=True,
+            italic=True,
+            size_half_points=28,
+        )
+    )
+    bookmark_end = etree.SubElement(paragraph, f"{{{W_NS}}}bookmarkEnd")
+    bookmark_end.set(f"{{{W_NS}}}id", "3900")
+    return paragraph
+
+
+def _prepend_locked_toc_field(paragraph: etree._Element) -> None:
+    ppr = paragraph.find("w:pPr", namespaces=NS)
+    insert_at = 1 if ppr is not None else 0
+    begin_run = etree.Element(f"{{{W_NS}}}r")
+    begin = etree.SubElement(begin_run, f"{{{W_NS}}}fldChar")
+    begin.set(f"{{{W_NS}}}fldCharType", "begin")
+    begin.set(f"{{{W_NS}}}fldLock", "true")
+    instruction_run = etree.Element(f"{{{W_NS}}}r")
+    instruction = etree.SubElement(instruction_run, f"{{{W_NS}}}instrText")
+    instruction.set(XML_SPACE, "preserve")
+    instruction.text = ' TOC \\h \\z \\t "SECTION,1,Назва1,2" '
+    separate_run = etree.Element(f"{{{W_NS}}}r")
+    separate = etree.SubElement(separate_run, f"{{{W_NS}}}fldChar")
+    separate.set(f"{{{W_NS}}}fldCharType", "separate")
+    for offset, run in enumerate((begin_run, instruction_run, separate_run)):
+        paragraph.insert(insert_at + offset, run)
+
+
+def _append_toc_field_end(paragraph: etree._Element) -> None:
+    run = etree.SubElement(paragraph, f"{{{W_NS}}}r")
+    end = etree.SubElement(run, f"{{{W_NS}}}fldChar")
+    end.set(f"{{{W_NS}}}fldCharType", "end")
+
+
+def _append_page_reference(
+    paragraph: etree._Element,
+    bookmark: str,
+    fallback_page: int,
+) -> None:
+    begin_run = etree.SubElement(paragraph, f"{{{W_NS}}}r")
+    _set_run_properties(begin_run, size_half_points=28)
+    begin = etree.SubElement(begin_run, f"{{{W_NS}}}fldChar")
+    begin.set(f"{{{W_NS}}}fldCharType", "begin")
+    instruction_run = etree.SubElement(paragraph, f"{{{W_NS}}}r")
+    instruction = etree.SubElement(instruction_run, f"{{{W_NS}}}instrText")
+    instruction.set(XML_SPACE, "preserve")
+    instruction.text = f" PAGEREF {bookmark} \\h "
+    separate_run = etree.SubElement(paragraph, f"{{{W_NS}}}r")
+    separate = etree.SubElement(separate_run, f"{{{W_NS}}}fldChar")
+    separate.set(f"{{{W_NS}}}fldCharType", "separate")
+    paragraph.append(_text_run(str(fallback_page), size_half_points=28))
+    end_run = etree.SubElement(paragraph, f"{{{W_NS}}}r")
+    end = etree.SubElement(end_run, f"{{{W_NS}}}fldChar")
+    end.set(f"{{{W_NS}}}fldCharType", "end")
+
+
+def _text_run(
+    value: str,
+    *,
+    bold: bool = False,
+    italic: bool = False,
+    size_half_points: int,
+) -> etree._Element:
+    run = etree.Element(f"{{{W_NS}}}r")
+    _set_run_properties(
+        run,
+        bold=bold,
+        italic=italic,
+        size_half_points=size_half_points,
+    )
+    text = etree.SubElement(run, f"{{{W_NS}}}t")
+    if value.startswith(" ") or value.endswith(" ") or "\t" in value:
+        text.set(XML_SPACE, "preserve")
+    text.text = value
+    return run
+
+
+def _set_run_properties(
+    run: etree._Element,
+    *,
+    bold: bool = False,
+    italic: bool = False,
+    size_half_points: int,
+) -> None:
+    rpr = run.find("w:rPr", namespaces=NS)
+    if rpr is None:
+        rpr = etree.Element(f"{{{W_NS}}}rPr")
+        run.insert(0, rpr)
+    fonts = etree.SubElement(rpr, f"{{{W_NS}}}rFonts")
+    for attribute in ("ascii", "hAnsi", "eastAsia", "cs"):
+        fonts.set(f"{{{W_NS}}}{attribute}", "Times New Roman")
+    if bold:
+        etree.SubElement(rpr, f"{{{W_NS}}}b")
+        etree.SubElement(rpr, f"{{{W_NS}}}bCs")
+    if italic:
+        etree.SubElement(rpr, f"{{{W_NS}}}i")
+        etree.SubElement(rpr, f"{{{W_NS}}}iCs")
+    for name in ("sz", "szCs"):
+        size = etree.SubElement(rpr, f"{{{W_NS}}}{name}")
+        size.set(W_VAL, str(size_half_points))
+
+
+def _toc_style_ids(styles_payload: bytes) -> dict[int, str]:
+    if not styles_payload:
+        return {}
+    parser = etree.XMLParser(remove_blank_text=False, resolve_entities=False)
+    root = etree.fromstring(styles_payload, parser)
+    result: dict[int, str] = {}
+    for style in root.xpath("./w:style[@w:type='paragraph']", namespaces=NS):
+        name = style.find("w:name", namespaces=NS)
+        style_id = style.get(f"{{{W_NS}}}styleId")
+        normalized = " ".join((name.get(W_VAL) if name is not None else "").lower().split())
+        match = re.fullmatch(r"(?:toc|зміст)\s*([12])", normalized)
+        if match and style_id:
+            result[int(match.group(1))] = style_id
+    return result
+
+
+def _set_paragraph_style(ppr: etree._Element, style_id: str) -> None:
+    style = etree.SubElement(ppr, f"{{{W_NS}}}pStyle")
+    style.set(W_VAL, style_id)
+
+
+def _set_spacing(
+    ppr: etree._Element,
+    *,
+    before: str,
+    after: str,
+    line: str,
+) -> None:
+    spacing = etree.SubElement(ppr, f"{{{W_NS}}}spacing")
+    spacing.set(f"{{{W_NS}}}before", before)
+    spacing.set(f"{{{W_NS}}}after", after)
+    spacing.set(f"{{{W_NS}}}line", line)
+    spacing.set(f"{{{W_NS}}}lineRule", "auto")
+
+
+def _set_alignment(ppr: etree._Element, value: str) -> None:
+    alignment = etree.SubElement(ppr, f"{{{W_NS}}}jc")
+    alignment.set(W_VAL, value)
 
 
 def _case_adjusted_target(source: str, target: str, preserve_case: bool) -> str:
