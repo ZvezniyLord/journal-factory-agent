@@ -295,16 +295,13 @@ Record provenance:
 
 ## Manual Test Procedure
 
-1. From repository root run `python -m unittest discover -s tests/dashboard_core -v`.
-2. Run `python tests/dashboard_core/real_run.py --serve`.
-3. Note the printed loopback URL and temporary source/output paths.
-4. Open `<url>/health`; expect `{"status":"ok"}`.
-5. Open the printed run URL; verify the snapshot shows discovered files, one Excel candidate, two article candidates, core progress, a warning, a report, a file, and an explicit successful final result.
-6. Stop the process with Ctrl+C.
-7. Run the printed recovery command; verify the same run ID and persisted state load after restart.
-8. Run the printed failure command; verify a stable failure code and no traceback.
-
-The exact commands may be adjusted after the real-run harness is implemented and must be updated here before release.
+1. From repository root run `python -W error -m unittest discover -s tests/dashboard_core -v`; expect `Ran 31 tests` and `OK` with no warnings, skips, or failures.
+2. Run `python -W error -m tests.dashboard_core.real_run --serve`.
+3. Confirm the printed evidence contains four recursively discovered files, one Excel candidate, two article candidates, five completed core states, report `inventory-report`, file `run-result`, `restart_recovered_stage: interrupted_for_real_run`, `resume_state: succeeded_with_warnings`, and `traceback_exposed: false`.
+4. Open the printed `health` URL; expect `{"status":"ok"}`.
+5. Open the printed `successful_run` URL; verify the persisted snapshot includes progress, warnings, reports, files, and the explicit `PASS WITH WARNINGS` final result with `production_ready: false`.
+6. Open the printed `failed_run` URL; verify state `failed` and failure code `SOURCE_DISCOVERY_FAILED`, with no traceback or private adapter message.
+7. Stop the process with Ctrl+C. The temporary sample folders are then removed.
 
 ## Completion Checklist
 
@@ -315,28 +312,43 @@ The exact commands may be adjusted after the real-run harness is implemented and
 - [x] Orchestrator and root HTML scopes confirmed disjoint.
 - [x] Passport created before implementation.
 - [x] Detailed plan created before implementation.
-- [ ] Failing model tests added before model implementation.
-- [ ] Failing service tests added before service implementation.
-- [ ] Failing persistence tests added before persistence implementation.
-- [ ] Failing backend tests added before backend implementation.
-- [ ] Focused tests pass with no skip/xfail.
-- [ ] Full suite passes with no skip/xfail.
-- [ ] Real loopback backend run demonstrated with temporary folders.
-- [ ] Recursive discovery, updates, collections, recovery, and failures inspected.
-- [ ] Architecture review passes.
-- [ ] Repository acceptance completed.
-- [ ] Passport and plan updated with final evidence.
+- [x] Failing model tests added before model implementation.
+- [x] Failing service tests added before service implementation.
+- [x] Failing persistence tests added before persistence implementation.
+- [x] Failing backend tests added before backend implementation.
+- [x] Focused tests pass with no skip/xfail.
+- [x] Full available suite passes with no skip/xfail.
+- [x] Real loopback backend run demonstrated with temporary folders.
+- [x] Recursive discovery, updates, collections, recovery, and failures inspected.
+- [x] Architecture review passes.
+- [x] Repository acceptance completed locally before integration push.
+- [x] Passport and plan updated with final evidence.
 - [ ] Implementation pushed.
 - [ ] Dashboard lock released and remotely verified free.
 
 ## Current State
 
-Cycle 0 documentation is drafted under the verified Dashboard lock. No implementation file has been created.
+Cycles 0 through 5 are implemented and locally verified under the Dashboard lock. The package contains only Dashboard domain/application code and its JSON/HTTP adapters. Recursive discovery and candidate classification remain test-only deterministic adapters. The current verification result is 31 tests passing with warnings treated as errors, plus a successful real backend run and artifact parse.
 
 ## Next Exact Action
 
-Add failing tests for immutable domain models, validation, JSON round-trip, progress invariants, and explicit final-result semantics; run them to capture the expected red state before implementing `models.py`.
+Commit the verified Dashboard files, fetch and integrate current `origin/main`, rerun the available focused/full suites and real-run harness on the integrated tree, push the implementation, record the commit in the registry, release the Dashboard lock, and verify `in_progress: false` on remote main.
 
 ## Blockers
 
-None for the isolated port foundation. Production integration remains intentionally deferred until the dependent cores publish accepted contracts.
+None for this isolated foundation. Production composition remains intentionally deferred until Workspace Driver, Source Discovery, candidate-locator, Orchestrator, and Browser UI contracts are accepted.
+
+## Completed Cycle Evidence
+
+- Model red state: missing `journal_factory.dashboard_core`; seven initial model tests then passed.
+- Service red state: missing `ports`; service implementation then passed 13 tests with models.
+- Persistence red state: missing `persistence`; atomic-store implementation then passed 19 tests total.
+- Backend red state: missing `backend`; loopback adapter implementation then passed 25 tests total.
+- Failure and strict-schema expansion: workspace, Excel locator, article locator, Orchestrator, persistence, and strict boolean cases brought the suite to 31 tests.
+- Focused/full available command: `python -W error -m unittest discover -s tests/dashboard_core -v` -> 31 passed, 0 failed, 0 skipped.
+- Real run: `python -W error -m tests.dashboard_core.real_run` -> exit 0; recursive discovery true; 4 files; Excel 1; articles 2; all 5 projected cores completed; report/file/final result collected; persisted JSON parsed; fresh backend recovered interrupted state; resume succeeded; structured discovery failure returned without traceback.
+- Architecture scan: no Excel parser, DOCX library, matching, UDC, LLM, cloud, root HTML, or Orchestrator implementation in production Dashboard files. Filesystem recursion occurs only in `tests/dashboard_core/adapters.py`; production filesystem access is limited to the supplied dashboard-state location.
+- Repository acceptance before integration push: correct canonical repository and `main`; Dashboard lock remotely owned by this session; modified paths remain within the declared scope; Python compile and diff checks pass. Historic remote branches remain outside this work item's authority.
+- User-visible checkout: all 15 Dashboard files were mirrored without modifying staged reset work, Orchestrator files, or root HTML at `C:\Users\Vint\Desktop\Галенко_Віталій_304ТН_варіант_5`; source/destination SHA-256 comparison reported 0 mismatches.
+- User-visible test repetition: Dashboard 31 passed in 4.182 seconds; integrated Orchestrator regressions 19 passed in 1.032 seconds; total 50 passed, 0 failed, 0 skipped; combined compileall passed.
+- User-visible real run: exit 0 on `127.0.0.1`; the same 4 recursive files, 1 Excel candidate, 2 article candidates, 5 completed core projections, report/file collection, persisted JSON recovery, resume, and sanitized failure were observed; the temporary evidence directory was removed by the harness after inspection.

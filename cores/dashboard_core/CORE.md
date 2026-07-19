@@ -253,6 +253,38 @@ Dashboard audit data includes:
 - Pause/cancel/retry controls are represented by future port extensions, not implemented here.
 - Dashboard snapshots are a projection and must be reconciled with authoritative core reports in a later integration cycle.
 
+## Implemented Foundation Evidence
+
+Implemented on 2026-07-19 under lock session `dashboard-core-20260719T202651Z-019f7c08`:
+
+- immutable domain records and validating JSON serializers;
+- explicit Workspace Driver, discovery, Excel locator, article locator, Orchestrator, state-store, and backend ports;
+- `DashboardService` start, read, resume, stage projection, collection, de-duplication, and structured-failure flows;
+- atomic UTF-8 `JsonDashboardStateStore` with restart validation;
+- loopback-only HTTP adapter with health, start, read, and resume routes;
+- deterministic adapters confined to `tests/dashboard_core/`;
+- 31 automated tests passing with Python warnings treated as errors;
+- 19 concurrently integrated Orchestrator regression tests also passing, for 50 tests across the two available core suites;
+- real HTTP execution over a four-file nested temporary source tree;
+- verified one Excel candidate, two article candidates, five completed core projections, one collected report, one collected output file, restart recovery, resume, and sanitized discovery failure;
+- no root HTML or Orchestrator implementation edits.
+- all 15 Dashboard files mirrored to and verified by SHA-256 in the user-visible checkout at `C:\Users\Vint\Desktop\Галенко_Віталій_304ТН_варіант_5` before the local test and real-run repetition.
+
+Verified commands:
+
+```text
+python -W error -m unittest discover -s tests/dashboard_core -v
+python -W error -m tests.dashboard_core.real_run
+python -W error -m compileall -q journal_factory/dashboard_core tests/dashboard_core
+```
+
+HTTP adapter routes:
+
+- `GET /health`;
+- `POST /api/dashboard/runs`;
+- `GET /api/dashboard/runs/<run_id>`;
+- `POST /api/dashboard/runs/<run_id>/resume`.
+
 ## Future Extensions
 
 - server-sent events or WebSocket event delivery;
