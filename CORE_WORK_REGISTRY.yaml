@@ -74,27 +74,18 @@ cores:
       - "Projects Dashboard and Orchestrator state and exposes existing report/output paths through browser-safe local APIs."
       - "Runs against the canonical local Conference 95 archive without modifying it and verifies every generated artifact."
       - "Passes focused, full-suite, browser viewport, real-run, architecture, and repository acceptance checks."
-    status: in_progress
-    in_progress: true
-    lock_owner: "Codex /root"
-    lock_session: "phase1-browser-acceptance-20260719T211027Z-7b93e4d1"
-    claimed_at_utc: "2026-07-19T21:10:27Z"
-    branch: "codex/phase1-browser-acceptance"
-    work_item: "Replace the rejected diagnostic menu with the real API-backed Phase 1 workspace, dashboard, run, and report workflow and verify it against the canonical Conference 95 archive."
-    allowed_write_scope:
-      - "CORE_WORK_REGISTRY.yaml"
-      - "cores/phase1_browser_acceptance/**"
-      - "index.html"
-      - "README.md"
-      - "journal_factory/workspace_driver/**"
-      - "journal_factory/phase1_app/**"
-      - "tests/workspace_driver/**"
-      - "tests/phase1_app/**"
-      - "build/phase1_acceptance/**"
-    last_result: null
-    last_commit: null
-    completed_at_utc: null
-    notes: "Registered after the user rejected the diagnostic-only root menu. This work item is the only owner of the cross-core Phase 1 acceptance fix."
+    status: completed
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: "PASS WITH WARNINGS"
+    last_commit: "1ec8fe0585f50a036746b2b3c2345ff49368a338"
+    completed_at_utc: "2026-07-19T21:38:03Z"
+    notes: "Replaced the rejected diagnostic menu with the API-backed Phase 1 interface and implemented Workspace Driver plus Dashboard/Orchestrator composition. Full suite: 66 passed, 0 failed/skipped. Canonical Conference 95 archive: 30,033,703 bytes; unchanged SHA-256 d86c0c33b96b321f2980993ecc6f3f91d1d67dea1b5cb21588984ec581b0c2a2. Real run: 100% Dashboard progress, 11 absolute paths, six existing reports, 41 coherent actions, production_ready false. Edge desktop/mobile workflow called validate, create, start, refresh, and resume with no overflow or terminal running cores. Warning: document/source parsing remains outside Phase 1, and final user UI confirmation is still required. The user-visible checkout was synchronized and passed all 66 tests locally."
 
   dashboard_core:
     display_name: "Dashboard Core"
