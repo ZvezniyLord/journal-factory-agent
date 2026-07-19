@@ -8,7 +8,7 @@ This file defines the mandatory lifecycle for every current and future Journal F
 
 This section applies specifically to Codex agents that have access to the user's computer, local repository, terminal, or mounted workspace.
 
-Codex must treat the user's local working copy as the primary visible development workspace and GitHub as the shared coordination and publication repository. It must not silently perform the entire development cycle only inside an isolated cloud container when a usable local workspace is available.
+Codex must treat the user's local working copy as the primary visible development workspace and GitHub as the shared coordination and publication repository. When local access is available, Codex must automatically keep the user's local repository synchronized with the approved remote state; it must not leave synchronization as a manual task for the user and must not silently perform the entire development cycle only inside an isolated cloud container.
 
 Before claiming or implementing a core, Codex must:
 
@@ -16,15 +16,30 @@ Before claiming or implementing a core, Codex must:
 2. show the resolved repository path in its work report;
 3. run `git fetch origin`;
 4. verify the current branch and working-tree state;
-5. update the local copy to current `origin/main` using a safe fast-forward operation, or stop with `BLOCKED` if local changes prevent a safe update;
-6. verify that local `HEAD` equals the intended remote base before placing the lock;
-7. perform the lock commit, push, fetch, and remote ownership verification from that local repository.
+5. automatically update the local copy to current `origin/main` using a safe fast-forward operation;
+6. stop with `BLOCKED` rather than overwrite, discard, reset, stash, or otherwise hide uncommitted user changes when they prevent a safe update;
+7. verify that local `HEAD` equals the intended remote base before placing the lock;
+8. perform the lock commit, push, fetch, and remote ownership verification from that local repository.
 
 All implementation files, tests, fixtures, logs, reports, generated artifacts, and real-run evidence must be created or updated in the user's local working copy so the user can inspect them while the work is in progress. Codex must run focused tests, the full test suite, launch commands, smoke tests, and real-run checks on the user's computer or explicitly designated local environment whenever the required runtime is available there.
 
 Codex must report the exact local commands executed, local paths used, test counts, failures, skipped tests, durations, generated artifact paths, and any processes started. Test evidence that exists only in an unobservable remote scratch environment is insufficient for acceptance when local execution is available.
 
-After local verification succeeds, Codex must commit and push the approved implementation to GitHub. GitHub receives the reviewed local result; it is not a substitute for maintaining the user's local files.
+After local verification succeeds, Codex must commit and push the approved implementation to GitHub. Immediately after every successful push that changes the shared project state, Codex must fetch again and verify that the user's local working copy contains the pushed commit and is synchronized with the intended remote branch. Before continuing work after another agent has pushed relevant changes, Codex must automatically fetch and safely fast-forward the user's local copy again.
+
+The required steady state is:
+
+```text
+safe local working tree
+-> fetch current origin/main
+-> automatic fast-forward update of the user's local files
+-> local implementation and local tests
+-> commit and push
+-> fetch again
+-> verify the same commit exists both locally and remotely
+```
+
+The user should not need to run `git pull` merely to see an approved commit produced by a Codex agent that has local-machine access. Automatic synchronization is mandatory whenever it can be performed without destroying or concealing local work.
 
 If Codex does not have access to the user's local filesystem or terminal, it must say so before implementation and stop with `STATUS: BLOCKED — LOCAL WORKSPACE ACCESS REQUIRED`, unless the user explicitly authorizes remote-only execution for that task. It must not claim that the user's computer was updated, tested, or synchronized when it only worked in a cloud environment.
 
@@ -35,7 +50,7 @@ git rev-parse HEAD
 git rev-parse origin/main
 ```
 
-and the expected commits are present locally. A successful GitHub push alone does not update the user's computer.
+and the expected commits are present locally. A successful GitHub push alone does not update the user's computer; the Codex agent with local access must perform and verify the local synchronization itself.
 
 ## Mandatory lock lifecycle
 
