@@ -36,12 +36,47 @@ selection_aliases:
   "orchestrator core": orchestrator_core
   "оркестратор": orchestrator_core
   "ядро оркестратора": orchestrator_core
+  "dashboard": dashboard_core
+  "dashboard core": dashboard_core
+  "reporting and dashboard": dashboard_core
   "udc": udc_detection
   "удк": udc_detection
   "ядро удк": udc_detection
   "виявлення удк": udc_detection
 
 cores:
+  dashboard_core:
+    display_name: "Dashboard Core"
+    description: "Operational execution center that creates or restores runs, requests source discovery and candidate location through ports, submits work to Orchestrator Core, and projects live run state for browser adapters."
+    roadmap_reference: "docs/CORE_DEVELOPMENT_PROTOCOL.md#core-architecture-separation"
+    phase: 1
+    development_case: "Build the Phase 1 dashboard application-service foundation with explicit ports and deterministic test adapters for unavailable cores, without owning root HTML or Orchestrator implementation."
+    depends_on:
+      - workspace_driver
+      - orchestrator_core
+    passport_path: "cores/dashboard_core/CORE.md"
+    development_plan_path: "cores/dashboard_core/DEVELOPMENT_PLAN.md"
+    acceptance_outline:
+      - "Accepts source folder, output folder, and journal number through a typed run request."
+      - "Creates or restores runs only through Workspace Driver and dashboard persistence ports."
+      - "Requests recursive discovery and Excel/article candidate location through dedicated ports."
+      - "Submits typed work to Orchestrator Core without implementing Orchestrator transitions or downstream domain logic."
+      - "Projects per-core state, progress, warnings, reports, files, final results, and structured failures for browser adapters."
+      - "Recovers persisted dashboard state after process restart."
+      - "Uses deterministic test adapters for unavailable cores and demonstrates a real loopback backend run with temporary folders."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: "User-approved Phase 1 foundation; root HTML and Orchestrator implementation remain owned by separate cores."
+
   orchestrator_core:
     display_name: "Orchestrator Core"
     description: "Deterministic pipeline conductor for core registration, dependency checks, routing, run state, transitions, retries, pause/resume, typed invocation contracts, action logging, and failure routing."
