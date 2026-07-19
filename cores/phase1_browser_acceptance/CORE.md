@@ -73,3 +73,16 @@ Acceptance requires real API-backed controls for source, output, journal number,
 ## Limitations
 
 The Phase 1 start action proves local workspace and orchestration plumbing. It does not process journal documents or claim production readiness.
+
+## Implemented Evidence
+
+Implemented under lock session `phase1-browser-acceptance-20260719T211027Z-7b93e4d1`:
+
+- a typed Workspace Driver class family with immutable models, explicit ports, registries, a local filesystem adapter, collision protection, and persisted recovery;
+- a Phase 1 composition service using the released Dashboard and Orchestrator contracts;
+- loopback-only JSON APIs and native source/output selection bridge;
+- a real root operator interface with every required control and visible report/output paths;
+- a local launcher with occupied-port fallback;
+- 66 automated tests passing with warnings treated as errors;
+- canonical Conference 95 archive verification with unchanged SHA-256;
+- successful Edge workflow automation at desktop and 390-pixel mobile widths.

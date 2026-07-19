@@ -3,245 +3,687 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Journal Factory | Orchestrator</title>
+  <title>Journal Factory</title>
   <style>
     :root {
       color-scheme: light;
-      --ink: #171a1f;
-      --muted: #5d646d;
-      --line: #cfd4d8;
-      --canvas: #f2f4f5;
+      --ink: #18211d;
+      --muted: #5d6963;
+      --canvas: #edf1ee;
       --surface: #ffffff;
-      --accent: #176a46;
-      --accent-hover: #105438;
-      --warning: #9a5600;
-      --danger: #a12b2b;
-      --focus: #1771b8;
+      --surface-soft: #f7f9f7;
+      --line: #cbd4cf;
+      --line-strong: #9dab-a3;
+      --green: #176b46;
+      --green-dark: #0f5236;
+      --amber: #946113;
+      --red: #a02d33;
+      --blue: #245f8d;
+      --focus: #1674b8;
     }
 
     * { box-sizing: border-box; }
 
+    html { min-width: 320px; background: var(--canvas); }
+
     body {
       margin: 0;
-      min-height: 100vh;
-      background: var(--canvas);
       color: var(--ink);
-      font: 15px/1.45 "Segoe UI", Arial, sans-serif;
+      background: var(--canvas);
+      font: 14px/1.45 "Segoe UI", system-ui, sans-serif;
       letter-spacing: 0;
     }
 
+    button,
+    input,
+    select { font: inherit; letter-spacing: 0; }
+
+    button,
+    select { cursor: pointer; }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--focus) 34%, transparent);
+      outline-offset: 2px;
+    }
+
+    button:disabled,
+    select:disabled { cursor: not-allowed; opacity: .48; }
+
     header {
-      border-bottom: 1px solid var(--line);
-      background: var(--surface);
+      color: #fff;
+      background: #1b2822;
+      border-bottom: 4px solid var(--green);
     }
 
     .header-inner,
     main {
-      width: min(760px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
     }
 
-    .header-inner { padding: 22px 0 18px; }
-
-    h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: 650;
-    }
-
-    .core-label {
-      margin: 3px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    main { padding: 28px 0; }
-
-    .command-panel {
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: var(--surface);
-      padding: 22px;
-    }
-
-    .panel-heading {
+    .header-inner {
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 20px;
+      gap: 24px;
     }
 
-    h2 {
-      margin: 0;
-      font-size: 17px;
-      font-weight: 650;
-    }
+    .brand h1 { margin: 0; font-size: 25px; line-height: 1.15; font-weight: 720; }
+    .brand p { margin: 5px 0 0; color: #c8d4cd; font-size: 12px; text-transform: uppercase; }
 
-    .state-badge {
+    .status-badge {
       min-width: 112px;
-      border: 1px solid var(--line);
+      padding: 7px 11px;
+      border: 1px solid #64736b;
       border-radius: 4px;
-      padding: 5px 9px;
-      background: #f7f8f8;
-      color: var(--muted);
+      color: #e8efeb;
+      background: #26362e;
+      font-size: 12px;
+      font-weight: 700;
       text-align: center;
-      font-size: 13px;
-      font-weight: 650;
       text-transform: uppercase;
     }
 
-    .state-badge[data-state="completed"] { border-color: #7db799; color: var(--accent); background: #eef8f2; }
-    .state-badge[data-state="failed"] { border-color: #d7a0a0; color: var(--danger); background: #fff3f3; }
-    .state-badge[data-state="running"] { border-color: #d9b47e; color: var(--warning); background: #fff8ed; }
+    .status-badge[data-state="succeeded"] { border-color: #5a9a76; color: #c9f1d9; }
+    .status-badge[data-state="succeeded_with_warnings"] { border-color: #b18c4c; color: #ffe2a8; }
+    .status-badge[data-state="failed"] { border-color: #bb676b; color: #ffd3d5; }
 
-    dl {
+    main { padding: 24px 0 44px; }
+
+    .workspace-grid {
       display: grid;
-      grid-template-columns: 150px minmax(0, 1fr);
-      gap: 0;
-      margin: 0 0 22px;
-      border-top: 1px solid var(--line);
+      grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface);
     }
 
-    dt,
-    dd {
-      margin: 0;
+    .setup,
+    .workspace-preview { padding: 22px; }
+    .workspace-preview { background: var(--surface-soft); border-left: 1px solid var(--line); }
+
+    h2 { margin: 0 0 18px; font-size: 17px; line-height: 1.25; }
+    h3 { margin: 0 0 12px; font-size: 13px; line-height: 1.25; text-transform: uppercase; color: var(--muted); }
+
+    .field { margin-bottom: 16px; }
+    .field:last-of-type { margin-bottom: 0; }
+    label { display: block; margin-bottom: 6px; font-weight: 650; }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .source-row { grid-template-columns: minmax(0, 1fr) 112px auto; }
+
+    input,
+    select {
+      width: 100%;
       min-width: 0;
-      border-bottom: 1px solid var(--line);
-      padding: 10px 8px;
-      overflow-wrap: anywhere;
+      min-height: 40px;
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      padding: 8px 10px;
+      color: var(--ink);
+      background: #fff;
     }
 
-    dt { color: var(--muted); }
-    dd { font-family: Consolas, "Courier New", monospace; }
-
-    .commands {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    input[aria-invalid="true"] { border-color: var(--red); }
+    input::placeholder { color: #7a8580; }
 
     button {
       min-height: 40px;
       border: 1px solid transparent;
-      border-radius: 5px;
-      padding: 8px 16px;
-      font: inherit;
-      font-weight: 650;
-      cursor: pointer;
+      border-radius: 4px;
+      padding: 8px 14px;
+      font-weight: 680;
+      white-space: nowrap;
     }
 
-    button:focus-visible { outline: 3px solid color-mix(in srgb, var(--focus) 35%, transparent); outline-offset: 2px; }
-    button:disabled { cursor: wait; opacity: .62; }
-    .primary { background: var(--accent); color: #fff; }
-    .primary:hover:not(:disabled) { background: var(--accent-hover); }
-    .secondary { border-color: var(--line); background: #f7f8f8; color: var(--ink); }
-    .secondary:hover:not(:disabled) { background: #eceff0; }
+    .primary { color: #fff; background: var(--green); }
+    .primary:hover:not(:disabled) { background: var(--green-dark); }
+    .secondary { color: var(--ink); border-color: var(--line-strong); background: #fff; }
+    .secondary:hover:not(:disabled) { background: #edf2ef; }
+    .quiet { color: var(--blue); border-color: #9eb7ca; background: #f5f9fc; }
+    .quiet:hover:not(:disabled) { background: #eaf2f7; }
 
-    .error {
-      min-height: 22px;
-      margin: 14px 0 0;
-      color: var(--danger);
-      font-weight: 600;
+    .command-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+
+    .path-block {
+      display: block;
+      width: 100%;
+      min-height: 72px;
+      margin: 0;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+      color: #26332d;
+      background: #fff;
+      font: 12px/1.5 "Cascadia Mono", Consolas, monospace;
     }
 
-    @media (max-width: 560px) {
+    .validation-list,
+    .warning-list,
+    .path-list,
+    .core-list { margin: 0; padding: 0; list-style: none; }
+    .validation-list { margin-top: 14px; }
+    .validation-list li { padding: 5px 0; color: var(--muted); }
+    .validation-list .warning { color: var(--amber); }
+    .validation-list .success { color: var(--green); font-weight: 650; }
+
+    .run-band {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .run-summary { min-width: 0; }
+    .run-summary strong { display: block; font-size: 15px; }
+    .run-summary span { display: block; margin-top: 3px; color: var(--muted); overflow-wrap: anywhere; }
+    .run-commands { display: flex; flex-wrap: wrap; gap: 8px; flex: 0 0 auto; }
+
+    .error-banner {
+      display: none;
+      margin-top: 18px;
+      padding: 11px 13px;
+      border-left: 4px solid var(--red);
+      color: #702126;
+      background: #fff1f2;
+      overflow-wrap: anywhere;
+    }
+    .error-banner.visible { display: block; }
+    .error-banner strong { margin-right: 6px; }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .panel {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .metric { min-width: 0; padding: 12px; background: var(--surface-soft); }
+    .metric span { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; }
+    .metric strong { display: block; margin-top: 3px; font-size: 18px; overflow-wrap: anywhere; }
+
+    progress { width: 100%; height: 10px; margin: 16px 0 0; accent-color: var(--green); }
+
+    .core-list { margin-top: 14px; border-top: 1px solid var(--line); }
+    .core-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .core-list strong { overflow-wrap: anywhere; }
+    .core-list span { color: var(--muted); text-align: right; }
+
+    .paths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .path-list li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+    .path-list li:last-child { border-bottom: 0; }
+    .path-list strong { display: block; margin-bottom: 2px; font-size: 12px; text-transform: capitalize; }
+    .path-list code { display: block; color: #3e4b45; font: 11px/1.45 "Cascadia Mono", Consolas, monospace; overflow-wrap: anywhere; }
+
+    .warning-list li { margin-top: 10px; padding: 9px 10px; border-left: 3px solid var(--amber); color: #66460f; background: #fff8e9; }
+    .empty { color: var(--muted); font-style: italic; }
+
+    @media (max-width: 850px) {
+      .workspace-grid,
+      .dashboard-grid { grid-template-columns: 1fr; }
+      .workspace-preview { border-left: 0; border-top: 1px solid var(--line); }
+      .paths-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
       .header-inner,
-      main { width: min(100% - 20px, 760px); }
-      main { padding-top: 16px; }
-      .command-panel { padding: 16px; }
-      .panel-heading { align-items: flex-start; flex-direction: column; }
-      dl { grid-template-columns: 1fr; }
-      dt { border-bottom: 0; padding-bottom: 2px; }
-      dd { padding-top: 2px; }
-      .commands button { flex: 1 1 140px; }
+      main { width: min(100% - 20px, 1180px); }
+      .header-inner { min-height: 76px; gap: 12px; }
+      .brand h1 { font-size: 21px; }
+      .brand p { font-size: 10px; }
+      .status-badge { min-width: 88px; padding-inline: 8px; }
+      main { padding-top: 14px; }
+      .setup,
+      .workspace-preview,
+      .panel { padding: 15px; }
+      .input-row,
+      .source-row { grid-template-columns: 1fr; }
+      .input-row button { width: 100%; }
+      .run-band { align-items: stretch; flex-direction: column; }
+      .run-commands { display: grid; grid-template-columns: repeat(3, 1fr); }
+      .run-commands button { min-width: 0; padding-inline: 6px; }
+      .metric-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <h1>Journal Factory</h1>
-      <p class="core-label">Orchestrator Command</p>
+      <div class="brand">
+        <h1>Journal Factory</h1>
+        <p>Phase 1 workspace control</p>
+      </div>
+      <output id="run-state" class="status-badge" data-state="idle">Idle</output>
     </div>
   </header>
+
   <main>
-    <section class="command-panel" aria-labelledby="command-heading">
-      <div class="panel-heading">
-        <h2 id="command-heading">Run state</h2>
-        <output id="run-state" class="state-badge" data-state="idle">Connecting</output>
+    <section class="workspace-grid" aria-labelledby="setup-title">
+      <div class="setup">
+        <h2 id="setup-title">Workspace setup</h2>
+        <div class="field">
+          <label for="source-path">Source archive or folder</label>
+          <div class="input-row source-row">
+            <input id="source-path" type="text" autocomplete="off" spellcheck="false" placeholder="Select or enter a local path">
+            <select id="source-kind" aria-label="Source selection type">
+              <option value="source_file">Archive</option>
+              <option value="source_folder">Folder</option>
+            </select>
+            <button id="select-source" class="secondary" type="button">Select</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="output-parent">Output parent</label>
+          <div class="input-row">
+            <input id="output-parent" type="text" autocomplete="off" spellcheck="false" placeholder="Desktop default">
+            <button id="select-output" class="secondary" type="button">Select</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="journal-number">Journal number</label>
+          <input id="journal-number" type="text" autocomplete="off" spellcheck="false" placeholder="For example: 95">
+        </div>
+
+        <div class="command-row">
+          <button id="validate-workspace" class="secondary" type="button">Validate</button>
+          <button id="create-workspace" class="primary" type="button" disabled>Create workspace</button>
+        </div>
       </div>
-      <dl>
-        <dt>Run ID</dt><dd id="run-id">-</dd>
-        <dt>Current core</dt><dd id="current-core">-</dd>
-        <dt>Completed</dt><dd id="completed-cores">0 / 0</dd>
-        <dt>Actions</dt><dd id="action-count">0</dd>
-        <dt>Warnings</dt><dd id="warning-count">0</dd>
-      </dl>
-      <div class="commands">
-        <button id="start-run" class="primary" type="button">Start run</button>
-        <button id="refresh-state" class="secondary" type="button">Refresh</button>
+
+      <aside class="workspace-preview" aria-labelledby="workspace-title">
+        <h2 id="workspace-title">Computed workspace</h2>
+        <output id="workspace-path" class="path-block">Awaiting validation</output>
+        <ul id="validation-results" class="validation-list" aria-live="polite">
+          <li>Not validated</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="run-band" aria-labelledby="run-title">
+      <div class="run-summary">
+        <strong id="run-title">Run not started</strong>
+        <span id="run-id">No run ID</span>
       </div>
-      <p id="command-error" class="error" role="alert" aria-live="polite"></p>
+      <div class="run-commands">
+        <button id="start-run" class="primary" type="button" disabled>Start run</button>
+        <button id="refresh-run" class="quiet" type="button" disabled>Refresh</button>
+        <button id="resume-run" class="secondary" type="button" disabled>Resume</button>
+      </div>
+    </section>
+
+    <div id="command-error" class="error-banner" role="alert" aria-live="assertive"></div>
+
+    <section class="dashboard-grid" aria-label="Run details">
+      <div class="panel">
+        <h2>Pipeline</h2>
+        <div class="metric-row">
+          <div class="metric"><span>Progress</span><strong id="progress-value">0%</strong></div>
+          <div class="metric"><span>Warnings</span><strong id="warning-count">0</strong></div>
+          <div class="metric"><span>Reports</span><strong id="report-count">0</strong></div>
+        </div>
+        <progress id="run-progress" value="0" max="100">0%</progress>
+        <ul id="core-list" class="core-list"><li class="empty">No core activity</li></ul>
+        <ul id="warning-list" class="warning-list"></ul>
+      </div>
+
+      <div class="panel">
+        <div class="paths-grid">
+          <section aria-labelledby="reports-title">
+            <h3 id="reports-title">Reports</h3>
+            <ul id="report-paths" class="path-list"><li class="empty">No reports yet</li></ul>
+          </section>
+          <section aria-labelledby="outputs-title">
+            <h3 id="outputs-title">Outputs</h3>
+            <ul id="output-paths" class="path-list"><li class="empty">No outputs yet</li></ul>
+          </section>
+        </div>
+      </div>
     </section>
   </main>
+
   <script>
-    const fields = {
-      state: document.querySelector('#run-state'),
-      runId: document.querySelector('#run-id'),
-      currentCore: document.querySelector('#current-core'),
-      completed: document.querySelector('#completed-cores'),
-      actions: document.querySelector('#action-count'),
-      warnings: document.querySelector('#warning-count'),
-      error: document.querySelector('#command-error'),
+    const ui = {
+      sourcePath: document.querySelector('#source-path'),
+      sourceKind: document.querySelector('#source-kind'),
+      selectSource: document.querySelector('#select-source'),
+      outputParent: document.querySelector('#output-parent'),
+      selectOutput: document.querySelector('#select-output'),
+      journalNumber: document.querySelector('#journal-number'),
+      workspacePath: document.querySelector('#workspace-path'),
+      validationResults: document.querySelector('#validation-results'),
+      validate: document.querySelector('#validate-workspace'),
+      create: document.querySelector('#create-workspace'),
       start: document.querySelector('#start-run'),
-      refresh: document.querySelector('#refresh-state')
+      refresh: document.querySelector('#refresh-run'),
+      resume: document.querySelector('#resume-run'),
+      runState: document.querySelector('#run-state'),
+      runTitle: document.querySelector('#run-title'),
+      runId: document.querySelector('#run-id'),
+      error: document.querySelector('#command-error'),
+      progress: document.querySelector('#run-progress'),
+      progressValue: document.querySelector('#progress-value'),
+      warningCount: document.querySelector('#warning-count'),
+      reportCount: document.querySelector('#report-count'),
+      cores: document.querySelector('#core-list'),
+      warnings: document.querySelector('#warning-list'),
+      reports: document.querySelector('#report-paths'),
+      outputs: document.querySelector('#output-paths')
     };
 
-    function present(snapshot) {
-      fields.state.textContent = snapshot.state.replaceAll('_', ' ');
-      fields.state.dataset.state = snapshot.state;
-      fields.runId.textContent = snapshot.run_id || '-';
-      fields.currentCore.textContent = snapshot.current_core || snapshot.next_core || '-';
-      fields.completed.textContent = `${snapshot.completed_cores.length} / ${snapshot.pipeline.length}`;
-      fields.actions.textContent = snapshot.action_count;
-      fields.warnings.textContent = snapshot.warnings.length;
+    let workspace = null;
+    let run = null;
+    let validated = false;
+
+    class ApiFailure extends Error {
+      constructor(payload, status) {
+        super(payload?.error?.message || `Request failed (${status})`);
+        this.payload = payload;
+      }
     }
 
-    async function request(path, options) {
+    async function request(path, options = {}) {
       const response = await fetch(path, options);
-      const payload = await response.json();
-      if (!response.ok) throw new Error(payload.error?.message || 'Command failed.');
+      let payload;
+      try {
+        payload = await response.json();
+      } catch {
+        payload = {error: {code: 'HTTP_RESPONSE_INVALID', message: 'The local backend returned an invalid response.'}};
+      }
+      if (!response.ok) throw new ApiFailure(payload, response.status);
       return payload;
     }
 
-    async function refresh() {
-      fields.error.textContent = '';
-      try {
-        present(await request('/api/orchestrator/state'));
-      } catch (error) {
-        fields.error.textContent = error.message;
+    function formPayload() {
+      return {
+        source_path: ui.sourcePath.value,
+        output_parent: ui.outputParent.value,
+        journal_number: ui.journalNumber.value
+      };
+    }
+
+    function jsonPost(body) {
+      return {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+      };
+    }
+
+    function clearError() {
+      ui.error.textContent = '';
+      ui.error.classList.remove('visible');
+    }
+
+    function showError(error) {
+      const code = error.payload?.error?.code || 'LOCAL_BACKEND_UNAVAILABLE';
+      ui.error.replaceChildren();
+      const label = document.createElement('strong');
+      label.textContent = code;
+      ui.error.append(label, document.createTextNode(error.message));
+      ui.error.classList.add('visible');
+    }
+
+    function setBusy(button, busy) {
+      button.dataset.busy = busy ? 'true' : 'false';
+      button.disabled = busy;
+    }
+
+    function invalidate() {
+      validated = false;
+      workspace = null;
+      run = null;
+      ui.create.disabled = true;
+      ui.start.disabled = true;
+      ui.refresh.disabled = true;
+      ui.resume.disabled = true;
+      ui.runTitle.textContent = 'Run not started';
+      ui.runId.textContent = 'No run ID';
+    }
+
+    function presentValidation(result) {
+      const value = result?.workspace || result;
+      ui.workspacePath.textContent = value?.workspace_path || 'Awaiting valid paths';
+      ui.validationResults.replaceChildren();
+      const items = [];
+      if (value?.valid) items.push({message: 'Configuration valid', className: 'success'});
+      for (const warning of value?.warnings || []) items.push({message: warning.message, className: 'warning'});
+      for (const error of value?.errors || []) items.push({message: error.message, className: 'error'});
+      if (!items.length) items.push({message: 'Not validated', className: ''});
+      for (const item of items) {
+        const element = document.createElement('li');
+        element.textContent = item.message;
+        element.className = item.className;
+        ui.validationResults.append(element);
+      }
+      const valid = Boolean(value?.valid);
+      validated = valid;
+      ui.create.disabled = !valid;
+      ui.sourcePath.setAttribute('aria-invalid', String((value?.errors || []).some(item => item.field === 'source_path')));
+      ui.outputParent.setAttribute('aria-invalid', String((value?.errors || []).some(item => item.field === 'output_parent')));
+      ui.journalNumber.setAttribute('aria-invalid', String((value?.errors || []).some(item => item.field === 'journal_number')));
+      if (valid && value.journal_number) ui.journalNumber.value = value.journal_number;
+    }
+
+    function namedPathList(element, values) {
+      element.replaceChildren();
+      const entries = Object.entries(values || {});
+      if (!entries.length) {
+        const empty = document.createElement('li');
+        empty.className = 'empty';
+        empty.textContent = 'None';
+        element.append(empty);
+        return;
+      }
+      for (const [name, path] of entries) {
+        const item = document.createElement('li');
+        const label = document.createElement('strong');
+        const value = document.createElement('code');
+        label.textContent = name.replaceAll('_', ' ');
+        value.textContent = path;
+        item.append(label, value);
+        element.append(item);
       }
     }
 
-    fields.start.addEventListener('click', async () => {
-      fields.start.disabled = true;
-      fields.error.textContent = '';
+    function recordPathList(element, records) {
+      const values = {};
+      for (const record of records || []) values[record.kind || record.record_id] = record.reference;
+      namedPathList(element, values);
+    }
+
+    function presentWorkspace(value) {
+      workspace = value;
+      ui.workspacePath.textContent = value.workspace_path;
+      ui.runTitle.textContent = 'Workspace ready';
+      ui.runId.textContent = value.run_id;
+      ui.runState.textContent = value.state.replaceAll('_', ' ');
+      ui.runState.dataset.state = value.state;
+      ui.start.disabled = false;
+      namedPathList(ui.reports, value.reports);
+      const outputValues = {
+        workspace: value.paths.workspace,
+        rendered_pdf: value.paths.rendered_pdf,
+        rendered_png: value.paths.rendered_png,
+        final: value.paths.final
+      };
+      namedPathList(ui.outputs, outputValues);
+      ui.reportCount.textContent = Object.keys(value.reports).length;
+    }
+
+    function presentRun(value) {
+      run = value;
+      ui.runTitle.textContent = value.stage.replaceAll('_', ' ');
+      ui.runId.textContent = value.run_id;
+      ui.runState.textContent = value.state.replaceAll('_', ' ');
+      ui.runState.dataset.state = value.state;
+      ui.progress.value = value.progress_percent;
+      ui.progressValue.textContent = `${Math.round(value.progress_percent)}%`;
+      ui.warningCount.textContent = value.warnings.length;
+      ui.reportCount.textContent = value.reports.length;
+      ui.cores.replaceChildren();
+      for (const core of value.cores) {
+        const item = document.createElement('li');
+        const name = document.createElement('strong');
+        const state = document.createElement('span');
+        name.textContent = core.core_id.replaceAll('_', ' ');
+        state.textContent = `${core.state.replaceAll('_', ' ')} | ${core.completed_work}/${core.total_work}`;
+        item.append(name, state);
+        ui.cores.append(item);
+      }
+      if (!value.cores.length) {
+        const empty = document.createElement('li');
+        empty.className = 'empty';
+        empty.textContent = 'No core activity';
+        ui.cores.append(empty);
+      }
+      ui.warnings.replaceChildren();
+      for (const warning of value.warnings) {
+        const item = document.createElement('li');
+        item.textContent = `${warning.code}: ${warning.message}`;
+        ui.warnings.append(item);
+      }
+      recordPathList(ui.reports, value.reports);
+      recordPathList(ui.outputs, value.files);
+      ui.refresh.disabled = false;
+      ui.resume.disabled = false;
+    }
+
+    async function validateWorkspace() {
+      clearError();
+      setBusy(ui.validate, true);
       try {
-        present(await request('/api/orchestrator/start', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: '{}'
-        }));
+        const result = await request('/api/workspace/validate', jsonPost(formPayload()));
+        presentValidation(result);
       } catch (error) {
-        fields.error.textContent = error.message;
+        if (error.payload?.workspace) presentValidation(error.payload);
+        showError(error);
       } finally {
-        fields.start.disabled = false;
+        ui.validate.disabled = false;
+      }
+    }
+
+    ui.selectSource.addEventListener('click', async () => {
+      clearError();
+      setBusy(ui.selectSource, true);
+      try {
+        const result = await request('/api/select', jsonPost({kind: ui.sourceKind.value}));
+        ui.sourcePath.value = result.path;
+        invalidate();
+      } catch (error) {
+        showError(error);
+      } finally {
+        ui.selectSource.disabled = false;
       }
     });
 
-    fields.refresh.addEventListener('click', refresh);
-    refresh();
+    ui.selectOutput.addEventListener('click', async () => {
+      clearError();
+      setBusy(ui.selectOutput, true);
+      try {
+        const result = await request('/api/select', jsonPost({kind: 'output_folder'}));
+        ui.outputParent.value = result.path;
+        invalidate();
+      } catch (error) {
+        showError(error);
+      } finally {
+        ui.selectOutput.disabled = false;
+      }
+    });
+
+    ui.validate.addEventListener('click', validateWorkspace);
+
+    ui.create.addEventListener('click', async () => {
+      clearError();
+      setBusy(ui.create, true);
+      try {
+        const result = await request('/api/workspace/create', jsonPost(formPayload()));
+        presentWorkspace(result.workspace);
+      } catch (error) {
+        showError(error);
+      } finally {
+        ui.create.disabled = !validated;
+      }
+    });
+
+    ui.start.addEventListener('click', async () => {
+      clearError();
+      setBusy(ui.start, true);
+      try {
+        const result = await request('/api/runs/start', jsonPost({...formPayload(), run_id: workspace.run_id}));
+        presentWorkspace(result.workspace);
+        presentRun(result.run);
+      } catch (error) {
+        showError(error);
+      } finally {
+        ui.start.disabled = !workspace;
+      }
+    });
+
+    ui.refresh.addEventListener('click', async () => {
+      clearError();
+      setBusy(ui.refresh, true);
+      try {
+        const result = await request(`/api/runs/${encodeURIComponent(workspace.run_id)}`);
+        presentWorkspace(result.workspace);
+        presentRun(result.run);
+      } catch (error) {
+        showError(error);
+      } finally {
+        ui.refresh.disabled = !run;
+      }
+    });
+
+    ui.resume.addEventListener('click', async () => {
+      clearError();
+      setBusy(ui.resume, true);
+      try {
+        const result = await request(`/api/runs/${encodeURIComponent(workspace.run_id)}/resume`, jsonPost({}));
+        presentWorkspace(result.workspace);
+        presentRun(result.run);
+      } catch (error) {
+        showError(error);
+      } finally {
+        ui.resume.disabled = !run;
+      }
+    });
+
+    for (const field of [ui.sourcePath, ui.outputParent, ui.journalNumber]) {
+      field.addEventListener('input', invalidate);
+    }
+
+    request('/api/workspace/defaults')
+      .then(defaults => {
+        ui.sourcePath.value = defaults.source_path || '';
+        ui.outputParent.value = defaults.output_parent || '';
+        ui.journalNumber.value = defaults.journal_number || '';
+        ui.workspacePath.textContent = defaults.workspace_path || 'Awaiting validation';
+      })
+      .catch(showError);
   </script>
 </body>
 </html>
