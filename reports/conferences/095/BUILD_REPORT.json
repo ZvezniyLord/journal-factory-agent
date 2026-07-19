@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-19T03:13:03+03:00",
+  "generated_at": "2026-07-19T05:08:32+03:00",
   "conference_id": 95,
-  "iteration": 2,
-  "status": "REVIEW_ARTIFACTS_READY",
+  "iteration": 3,
+  "status": "PASS_PENDING_REVIEW",
   "production_ready": false,
   "typography_profile": "legacy_14pt",
   "article_count": 34,
@@ -10,34 +10,33 @@
     "archive_inventory": "PASS",
     "auto_manifest": "PASS",
     "article_preparation": "PASS",
+    "front_matter": "PASS",
     "style_bridge": "PASS",
     "typography_profile": "PASS",
+    "section_normalization": "PASS",
     "compose_docx": "PASS",
     "source_to_final_fidelity": "PASS",
+    "word_toc": "PASS",
+    "continuous_pagination": "PASS",
     "word_pdf_render": "PASS",
-    "visual_render_qa": "BLOCKED",
-    "toc": "BLOCKED",
-    "pagination": "BLOCKED",
-    "front_matter": "BLOCKED",
+    "all_pages_visual_qa": "PASS",
+    "post_render_typography_audit": "PASS",
     "clean_rebuild": "PASS",
     "publication_parity": "NOT_REQUIRED"
   },
   "artifacts": {
-    "docx": "artifacts/conferences/095/iteration-002/Conference95_generated.docx",
-    "docx_sha256": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
-    "pdf": "artifacts/conferences/095/iteration-002/Conference95_generated.pdf",
-    "pdf_sha256": "2d1948c1c3d4d77a07da0e13051efab4f07857eacfb2a0524c08aa36119d3645"
+    "docx": "artifacts/conferences/095/iteration-003/Conference95_generated.docx",
+    "docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
+    "pdf": "artifacts/conferences/095/iteration-003/Conference95_generated.pdf",
+    "pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203"
   },
-  "blockers": [
-    "front_matter_not_parameterized_for_conference_95",
-    "toc_field_missing",
-    "toc_entries_missing:34",
-    "continuous_pagination_missing_for_pdf_pages_1_89"
-  ],
-  "required_next_gates": [
-    "SERVICE_FRONT_MATTER_PARAMETERIZATION",
-    "TOC_GENERATION",
-    "CONTINUOUS_PAGINATION",
-    "DIRECT_RUN_FONT_SIZE_AUDIT"
-  ]
+  "metrics": {
+    "pdf_pages": 237,
+    "toc_article_entries": 34,
+    "first_article_page": 6,
+    "visible_footer_numbers": "236/236",
+    "effective_14pt_body_runs": 7532,
+    "tests_passed": 73
+  },
+  "blockers": []
 }

@@ -2,3 +2,7 @@
 {"timestamp": "2026-07-19T03:15:01+03:00", "decision": "LEGACY_DOC_READ_ONLY", "reason": "short isolated Word COM sessions avoid path-length and session-state nondeterminism", "conference_specific_rule": false}
 {"timestamp": "2026-07-19T03:15:01+03:00", "decision": "OFFICIAL_PDF_NOT_REQUIRED", "reason": "iteration contract explicitly waives publication parity", "conference_specific_rule": false}
 {"timestamp": "2026-07-19T03:15:01+03:00", "decision": "READY_FOR_REVIEW_NOT_ACCEPTED", "reason": "DOCX/PDF exist, but front matter, TOC, and continuous pagination remain blocked", "conference_specific_rule": false}
+{"timestamp": "2026-07-19T05:08:32+03:00", "decision": "EXPLICIT_CONFERENCE_METADATA", "reason": "service pages are materialized from schema-validated config without conference-id branches", "conference_specific_rule": false}
+{"timestamp": "2026-07-19T05:08:32+03:00", "decision": "CUSTOM_STYLE_WORD_TOC", "reason": "localized Word list separator maps SECTION to level 1 and Назва1 to level 2 while excluding author Heading styles", "conference_specific_rule": false}
+{"timestamp": "2026-07-19T05:08:32+03:00", "decision": "CONTINUOUS_PAGE_POLICY", "reason": "one footer PAGE field, first section starts at 1, title-page number hidden, later sections contain no restart", "conference_specific_rule": false}
+{"timestamp": "2026-07-19T05:08:32+03:00", "decision": "READY_FOR_REVIEW_NOT_ACCEPTED", "reason": "all iteration-003 internal gates pass; final acceptance remains owned by Reviewer", "conference_specific_rule": false}

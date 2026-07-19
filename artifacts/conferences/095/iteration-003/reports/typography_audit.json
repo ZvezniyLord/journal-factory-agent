@@ -1,0 +1,440 @@
+{
+  "status": "PASS",
+  "docx": "build\\iteration-003-final-d\\Conference95\\Conference95_generated.docx",
+  "docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
+  "profile": "legacy_14pt",
+  "expected_body_font_size_pt": 14,
+  "default_effective_font_size_pt": 14.0,
+  "article_bookmark_count": 34,
+  "sampled_paragraph_count": 1581,
+  "sampled_run_count": 7583,
+  "effective_body_size_counts": {
+    "14": 7532
+  },
+  "paragraph_mark_size_counts": {
+    "1": 4,
+    "10": 13,
+    "12": 3,
+    "14": 15,
+    "16": 1,
+    "18": 3,
+    "23": 1
+  },
+  "exception_counts": {
+    "local_author_override": 7,
+    "specialized_style": 32,
+    "table": 12
+  },
+  "exceptions": [
+    {
+      "article_bookmark": "JF_ARTICLE_001_START",
+      "paragraph_index": 177,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "f5347b3272ee661af7be255899e8ff6f4a1651969c7d88c738feeb975b031134"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_002_START",
+      "paragraph_index": 285,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "e5039575f2390edf8a6f9037e0cf352a84704f428c5ded4f82de14afe051e12c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_003_START",
+      "paragraph_index": 327,
+      "style": "",
+      "effective_size_pt": 10.0,
+      "category": "local_author_override",
+      "text_sha256": "72a5ac92b094e77e4619b97228e30f1507cbb3f1fac55c84d6b154d6dffda649"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_003_START",
+      "paragraph_index": 336,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "368b0c681a2f8f6ff03a9ee4fb6b0a82a4cf0591b7694b11aad8236aa72c1b7d"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_004_START",
+      "paragraph_index": 358,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "8839e605cdad262f2e71648aaa8389ffdd987cace71f2489a9b9c087c0ef5218"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_005_START",
+      "paragraph_index": 397,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "605b1685e8d5f444baf465d43910651f382cf99b6fb26361b75b5b9a5bf14f5a"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_006_START",
+      "paragraph_index": 429,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "00d88f22b40a4543e1a48b5ac19fd7669d07529743ed12b447260b0de93061d4"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_007_START",
+      "paragraph_index": 449,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "7fc63e710d1dc815cf5f2cc2060987afcdc214a080bb1fdf3b1a88a6776741dc"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 481,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "1783cc6211121453f8f7f7ddab7030bcd87d5995311e8eafc781c8c213b1e062"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 482,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "8e97a0050b9043b64cde17120790d767314538952baec6af35bb8cb886a30271"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 483,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "546f370b0d624c7205d4c02a70e19f910392b18b3a2f3a49df504eec2cc8779c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 484,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "097b79ddd258ced6f01a5afc4321df73b49ecf892d787abe70dad6b1dfe0ceb1"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 485,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "8bb8c21b00872d22a8b8eb8bdc49d05414269bfe1c6c1b16be4b2d1379e7e1f7"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 486,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "f4e4283426654d8545fc694a3f45c3ed1681c561dd077a4dc36f2830cac9a63e"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 487,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "0fa2b81886d553837a1bc468fccf77d9e564bc8009fe6cef0357c67aa17e848c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 488,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "a46f00663982baaccbe5c91801a82c50441f93182a29d22ab6bc0244c4a519c0"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 489,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "752157d2f0fda877bca200a379f6ec596aa728d05cdf9695dd4fe74fda5117ae"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 490,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "5b1529ff3f32077bfea7e46ba9dde72ecbfa7b3e133b3f67f6048f645890cd44"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 491,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "122ef059aeb19142095f8e5b8d832077a7ccd7e2066473d48cfada2b2ba51314"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 492,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "table",
+      "text_sha256": "e2b383037c3916fa020a841ee72602f849d2bbbd07dca09202c2cc537de80410"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_008_START",
+      "paragraph_index": 509,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "20095a06cb65e8ec8d8aa45443d309ada5fc9e3df08510ad4f0b59b6241e8201"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_009_START",
+      "paragraph_index": 554,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "8839e605cdad262f2e71648aaa8389ffdd987cace71f2489a9b9c087c0ef5218"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_010_START",
+      "paragraph_index": 596,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "e5039575f2390edf8a6f9037e0cf352a84704f428c5ded4f82de14afe051e12c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_013_START",
+      "paragraph_index": 819,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "1953819a77ef91a70180a9b5877ec2bdd23a2df5807cc6aa7d50c35e33a28fb3"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_014_START",
+      "paragraph_index": 845,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "948ecfb3997df6dfb0397a11dc374ee3d67500e46fa837653bd1b906f362b6e9"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_015_START",
+      "paragraph_index": 895,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "a2a1c5a23d032a263b2b245170e7f256f2c9df965a089851d9dbec3231023204"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_016_START",
+      "paragraph_index": 965,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "e5039575f2390edf8a6f9037e0cf352a84704f428c5ded4f82de14afe051e12c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_017_START",
+      "paragraph_index": 1067,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "a2a1c5a23d032a263b2b245170e7f256f2c9df965a089851d9dbec3231023204"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_017_START",
+      "paragraph_index": 1068,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "local_author_override",
+      "text_sha256": "3a235fb840cceee0862f638e1d68b92909cd757176a59ff2a671634e738ee47b"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_017_START",
+      "paragraph_index": 1068,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "local_author_override",
+      "text_sha256": "276a39931239448ec1d5d0c716564222cc16daf84b087709f2c18b27b40ab59e"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_018_START",
+      "paragraph_index": 1089,
+      "style": "Назва1",
+      "effective_size_pt": 12.0,
+      "category": "specialized_style",
+      "text_sha256": "8229f18b8a628658ee98e122a0ce23d74910e3f6f490a026de563ebe381a5574"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_018_START",
+      "paragraph_index": 1089,
+      "style": "Назва1",
+      "effective_size_pt": 12.0,
+      "category": "specialized_style",
+      "text_sha256": "3f46d716382382a5b230e34c205561eea851a73b8b91b48757fe493f28d24876"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_018_START",
+      "paragraph_index": 1131,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "948ecfb3997df6dfb0397a11dc374ee3d67500e46fa837653bd1b906f362b6e9"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_019_START",
+      "paragraph_index": 1162,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "e5039575f2390edf8a6f9037e0cf352a84704f428c5ded4f82de14afe051e12c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_019_START",
+      "paragraph_index": 1163,
+      "style": "",
+      "effective_size_pt": 12.0,
+      "category": "local_author_override",
+      "text_sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_020_START",
+      "paragraph_index": 1219,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "f5347b3272ee661af7be255899e8ff6f4a1651969c7d88c738feeb975b031134"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_021_START",
+      "paragraph_index": 1320,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "7fc63e710d1dc815cf5f2cc2060987afcdc214a080bb1fdf3b1a88a6776741dc"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_022_START",
+      "paragraph_index": 1355,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "e5039575f2390edf8a6f9037e0cf352a84704f428c5ded4f82de14afe051e12c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_025_START",
+      "paragraph_index": 1477,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "c6e02f4bad0073390476982aa488f18b3fdc9b6f0aac70dfffd7c6a876e6508d"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_026_START",
+      "paragraph_index": 1521,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "78b34edf8ed557d699ead8614a5070068689caec2a7c92c878b6f6cce5169946"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_027_START",
+      "paragraph_index": 1579,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "505cfa811957fefda07b6ec5f8e0b4d21816bfa94693eda89e9e3094319f81d7"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_027_START",
+      "paragraph_index": 1579,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "497ee9123ea630f60da217109a9dd66bde0b605efefcd57802d7cd9d9d10629b"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_028_START",
+      "paragraph_index": 1609,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "78b34edf8ed557d699ead8614a5070068689caec2a7c92c878b6f6cce5169946"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_029_START",
+      "paragraph_index": 1643,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "a2a1c5a23d032a263b2b245170e7f256f2c9df965a089851d9dbec3231023204"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_029_START",
+      "paragraph_index": 1644,
+      "style": "",
+      "effective_size_pt": 9.0,
+      "category": "local_author_override",
+      "text_sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_030_START",
+      "paragraph_index": 1767,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "f5347b3272ee661af7be255899e8ff6f4a1651969c7d88c738feeb975b031134"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_031_START",
+      "paragraph_index": 1814,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "e5039575f2390edf8a6f9037e0cf352a84704f428c5ded4f82de14afe051e12c"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_032_START",
+      "paragraph_index": 1842,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "3596fc5d476b32026e6427f5ca62af6d1324976ba05be62398a35619168f8d7e"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_033_START",
+      "paragraph_index": 1853,
+      "style": "",
+      "effective_size_pt": 10.0,
+      "category": "local_author_override",
+      "text_sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_033_START",
+      "paragraph_index": 1853,
+      "style": "",
+      "effective_size_pt": 10.0,
+      "category": "local_author_override",
+      "text_sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+    },
+    {
+      "article_bookmark": "JF_ARTICLE_033_START",
+      "paragraph_index": 1866,
+      "style": "SECTION",
+      "effective_size_pt": 24.0,
+      "category": "specialized_style",
+      "text_sha256": "e5039575f2390edf8a6f9037e0cf352a84704f428c5ded4f82de14afe051e12c"
+    }
+  ],
+  "exceptions_truncated": false,
+  "blockers": []
+}

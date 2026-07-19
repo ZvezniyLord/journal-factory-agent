@@ -2,8 +2,8 @@
   "status": "PASS",
   "articles": [
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/New_Тези Оксфорд.docx",
-      "source_sha256": "365ab241df5b4825fd85fbb4a4800b51675aa2a760609d30adccf3f339cea6f2",
+      "source_path": "article-001.docx",
+      "source_sha256": "ddaf1cd6cbed7ee92c9d1a8237ce7e8fd9ec40eaeaa6ab376f654e2bb6f82322",
       "normalized_text_length": 5888,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -11,17 +11,17 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, стаття по арттерапії.docx",
-      "source_sha256": "c58abba9c8c7734ce3d4461b7453a447f8777d66549389b4eec51b03f6e7ce96",
+      "source_path": "article-002.docx",
+      "source_sha256": "9857ed22ba06cd8e38a2078a01228a2c1a2897a9750c97fd90330e834050301b",
       "normalized_text_length": 9285,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
-      "paragraph_count": 96,
+      "paragraph_count": 95,
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Тези Алекс.docx",
-      "source_sha256": "6f8433de106c9e10dcb2d595d9e36542dfdb9269417a5fb104bb127387315696",
+      "source_path": "article-003.docx",
+      "source_sha256": "9f453087d2975a9dc2bfb04225cef3e502a94f0fe5b7854a58c1c0ab40d327dd",
       "normalized_text_length": 4248,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -29,8 +29,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. стаття.docx",
-      "source_sha256": "de335e889ed6911698b1a8550e74033c660f9bd6170421968120dccc043e813a",
+      "source_path": "article-004.docx",
+      "source_sha256": "18fc08118c6e6d28e5b8f58e642d22b042a628be2dab1d27ca86ccd883e7be48",
       "normalized_text_length": 7135,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -38,8 +38,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/Стаття_Лисенко_Ілля.docx",
-      "source_sha256": "dfbf5eea3fb69061feadafd5d43eee6ce17ed156c20ee7128ea384901f880ab1",
+      "source_path": "article-005.docx",
+      "source_sha256": "22f98fe8a61f62c50917bf54b22841dabce9849d0615a0460ca951cad9e67a5a",
       "normalized_text_length": 23309,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -47,17 +47,17 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є.Р.стаття.docx",
-      "source_sha256": "301ab7ed516faea70c3d58aa0ea8ade93ec9df3c572fa967b5a2b88d5309331a",
+      "source_path": "article-006.docx",
+      "source_sha256": "e184479607eba149491e4988dd20da9cdf285a2343fa06550f968b7c3f86a950",
       "normalized_text_length": 6558,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
-      "paragraph_count": 31,
+      "paragraph_count": 30,
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/УДК 373.docx",
-      "source_sha256": "8b65a0fcec77f61a9bde8903fdb53199bf381db9934cf08239e97a3855a8808c",
+      "source_path": "article-007.docx",
+      "source_sha256": "30ff1c9b6b60787408b80bbfd2d72700342340331e241daf28733f7180323f85",
       "normalized_text_length": 6031,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -65,8 +65,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/New_Креативні 〓ндустр〓〓〓 як чинник соціально.docx",
-      "source_sha256": "8d5129946c459ed9811391a3709bf563e9c9e423f0ec4737a200008cee91d0af",
+      "source_path": "article-008.docx",
+      "source_sha256": "795775fec508c1b05910d6156392d82615da3feaaf89572b631625735f4e1a9f",
       "normalized_text_length": 8862,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -74,8 +74,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Теза 7.7.docx",
-      "source_sha256": "6d1faf42037efde5cf903e166731c70230e889c6f7088539a054122586c6fd6f",
+      "source_path": "article-009.docx",
+      "source_sha256": "aa3e4b600a89b29cebff9d60126a0f510affe6fbd251dc7186b6a477ad510397",
       "normalized_text_length": 9102,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -83,8 +83,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/New_Прибитько.docx",
-      "source_sha256": "aaf8e0c45ef44274d7d5e6a35e8c65f9d4c2dbc791f84a734553097ba1dbdb99",
+      "source_path": "article-010.docx",
+      "source_sha256": "3cdcb6df4288438e22e74de3a398dfe8df1651b6d0b127aaafbb2663262737ff",
       "normalized_text_length": 10252,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -92,8 +92,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко Олена Олексіївна.docx",
-      "source_sha256": "9490b6596111dd8339ab148b5646b5abc80573e62bb6b8aaee65dbb57bd8c163",
+      "source_path": "article-011.docx",
+      "source_sha256": "a16868ad625fa97cb1f20210d4c904c09b98cd198f2d56a68f1c2516e0089ca7",
       "normalized_text_length": 21260,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -101,8 +101,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Стаття Цифрова зрілість Сидоренко С. Ю..docx",
-      "source_sha256": "2591eae01d7a6badf5374b716b7aeb132a9400212926a44b8a5f4ee288079637",
+      "source_path": "article-012.docx",
+      "source_sha256": "3c8544587e896b8f45aca7ec3e2d5e5a6d80e4726f09285e49a0c742e26f1eec",
       "normalized_text_length": 16582,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -110,8 +110,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/Заявка і стаття.docx#prepared",
-      "source_sha256": "8e741ce7eabbc587d791fa65c3c61840576c50219bcdcc2a09a0c46d7a347eea",
+      "source_path": "article-013.docx",
+      "source_sha256": "9a0af1247eb608c16d45b3e1b7bb593be5ed3853572bb80fe068965366924201",
       "normalized_text_length": 5624,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -119,8 +119,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/15 Резніков/Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises.docx",
-      "source_sha256": "f43da66e0c7096630365f6b96c565f27075c550e37919a1923f6b5618c66095b",
+      "source_path": "article-014.docx",
+      "source_sha256": "879616052d8fb1166bf8985b599ed37270c3fd40f4aa63963f5bbdffbd5007ae",
       "normalized_text_length": 12700,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -128,8 +128,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Вибори в Україні в умовах повномасшт.війни_правові та політ.виклик.Шаповалова А.М..docx",
-      "source_sha256": "e92001c8abd506590b5f64a24b527199b24d233e13237c15aa49f9f9faf34028",
+      "source_path": "article-015.docx",
+      "source_sha256": "f5b40f492016b120aa28bd689fef9f0c89d3d23b784913ef7774b2ff6817c1be",
       "normalized_text_length": 11772,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -137,8 +137,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко стаття.docx",
-      "source_sha256": "5cd15ec7071159b8af2f59aa7ecf7343792d3ea4ee18f1c74c7e2e176acf075b",
+      "source_path": "article-016.docx",
+      "source_sha256": "e889cf46deb96f409442105fe52193d87e4e09a31914d675e4951bb4aebbc695",
       "normalized_text_length": 12090,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -146,8 +146,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/стаття_Спиридонова_Зозуля.docx",
-      "source_sha256": "c953933edd88a92c2cd69184ebd521e3fe5880b5bb8f0a64758dbd04c98d5e57",
+      "source_path": "article-017.docx",
+      "source_sha256": "d8d9b6246cbe0aa829e54f7c896de8b06f27b95be18e6a367d16ef0db73f85e2",
       "normalized_text_length": 15677,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -155,26 +155,26 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/1- Oxford.Замятін П.М. стаття .docx",
-      "source_sha256": "cff1a8b79e29293d7afad04f214004b25c84e690785660f5e8cb5c28b26683ab",
+      "source_path": "article-018.docx",
+      "source_sha256": "1b9b4e95cb7ba1c18f537fbaa29440a7f0541fba6600db66b0e687451a632c2f",
       "normalized_text_length": 16215,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
-      "paragraph_count": 59,
+      "paragraph_count": 58,
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Доній_Гончаренко_2026.docx",
-      "source_sha256": "03913014a289f2954d03c6f336e33c260acd761937d5de8a9c4f9dc27f800809",
+      "source_path": "article-019.docx",
+      "source_sha256": "26d2640e5bc2884a966613368c22bdce862f869b51714092f5e9241bc097eb42",
       "normalized_text_length": 7930,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
-      "paragraph_count": 28,
+      "paragraph_count": 27,
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/Добридень_Стаття.docx",
-      "source_sha256": "a68d94316944dfc88820bab08a19537327b5b4f2fc301e207391e6d777850ff4",
+      "source_path": "article-020.docx",
+      "source_sha256": "1dd63fa8290e9ed1ef0d1f68257a2842c1365804cf744c5733d75d297c945e17",
       "normalized_text_length": 16540,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -182,8 +182,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Жорстокість підлітків Костишина С.П..docx",
-      "source_sha256": "9c8d679f5802ec6a2c764cda4f1652ceaa03f7d4e6da2abe1cbe7cde7abda894",
+      "source_path": "article-021.docx",
+      "source_sha256": "ef27b3545e72c04158dd45cde7d497102871feebc90a41eb408052bfaa6533cc",
       "normalized_text_length": 17805,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -191,8 +191,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_тези.docx",
-      "source_sha256": "2be365e5cd3119eb1a9f098fb850b78102fee3b7284afd0099c707b1fac5b3f5",
+      "source_path": "article-022.docx",
+      "source_sha256": "1d1d32ae6ffcb343e18210d31ab9e3663d352b9d9c1a52469f7a78717b9b56b7",
       "normalized_text_length": 8137,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -200,8 +200,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_стаття.docx",
-      "source_sha256": "a1c9ae0f16769c498716646f7b4e70e15b9feacdf03df4d50e17a7bc638f1d3e",
+      "source_path": "article-023.docx",
+      "source_sha256": "945d7fa513afa5804fc3595c8fad120ad80999081497c800e688a3bc2d57c5d4",
       "normalized_text_length": 8896,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -209,8 +209,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Стаття Панчук О. І.1.docx",
-      "source_sha256": "d5a9bc509fdf862df60f0004a943f41bb4889a07e94c0fd18c40a8431f06a737",
+      "source_path": "article-024.docx",
+      "source_sha256": "5ac2c85874dbb74943995d10951b86e55419f75981261daac7f3cbbb7cbc78e4",
       "normalized_text_length": 22750,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -218,8 +218,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Стаття Іванчикова.docx",
-      "source_sha256": "a026a692ecad21092da481910e351be9cb533ce79a7dd05fb9ddc2da05118d25",
+      "source_path": "article-025.docx",
+      "source_sha256": "9e9d6e38bccaf4532224798318da621ef8d279d7cd3783a69ed94db7838ef61b",
       "normalized_text_length": 5838,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -227,8 +227,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Тези_МНПК_Оксфорд_Цьось_06_08.02.2026.docx",
-      "source_sha256": "756151b9011c3d0442feeff1f01a75d8432e092e6abf34e1f2bf07b3774d5a35",
+      "source_path": "article-026.docx",
+      "source_sha256": "fbbe912105ef315cc55aac7ca5292206e1e5e7e8bcb64de699bc23074c01e0d1",
       "normalized_text_length": 14614,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -236,8 +236,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Стаття.docx",
-      "source_sha256": "4f0ecfc3cb6f3d41f2efc73dcfcb0f993f61cadd02df32155f7a894c94041288",
+      "source_path": "article-027.docx",
+      "source_sha256": "d57da9f1a6aa36fefab1f47b5d83637e3b89f724f2a6fa5c7a071b7da32171fb",
       "normalized_text_length": 8182,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -245,8 +245,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Новий Документ Microsoft Word.docx",
-      "source_sha256": "4300910dc91c86804a94e17f006fd5fd8438ae6867dc60a43bd9de0fde815936",
+      "source_path": "article-028.docx",
+      "source_sha256": "6c53dc0c24b85643a42287c216ac1d6f35da7e404e882f29cdcd459dc679c269",
       "normalized_text_length": 8192,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -254,8 +254,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/Львович_Тези.docx",
-      "source_sha256": "e101b60842d3ca88561f7f81a83392e01e4941171ffccce4f6afe1e5e6990604",
+      "source_path": "article-029.docx",
+      "source_sha256": "ad30afd4dd2c8f3d00b3401032ee8f19e37ebcc84ef9df2e54e8aaff2c3f4fa8",
       "normalized_text_length": 8713,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -263,8 +263,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Стаття Обозна-Красовська_.docx",
-      "source_sha256": "fc073f5e7397625659e5ddd498cd2eb71f0aebe1d41627011ac53e49857a3772",
+      "source_path": "article-030.docx",
+      "source_sha256": "1dd873a8f508011f49a30a87a9957748bbffe949c5da5621a89941b7ea484746",
       "normalized_text_length": 25860,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -272,8 +272,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Стаття_Paios.docx",
-      "source_sha256": "b3b28c60726011a8afc24574d049a1d158228ce0f303b1814670fb78c1ef7bd1",
+      "source_path": "article-031.docx",
+      "source_sha256": "06366e5bd432771a95250a5a0412d138127bf5ddc0b0e49bb655a28dfa72e73f",
       "normalized_text_length": 8649,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -281,17 +281,17 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_тези.docx",
-      "source_sha256": "3d0b2124ec488015ea648f21e4c5c6401bda509e2b5671a2d41a9a8c298eba64",
+      "source_path": "article-032.docx",
+      "source_sha256": "dd160ff1476e23c1975c9c69aece0526fa3e4c209ce4cfbf680d4c01a95febf5",
       "normalized_text_length": 6868,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
-      "paragraph_count": 25,
+      "paragraph_count": 23,
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_тези.docx",
-      "source_sha256": "75c98b799dae01ad6c938dc8895ed9ecb06b2e349ed092fa9819c523b2fc37e1",
+      "source_path": "article-033.docx",
+      "source_sha256": "ca953b6f149745fcfeceeed7d1fe3d775ba96f43bf048fd7ef8ddf66bd87bf33",
       "normalized_text_length": 6022,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -299,8 +299,8 @@
       "status": "PASS"
     },
     {
-      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_ТЕЗИ.docx",
-      "source_sha256": "7b9e34a96ad3b92d5d8771e3d711b7e6a8b6d41bd5ee006cd9248538a6278d8f",
+      "source_path": "article-034.docx",
+      "source_sha256": "933962f7456f3ca2ed04d0ee657e0d5f512abf64556e3ee7840c430ba873fb93",
       "normalized_text_length": 10009,
       "occurrences_in_final": 1,
       "audit_method": "ordered_paragraph_sequence",
@@ -331,34 +331,5 @@
     "missing_embeddings": []
   },
   "unsupported_sources": [],
-  "blockers": [],
-  "clean_rebuild": {
-    "status": "PASS",
-    "manifest_articles_identical": true,
-    "manifest_sha256": "4d96467f7809e681874ad243e023b1b8748c4925758a0a70d6d32d3930351c0c",
-    "stable_snapshot_fields": {
-      "visible_text": true,
-      "paragraph_order": true,
-      "table_cells": true,
-      "textboxes": true,
-      "media_hashes": true,
-      "chart_payload_hashes": true,
-      "embedding_hashes": true,
-      "tables": true,
-      "images": true,
-      "charts": true,
-      "drawings": true,
-      "equations": true,
-      "OLE": true,
-      "shapes": true,
-      "page_breaks": true,
-      "section_breaks": true
-    },
-    "docx_container_sha256": {
-      "rebuild_a": "7164a0963978809e1140642013d7f5620f08ce95b0d040d87675ace1662587c8",
-      "rebuild_b": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
-      "byte_identical": false,
-      "note": "OpenXML ZIP container metadata is nondeterministic; semantic and payload gates are identical."
-    }
-  }
+  "blockers": []
 }

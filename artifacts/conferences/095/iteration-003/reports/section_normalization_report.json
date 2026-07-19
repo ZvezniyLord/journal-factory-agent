@@ -1,0 +1,350 @@
+{
+  "status": "PASS",
+  "catalog": "config\\section_catalog.json",
+  "article_count": 34,
+  "resolved_count": 34,
+  "raw_participant_manifest_title_count": 35,
+  "articles": [
+    {
+      "article_id": "article-001",
+      "journal_order": 1,
+      "raw_label": "Медичні науки та громадське здоров’я",
+      "canonical_key": "section-36",
+      "canonical_label": "Медичні науки та громадське здоров’я",
+      "display_title": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "section_order": 36,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-002",
+      "journal_order": 2,
+      "raw_label": "35. Психологія та психіатрія",
+      "canonical_key": "section-35",
+      "canonical_label": "Психологія та психіатрія",
+      "display_title": "PSYCHOLOGY AND PSYCHIATRY",
+      "section_order": 35,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-003",
+      "journal_order": 3,
+      "raw_label": "Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-004",
+      "journal_order": 4,
+      "raw_label": "29. Фізико-математичні науки",
+      "canonical_key": "section-29",
+      "canonical_label": "Фізико-математичні науки",
+      "display_title": "PHYSICAL AND MATHEMATICAL SCIENCES",
+      "section_order": 29,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-005",
+      "journal_order": 5,
+      "raw_label": "Історія, археологія та культурологія",
+      "canonical_key": "section-39",
+      "canonical_label": "Історія, археологія та культурологія",
+      "display_title": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "section_order": 39,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-006",
+      "journal_order": 6,
+      "raw_label": "9. Інститут правоохоронної діяльності, судова система та нотаріат",
+      "canonical_key": "section-09",
+      "canonical_label": "Інститут правоохоронної діяльності, судова система та нотаріат",
+      "display_title": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY",
+      "section_order": 9,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-007",
+      "journal_order": 7,
+      "raw_label": "Філологія та журналістика",
+      "canonical_key": "section-31",
+      "canonical_label": "Філологія та журналістика",
+      "display_title": "PHILOLOGY AND JOURNALISM",
+      "section_order": 31,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-008",
+      "journal_order": 8,
+      "raw_label": "5.Менеджмент, публічне управління та адміністрування або 41. Культура та мистецтво",
+      "canonical_key": "section-05",
+      "canonical_label": "Менеджмент, публічне управління та адміністрування",
+      "display_title": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "section_order": 5,
+      "resolution_source": "raw_participant_manifest"
+    },
+    {
+      "article_id": "article-009",
+      "journal_order": 9,
+      "raw_label": "Воєнні науки, національна безпека та безпека державного кордону",
+      "canonical_key": "section-10",
+      "canonical_label": "Воєнні науки, національна безпека та безпека державного кордону",
+      "display_title": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY",
+      "section_order": 10,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-010",
+      "journal_order": 10,
+      "raw_label": "39. Історія, археологія та культурологія",
+      "canonical_key": "section-39",
+      "canonical_label": "Історія, археологія та культурологія",
+      "display_title": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "section_order": 39,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-011",
+      "journal_order": 11,
+      "raw_label": "34. Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-012",
+      "journal_order": 12,
+      "raw_label": "34. Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-013",
+      "journal_order": 13,
+      "raw_label": "Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-014",
+      "journal_order": 14,
+      "raw_label": "",
+      "canonical_key": "section-01",
+      "canonical_label": "Економічна теорія, макро- та регіональна економіка",
+      "display_title": "ECONOMIC THEORY, MACRO- AND REGIONAL ECONOMY",
+      "section_order": 1,
+      "resolution_source": "raw_participant_manifest"
+    },
+    {
+      "article_id": "article-015",
+      "journal_order": 15,
+      "raw_label": "Філософія та політологія",
+      "canonical_key": "section-32",
+      "canonical_label": "Філософія та політологія",
+      "display_title": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "section_order": 32,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-016",
+      "journal_order": 16,
+      "raw_label": "36.Медичні науки та громадське здоров’я",
+      "canonical_key": "section-36",
+      "canonical_label": "Медичні науки та громадське здоров’я",
+      "display_title": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "section_order": 36,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-017",
+      "journal_order": 17,
+      "raw_label": "34. Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-018",
+      "journal_order": 18,
+      "raw_label": "36. Медичні науки та громадське здоров’я",
+      "canonical_key": "section-36",
+      "canonical_label": "Медичні науки та громадське здоров’я",
+      "display_title": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "section_order": 36,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-019",
+      "journal_order": 19,
+      "raw_label": "32. Філософія та політологія",
+      "canonical_key": "section-32",
+      "canonical_label": "Філософія та політологія",
+      "display_title": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "section_order": 32,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-020",
+      "journal_order": 20,
+      "raw_label": "",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "raw_participant_manifest"
+    },
+    {
+      "article_id": "article-021",
+      "journal_order": 21,
+      "raw_label": "Психологія та психіатрія",
+      "canonical_key": "section-35",
+      "canonical_label": "Психологія та психіатрія",
+      "display_title": "PSYCHOLOGY AND PSYCHIATRY",
+      "section_order": 35,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-022",
+      "journal_order": 22,
+      "raw_label": "5. Менеджмент, публічне управління та адміністрування",
+      "canonical_key": "section-05",
+      "canonical_label": "Менеджмент, публічне управління та адміністрування",
+      "display_title": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "section_order": 5,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-023",
+      "journal_order": 23,
+      "raw_label": "34. Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-024",
+      "journal_order": 24,
+      "raw_label": "Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-025",
+      "journal_order": 25,
+      "raw_label": "Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-026",
+      "journal_order": 26,
+      "raw_label": "8. Право та міжнародне право",
+      "canonical_key": "section-08",
+      "canonical_label": "Право та міжнародне право",
+      "display_title": "LAW AND INTERNATIONAL LAW",
+      "section_order": 8,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-027",
+      "journal_order": 27,
+      "raw_label": "3. Фінанси та банківська справа; оподаткування, облік і аудит",
+      "canonical_key": "section-03",
+      "canonical_label": "Фінанси та банківська справа; оподаткування, облік і аудит",
+      "display_title": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "section_order": 3,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-028",
+      "journal_order": 28,
+      "raw_label": "Право та міжнародне право",
+      "canonical_key": "section-08",
+      "canonical_label": "Право та міжнародне право",
+      "display_title": "LAW AND INTERNATIONAL LAW",
+      "section_order": 8,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-029",
+      "journal_order": 29,
+      "raw_label": "3. Фінанси та банківська справа; оподаткування, облік і аудит",
+      "canonical_key": "section-03",
+      "canonical_label": "Фінанси та банківська справа; оподаткування, облік і аудит",
+      "display_title": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "section_order": 3,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-030",
+      "journal_order": 30,
+      "raw_label": "36. Медичні науки та громадське здоров’я",
+      "canonical_key": "section-36",
+      "canonical_label": "Медичні науки та громадське здоров’я",
+      "display_title": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "section_order": 36,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-031",
+      "journal_order": 31,
+      "raw_label": "35. Психологія та психіатрія",
+      "canonical_key": "section-35",
+      "canonical_label": "Психологія та психіатрія",
+      "display_title": "PSYCHOLOGY AND PSYCHIATRY",
+      "section_order": 35,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-032",
+      "journal_order": 32,
+      "raw_label": "34.Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-033",
+      "journal_order": 33,
+      "raw_label": "6.Соціальна робота та соціальне забезпечення",
+      "canonical_key": "section-06",
+      "canonical_label": "Соціальна робота та соціальне забезпечення",
+      "display_title": "SOCIAL WORK AND SOCIAL WELFARE",
+      "section_order": 6,
+      "resolution_source": "article_manifest"
+    },
+    {
+      "article_id": "article-034",
+      "journal_order": 34,
+      "raw_label": "34. Педагогіка та освіта",
+      "canonical_key": "section-34",
+      "canonical_label": "Педагогіка та освіта",
+      "display_title": "PEDAGOGY AND EDUCATION",
+      "section_order": 34,
+      "resolution_source": "article_manifest"
+    }
+  ],
+  "blockers": []
+}

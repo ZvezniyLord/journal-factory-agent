@@ -1,0 +1,335 @@
+{
+  "status": "PASS",
+  "articles": [
+    {
+      "source_path": "article-001.docx",
+      "source_sha256": "ddaf1cd6cbed7ee92c9d1a8237ce7e8fd9ec40eaeaa6ab376f654e2bb6f82322",
+      "normalized_text_length": 5888,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 31,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-002.docx",
+      "source_sha256": "9857ed22ba06cd8e38a2078a01228a2c1a2897a9750c97fd90330e834050301b",
+      "normalized_text_length": 9285,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 95,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-003.docx",
+      "source_sha256": "9f453087d2975a9dc2bfb04225cef3e502a94f0fe5b7854a58c1c0ab40d327dd",
+      "normalized_text_length": 4248,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 16,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-004.docx",
+      "source_sha256": "18fc08118c6e6d28e5b8f58e642d22b042a628be2dab1d27ca86ccd883e7be48",
+      "normalized_text_length": 7135,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 21,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-005.docx",
+      "source_sha256": "22f98fe8a61f62c50917bf54b22841dabce9849d0615a0460ca951cad9e67a5a",
+      "normalized_text_length": 23309,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 34,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-006.docx",
+      "source_sha256": "e184479607eba149491e4988dd20da9cdf285a2343fa06550f968b7c3f86a950",
+      "normalized_text_length": 6558,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 30,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-007.docx",
+      "source_sha256": "30ff1c9b6b60787408b80bbfd2d72700342340331e241daf28733f7180323f85",
+      "normalized_text_length": 6031,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 18,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-008.docx",
+      "source_sha256": "795775fec508c1b05910d6156392d82615da3feaaf89572b631625735f4e1a9f",
+      "normalized_text_length": 8862,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 40,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-009.docx",
+      "source_sha256": "aa3e4b600a89b29cebff9d60126a0f510affe6fbd251dc7186b6a477ad510397",
+      "normalized_text_length": 9102,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 38,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-010.docx",
+      "source_sha256": "3cdcb6df4288438e22e74de3a398dfe8df1651b6d0b127aaafbb2663262737ff",
+      "normalized_text_length": 10252,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 35,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-011.docx",
+      "source_sha256": "a16868ad625fa97cb1f20210d4c904c09b98cd198f2d56a68f1c2516e0089ca7",
+      "normalized_text_length": 21260,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 103,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-012.docx",
+      "source_sha256": "3c8544587e896b8f45aca7ec3e2d5e5a6d80e4726f09285e49a0c742e26f1eec",
+      "normalized_text_length": 16582,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 67,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-013.docx",
+      "source_sha256": "9a0af1247eb608c16d45b3e1b7bb593be5ed3853572bb80fe068965366924201",
+      "normalized_text_length": 5624,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 18,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-014.docx",
+      "source_sha256": "879616052d8fb1166bf8985b599ed37270c3fd40f4aa63963f5bbdffbd5007ae",
+      "normalized_text_length": 12700,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 23,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-015.docx",
+      "source_sha256": "f5b40f492016b120aa28bd689fef9f0c89d3d23b784913ef7774b2ff6817c1be",
+      "normalized_text_length": 11772,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 43,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-016.docx",
+      "source_sha256": "e889cf46deb96f409442105fe52193d87e4e09a31914d675e4951bb4aebbc695",
+      "normalized_text_length": 12090,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 49,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-017.docx",
+      "source_sha256": "d8d9b6246cbe0aa829e54f7c896de8b06f27b95be18e6a367d16ef0db73f85e2",
+      "normalized_text_length": 15677,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 53,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-018.docx",
+      "source_sha256": "1b9b4e95cb7ba1c18f537fbaa29440a7f0541fba6600db66b0e687451a632c2f",
+      "normalized_text_length": 16215,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 58,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-019.docx",
+      "source_sha256": "26d2640e5bc2884a966613368c22bdce862f869b51714092f5e9241bc097eb42",
+      "normalized_text_length": 7930,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 27,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-020.docx",
+      "source_sha256": "1dd63fa8290e9ed1ef0d1f68257a2842c1365804cf744c5733d75d297c945e17",
+      "normalized_text_length": 16540,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 53,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-021.docx",
+      "source_sha256": "ef27b3545e72c04158dd45cde7d497102871feebc90a41eb408052bfaa6533cc",
+      "normalized_text_length": 17805,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 97,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-022.docx",
+      "source_sha256": "1d1d32ae6ffcb343e18210d31ab9e3663d352b9d9c1a52469f7a78717b9b56b7",
+      "normalized_text_length": 8137,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 27,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-023.docx",
+      "source_sha256": "945d7fa513afa5804fc3595c8fad120ad80999081497c800e688a3bc2d57c5d4",
+      "normalized_text_length": 8896,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 27,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-024.docx",
+      "source_sha256": "5ac2c85874dbb74943995d10951b86e55419f75981261daac7f3cbbb7cbc78e4",
+      "normalized_text_length": 22750,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 51,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-025.docx",
+      "source_sha256": "9e9d6e38bccaf4532224798318da621ef8d279d7cd3783a69ed94db7838ef61b",
+      "normalized_text_length": 5838,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 29,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-026.docx",
+      "source_sha256": "fbbe912105ef315cc55aac7ca5292206e1e5e7e8bcb64de699bc23074c01e0d1",
+      "normalized_text_length": 14614,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 38,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-027.docx",
+      "source_sha256": "d57da9f1a6aa36fefab1f47b5d83637e3b89f724f2a6fa5c7a071b7da32171fb",
+      "normalized_text_length": 8182,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 34,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-028.docx",
+      "source_sha256": "6c53dc0c24b85643a42287c216ac1d6f35da7e404e882f29cdcd459dc679c269",
+      "normalized_text_length": 8192,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 23,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-029.docx",
+      "source_sha256": "ad30afd4dd2c8f3d00b3401032ee8f19e37ebcc84ef9df2e54e8aaff2c3f4fa8",
+      "normalized_text_length": 8713,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 19,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-030.docx",
+      "source_sha256": "1dd873a8f508011f49a30a87a9957748bbffe949c5da5621a89941b7ea484746",
+      "normalized_text_length": 25860,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 93,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-031.docx",
+      "source_sha256": "06366e5bd432771a95250a5a0412d138127bf5ddc0b0e49bb655a28dfa72e73f",
+      "normalized_text_length": 8649,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 28,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-032.docx",
+      "source_sha256": "dd160ff1476e23c1975c9c69aece0526fa3e4c209ce4cfbf680d4c01a95febf5",
+      "normalized_text_length": 6868,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 23,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-033.docx",
+      "source_sha256": "ca953b6f149745fcfeceeed7d1fe3d775ba96f43bf048fd7ef8ddf66bd87bf33",
+      "normalized_text_length": 6022,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 19,
+      "status": "PASS"
+    },
+    {
+      "source_path": "article-034.docx",
+      "source_sha256": "933962f7456f3ca2ed04d0ee657e0d5f512abf64556e3ee7840c430ba873fb93",
+      "normalized_text_length": 10009,
+      "occurrences_in_final": 1,
+      "audit_method": "ordered_paragraph_sequence",
+      "paragraph_count": 35,
+      "status": "PASS"
+    }
+  ],
+  "article_count": 34,
+  "media": {
+    "expected_unique_hashes": 3,
+    "final_unique_hashes": 11,
+    "missing": []
+  },
+  "objects": {
+    "tables_expected": 9,
+    "tables_final": 9,
+    "equations_expected": 0,
+    "equations_final": 0,
+    "drawings_expected": 10,
+    "drawings_final": 21,
+    "missing_table_signatures": [],
+    "missing_textboxes": [],
+    "chart_payloads_expected": 12,
+    "chart_payloads_final": 12,
+    "missing_chart_payloads": [],
+    "embeddings_expected": 0,
+    "embeddings_final": 0,
+    "missing_embeddings": []
+  },
+  "unsupported_sources": [],
+  "blockers": []
+}

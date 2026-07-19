@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "method": "clean workspace semantic comparison after independent build and Microsoft Word render",
+  "builds": [
+    "build\\iteration-003-final-c\\Conference95",
+    "build\\iteration-003-final-d\\Conference95"
+  ],
+  "checks": {
+    "manifest_order_and_sources": true,
+    "final_semantic_snapshot": true,
+    "toc_entries_and_pages": true,
+    "article_bookmark_pages": true,
+    "page_count": true,
+    "all_page_visual_audit": true,
+    "fidelity": true,
+    "front_matter": true,
+    "typography": true,
+    "effective_body_sizes": true,
+    "rendered_page_pixels_with_tolerance": true
+  },
+  "semantic_snapshot_sha256": [
+    "83e792b5f1c07cce6c4204e81b0eb74f7c73ae053722c9192ad542ed8e93607c",
+    "83e792b5f1c07cce6c4204e81b0eb74f7c73ae053722c9192ad542ed8e93607c"
+  ],
+  "metrics": {
+    "articles": 34,
+    "pdf_pages": 237,
+    "toc_article_entries": 34,
+    "first_article_page": {
+      "name": "JF_ARTICLE_001_START",
+      "printed_page": 6,
+      "physical_page": 6
+    },
+    "sampled_typography_runs": 7583,
+    "effective_body_size_counts": {
+      "14": 7532
+    }
+  },
+  "blockers": [],
+  "pixel_comparison": {
+    "dpi": 54,
+    "pages_compared": 237,
+    "tolerance_changed_channel_ratio": 1e-05,
+    "different_pages": [
+      {
+        "page": 147,
+        "changed_channels": 3,
+        "total_channels": 847512,
+        "ratio": 3.539772888171495e-06
+      }
+    ]
+  }
+}

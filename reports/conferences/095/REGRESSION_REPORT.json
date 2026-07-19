@@ -1,37 +1,53 @@
 {
-  "generated_at": "2026-07-19T03:15:01+03:00",
   "status": "PASS",
-  "tests_passed": 61,
-  "tests_failed": 0,
-  "command": ".venv\\Scripts\\python -m pytest -p no:cacheprovider",
-  "compile_check": "PASS",
-  "clean_rebuild": {
-    "status": "PASS",
-    "manifest_articles_identical": true,
-    "manifest_sha256": "4d96467f7809e681874ad243e023b1b8748c4925758a0a70d6d32d3930351c0c",
-    "stable_snapshot_fields": {
-      "visible_text": true,
-      "paragraph_order": true,
-      "table_cells": true,
-      "textboxes": true,
-      "media_hashes": true,
-      "chart_payload_hashes": true,
-      "embedding_hashes": true,
-      "tables": true,
-      "images": true,
-      "charts": true,
-      "drawings": true,
-      "equations": true,
-      "OLE": true,
-      "shapes": true,
-      "page_breaks": true,
-      "section_breaks": true
+  "method": "clean workspace semantic comparison after independent build and Microsoft Word render",
+  "builds": [
+    "build\\iteration-003-final-c\\Conference95",
+    "build\\iteration-003-final-d\\Conference95"
+  ],
+  "checks": {
+    "manifest_order_and_sources": true,
+    "final_semantic_snapshot": true,
+    "toc_entries_and_pages": true,
+    "article_bookmark_pages": true,
+    "page_count": true,
+    "all_page_visual_audit": true,
+    "fidelity": true,
+    "front_matter": true,
+    "typography": true,
+    "effective_body_sizes": true,
+    "rendered_page_pixels_with_tolerance": true
+  },
+  "semantic_snapshot_sha256": [
+    "83e792b5f1c07cce6c4204e81b0eb74f7c73ae053722c9192ad542ed8e93607c",
+    "83e792b5f1c07cce6c4204e81b0eb74f7c73ae053722c9192ad542ed8e93607c"
+  ],
+  "metrics": {
+    "articles": 34,
+    "pdf_pages": 237,
+    "toc_article_entries": 34,
+    "first_article_page": {
+      "name": "JF_ARTICLE_001_START",
+      "printed_page": 6,
+      "physical_page": 6
     },
-    "docx_container_sha256": {
-      "rebuild_a": "7164a0963978809e1140642013d7f5620f08ce95b0d040d87675ace1662587c8",
-      "rebuild_b": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
-      "byte_identical": false,
-      "note": "OpenXML ZIP container metadata is nondeterministic; semantic and payload gates are identical."
+    "sampled_typography_runs": 7583,
+    "effective_body_size_counts": {
+      "14": 7532
     }
+  },
+  "blockers": [],
+  "pixel_comparison": {
+    "dpi": 54,
+    "pages_compared": 237,
+    "tolerance_changed_channel_ratio": 1e-05,
+    "different_pages": [
+      {
+        "page": 147,
+        "changed_channels": 3,
+        "total_channels": 847512,
+        "ratio": 3.539772888171495e-06
+      }
+    ]
   }
 }
