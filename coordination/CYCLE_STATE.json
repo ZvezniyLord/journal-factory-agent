@@ -1,110 +1,120 @@
 {
   "protocol_version": 1,
   "conference_id": 95,
-  "iteration": 3,
-  "state": "READY_FOR_REVIEW",
-  "owner": "REVIEWER",
+  "iteration": 4,
+  "state": "CHANGES_REQUESTED",
+  "owner": "CODEX",
   "work_branch": "agent/journal-builder-95",
   "typography_profile": "legacy_14pt",
-  "golden_pdf_required": false,
-  "goal": "Зібрати з реального RAW Conference 95 готові DOCX і PDF та довести builder до внутрішніх fidelity, structure, render, TOC і pagination gates.",
+  "golden_pdf_required": true,
+  "official_pdf_url": "https://naukainfo.com/jurnaly/Conference95.pdf",
+  "goal": "Зібрати Conference 95 з реального RAW так, щоб DOCX/PDF не лише проходили внутрішні gates, а й відповідали офіційному збірнику за складом, редакційним порядком, секціями, змістом і сторінками.",
   "last_codex_commit": "3c3ae51f9d763928cdcdd433e3f0db549332fdd0",
-  "submitted_at": "2026-07-19T05:08:32+03:00",
-  "addressed_review_findings": [
+  "accepted_for_regression": [
     {
-      "code": "MANIFEST_SOURCE_MISSING",
-      "status": "ACCEPTED_FOR_REGRESSION",
-      "evidence": "AUTO_INVENTORY_V1 створив 34 MATCHED статті; 34 ARTICLE, 6 DUPLICATE, 99 NON_ARTICLE, 0 REVIEW/BLOCKED."
-    },
-    {
-      "code": "CANDIDATE_CLASSIFICATION_TOO_BROAD",
-      "status": "ACCEPTED_FOR_REGRESSION",
-      "evidence": "Службові документи та дублікати виключені з journal order; усі 34 статті мають provenance і confidence."
+      "code": "AUTO_MANIFEST_CLASSIFICATION",
+      "evidence": "34 ARTICLE, 6 DUPLICATE, 99 NON_ARTICLE, 0 REVIEW/BLOCKED."
     },
     {
       "code": "SOURCE_TO_FINAL_FIDELITY",
-      "status": "ACCEPTED_FOR_REGRESSION",
-      "evidence": "34 статті знайдено у фіналі по одному разу; missing tables/textboxes/chart payloads/embeddings відсутні; clean rebuild семантично PASS."
+      "evidence": "34 статті присутні по одному разу; object loss 0; clean rebuild semantics PASS."
     },
     {
-      "code": "REPOSITORY_CLEANUP_REQUIRED",
-      "status": "ACCEPTED",
-      "evidence": "Опубліковано cleanup inventory; сторонні Release-AI-Editor каталоги й доведені кеші видалено без торкання N:/ та uncertain paths."
+      "code": "FRONT_MATTER_PARAMETERIZATION",
+      "evidence": "Oxford / February 6-8, 2026 / Conference 95 / ISBN / DOI матеріалізуються з config; stale markers 0."
+    },
+    {
+      "code": "TOC_AND_PAGINATION_MECHANISM",
+      "evidence": "Word TOC field, bookmarks, field stabilization і continuous numbering технічно працюють для поточної збірки."
+    },
+    {
+      "code": "LEGACY_14PT_AUDIT",
+      "evidence": "Direct typography audit PASS: 7532 effective 14 pt body runs, 51 класифікований виняток."
     }
   ],
   "review_findings": [
     {
       "severity": "BLOCKER",
-      "code": "FRONT_MATTER_STALE_AND_UNPARAMETERIZED",
-      "status": "ADDRESSED_PENDING_REVIEW",
-      "evidence": "PDF page 1 містить New York / June 12-14, pages 2-3 і 241 містять Cambridge / January 19-21 та conference 91. Очікувано: Oxford, United Kingdom; February 6-8, 2026; Conference 95.",
-      "required_fix": "Створити загальний conference metadata config і детерміновано матеріалізувати всі front/back matter placeholders до assembly. Не робити conference-id branch у Python. Після збірки stale-marker audit повинен бути чистим."
+      "code": "PUBLICATION_ORDER_MISMATCH",
+      "evidence": "Офіційний Conference95 TOC починається з Резнікова, Львовича та Ганзюк. Згенерований manifest починається з Кравченка, Губи та Лаврівської. builder_pipeline сортує за journal_order, який AUTO_INVENTORY_V1 успадковує з номерів папок учасників; composer зберігає цей порядок.",
+      "required_fix": "Додати загальний publication-order resolver. Коли доступний official PDF/DOCX, розібрати його TOC, зіставити записи з RAW за нормалізованими title+authors, сформувати order evidence і збирати за publication order. Заборонено hardcode titles або if conference_id == 95 у Python."
     },
     {
       "severity": "BLOCKER",
-      "code": "TOC_MISSING",
-      "status": "ADDRESSED_PENDING_REVIEW",
-      "evidence": "word_toc_count=0; expected_article_entry_count=34; actual_article_entry_count=0; TOC page містить лише заголовок, наступна сторінка порожня.",
-      "required_fix": "Згенерувати справжнє Word TOC field із SECTION та Назва1/article-title рівнями, оновити fields через Word COM до стабілізації та перевірити рівно 34 article entries з правильними сторінками."
+      "code": "SECTION_HIERARCHY_MISMATCH",
+      "evidence": "Згенерований TOC має 30 level-1 SECTION entries для 34 статей. Офіційний TOC групує статті у 14 редакційних секцій.",
+      "required_fix": "Відтворити секції та їх порядок із official TOC evidence. Розширити section catalog aliases, але зберігати конкретну структуру конференції у data/config, не у conference-specific Python branches."
     },
     {
       "severity": "BLOCKER",
-      "code": "PAGINATION_NOT_CONTINUOUS",
-      "status": "ADDRESSED_PENDING_REVIEW",
-      "evidence": "Перша видима нумерація з'являється лише на PDF page 90 як printed page 1; на page 241 видно 152. Article 1 фізично починається на PDF page 6.",
-      "required_fix": "Видалити успадковані page-number restarts/header-footer relationships зі статей, задати єдину section/page-number policy: front matter рахується від page 1, номер на title page може бути прихований, перша стаття повинна мати printed page 6, усі наступні сторінки продовжуються без reset."
+      "code": "OFFICIAL_CORPUS_PARITY_NOT_PROVEN",
+      "evidence": "Внутрішній manifest доводить 34 статті, але ще немає звіту 34/34 проти офіційного TOC за title, authors, section і order.",
+      "required_fix": "Створити official_corpus_parity.json: exact/fuzzy title mapping, author mapping, section, official order, generated order, missing, extra, ambiguous. PASS лише за 34/34 і нуль missing/extra/ambiguous."
+    },
+    {
+      "severity": "BLOCKER",
+      "code": "PHYSICAL_LAYOUT_PARITY_MISMATCH",
+      "evidence": "Офіційний PDF має 248 physical pages і бібліографічно 245 pages; generated PDF має 237 physical pages. Офіційна перша стаття має TOC printed page 6 і йде після розширеного TOC/special-thanks блоку; generated page 6 містить іншу першу статтю.",
+      "required_fix": "Після правильного order/sections повторно стабілізувати Word layout. Додати official page mapping для всіх 34 article starts, physical↔printed offset, TOC span, special-thanks page і final page count."
     },
     {
       "severity": "HIGH",
-      "code": "SECTION_LABELS_NOT_NORMALIZED",
-      "status": "ADDRESSED_PENDING_REVIEW",
-      "evidence": "Render report фіксує непослідовні номери та пробіли у section headings через raw section labels.",
-      "required_fix": "Ввести загальний section normalization layer: canonical section key, display title та order з config/knowledge base; не змінювати article body."
-    },
-    {
-      "severity": "HIGH",
-      "code": "TYPOGRAPHY_EFFECTIVE_SIZE_NOT_AUDITED",
-      "status": "ADDRESSED_PENDING_REVIEW",
-      "evidence": "Профіль legacy_14pt передано через CLI, але немає direct-run audit ефективного розміру основного тексту після merge/render.",
-      "required_fix": "Додати typography_audit.json: перевіряти effective body font size 14 pt у статтях, окремо перелічувати дозволені винятки для footnotes, формул, таблиць і локальних author overrides."
+      "code": "SELF_CONSISTENCY_MISTAKEN_FOR_PUBLICATION_PARITY",
+      "evidence": "toc_pages_match_article_starts=true доводить лише, що generated TOC відповідає generated bookmarks; це не доводить відповідність офіційному виданню.",
+      "required_fix": "Розділити gates на INTERNAL_CONSISTENCY та GOLDEN_PUBLICATION_PARITY. Production ACCEPTED потребує обох для regression conference із golden PDF."
     }
   ],
   "next_action": {
-    "id": "REVIEW-CONF95-ITER-003",
+    "id": "CONF95-ITER-004",
     "instructions": [
-      "Перевірити commit 3c3ae51f9d763928cdcdd433e3f0db549332fdd0 гілки agent/journal-builder-95.",
-      "Звірити required artifacts і reports/FILES.sha256 у artifacts/conferences/095/iteration-003.",
-      "Перевірити front matter, Word TOC 34/34, page mappings, canonical sections, post-render legacy_14pt audit, fidelity, all-pages render QA і clean rebuild.",
-      "Reviewer встановлює ACCEPTED або формує наступний CHANGES_REQUESTED; Codex сам ACCEPTED не встановлює."
+      "Оновити agent/journal-builder-95 і прочитати цей state.",
+      "Завантажити public official PDF з official_pdf_url; зафіксувати SHA-256, page count і provenance. RAW у Git не комітити.",
+      "Реалізувати загальний official TOC extractor: section headings, article ordinal, authors, title, printed page. Fail closed при неоднозначному parsing.",
+      "Зіставити 34 official TOC entries з 34 RAW manifest articles за title+authors. Не використовувати participant folder number як publication order.",
+      "Створити fixtures/conferences/095/official_toc.json та official_corpus_parity.json як data/evidence, не як Python hardcode.",
+      "Перебудувати ordered manifest: official section order, official article order within sections, canonical section display names.",
+      "Відтворити special-thanks block із доказового джерела/config і правильний TOC span. Не копіювати article body з official PDF/DOCX.",
+      "Повторити DOCX→Word PDF render, field stabilization, fidelity, typography, all-pages raster QA і clean rebuild.",
+      "Додати golden parity report: official/generated title order, authors, sections, article start pages, physical/printed mapping, total pages, missing/extra/ambiguous.",
+      "Додати regression-тести, які падають при participant-folder order, 30 section headings або self-consistency-only PASS.",
+      "Опублікувати iteration-004 DOCX/PDF/reports, push українські коміти та перевести state у READY_FOR_REVIEW, owner REVIEWER."
     ]
   },
   "required_artifacts": [
-    "artifacts/conferences/095/iteration-003/ITERATION_RESULT.json",
-    "artifacts/conferences/095/iteration-003/REVIEW_PACKET.md",
-    "artifacts/conferences/095/iteration-003/Conference95_generated.docx",
-    "artifacts/conferences/095/iteration-003/Conference95_generated.pdf",
-    "artifacts/conferences/095/iteration-003/reports/article_manifest.json",
-    "artifacts/conferences/095/iteration-003/reports/fidelity_report.json",
-    "artifacts/conferences/095/iteration-003/reports/front_matter_audit.json",
-    "artifacts/conferences/095/iteration-003/reports/toc_pagination_report.json",
-    "artifacts/conferences/095/iteration-003/reports/render_report.json",
-    "artifacts/conferences/095/iteration-003/reports/typography_audit.json",
-    "artifacts/conferences/095/iteration-003/reports/FILES.sha256"
+    "artifacts/conferences/095/iteration-004/ITERATION_RESULT.json",
+    "artifacts/conferences/095/iteration-004/REVIEW_PACKET.md",
+    "artifacts/conferences/095/iteration-004/Conference95_generated.docx",
+    "artifacts/conferences/095/iteration-004/Conference95_generated.pdf",
+    "artifacts/conferences/095/iteration-004/reports/official_pdf_identity.json",
+    "artifacts/conferences/095/iteration-004/reports/official_toc.json",
+    "artifacts/conferences/095/iteration-004/reports/official_corpus_parity.json",
+    "artifacts/conferences/095/iteration-004/reports/official_page_parity.json",
+    "artifacts/conferences/095/iteration-004/reports/article_manifest.json",
+    "artifacts/conferences/095/iteration-004/reports/fidelity_report.json",
+    "artifacts/conferences/095/iteration-004/reports/front_matter_audit.json",
+    "artifacts/conferences/095/iteration-004/reports/toc_pagination_report.json",
+    "artifacts/conferences/095/iteration-004/reports/render_report.json",
+    "artifacts/conferences/095/iteration-004/reports/typography_audit.json",
+    "artifacts/conferences/095/iteration-004/reports/FILES.sha256"
   ],
   "acceptance_gates": {
-    "manifest_created_automatically": true,
-    "all_articles_once": true,
-    "service_documents_excluded": true,
-    "ambiguous_items_fail_closed": true,
+    "internal_manifest_articles": 34,
+    "official_toc_articles": 34,
+    "official_corpus_matched": 34,
+    "missing_articles": 0,
+    "extra_articles": 0,
+    "ambiguous_articles": 0,
+    "official_order_matches": true,
+    "official_sections_match": true,
+    "official_section_count": 14,
+    "article_start_pages_match_official": true,
+    "official_physical_page_count": 248,
+    "official_bibliographic_page_count": 245,
+    "front_matter_matches_official": true,
+    "toc_matches_official": true,
+    "special_thanks_block_present": true,
     "author_body_changed": false,
     "object_loss": 0,
-    "front_matter_matches_config": true,
-    "stale_front_matter_markers": 0,
-    "toc_article_entries": 34,
-    "toc_pages_match_article_starts": true,
-    "first_article_printed_page": 6,
-    "continuous_pagination": true,
-    "section_labels_canonical": true,
     "legacy_body_font_pt": 14,
     "docx_opens_without_repair": true,
     "pdf_rendered": true,
@@ -115,67 +125,30 @@
   },
   "codex_result": {
     "commit": "3c3ae51f9d763928cdcdd433e3f0db549332fdd0",
-    "implementation_commits": [
-      "5477cdc2d719f09d774269d7116a7a37c43657dd",
-      "3c3ae51f9d763928cdcdd433e3f0db549332fdd0"
-    ],
     "tests": "73 passed in 2.96s; compile check PASS",
-    "status": "REVIEW_ARTIFACTS_READY",
-    "manifest_metrics": {
-      "inventory_files": 139,
-      "articles": 34,
-      "duplicates": 6,
-      "non_articles": 99,
-      "review_or_blocked": 0
-    },
-    "quality": {
+    "status": "INTERNAL_GATES_PASS_GOLDEN_PARITY_FAILED",
+    "internal_quality": {
       "fidelity": "PASS",
       "object_loss": 0,
-      "clean_rebuild": "PASS",
-      "technical_render": "PASS",
-      "all_pages_raster_qa": "PASS",
-      "pdf_pages": 237,
-      "blank_pages": [],
       "front_matter": "PASS",
-      "stale_front_matter_markers": 0,
-      "toc": "PASS",
-      "word_toc_count": 1,
-      "toc_article_entries": 34,
-      "toc_pages_match_article_starts": true,
-      "toc_stable_measurements": 2,
-      "continuous_pagination": "PASS",
-      "first_article_physical_page": 6,
-      "first_article_printed_page": 6,
-      "visible_footer_numbers": "236/236",
-      "section_labels_canonical": true,
-      "typography_audit": "PASS",
-      "sampled_typography_paragraphs": 1581,
-      "sampled_typography_runs": 7583,
-      "effective_14pt_body_runs": 7532,
-      "allowed_typography_exceptions": 51,
-      "manual_output_edits": false,
-      "conference_id_patches": false
+      "generated_toc": "PASS",
+      "generated_pagination": "PASS",
+      "typography": "PASS",
+      "clean_rebuild": "PASS"
     },
-    "artifacts": {
-      "docx": "artifacts/conferences/095/iteration-003/Conference95_generated.docx",
-      "docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
-      "pdf": "artifacts/conferences/095/iteration-003/Conference95_generated.pdf",
-      "pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203",
-      "files_sha256": "artifacts/conferences/095/iteration-003/reports/FILES.sha256"
-    },
-    "blockers": []
+    "golden_quality": {
+      "official_pdf_found_by_reviewer": true,
+      "official_pdf_pages": 248,
+      "generated_pdf_pages": 237,
+      "publication_order": "FAIL",
+      "section_hierarchy": "FAIL",
+      "corpus_mapping": "NOT_PROVEN",
+      "official_page_mapping": "NOT_PROVEN"
+    }
   },
   "reviewer_result": {
     "decision": "CHANGES_REQUESTED",
-    "reviewed_commit": "2d799e3be0aaf1151aaed4e43748256e1e8f20d9",
-    "accepted_components": [
-      "auto-manifest and classification",
-      "34 article one-time inclusion",
-      "source-to-final fidelity",
-      "object preservation",
-      "clean rebuild semantics",
-      "controlled repository cleanup"
-    ],
-    "reason": "Conference 95 не готовий до приймання: front matter містить чужі конференції, TOC має 0/34 записів, наскрізна пагінація відсутня, section labels не нормалізовані, effective 14 pt не підтверджено direct audit."
+    "reviewed_commit": "3c3ae51f9d763928cdcdd433e3f0db549332fdd0",
+    "reason": "Ітерація 3 проходить внутрішні gates, але не відповідає офіційному Conference95 за редакційним порядком, структурою секцій і фізичною версткою. Самоузгоджений TOC не є publication parity."
   }
 }
