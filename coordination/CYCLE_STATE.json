@@ -2,13 +2,14 @@
   "protocol_version": 1,
   "conference_id": 95,
   "iteration": 3,
-  "state": "CHANGES_REQUESTED",
-  "owner": "CODEX",
+  "state": "READY_FOR_REVIEW",
+  "owner": "REVIEWER",
   "work_branch": "agent/journal-builder-95",
   "typography_profile": "legacy_14pt",
   "golden_pdf_required": false,
   "goal": "Зібрати з реального RAW Conference 95 готові DOCX і PDF та довести builder до внутрішніх fidelity, structure, render, TOC і pagination gates.",
-  "last_codex_commit": "2d799e3be0aaf1151aaed4e43748256e1e8f20d9",
+  "last_codex_commit": "3c3ae51f9d763928cdcdd433e3f0db549332fdd0",
+  "submitted_at": "2026-07-19T05:08:32+03:00",
   "addressed_review_findings": [
     {
       "code": "MANIFEST_SOURCE_MISSING",
@@ -35,49 +36,46 @@
     {
       "severity": "BLOCKER",
       "code": "FRONT_MATTER_STALE_AND_UNPARAMETERIZED",
+      "status": "ADDRESSED_PENDING_REVIEW",
       "evidence": "PDF page 1 містить New York / June 12-14, pages 2-3 і 241 містять Cambridge / January 19-21 та conference 91. Очікувано: Oxford, United Kingdom; February 6-8, 2026; Conference 95.",
       "required_fix": "Створити загальний conference metadata config і детерміновано матеріалізувати всі front/back matter placeholders до assembly. Не робити conference-id branch у Python. Після збірки stale-marker audit повинен бути чистим."
     },
     {
       "severity": "BLOCKER",
       "code": "TOC_MISSING",
+      "status": "ADDRESSED_PENDING_REVIEW",
       "evidence": "word_toc_count=0; expected_article_entry_count=34; actual_article_entry_count=0; TOC page містить лише заголовок, наступна сторінка порожня.",
       "required_fix": "Згенерувати справжнє Word TOC field із SECTION та Назва1/article-title рівнями, оновити fields через Word COM до стабілізації та перевірити рівно 34 article entries з правильними сторінками."
     },
     {
       "severity": "BLOCKER",
       "code": "PAGINATION_NOT_CONTINUOUS",
+      "status": "ADDRESSED_PENDING_REVIEW",
       "evidence": "Перша видима нумерація з'являється лише на PDF page 90 як printed page 1; на page 241 видно 152. Article 1 фізично починається на PDF page 6.",
       "required_fix": "Видалити успадковані page-number restarts/header-footer relationships зі статей, задати єдину section/page-number policy: front matter рахується від page 1, номер на title page може бути прихований, перша стаття повинна мати printed page 6, усі наступні сторінки продовжуються без reset."
     },
     {
       "severity": "HIGH",
       "code": "SECTION_LABELS_NOT_NORMALIZED",
+      "status": "ADDRESSED_PENDING_REVIEW",
       "evidence": "Render report фіксує непослідовні номери та пробіли у section headings через raw section labels.",
       "required_fix": "Ввести загальний section normalization layer: canonical section key, display title та order з config/knowledge base; не змінювати article body."
     },
     {
       "severity": "HIGH",
       "code": "TYPOGRAPHY_EFFECTIVE_SIZE_NOT_AUDITED",
+      "status": "ADDRESSED_PENDING_REVIEW",
       "evidence": "Профіль legacy_14pt передано через CLI, але немає direct-run audit ефективного розміру основного тексту після merge/render.",
       "required_fix": "Додати typography_audit.json: перевіряти effective body font size 14 pt у статтях, окремо перелічувати дозволені винятки для footnotes, формул, таблиць і локальних author overrides."
     }
   ],
   "next_action": {
-    "id": "CONF95-ITER-003",
+    "id": "REVIEW-CONF95-ITER-003",
     "instructions": [
-      "Прочитати coordination/LOOP.md і цей CYCLE_STATE.json з upstream/agent/journal-control.",
-      "Оновити agent/journal-builder-95 від upstream; базою є commit 2d799e3be0aaf1151aaed4e43748256e1e8f20d9.",
-      "Створити schema/config для conference metadata. Для Conference 95 конфіг повинен містити Oxford International Science Forum, Oxford, United Kingdom, February 6-8 2026, conference_id 95 та typography profile legacy_14pt. Решту бібліографічних полів брати з явного config/source-pack, а не з hardcoded Python.",
-      "Матеріалізувати front matter і фінальну службову сторінку з config до вставки статей; додати stale-marker audit для New York, Cambridge, conference 91 та інших невідповідних conference identifiers.",
-      "Згенерувати Word TOC field. Включити canonical SECTION як level 1 і article title/Назва1 як level 2; оновити fields через Word COM щонайменше до двох послідовних стабільних render measurements.",
-      "Виправити section/page-number properties: прибрати article-local pgNumType restarts та небажані footer/header rels; front matter рахується з physical page 1, article-001 на physical page 6 має printed page 6, далі нумерація без reset до останньої сторінки.",
-      "Нормалізувати section labels через загальний mapping/config, без if conference_id == 95 і без зміни article body.",
-      "Додати direct effective typography audit для legacy_14pt і regression для standard_11pt. Звіт має містити sampled paragraph counts, effective sizes, exceptions та blockers.",
-      "Додати unit/integration tests для front matter replacement, TOC field creation, custom-style TOC mapping, page-number continuity, section normalization, stale-marker detection і typography audit.",
-      "Запустити повний test suite, clean rebuild з реальним RAW, Word DOCX->PDF render та візуальний огляд усіх сторінок. Не редагувати DOCX/PDF вручну.",
-      "Опублікувати iteration-003 DOCX/PDF і всі machine reports; RAW та окремі сирі статті не комітити.",
-      "Після push оновити agent/journal-control/coordination/CYCLE_STATE.json до READY_FOR_REVIEW, owner REVIEWER, із commit SHA, тестами, hashes, TOC metrics, page-number mapping, front-matter audit, typography audit та blockers."
+      "Перевірити commit 3c3ae51f9d763928cdcdd433e3f0db549332fdd0 гілки agent/journal-builder-95.",
+      "Звірити required artifacts і reports/FILES.sha256 у artifacts/conferences/095/iteration-003.",
+      "Перевірити front matter, Word TOC 34/34, page mappings, canonical sections, post-render legacy_14pt audit, fidelity, all-pages render QA і clean rebuild.",
+      "Reviewer встановлює ACCEPTED або формує наступний CHANGES_REQUESTED; Codex сам ACCEPTED не встановлює."
     ]
   },
   "required_artifacts": [
@@ -116,9 +114,13 @@
     "clean_rebuild": true
   },
   "codex_result": {
-    "commit": "2d799e3be0aaf1151aaed4e43748256e1e8f20d9",
-    "tests": "61 passed in 2.12s; compile check PASS",
-    "status": "REVIEW_ARTIFACTS_READY_WITH_BLOCKERS",
+    "commit": "3c3ae51f9d763928cdcdd433e3f0db549332fdd0",
+    "implementation_commits": [
+      "5477cdc2d719f09d774269d7116a7a37c43657dd",
+      "3c3ae51f9d763928cdcdd433e3f0db549332fdd0"
+    ],
+    "tests": "73 passed in 2.96s; compile check PASS",
+    "status": "REVIEW_ARTIFACTS_READY",
     "manifest_metrics": {
       "inventory_files": 139,
       "articles": 34,
@@ -131,17 +133,37 @@
       "object_loss": 0,
       "clean_rebuild": "PASS",
       "technical_render": "PASS",
-      "pdf_pages": 241,
-      "toc": "BLOCKED",
-      "continuous_pagination": "BLOCKED",
-      "front_matter": "BLOCKED"
+      "all_pages_raster_qa": "PASS",
+      "pdf_pages": 237,
+      "blank_pages": [],
+      "front_matter": "PASS",
+      "stale_front_matter_markers": 0,
+      "toc": "PASS",
+      "word_toc_count": 1,
+      "toc_article_entries": 34,
+      "toc_pages_match_article_starts": true,
+      "toc_stable_measurements": 2,
+      "continuous_pagination": "PASS",
+      "first_article_physical_page": 6,
+      "first_article_printed_page": 6,
+      "visible_footer_numbers": "236/236",
+      "section_labels_canonical": true,
+      "typography_audit": "PASS",
+      "sampled_typography_paragraphs": 1581,
+      "sampled_typography_runs": 7583,
+      "effective_14pt_body_runs": 7532,
+      "allowed_typography_exceptions": 51,
+      "manual_output_edits": false,
+      "conference_id_patches": false
     },
     "artifacts": {
-      "docx": "artifacts/conferences/095/iteration-002/Conference95_generated.docx",
-      "docx_sha256": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
-      "pdf": "artifacts/conferences/095/iteration-002/Conference95_generated.pdf",
-      "pdf_sha256": "2d1948c1c3d4d77a07da0e13051efab4f07857eacfb2a0524c08aa36119d3645"
-    }
+      "docx": "artifacts/conferences/095/iteration-003/Conference95_generated.docx",
+      "docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
+      "pdf": "artifacts/conferences/095/iteration-003/Conference95_generated.pdf",
+      "pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203",
+      "files_sha256": "artifacts/conferences/095/iteration-003/reports/FILES.sha256"
+    },
+    "blockers": []
   },
   "reviewer_result": {
     "decision": "CHANGES_REQUESTED",
