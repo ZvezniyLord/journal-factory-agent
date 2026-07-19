@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "input_docx": "build\\iteration-004-m\\Conference95\\workspace\\ETALON_WITH_TYPOGRAPHY_PROFILE.docx",
+  "input_sha256": "53c1303b31256cf4ef82e9d61d46b071626c6c8031accda72f9aef48afe37e6c",
+  "output_docx": "build\\iteration-004-m\\Conference95\\workspace\\ETALON_WITH_CONFERENCE_METADATA.docx",
+  "output_sha256": "88e8d7db94b1334024e83975d09b108c485da146719d58a3f10c79f52be75031",
+  "conference_id": 95,
+  "replacement_counts": {
+    "Science in the Modern World": 4,
+    "June 12-14, 2026": 1,
+    "January 19-21, 2026": 4,
+    "New York, USA": 1,
+    "Cambridge, United Kingdom": 5,
+    "https://naukainfo.com/conference?id=91": 3,
+    "https://doi.org/10.64828/conf-91-2026": 1,
+    "978-617-8680-36-7": 1,
+    "February 8, 2026": 2
+  },
+  "dynamic_field_counts": {
+    "NUMPAGES": 1
+  },
+  "layout_adjustment_counts": {
+    "Oxford, United Kingdom": 1,
+    "trailing_empty_paragraphs": 1,
+    "official_toc_articles": 34,
+    "official_toc_sections": 14,
+    "special_thanks_blocks": 1
+  },
+  "missing_replacements": [],
+  "audit": {
+    "status": "PASS",
+    "conference_id": 95,
+    "docx": "build\\iteration-004-m\\Conference95\\workspace\\ETALON_WITH_CONFERENCE_METADATA.docx",
+    "docx_sha256": "88e8d7db94b1334024e83975d09b108c485da146719d58a3f10c79f52be75031",
+    "required_marker_counts": {
+      "{event_title}": 4,
+      "{dates}": 5,
+      "{location}": 6,
+      "{conference_url}": 3,
+      "{doi_url}": 1,
+      "{isbn}": 1,
+      "February 22, 2026": 2
+    },
+    "stale_marker_counts": {},
+    "stale_marker_count": 0,
+    "foreign_conference_identifiers": [],
+    "official_toc_article_count": 34,
+    "special_thanks_present": true,
+    "blockers": []
+  },
+  "blockers": []
+}

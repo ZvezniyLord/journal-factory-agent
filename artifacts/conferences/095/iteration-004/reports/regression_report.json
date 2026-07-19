@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "method": "independent clean build and Microsoft Word render with semantic and raster comparison",
+  "builds": [
+    "build\\iteration-004-m\\Conference95",
+    "build\\iteration-004-clean-final-2\\Conference95"
+  ],
+  "checks": {
+    "manifest_order_and_sources": true,
+    "official_corpus_matches": true,
+    "official_toc_page_distribution": true,
+    "toc_entries_and_pages": true,
+    "article_bookmark_pages": true,
+    "special_thanks_page": true,
+    "page_count": true,
+    "all_page_visual_audit": true,
+    "fidelity": true,
+    "front_matter": true,
+    "typography": true,
+    "rendered_page_pixels_with_tolerance": true
+  },
+  "pdf_text_sha256": [
+    "70aa919249f55f58e3b32476fa7d9fc1e91f1c82573a084e3dddb5e5270534e8",
+    "70aa919249f55f58e3b32476fa7d9fc1e91f1c82573a084e3dddb5e5270534e8"
+  ],
+  "metrics": {
+    "articles": 34,
+    "sections": 14,
+    "pdf_pages": 248,
+    "official_article_starts_matched": 34,
+    "special_thanks_physical_page": 7,
+    "toc_article_entries": 34,
+    "first_article_physical_page": 8,
+    "first_article_printed_page": 6
+  },
+  "pixel_comparison": {
+    "dpi": 54,
+    "pages_compared": 248,
+    "tolerance_changed_channel_ratio": 0.00001,
+    "different_pages": [
+      {
+        "page": 179,
+        "changed_channels": 3,
+        "total_channels": 847512,
+        "ratio": 0.000003539772888171495
+      }
+    ]
+  },
+  "blockers": []
+}

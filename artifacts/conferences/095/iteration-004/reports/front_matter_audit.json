@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "conference_id": 95,
+  "docx": "build\\iteration-004-m\\Conference95\\Conference95_generated.docx",
+  "docx_sha256": "53bc45b397fe9e0eccccb587885d0537976a76ae6f36c0bb9f14d998bb6bc246",
+  "required_marker_counts": {
+    "{event_title}": 4,
+    "{dates}": 5,
+    "{location}": 6,
+    "{conference_url}": 3,
+    "{doi_url}": 1,
+    "{isbn}": 1,
+    "February 22, 2026": 2
+  },
+  "stale_marker_counts": {},
+  "stale_marker_count": 0,
+  "foreign_conference_identifiers": [],
+  "official_toc_article_count": 34,
+  "special_thanks_present": true,
+  "blockers": []
+}

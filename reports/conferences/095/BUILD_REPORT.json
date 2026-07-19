@@ -1,42 +1,45 @@
 {
-  "generated_at": "2026-07-19T05:08:32+03:00",
+  "generated_at": "2026-07-19T08:14:35+03:00",
   "conference_id": 95,
-  "iteration": 3,
+  "iteration": 4,
   "status": "PASS_PENDING_REVIEW",
   "production_ready": false,
-  "typography_profile": "legacy_14pt",
   "article_count": 34,
+  "section_count": 14,
   "stages": {
     "archive_inventory": "PASS",
     "auto_manifest": "PASS",
+    "official_toc_resolution": "PASS",
+    "official_corpus_parity": "PASS",
     "article_preparation": "PASS",
     "front_matter": "PASS",
-    "style_bridge": "PASS",
-    "typography_profile": "PASS",
     "section_normalization": "PASS",
     "compose_docx": "PASS",
     "source_to_final_fidelity": "PASS",
     "word_toc": "PASS",
-    "continuous_pagination": "PASS",
+    "official_page_parity": "PASS",
+    "special_thanks_parity": "PASS",
     "word_pdf_render": "PASS",
     "all_pages_visual_qa": "PASS",
     "post_render_typography_audit": "PASS",
-    "clean_rebuild": "PASS",
-    "publication_parity": "NOT_REQUIRED"
+    "clean_rebuild": "PASS"
   },
   "artifacts": {
-    "docx": "artifacts/conferences/095/iteration-003/Conference95_generated.docx",
-    "docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
-    "pdf": "artifacts/conferences/095/iteration-003/Conference95_generated.pdf",
-    "pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203"
+    "docx": "artifacts/conferences/095/iteration-004/Conference95_generated.docx",
+    "docx_sha256": "20db8e79ad55fbe2df98383e646a5617e1a2e59b335274e132d8a71c6d0e93b5",
+    "pdf": "artifacts/conferences/095/iteration-004/Conference95_generated.pdf",
+    "pdf_sha256": "eb6c3209ec96e65574dbffae7a501c49fb89ee82c84b39231db72ffc544c8eee"
   },
   "metrics": {
-    "pdf_pages": 237,
-    "toc_article_entries": 34,
-    "first_article_page": 6,
-    "visible_footer_numbers": "236/236",
-    "effective_14pt_body_runs": 7532,
-    "tests_passed": 73
+    "pdf_pages": 248,
+    "official_article_starts": "34/34",
+    "toc_sections": 14,
+    "toc_articles": 34,
+    "special_thanks_physical_page": 7,
+    "first_article_physical_page": 8,
+    "first_article_printed_page": 6,
+    "visible_footer_numbers": "246/246",
+    "tests_passed": 80
   },
   "blockers": []
 }

@@ -1,0 +1,83 @@
+{
+  "status": "READY",
+  "checks": [
+    {
+      "name": "archive",
+      "path": "N:\\Конференції\\Конференції_zip\\95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року.zip",
+      "ok": true,
+      "required": true,
+      "message": "Author submissions ZIP or folder"
+    },
+    {
+      "name": "etalon",
+      "path": "ETALON-JOURNAL.docx",
+      "ok": true,
+      "required": true,
+      "message": "ETALON-JOURNAL.docx"
+    },
+    {
+      "name": "template",
+      "path": "Jurnal.dotx",
+      "ok": true,
+      "required": true,
+      "message": "Jurnal.dotx"
+    },
+    {
+      "name": "source_pack",
+      "path": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX",
+      "ok": true,
+      "required": true,
+      "message": "Clean requirements pack"
+    },
+    {
+      "name": "source_pack:README_FOR_CODEX.md",
+      "path": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\README_FOR_CODEX.md",
+      "ok": true,
+      "required": true,
+      "message": "README_FOR_CODEX.md"
+    },
+    {
+      "name": "source_pack:new_version_spec/CURRENT_RULES_2026.md",
+      "path": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\new_version_spec\\CURRENT_RULES_2026.md",
+      "ok": true,
+      "required": true,
+      "message": "new_version_spec/CURRENT_RULES_2026.md"
+    },
+    {
+      "name": "source_pack:new_version_spec/CURRENT_RULES_2026.json",
+      "path": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\new_version_spec\\CURRENT_RULES_2026.json",
+      "ok": true,
+      "required": true,
+      "message": "new_version_spec/CURRENT_RULES_2026.json"
+    },
+    {
+      "name": "source_pack:new_version_spec/DATABASE_JSON_CONCEPT.md",
+      "path": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\new_version_spec\\DATABASE_JSON_CONCEPT.md",
+      "ok": true,
+      "required": true,
+      "message": "new_version_spec/DATABASE_JSON_CONCEPT.md"
+    },
+    {
+      "name": "source_pack:new_version_spec/PROMPT_FOR_NEW_CODEX.md",
+      "path": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\new_version_spec\\PROMPT_FOR_NEW_CODEX.md",
+      "ok": true,
+      "required": true,
+      "message": "new_version_spec/PROMPT_FOR_NEW_CODEX.md"
+    },
+    {
+      "name": "active_skill_journal_v3_2",
+      "path": "C:\\Users\\Vint\\.codex\\skills\\journal-factory-docker-local\\SKILL.md",
+      "ok": true,
+      "required": false,
+      "message": "Codex journal skill is optional inside Docker runtime"
+    },
+    {
+      "name": "acceptance_qa_control_files",
+      "path": "C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\examples\\132_audit_report.md; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\empty_paragraph_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\excel_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\final_quality_gate.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\layout_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\markers_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\object_integrity_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\references_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\style_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\text_integrity_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\toc_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\udc_audit.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\current_working\\Analizator_clean\\src\\finalization\\tests\\test_rebuild_journal_styles.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\legacy_reference\\Version_5_6_docs\\audit_103_ny_20260322.md; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\legacy_reference\\Version_5_6_docs\\AUDIT_GPT54_2026-04-02.md; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\legacy_reference\\Version_5_6_docs\\AUDIT_VERSION_5_5.md; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\legacy_reference\\Version_Codex_5_6_clean\\core\\audit_annotation_markers.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\legacy_reference\\Version_Codex_5_6_clean\\core\\quality_gate.py; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\legacy_reference\\Version_Codex_5_6_clean\\shapka_core\\name_db_finished_journals_audit.json; C:\\Users\\Vint\\Downloads\\_source_zip\\NAukaInfo_JournalBuilder_CLEAN_FOR_CODEX\\legacy_reference\\Version_Codex_5_6_clean\\tools\\conference_reference_audit.py",
+      "ok": true,
+      "required": true,
+      "message": "Acceptance tests, QA schemas, or quality gate controls"
+    }
+  ],
+  "blockers": []
+}

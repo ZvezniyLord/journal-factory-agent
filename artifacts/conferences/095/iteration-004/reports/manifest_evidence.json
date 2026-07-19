@@ -1,0 +1,4043 @@
+{
+  "generation_mode": "AUTO_INVENTORY_V1",
+  "workspace_source": "build\\iteration-004-m\\Conference95\\workspace\\source",
+  "inventory_file_count": 139,
+  "document_file_count": 87,
+  "selected_article_count": 34,
+  "classification_counts": {
+    "ARTICLE": 34,
+    "DUPLICATE": 6,
+    "NON_ARTICLE": 99
+  },
+  "legacy_text_extraction": {
+    "method": "word_com_read_only_isolated",
+    "requested_count": 14,
+    "extracted_count": 14,
+    "errors": []
+  },
+  "groups": [
+    {
+      "participant_group": "1 Кравченко",
+      "participant_order": 1,
+      "file_count": 4,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/New_Тези Оксфорд.docx",
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/Тези Оксфорд.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/New_Тези Оксфорд.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "2 Губа",
+      "participant_order": 2,
+      "file_count": 4,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/New_Губа, стаття по арттерапії.docx",
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, стаття по арттерапії.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, стаття по арттерапії.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "3 Лаврівська",
+      "participant_order": 3,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Тези Алекс.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Тези Алекс.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "4 Нігальчук",
+      "participant_order": 4,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. стаття.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. стаття.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "5 Лисенко",
+      "participant_order": 5,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/Стаття_Лисенко_Ілля.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/Стаття_Лисенко_Ілля.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "6 Нігальчук",
+      "participant_order": 6,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є.Р.стаття.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є.Р.стаття.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "7 Мартинюк",
+      "participant_order": 7,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/УДК 373.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/УДК 373.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "8 Качмар",
+      "participant_order": 8,
+      "file_count": 4,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/New_Креативні 〓ндустр〓〓〓 як чинник соціально.docx",
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/Креативні 〓ндустр〓〓〓 як чинник соціально.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/New_Креативні 〓ндустр〓〓〓 як чинник соціально.docx",
+      "application_records": 3,
+      "blockers": []
+    },
+    {
+      "participant_group": "9 Ящук (індивідуальний ДОІ)",
+      "participant_order": 9,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Теза 7.7.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Теза 7.7.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "10 Прибитько, Івкова",
+      "participant_order": 10,
+      "file_count": 5,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/New_Прибитько.docx",
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/New_Прибитько.docx",
+      "application_records": 3,
+      "blockers": []
+    },
+    {
+      "participant_group": "11 Стрельченко",
+      "participant_order": 11,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко Олена Олексіївна.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко Олена Олексіївна.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "12 Толкова (БП)",
+      "participant_order": 12,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "13 Сидоренко",
+      "participant_order": 13,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Стаття Цифрова зрілість Сидоренко С. Ю..docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Стаття Цифрова зрілість Сидоренко С. Ю..docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "14 Пилипенко",
+      "participant_order": 14,
+      "file_count": 2,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/Заявка і стаття.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/Заявка і стаття.docx",
+      "application_records": 3,
+      "blockers": []
+    },
+    {
+      "participant_group": "15 Резніков",
+      "participant_order": 15,
+      "file_count": 1,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/15 Резніков/Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/15 Резніков/Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises.docx",
+      "application_records": 0,
+      "blockers": []
+    },
+    {
+      "participant_group": "16 Полях (БП)",
+      "participant_order": 16,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "17 Шаповалова",
+      "participant_order": 17,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Вибори в Україні в умовах повномасшт.війни_правові та політ.виклик.Шаповалова А.М..docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Вибори в Україні в умовах повномасшт.війни_правові та політ.виклик.Шаповалова А.М..docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "18 Євтушенко",
+      "participant_order": 18,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко стаття.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко стаття.docx",
+      "application_records": 5,
+      "blockers": []
+    },
+    {
+      "participant_group": "19 Спиридонова",
+      "participant_order": 19,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/стаття_Спиридонова_Зозуля.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/стаття_Спиридонова_Зозуля.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "20 Замятін",
+      "participant_order": 20,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/1- Oxford.Замятін П.М. стаття .docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/1- Oxford.Замятін П.М. стаття .docx",
+      "application_records": 5,
+      "blockers": []
+    },
+    {
+      "participant_group": "21 Лаврусь (БП)",
+      "participant_order": 21,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "22 Доній",
+      "participant_order": 22,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Доній_Гончаренко_2026.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Доній_Гончаренко_2026.docx",
+      "application_records": 3,
+      "blockers": []
+    },
+    {
+      "participant_group": "23 Самборко",
+      "participant_order": 23,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/Добридень_Стаття.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/Добридень_Стаття.docx",
+      "application_records": 0,
+      "blockers": []
+    },
+    {
+      "participant_group": "24 Костишина",
+      "participant_order": 24,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Жорстокість підлітків Костишина С.П..docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Жорстокість підлітків Костишина С.П..docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "25 Туровський",
+      "participant_order": 25,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_тези.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_тези.docx",
+      "application_records": 3,
+      "blockers": []
+    },
+    {
+      "participant_group": "26 Башкірова",
+      "participant_order": 26,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_стаття.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_стаття.docx",
+      "application_records": 3,
+      "blockers": []
+    },
+    {
+      "participant_group": "27 Строганова (БП)",
+      "participant_order": 27,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "28 Рибачук (БП)",
+      "participant_order": 28,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "29 Панчук",
+      "participant_order": 29,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Стаття Панчук О. І.1.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Стаття Панчук О. І.1.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "30 Мельнічук (БП)",
+      "participant_order": 30,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "31 Іванчикова",
+      "participant_order": 31,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Стаття Іванчикова.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Стаття Іванчикова.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "32 Цьось",
+      "participant_order": 32,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Тези_МНПК_Оксфорд_Цьось_06_08.02.2026.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Тези_МНПК_Оксфорд_Цьось_06_08.02.2026.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "33 Ганзюк",
+      "participant_order": 33,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Стаття.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Стаття.docx",
+      "application_records": 3,
+      "blockers": []
+    },
+    {
+      "participant_group": "34 Ягмуров",
+      "participant_order": 34,
+      "file_count": 4,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Новий Документ Microsoft Word.docx",
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Ягмуров Є.К. тези ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛ.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Новий Документ Microsoft Word.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "35 Львович",
+      "participant_order": 35,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/Львович_Тези.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/Львович_Тези.docx",
+      "application_records": 1,
+      "blockers": []
+    },
+    {
+      "participant_group": "36 Будь (БП)",
+      "participant_order": 36,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "37 Обозна",
+      "participant_order": 37,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Стаття Обозна-Красовська_.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Стаття Обозна-Красовська_.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "38 Пайос",
+      "participant_order": 38,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Стаття_Paios.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Стаття_Paios.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "39 Олексюк",
+      "participant_order": 39,
+      "file_count": 4,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/New_Олексюк_тези.docx",
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_тези.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_тези.docx",
+      "application_records": 4,
+      "blockers": []
+    },
+    {
+      "participant_group": "40 Ординович",
+      "participant_order": 40,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_тези.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_тези.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "41 Білоус (БП)",
+      "participant_order": 41,
+      "file_count": 2,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "42 Савіщенко",
+      "participant_order": 42,
+      "file_count": 3,
+      "article_candidates": [
+        "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_ТЕЗИ.docx"
+      ],
+      "selected_article": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_ТЕЗИ.docx",
+      "application_records": 2,
+      "blockers": []
+    },
+    {
+      "participant_group": "43 Борцевич (БП)",
+      "participant_order": 43,
+      "file_count": 1,
+      "article_candidates": [],
+      "selected_article": "",
+      "application_records": 0,
+      "blockers": []
+    }
+  ],
+  "files": [
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/95Оксфорд_Обкладинка.png",
+      "extension": ".png",
+      "sha256": "0df77b42f544360e22b7e0f5e15fea7659f9d8f011006e6aee1898564d851964",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/New_Інформаційний лист 95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.docx",
+      "extension": ".docx",
+      "sha256": "15cf3e0eadd932895573b14173f6b4013fc9464cf4aae6ff26bbade5baf72e3c",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "information_letter_content",
+        "outside_participant_folder",
+        "unresolved_placeholder_detected"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 9006,
+      "title_detected": "Важливо! Якщо автори мають однаковий статус і загальне місце роботи (навчання), то оформлення проводиться відповідно до шаблону оформлення статті, розділяючи кожного автора комою;",
+      "authors_detected": [
+        "Департамент досліджень Європейського Союзу",
+        "ЗАГАЛЬНА ІНФОРМАЦІЯ",
+        "СЕКЦІЇ РОБОТИ КОНФЕРЕНЦІЇ:",
+        "ОФОРМЛЕННЯ СТАТТІ:"
+      ],
+      "modified_utc": "2025-12-19T15:41:00Z",
+      "embedded_service_tail": true,
+      "placeholder_count": 1,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Анкета-заявка.doc",
+      "extension": ".doc",
+      "sha256": "fa62e0280204714075b5c43c458f899129b7454f5c5fa245da29621e4916e3c0",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "certificate_template_or_request"
+      ],
+      "content_markers": [],
+      "text_length": 709,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/04B6B21A-2D3D-4DD2-9766-46D2878653E0.pdf",
+      "extension": ".pdf",
+      "sha256": "f511135275b05f688fffd75e939fe3a1b938d0f0a75a53070310df78881e9b79",
+      "participant_group": "1 Кравченко",
+      "participant_order": 1,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/New_Тези Оксфорд.docx",
+      "extension": ".docx",
+      "sha256": "365ab241df5b4825fd85fbb4a4800b51675aa2a760609d30adccf3f339cea6f2",
+      "participant_group": "1 Кравченко",
+      "participant_order": 1,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "references",
+        "udc"
+      ],
+      "text_length": 5889,
+      "title_detected": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES",
+      "authors_detected": [
+        "Bohdan Kravchenko"
+      ],
+      "modified_utc": "2026-02-16T17:24:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/Анкета учасника.doc",
+      "extension": ".doc",
+      "sha256": "158ac6d3ce989d92e271b8f252e9851d09b216ea5d79d8c1de732157f3b484fe",
+      "participant_group": "1 Кравченко",
+      "participant_order": 1,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1061,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/Тези Оксфорд.docx",
+      "extension": ".docx",
+      "sha256": "052875c1ae0c41047a46c66b8a5d488b086c8e5b0e25196fcaa4c3234da31735",
+      "participant_group": "1 Кравченко",
+      "participant_order": 1,
+      "free_listener_folder": false,
+      "classification": "DUPLICATE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "semantic_duplicate_variant_excluded"
+      ],
+      "content_markers": [
+        "annotation",
+        "references",
+        "udc"
+      ],
+      "text_length": 5880,
+      "title_detected": "Importantly, smoking cessation was associated with measurable clinical improvement. Studies indicate that discontinuation of nicotine use for at least 8–12 weeks prior to implant placement contributes to improved vascular response, reduced inflammatory markers, and enhanced osseointegration potential.",
+      "authors_detected": [
+        "Bohdan Kravchenko"
+      ],
+      "modified_utc": "2026-01-08T15:02:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/New_Тези Оксфорд.docx"
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/New_Прибитько.docx",
+      "extension": ".docx",
+      "sha256": "aaf8e0c45ef44274d7d5e6a35e8c65f9d4c2dbc791f84a734553097ba1dbdb99",
+      "participant_group": "10 Прибитько, Івкова",
+      "participant_order": 10,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 10253,
+      "title_detected": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 РР.)",
+      "authors_detected": [
+        "Прибитько Іван Олександрович",
+        "Івкова Вікторія Юріївна"
+      ],
+      "modified_utc": "2026-02-20T02:05:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько (2).docx",
+      "extension": ".docx",
+      "sha256": "61b748d1fc91a5647d25fb7975a430cf06e662e861a0f1e4db7ed5ed11c42272",
+      "participant_group": "10 Прибитько, Івкова",
+      "participant_order": 10,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1325,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Ivan Prybytko"
+      ],
+      "modified_utc": "2026-01-29T20:09:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько (2).pdf",
+      "extension": ".pdf",
+      "sha256": "d77e5af829d75b31acf4daefee2b1ce47ffdfa60e3b20374e8676e08a2426e19",
+      "participant_group": "10 Прибитько, Івкова",
+      "participant_order": 10,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько.docx",
+      "extension": ".docx",
+      "sha256": "d1dab8a27e1269afd0c6d90c5fdbefed5bdaab56da118c90ddf9f8b50c3aa086",
+      "participant_group": "10 Прибитько, Івкова",
+      "participant_order": 10,
+      "free_listener_folder": false,
+      "classification": "DUPLICATE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "semantic_duplicate_variant_excluded"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 10279,
+      "title_detected": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 рр.)",
+      "authors_detected": [
+        "Прибитько Іван Олександрович",
+        "Івкова Вікторія Юріївна"
+      ],
+      "modified_utc": "2026-01-29T18:15:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/New_Прибитько.docx"
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько.pdf",
+      "extension": ".pdf",
+      "sha256": "9a5c0b986e0ff205c5ed0ceba126090c46cd80b07e1197101e7956ae21a5fc84",
+      "participant_group": "10 Прибитько, Івкова",
+      "participant_order": 10,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко О.О..doc",
+      "extension": ".doc",
+      "sha256": "70ba64deb3df216e5f69ea6ed56bd5d30ff485895ae441b6d9c44cf5baf78aa7",
+      "participant_group": "11 Стрельченко",
+      "participant_order": 11,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1087,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко О.О.pdf",
+      "extension": ".pdf",
+      "sha256": "059a09bc4f980cf3dc222676ad3097cf4497f361159b3e5bcd154c2a6049809d",
+      "participant_group": "11 Стрельченко",
+      "participant_order": 11,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко Олена Олексіївна.docx",
+      "extension": ".docx",
+      "sha256": "9490b6596111dd8339ab148b5646b5abc80573e62bb6b8aaee65dbb57bd8c163",
+      "participant_group": "11 Стрельченко",
+      "participant_order": 11,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 22138,
+      "title_detected": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+      "authors_detected": [
+        "Стрельченко Олена Олексіївна"
+      ],
+      "modified_utc": "2026-01-29T19:10:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/12 Толкова (БП)/Толкова анкета_6c6ea377-667f-4510-afd8-86110964f0e9.docx",
+      "extension": ".docx",
+      "sha256": "a92090b7c2d991f73ec1d3447476b124b72f905f041f5e63bdc58d4bd39455f5",
+      "participant_group": "12 Толкова (БП)",
+      "participant_order": 12,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 808,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Tetiana Tolkova"
+      ],
+      "modified_utc": "2026-02-01T17:57:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/12 Толкова (БП)/Толкова квитанція_c1dedb10-b96a-45b9-9c00-eebe035ee982.pdf",
+      "extension": ".pdf",
+      "sha256": "bcb6ceee45a5b649ee060a569466eba6c1dc90f2d9587c6e9c3b8f6db257b8b4",
+      "participant_group": "12 Толкова (БП)",
+      "participant_order": 12,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Анкета учасника.docx",
+      "extension": ".docx",
+      "sha256": "62aeffce2194bd4a734f858df8ab07a6591893cf0b67409347779187c211f17d",
+      "participant_group": "13 Сидоренко",
+      "participant_order": 13,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1059,
+      "title_detected": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-02-01T18:02:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Квитанція про оплату.pdf",
+      "extension": ".pdf",
+      "sha256": "20680bc5b42e6d3e628f29acf88963469918f9200207ce182c58c91bad884799",
+      "participant_group": "13 Сидоренко",
+      "participant_order": 13,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Стаття Цифрова зрілість Сидоренко С. Ю..docx",
+      "extension": ".docx",
+      "sha256": "2591eae01d7a6badf5374b716b7aeb132a9400212926a44b8a5f4ee288079637",
+      "participant_group": "13 Сидоренко",
+      "participant_order": 13,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 16593,
+      "title_detected": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "authors_detected": [
+        "Сидоренко Сергій Юрійович"
+      ],
+      "modified_utc": "2026-01-31T14:20:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/unnamed.jpg",
+      "extension": ".jpg",
+      "sha256": "25af0eec3b7bb93df09e8abed3438baacfe7c782ab7b89d1155a5bca2eb57ca2",
+      "participant_group": "14 Пилипенко",
+      "participant_order": 14,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/Заявка і стаття.docx",
+      "extension": ".docx",
+      "sha256": "7188b3d74b0cb6b3b2153b8e5f82c5211a1e1002bbb56f8564cb5d835f7e98f7",
+      "participant_group": "14 Пилипенко",
+      "participant_order": 14,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.9,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "embedded_application_tail_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references"
+      ],
+      "text_length": 6762,
+      "title_detected": "Харківської міської ради»",
+      "authors_detected": [
+        "Пилипенко Наталія Вікторівна",
+        "Чібірєва Людмила Вікторівна"
+      ],
+      "modified_utc": "2026-02-01T18:22:00Z",
+      "embedded_service_tail": true,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/15 Резніков/Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises.docx",
+      "extension": ".docx",
+      "sha256": "f43da66e0c7096630365f6b96c565f27075c550e37919a1923f6b5618c66095b",
+      "participant_group": "15 Резніков",
+      "participant_order": 15,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 12703,
+      "title_detected": "Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises",
+      "authors_detected": [
+        "Резніков Роман Борисович"
+      ],
+      "modified_utc": "2026-01-31T18:08:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/16 Полях (БП)/Component.pdf",
+      "extension": ".pdf",
+      "sha256": "7b6dee896249b53d97901aabc3230b8a699d3f9a127a27ff8bbfb48db34f8470",
+      "participant_group": "16 Полях (БП)",
+      "participant_order": 16,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/16 Полях (БП)/АНКЕТА УЧАСНИКА.docx",
+      "extension": ".docx",
+      "sha256": "e6aca09bc75429ed3ea63366dd5c4cc96b93e7dc4fa6c24d2546c616e235b594",
+      "participant_group": "16 Полях (БП)",
+      "participant_order": 16,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 873,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Polyakh Оleksandr"
+      ],
+      "modified_utc": "2026-02-02T02:03:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/0-02-05-98bdd1603fef5a2e67192e03895b702ec1808994e9d2fe0e9eb4ec5f1ec2fbba_8c74921d7156e860.jpg",
+      "extension": ".jpg",
+      "sha256": "7336dfc8c482136a72b08d5bc65bbded6abc881f2ff647b9f9e822d3c6cefcee",
+      "participant_group": "17 Шаповалова",
+      "participant_order": 17,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Вибори в Україні в умовах повномасшт.війни_правові та політ.виклик.Шаповалова А.М..docx",
+      "extension": ".docx",
+      "sha256": "e92001c8abd506590b5f64a24b527199b24d233e13237c15aa49f9f9faf34028",
+      "participant_group": "17 Шаповалова",
+      "participant_order": 17,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 11782,
+      "title_detected": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ",
+      "authors_detected": [
+        "Шаповалова Алла Миколаївна"
+      ],
+      "modified_utc": "2026-02-02T07:04:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Інформаційний лист       м. Оксфорд.docx",
+      "extension": ".docx",
+      "sha256": "66f753bfabcedfaa2b0cf5ff6cdd67050d9313ec72c107f2355ce1f9d8b35581",
+      "participant_group": "17 Шаповалова",
+      "participant_order": 17,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 916,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Shapovalova Alla"
+      ],
+      "modified_utc": "2026-02-02T21:00:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко Анкета-заявка.doc",
+      "extension": ".doc",
+      "sha256": "79c4dc5e0aca1366bcae3892d3106efba2dac736ee4f571b30e4bc5127541b6a",
+      "participant_group": "18 Євтушенко",
+      "participant_order": 18,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 2952,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко квитанція.pdf",
+      "extension": ".pdf",
+      "sha256": "95c80676101f1b8c945a8970fab0359ba84a247de2b11ee38ff6cce4ed939e67",
+      "participant_group": "18 Євтушенко",
+      "participant_order": 18,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко стаття.docx",
+      "extension": ".docx",
+      "sha256": "5cd15ec7071159b8af2f59aa7ecf7343792d3ea4ee18f1c74c7e2e176acf075b",
+      "participant_group": "18 Євтушенко",
+      "participant_order": 18,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 12100,
+      "title_detected": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ",
+      "authors_detected": [
+        "Євтушенко Віталій Вячеславович"
+      ],
+      "modified_utc": "2026-02-02T09:57:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/Анкета-заявка_ Спиридонова_Зозуля.doc",
+      "extension": ".doc",
+      "sha256": "71f4df79f26422524b27d8f3842569abe84efb9a4e6e1688368a6dc63e2efa55",
+      "participant_group": "19 Спиридонова",
+      "participant_order": 19,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1350,
+      "title_detected": "\u0007заступник директора з навчально-виховної роботи, вчитель початкових класів, Херсонський навчально-виховний комплекс – загальноосвітня школа І-ІІІ ступенів № 9 Херсонської міської ради",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/квитанція_Спиридонова_Зозуля.pdf",
+      "extension": ".pdf",
+      "sha256": "014d196409a9a39a505e3f76513c56c54200b27880451b22f421ac7e0d1f4db8",
+      "participant_group": "19 Спиридонова",
+      "participant_order": 19,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/стаття_Спиридонова_Зозуля.docx",
+      "extension": ".docx",
+      "sha256": "c953933edd88a92c2cd69184ebd521e3fe5880b5bb8f0a64758dbd04c98d5e57",
+      "participant_group": "19 Спиридонова",
+      "participant_order": 19,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 15782,
+      "title_detected": "Особливості організації психолого-педагогічної підтримки дітей з особливими освітніми потребами в сучасній освіті",
+      "authors_detected": [
+        "Спиридонова Олександра Олександрівна",
+        "Зозуля Оксана Василівна"
+      ],
+      "modified_utc": "2026-02-02T12:02:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/New_Губа, стаття по арттерапії.docx",
+      "extension": ".docx",
+      "sha256": "8944352b6dd641e83b9586bed5579ab3cbba2aa2a1d9a623ee2715c4e73af86c",
+      "participant_group": "2 Губа",
+      "participant_order": 2,
+      "free_listener_folder": false,
+      "classification": "DUPLICATE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "unresolved_placeholder_detected",
+        "semantic_duplicate_variant_excluded"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 9270,
+      "title_detected": "УЧАСНИКІВ ОСВІТНЬОГО ПРОЦЕСУ",
+      "authors_detected": [
+        "Наталія Губа"
+      ],
+      "modified_utc": "2026-02-23T16:23:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 1,
+      "duplicate_of": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, стаття по арттерапії.docx"
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа , оплата.jpg",
+      "extension": ".jpg",
+      "sha256": "ad44c2ee3a081c9cfced1696435d66a44968d4b5d29c25e105e3a9b4cb181639",
+      "participant_group": "2 Губа",
+      "participant_order": 2,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, заявка.docx",
+      "extension": ".docx",
+      "sha256": "28741133e76423506b12b822d60140c4e8dbe443f636399db319ed6ee02fcb71",
+      "participant_group": "2 Губа",
+      "participant_order": 2,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1019,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІї",
+      "authors_detected": [
+        "Nataliya Huba"
+      ],
+      "modified_utc": "2026-01-17T19:54:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, стаття по арттерапії.docx",
+      "extension": ".docx",
+      "sha256": "c58abba9c8c7734ce3d4461b7453a447f8777d66549389b4eec51b03f6e7ce96",
+      "participant_group": "2 Губа",
+      "participant_order": 2,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "udc"
+      ],
+      "text_length": 9313,
+      "title_detected": "Зачепилівської селищної ради",
+      "authors_detected": [
+        "Наталія Губа"
+      ],
+      "modified_utc": "2026-01-14T09:21:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/1- Oxford.Замятін П.М. стаття .docx",
+      "extension": ".docx",
+      "sha256": "cff1a8b79e29293d7afad04f214004b25c84e690785660f5e8cb5c28b26683ab",
+      "participant_group": "20 Замятін",
+      "participant_order": 20,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "udc"
+      ],
+      "text_length": 16222,
+      "title_detected": "AT THE MODERN LEVEL",
+      "authors_detected": [
+        "Petro Zamіatin"
+      ],
+      "modified_utc": "2026-01-30T08:31:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/2-OXford-Замятін П.М.-Анкета учасників .docx",
+      "extension": ".docx",
+      "sha256": "36cbe9c4b34f591ffeebc31999ae333626ce74fc718ef1e7d174ae036e5fe3fb",
+      "participant_group": "20 Замятін",
+      "participant_order": 20,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 2050,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Pеtrо Zamіatin"
+      ],
+      "modified_utc": "2026-02-02T21:22:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/3-Охford-Замятін ПМ-ОПЛАТА.pdf",
+      "extension": ".pdf",
+      "sha256": "d932554efaa71bb80f7eb3ceb0a1809ed4babc2d1ea1810ae5ad3f77fcbde4c4",
+      "participant_group": "20 Замятін",
+      "participant_order": 20,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/21 Лаврусь (БП)/Анкета учасника конференції Лаврусь.docx",
+      "extension": ".docx",
+      "sha256": "9091ed512418c98f7effe15985ad67d222141a58119ace5d2e433a1985e86272",
+      "participant_group": "21 Лаврусь (БП)",
+      "participant_order": 21,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 813,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Oksana Lavrus"
+      ],
+      "modified_utc": "2026-02-02T21:27:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/21 Лаврусь (БП)/Лаврусь.pdf",
+      "extension": ".pdf",
+      "sha256": "9bfa73115376505d46186cb54fdec70ab82d2a2bf82d467e4d491c1525834023",
+      "participant_group": "21 Лаврусь (БП)",
+      "participant_order": 21,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Доній_Гончаренко_2026.docx",
+      "extension": ".docx",
+      "sha256": "03913014a289f2954d03c6f336e33c260acd761937d5de8a9c4f9dc27f800809",
+      "participant_group": "22 Доній",
+      "participant_order": 22,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 7933,
+      "title_detected": "FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "authors_detected": [
+        "Donii Nataliia Yevgeniivna"
+      ],
+      "modified_utc": "2026-02-02T15:54:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Заявка м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.docx",
+      "extension": ".docx",
+      "sha256": "f2a12ba6ead2a4ef34f5c466a0cf0639e5db935606414ae9d5dbe80a84efe588",
+      "participant_group": "22 Доній",
+      "participant_order": 22,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1092,
+      "title_detected": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-02-02T21:32:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Квитанція(02-02-2026T05-08-42).pdf",
+      "extension": ".pdf",
+      "sha256": "3b1e66461b27567e2e97b5f8b8d0bf0d30b572e1a4386a8dc4e234fe5f89c131",
+      "participant_group": "22 Доній",
+      "participant_order": 22,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/privat24_receipt.pdf",
+      "extension": ".pdf",
+      "sha256": "1e015b88c652a066f3bd39abb338f3ecce3094de4ba3127ea4c21bc29e184421",
+      "participant_group": "23 Самборко",
+      "participant_order": 23,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/Добридень_Анкета.docx",
+      "extension": ".docx",
+      "sha256": "348cbe9f38d8fb5295a9b41f7fbeac8cdeb3c3f9f9b89d4b4bab4df91078fa66",
+      "participant_group": "23 Самборко",
+      "participant_order": 23,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1485,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "2026-01-31T18:34:24Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/Добридень_Стаття.docx",
+      "extension": ".docx",
+      "sha256": "a68d94316944dfc88820bab08a19537327b5b4f2fc301e207391e6d777850ff4",
+      "participant_group": "23 Самборко",
+      "participant_order": 23,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 16543,
+      "title_detected": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "authors_detected": [
+        "Добридень Алла Володимирівна",
+        "Самборко Інна Миколаївна"
+      ],
+      "modified_utc": "2026-02-02T07:22:31Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/0-02-05-20c1ec07124ebe2aedf7b9d129dabc3284168a365e25ab169fff7f4bd98b7262_9280f4bd95a4771d.jpg",
+      "extension": ".jpg",
+      "sha256": "6fbcf49daae34271d345009cde78fc1c7a70b3ad74d611c444ed1876d2509e4b",
+      "participant_group": "24 Костишина",
+      "participant_order": 24,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Анкета-заявка КостишинаС.П..doc",
+      "extension": ".doc",
+      "sha256": "0c32869e16d54de5636bdfb2def85f21b15cc8b95c535296fddf12f6ecc720e3",
+      "participant_group": "24 Костишина",
+      "participant_order": 24,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1123,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Жорстокість підлітків Костишина С.П..docx",
+      "extension": ".docx",
+      "sha256": "9c8d679f5802ec6a2c764cda4f1652ceaa03f7d4e6da2abe1cbe7cde7abda894",
+      "participant_group": "24 Костишина",
+      "participant_order": 24,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 17827,
+      "title_detected": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ.",
+      "authors_detected": [
+        "Костишина Світлана Павлівна"
+      ],
+      "modified_utc": "2026-02-03T08:02:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський Квитанція.pdf",
+      "extension": ".pdf",
+      "sha256": "337852f99ba1f7aafbb03c7577ebbabe5745e5fb6610fa604327eaa253c913f7",
+      "participant_group": "25 Туровський",
+      "participant_order": 25,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_Анкета учасників конференції (2).docx",
+      "extension": ".docx",
+      "sha256": "3802bd29681d0a3bcd1025a85899bb7a33a417f7be3829102ee16361d5129b3c",
+      "participant_group": "25 Туровський",
+      "participant_order": 25,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1331,
+      "title_detected": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-02-03T22:25:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_тези.docx",
+      "extension": ".docx",
+      "sha256": "2be365e5cd3119eb1a9f098fb850b78102fee3b7284afd0099c707b1fac5b3f5",
+      "participant_group": "25 Туровський",
+      "participant_order": 25,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8141,
+      "title_detected": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "authors_detected": [
+        "Долгальова Олена Вячеславівна",
+        "Туровський Ігор Володимирович"
+      ],
+      "modified_utc": "2026-02-03T10:49:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_анкета учасника.docx",
+      "extension": ".docx",
+      "sha256": "b5862264fad66092f3a8563784b8918731341b5666b0504454349f5f2f2403eb",
+      "participant_group": "26 Башкірова",
+      "participant_order": 26,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1398,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Nataliia Bashkirova"
+      ],
+      "modified_utc": "2026-02-05T05:03:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_квітанція.pdf",
+      "extension": ".pdf",
+      "sha256": "710cf85d3e67fa2f88363695160c8d46334e91e2c16159b439966dde7dcfb9ab",
+      "participant_group": "26 Башкірова",
+      "participant_order": 26,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_стаття.docx",
+      "extension": ".docx",
+      "sha256": "a1c9ae0f16769c498716646f7b4e70e15b9feacdf03df4d50e17a7bc638f1d3e",
+      "participant_group": "26 Башкірова",
+      "participant_order": 26,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "udc"
+      ],
+      "text_length": 8921,
+      "title_detected": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»",
+      "authors_detected": [
+        "Башкірова Наталія",
+        "Краус Орина"
+      ],
+      "modified_utc": "2026-02-03T11:07:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/27 Строганова (БП)/2FDDD87D-23D2-4361-A8CA-229EBAAE8199.pdf",
+      "extension": ".pdf",
+      "sha256": "b75a6b8622af6fcb8338018b56a60af0f8b92adfbad49100bbcc1f7a0f6cfde9",
+      "participant_group": "27 Строганова (БП)",
+      "participant_order": 27,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/27 Строганова (БП)/Анкета заявка.docx",
+      "extension": ".docx",
+      "sha256": "bd91f46055bbcbb80c3eac0c4c98647bb329728593982aaa16aac1ff133f2277",
+      "participant_group": "27 Строганова (БП)",
+      "participant_order": 27,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1411,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "2026-02-05T05:05:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/28 Рибачук (БП)/receipt_-2884932166.pdf",
+      "extension": ".pdf",
+      "sha256": "aa0adb6cd6eec7ddecb0039c90e9aec870fbe1c805cf3e1ad4527e27313ba449",
+      "participant_group": "28 Рибачук (БП)",
+      "participant_order": 28,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/28 Рибачук (БП)/анкета.docx",
+      "extension": ".docx",
+      "sha256": "b01c92aec87b8478940e551ffb378c9e05ac89155efd99fb25bd746c8b7357cc",
+      "participant_group": "28 Рибачук (БП)",
+      "participant_order": 28,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 851,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Olena Rybachuk"
+      ],
+      "modified_utc": "2026-02-05T05:07:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Анкета-заявка.doc",
+      "extension": ".doc",
+      "sha256": "1d9725df2c975fa23c9be7a228f50e78df02156de90182e51e4b9d507dde6a6b",
+      "participant_group": "29 Панчук",
+      "participant_order": 29,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1020,
+      "title_detected": "\u0007Кулевчанський опорний заклад – ліцей з початковою школою та гімназією Кулевчанської сільської ради Білгород-Дністровського району Одеської області, вчитель української мови та літератури, практичний психолог",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Орг.внесок Панчук О.І..jpg",
+      "extension": ".jpg",
+      "sha256": "1326fcf891fa6321f64a5d261864c25e32aaec415aaa9acc88fbb7672eabff25",
+      "participant_group": "29 Панчук",
+      "participant_order": 29,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Стаття Панчук О. І.1.docx",
+      "extension": ".docx",
+      "sha256": "d5a9bc509fdf862df60f0004a943f41bb4889a07e94c0fd18c40a8431f06a737",
+      "participant_group": "29 Панчук",
+      "participant_order": 29,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 22755,
+      "title_detected": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "authors_detected": [
+        "Панчук Ольга Іванівна"
+      ],
+      "modified_utc": "2026-02-03T13:25:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/unnamed.jpg",
+      "extension": ".jpg",
+      "sha256": "2f1a3924685cd872cb54dd6aaa5d9dab4998509a6431d0cc2213335578f3d4d4",
+      "participant_group": "3 Лаврівська",
+      "participant_order": 3,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Анкета учасника.doc",
+      "extension": ".doc",
+      "sha256": "54dba9feb42d3950b1b6dc05ff2ac8cc25ddfb080843af23f6a49a0c08aa0e6b",
+      "participant_group": "3 Лаврівська",
+      "participant_order": 3,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1153,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Тези Алекс.docx",
+      "extension": ".docx",
+      "sha256": "6f8433de106c9e10dcb2d595d9e36542dfdb9269417a5fb104bb127387315696",
+      "participant_group": "3 Лаврівська",
+      "participant_order": 3,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references"
+      ],
+      "text_length": 4248,
+      "title_detected": "Specifics of the Methodology of Teaching English to Foreign Students in Primary Schools of the Karlovy Vary Region",
+      "authors_detected": [
+        "Bc. Oleksandra Lavrivska"
+      ],
+      "modified_utc": "2026-01-19T17:57:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/30 Мельнічук (БП)/privat24_receiptквітанція.pdf",
+      "extension": ".pdf",
+      "sha256": "cd7b7f87ed89cb5861b8e56cb7e6bf555e630f67c15e9e074059fb9285a987b3",
+      "participant_group": "30 Мельнічук (БП)",
+      "participant_order": 30,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/30 Мельнічук (БП)/АНКЕТА УЧАСНИКА.docx",
+      "extension": ".docx",
+      "sha256": "a0eb762183094e6397f1cf0420dcdc4f196a5023032396afcdc397bb6caf24f2",
+      "participant_group": "30 Мельнічук (БП)",
+      "participant_order": 30,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 855,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Maryna Melnichuk"
+      ],
+      "modified_utc": "2026-02-05T05:11:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Анкета-заявка Іванчикова.doc",
+      "extension": ".doc",
+      "sha256": "c08bc783b686adf8bd6710d17ebaf5e0945030bb50288b7578fae8cb73f6e425",
+      "participant_group": "31 Іванчикова",
+      "participant_order": 31,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 958,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/квитанція Іванчикова.pdf",
+      "extension": ".pdf",
+      "sha256": "17788992153ff689ea6d7f603092d28e9a3220cc7deae737de8cd817c3444672",
+      "participant_group": "31 Іванчикова",
+      "participant_order": 31,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Стаття Іванчикова.docx",
+      "extension": ".docx",
+      "sha256": "a026a692ecad21092da481910e351be9cb533ce79a7dd05fb9ddc2da05118d25",
+      "participant_group": "31 Іванчикова",
+      "participant_order": 31,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 5850,
+      "title_detected": "Писанкарство: тиха сила предків",
+      "authors_detected": [
+        "Іванчикова Людмила Іванівна"
+      ],
+      "modified_utc": "2026-02-04T13:45:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Анкета-заява Цьось.docx",
+      "extension": ".docx",
+      "sha256": "f2c08d0b7d10be7a7a32c3a5b31572c349922bf5b3fac0248d9f2712122ee1d5",
+      "participant_group": "32 Цьось",
+      "participant_order": 32,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 999,
+      "title_detected": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАОВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-02-05T12:10:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Квитанція_Цьось_Ю.С._6_8.02.2026_м. Оксфорд.pdf",
+      "extension": ".pdf",
+      "sha256": "ec9e1eaa9548a1dc14038595d08368a9d2ff6fd1a4a34f7caa1bd2a7763f546d",
+      "participant_group": "32 Цьось",
+      "participant_order": 32,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Тези_МНПК_Оксфорд_Цьось_06_08.02.2026.docx",
+      "extension": ".docx",
+      "sha256": "756151b9011c3d0442feeff1f01a75d8432e092e6abf34e1f2bf07b3774d5a35",
+      "participant_group": "32 Цьось",
+      "participant_order": 32,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 14631,
+      "title_detected": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАОВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "authors_detected": [
+        "Цьось Юлія Станіславівна"
+      ],
+      "modified_utc": "2026-02-05T08:12:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Анкета.docx",
+      "extension": ".docx",
+      "sha256": "656c8fa824c87e07fe5c5ba537ec50728755707e3afc24fd2490e48b8a0b043f",
+      "participant_group": "33 Ганзюк",
+      "participant_order": 33,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 973,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Hanziuk Svitlana"
+      ],
+      "modified_utc": "2026-02-05T12:18:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Оплата.pdf",
+      "extension": ".pdf",
+      "sha256": "7a64b758f2f504a293d8bd241acbc355517197e69e579143bcbd2d7775da8ae6",
+      "participant_group": "33 Ганзюк",
+      "participant_order": 33,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Стаття.docx",
+      "extension": ".docx",
+      "sha256": "4f0ecfc3cb6f3d41f2efc73dcfcb0f993f61cadd02df32155f7a894c94041288",
+      "participant_group": "33 Ганзюк",
+      "participant_order": 33,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8189,
+      "title_detected": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ",
+      "authors_detected": [
+        "Ганзюк Світлана Михайлівна",
+        "Луценко Катерина Геннадіївна"
+      ],
+      "modified_utc": "2026-02-05T08:16:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Новий Документ Microsoft Word.docx",
+      "extension": ".docx",
+      "sha256": "4300910dc91c86804a94e17f006fd5fd8438ae6867dc60a43bd9de0fde815936",
+      "participant_group": "34 Ягмуров",
+      "participant_order": 34,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8196,
+      "title_detected": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "authors_detected": [
+        "Ягмуров Єгор Костянтинович"
+      ],
+      "modified_utc": "2026-02-18T01:08:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Ягмуров Є.К. АНКЕТА УЧАСНИКА.doc",
+      "extension": ".doc",
+      "sha256": "3031db2bd92dbaac9170216f510e833e5b9e6cf32156f87e8d717420c0cf4701",
+      "participant_group": "34 Ягмуров",
+      "participant_order": 34,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1083,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Ягмуров Є.К. платіж OXFORD INTERNATIONAL SCIENCE FORUM.pdf",
+      "extension": ".pdf",
+      "sha256": "e2b39a9d06f97c941c2be32e928a4ac1a0900aba1a0c1c10077fdc31b5c76f88",
+      "participant_group": "34 Ягмуров",
+      "participant_order": 34,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Ягмуров Є.К. тези ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛ.docx",
+      "extension": ".docx",
+      "sha256": "e85410fef84c01a7b1e132a48ac5f037dbefd2274f1b6e8b04efdfba5dcbb417",
+      "participant_group": "34 Ягмуров",
+      "participant_order": 34,
+      "free_listener_folder": false,
+      "classification": "DUPLICATE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "semantic_duplicate_variant_excluded"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8195,
+      "title_detected": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "authors_detected": [
+        "Ягмуров Єгор Костянтинович"
+      ],
+      "modified_utc": "2026-02-18T01:02:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Новий Документ Microsoft Word.docx"
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/CE06533E-9EA1-487B-93EC-4838D4F2309F.pdf",
+      "extension": ".pdf",
+      "sha256": "4374c17501c352fa066b2ecb6524786bbfbdf3899537ab3884021cfb383cbf8c",
+      "participant_group": "35 Львович",
+      "participant_order": 35,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/АНКЕТА УЧАСНИКА_Львович.doc",
+      "extension": ".doc",
+      "sha256": "0bff08fd20146ce71332f83f498ea6f9b39ceb6a9ac477e4095d949b18af4876",
+      "participant_group": "35 Львович",
+      "participant_order": 35,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 961,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/Львович_Тези.docx",
+      "extension": ".docx",
+      "sha256": "e101b60842d3ca88561f7f81a83392e01e4941171ffccce4f6afe1e5e6990604",
+      "participant_group": "35 Львович",
+      "participant_order": 35,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8717,
+      "title_detected": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "authors_detected": [
+        "Львович Арсеній Вячеславович"
+      ],
+      "modified_utc": "2026-02-04T19:58:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/36 Будь (БП)/unnamed.jpg",
+      "extension": ".jpg",
+      "sha256": "0d0fbad2018bc0d950b32d949e4431ac6dccea06c8502b9b41c921e061708273",
+      "participant_group": "36 Будь (БП)",
+      "participant_order": 36,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/36 Будь (БП)/АНКЕТА УЧАСНИКА.docx",
+      "extension": ".docx",
+      "sha256": "6044a51ed97c17ac85f1bb00893c48ba07d274b10002280eaf7ed00852657a98",
+      "participant_group": "36 Будь (БП)",
+      "participant_order": 36,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 826,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Natalya Bud"
+      ],
+      "modified_utc": "2026-02-06T03:07:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Вікторія Обозна Анкета_.doc",
+      "extension": ".doc",
+      "sha256": "6e7b35debef7a892f076fe4fbb4e10fcf217c8a5c2df970b03b2d4d08868bec2",
+      "participant_group": "37 Обозна",
+      "participant_order": 37,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1555,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Квитанция.png",
+      "extension": ".png",
+      "sha256": "8a8b63def9d3a39a103f35e349e694599175a63b44f87ce2b553a0b92df83572",
+      "participant_group": "37 Обозна",
+      "participant_order": 37,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Стаття Обозна-Красовська_.docx",
+      "extension": ".docx",
+      "sha256": "fc073f5e7397625659e5ddd498cd2eb71f0aebe1d41627011ac53e49857a3772",
+      "participant_group": "37 Обозна",
+      "participant_order": 37,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 25907,
+      "title_detected": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ",
+      "authors_detected": [
+        "Обозна Вікторія Василівна",
+        "Красовська Катерина Олександрівна"
+      ],
+      "modified_utc": "2026-02-05T14:13:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Анкета_Paios.docx",
+      "extension": ".docx",
+      "sha256": "846a02694a260393e65b1deb202fb8c281c5be2e0ce183cbe0be35a6c3775608",
+      "participant_group": "38 Пайос",
+      "participant_order": 38,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 983,
+      "title_detected": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-02-06T03:23:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Квитанція_Paios.pdf",
+      "extension": ".pdf",
+      "sha256": "df43c1163084c68a3d305b71c0df98ccf68850b6573b90a1852c04b06eef183c",
+      "participant_group": "38 Пайос",
+      "participant_order": 38,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Стаття_Paios.docx",
+      "extension": ".docx",
+      "sha256": "b3b28c60726011a8afc24574d049a1d158228ce0f303b1814670fb78c1ef7bd1",
+      "participant_group": "38 Пайос",
+      "participant_order": 38,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_requires_group_resolution",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8650,
+      "title_detected": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "authors_detected": [],
+      "modified_utc": "2026-02-05T20:02:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/New_Олексюк_тези.docx",
+      "extension": ".docx",
+      "sha256": "9b42983496ced5728ac5c6092336a78a7650ca98c2decf5fe10654bd13a5357b",
+      "participant_group": "39 Олексюк",
+      "participant_order": 39,
+      "free_listener_folder": false,
+      "classification": "DUPLICATE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "semantic_duplicate_variant_excluded"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 6877,
+      "title_detected": "У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+      "authors_detected": [
+        "Олексюк Наталія Степанівна",
+        "Гукалюк Андрій Ігорович",
+        "ЗАКОРДОННИЙ ДОСВІД",
+        "ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ"
+      ],
+      "modified_utc": "2026-02-05T22:41:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_тези.docx"
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_заявка.docx",
+      "extension": ".docx",
+      "sha256": "ab0d7b1db8036ccaad84988533c9d50a91aa45ec634e55a28a95734c09482183",
+      "participant_group": "39 Олексюк",
+      "participant_order": 39,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1529,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Nataliya Oleksiuk"
+      ],
+      "modified_utc": "2026-02-06T03:29:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_оплата.pdf",
+      "extension": ".pdf",
+      "sha256": "42a6bbf1cc2a120528992bbd380d14d508559b1c84ef27ae47fce8897c15e24a",
+      "participant_group": "39 Олексюк",
+      "participant_order": 39,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_тези.docx",
+      "extension": ".docx",
+      "sha256": "3d0b2124ec488015ea648f21e4c5c6401bda509e2b5671a2d41a9a8c298eba64",
+      "participant_group": "39 Олексюк",
+      "participant_order": 39,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 6881,
+      "title_detected": "У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+      "authors_detected": [
+        "Олексюк Наталія Степанівна",
+        "Гукалюк Андрій Ігорович",
+        "ЗАКОРДОННИЙ ДОСВІД",
+        "ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ"
+      ],
+      "modified_utc": "2026-02-05T22:41:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. анкета.docx",
+      "extension": ".docx",
+      "sha256": "69e3ea84596d0fd68559b386772973f230d7bd8e1314a949e9a847de65240dbf",
+      "participant_group": "4 Нігальчук",
+      "participant_order": 4,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 874,
+      "title_detected": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-01-27T16:01:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. стаття.docx",
+      "extension": ".docx",
+      "sha256": "de335e889ed6911698b1a8550e74033c660f9bd6170421968120dccc043e813a",
+      "participant_group": "4 Нігальчук",
+      "participant_order": 4,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 7137,
+      "title_detected": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "authors_detected": [
+        "Нігальчук Єва Романівна"
+      ],
+      "modified_utc": "2026-01-25T18:47:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є.Р. квитанція.pdf",
+      "extension": ".pdf",
+      "sha256": "c740d8f1addd17b3dbdd112d7243f85d98eb387096abad798656fb373a7ecc58",
+      "participant_group": "4 Нігальчук",
+      "participant_order": 4,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_заявка.docx",
+      "extension": ".docx",
+      "sha256": "cae44ea6894ade97547f0be7ed67b32777fba87d82d2e97adb6836a53d168466",
+      "participant_group": "40 Ординович",
+      "participant_order": 40,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 898,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Victor Ordynovych"
+      ],
+      "modified_utc": "2026-02-07T05:09:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_оплата.pdf",
+      "extension": ".pdf",
+      "sha256": "81a3232328bbbc179389591d72a69d78c31af5473af9d6dbe5cbe2795852a961",
+      "participant_group": "40 Ординович",
+      "participant_order": 40,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_тези.docx",
+      "extension": ".docx",
+      "sha256": "75c98b799dae01ad6c938dc8895ed9ecb06b2e349ed092fa9819c523b2fc37e1",
+      "participant_group": "40 Ординович",
+      "participant_order": 40,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 6028,
+      "title_detected": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ",
+      "authors_detected": [
+        "Ординович Віктор Андрійович"
+      ],
+      "modified_utc": "2026-02-06T03:44:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/41 Білоус (БП)/ACFrOgD-DJ3CMLn-uprdiN8NKWzOwaQZfcpLHTBvahiN9_Eg6YZ21MDiW39XbjoM10vYOj-FzAQX_tdjgUX2t7FVJnJy70gs-rqPqmS8ya4Z0fReRG2FpdGNJ7vWatvdyOPl8bV.pdf",
+      "extension": ".pdf",
+      "sha256": "e653f8938403352bd8d759c7752e5ad06776f99e737ac6334ce4e85aee9cad78",
+      "participant_group": "41 Білоус (БП)",
+      "participant_order": 41,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/41 Білоус (БП)/Анкета учасника Білоус В.Р..docx",
+      "extension": ".docx",
+      "sha256": "b7cc033b3fc88463004538f7b168e624d0389ea0f92d2fee72eb5a035097f7b0",
+      "participant_group": "41 Білоус (БП)",
+      "participant_order": 41,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 798,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Vladyslav Bilous"
+      ],
+      "modified_utc": "2026-02-07T05:15:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/Квитанція(06-02-2026T05-42-45).pdf",
+      "extension": ".pdf",
+      "sha256": "b29de37925ed353fadb83140bedbf09f24b29cd6108cb4a5476098c61fb816cb",
+      "participant_group": "42 Савіщенко",
+      "participant_order": 42,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_АНКЕТА.docx",
+      "extension": ".docx",
+      "sha256": "ea78844ffd4fb0ab7e8441ba02a1d292983bc87787e37695cf7a5aef88a3767f",
+      "participant_group": "42 Савіщенко",
+      "participant_order": 42,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 949,
+      "title_detected": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ",
+      "authors_detected": [
+        "Viktoriia Savishchenko"
+      ],
+      "modified_utc": "2026-02-07T05:31:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_ТЕЗИ.docx",
+      "extension": ".docx",
+      "sha256": "7b9e34a96ad3b92d5d8771e3d711b7e6a8b6d41bd5ee006cd9248538a6278d8f",
+      "participant_group": "42 Савіщенко",
+      "participant_order": 42,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 10026,
+      "title_detected": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ",
+      "authors_detected": [
+        "Савіщенко Вікторія Миколаївна"
+      ],
+      "modified_utc": "2026-02-06T16:24:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/43 Борцевич (БП)/Інформаційний лист 95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року_11fbc8fc-a00f-4e6d-af4f-181a440889f1.pdf",
+      "extension": ".pdf",
+      "sha256": "a1db35db4dc4e4b0cbf72972eb51d05d4f78c56e61a246f1e70797932d4f441e",
+      "participant_group": "43 Борцевич (БП)",
+      "participant_order": 43,
+      "free_listener_folder": true,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "free_listener_folder",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/АНКЕТА УЧАСНИКА_Лисенко.docx",
+      "extension": ".docx",
+      "sha256": "f75d9b475516f3b1f49af9d087ecf90cbf42f6102a477d2510df9ca03f459f96",
+      "participant_group": "5 Лисенко",
+      "participant_order": 5,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 828,
+      "title_detected": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-01-29T14:06:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/квитанція про оплату Лисенко.PNG",
+      "extension": ".png",
+      "sha256": "51f56256c673105713e1b21cf17f3edf69bf62550cc2316ce22e1e573482d670",
+      "participant_group": "5 Лисенко",
+      "participant_order": 5,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/Стаття_Лисенко_Ілля.docx",
+      "extension": ".docx",
+      "sha256": "dfbf5eea3fb69061feadafd5d43eee6ce17ed156c20ee7128ea384901f880ab1",
+      "participant_group": "5 Лисенко",
+      "participant_order": 5,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 23451,
+      "title_detected": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "authors_detected": [
+        "Лисенко Ілля Сергійович"
+      ],
+      "modified_utc": "2026-01-28T09:27:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є. Р. анкета.docx",
+      "extension": ".docx",
+      "sha256": "7edee49dcfa30087f57de32c54e4ba03fd936fe546884eb552d0ad85bdf88ed2",
+      "participant_group": "6 Нігальчук",
+      "participant_order": 6,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 929,
+      "title_detected": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ"
+      ],
+      "modified_utc": "2026-01-29T15:09:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є.Р. квитанція.pdf",
+      "extension": ".pdf",
+      "sha256": "a485e76f05fa9be7c129ac660a050bde1f40dcb2eb7f9185eef097cbc05a615c",
+      "participant_group": "6 Нігальчук",
+      "participant_order": 6,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є.Р.стаття.docx",
+      "extension": ".docx",
+      "sha256": "301ab7ed516faea70c3d58aa0ea8ade93ec9df3c572fa967b5a2b88d5309331a",
+      "participant_group": "6 Нігальчук",
+      "participant_order": 6,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 6566,
+      "title_detected": "УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "authors_detected": [
+        "Нігальчук Єва Романівна"
+      ],
+      "modified_utc": "2026-01-28T13:28:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/АНКЕТА УЧАСНИКА1.docx",
+      "extension": ".docx",
+      "sha256": "22625c2f47a84d56c5343d28eed7070352ad6f5398c761f8df03b027a54ea933",
+      "participant_group": "7 Мартинюк",
+      "participant_order": 7,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 906,
+      "title_detected": "АНКЕТА УЧАСНИКА МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "Svitlana Martyniuk"
+      ],
+      "modified_utc": "2026-01-29T15:52:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/Платіж Мартинюк С..pdf",
+      "extension": ".pdf",
+      "sha256": "12d2e3cb27c226f4a2c6064d93db9359efde56dace9254302b69e3a3f0df7db7",
+      "participant_group": "7 Мартинюк",
+      "participant_order": 7,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/УДК 373.docx",
+      "extension": ".docx",
+      "sha256": "8b65a0fcec77f61a9bde8903fdb53199bf381db9934cf08239e97a3855a8808c",
+      "participant_group": "7 Мартинюк",
+      "participant_order": 7,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "udc"
+      ],
+      "text_length": 6121,
+      "title_detected": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL",
+      "authors_detected": [
+        "Мартинюк Світлана Євгенівна"
+      ],
+      "modified_utc": "2026-01-25T21:46:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/c9476934-c1de-496a-9117-71769a2d0c2b.pdf",
+      "extension": ".pdf",
+      "sha256": "0212fb1977153b4a37e59f6e89eb87dc17069b2990e0600e3b23edbd6b0c9898",
+      "participant_group": "8 Качмар",
+      "participant_order": 8,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.75,
+      "reasons": [
+        "participant_pdf_requires_group_resolution",
+        "attachment_in_resolved_participant_group"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/New_Креативні 〓ндустр〓〓〓 як чинник соціально.docx",
+      "extension": ".docx",
+      "sha256": "8d5129946c459ed9811391a3709bf563e9c9e423f0ec4737a200008cee91d0af",
+      "participant_group": "8 Качмар",
+      "participant_order": 8,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8864,
+      "title_detected": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+      "authors_detected": [
+        "Федорак Володимир Васильович",
+        "Качмар Олександра Василівна",
+        "Стратієнко Іван Іванович"
+      ],
+      "modified_utc": "2026-02-18T00:20:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/Анкета-заявка.до конференц〓〓〓.doc",
+      "extension": ".doc",
+      "sha256": "c937a449db04a1603bc93cd15813bd79172e60a934060662559f2cf49d3da1da",
+      "participant_group": "8 Качмар",
+      "participant_order": 8,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 2053,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/Креативні 〓ндустр〓〓〓 як чинник соціально.docx",
+      "extension": ".docx",
+      "sha256": "07cfa8ffd08d0fc2dc83d26bd8a039bcd259a3a9f26b5d506f017d274882da7b",
+      "participant_group": "8 Качмар",
+      "participant_order": 8,
+      "free_listener_folder": false,
+      "classification": "DUPLICATE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "semantic_duplicate_variant_excluded"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8872,
+      "title_detected": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+      "authors_detected": [
+        "Федорак Володимир Васильович",
+        "Качмар Олександра Василівна",
+        "Стратієнко Іван Іванович"
+      ],
+      "modified_utc": "2026-01-29T17:39:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/New_Креативні 〓ндустр〓〓〓 як чинник соціально.docx"
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/privat24_receipt_49.pdf",
+      "extension": ".pdf",
+      "sha256": "312d16a6f4d8cd5982753e53a71e72de238e63dfd886f75b85202e0b65352a60",
+      "participant_group": "9 Ящук (індивідуальний ДОІ)",
+      "participant_order": 9,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "payment_document_name",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Заява на тезу 7.7.doc",
+      "extension": ".doc",
+      "sha256": "63fc1591b94d1fd3e8535639aefc4e458928107a774a7f71d695013dce2e686d",
+      "participant_group": "9 Ящук (індивідуальний ДОІ)",
+      "participant_order": 9,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "participant_application_content",
+        "article_structure_absent"
+      ],
+      "content_markers": [],
+      "text_length": 1156,
+      "title_detected": "МІЖНАРОДНОЇ НАУКОВО-ПРАКТИЧНОЇ КОНФЕРЕНЦІЇ",
+      "authors_detected": [
+        "АНКЕТА УЧАСНИКА"
+      ],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Теза 7.7.docx",
+      "extension": ".docx",
+      "sha256": "6d1faf42037efde5cf903e166731c70230e889c6f7088539a054122586c6fd6f",
+      "participant_group": "9 Ящук (індивідуальний ДОІ)",
+      "participant_order": 9,
+      "free_listener_folder": false,
+      "classification": "ARTICLE",
+      "confidence": 0.94,
+      "reasons": [
+        "article_structure_markers",
+        "title_detected",
+        "author_identity_detected",
+        "selected_once_for_participant_group"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 9108,
+      "title_detected": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "authors_detected": [
+        "Ящук Петро Володимирович"
+      ],
+      "modified_utc": "2026-01-29T12:41:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Збірник/Conference95.docx",
+      "extension": ".docx",
+      "sha256": "4a321ffcece73c475d3fc2aca11bf3af1b5c5e0c443bb1ea78f8bd463d5cec5f",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "compiled_journal_directory",
+        "not_an_individual_submission"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 98307,
+      "title_detected": "METHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
+      "authors_detected": [
+        "Soloviov O. V.",
+        "TABLE OF CONTENTS",
+        "Резніков Роман Борисович"
+      ],
+      "modified_utc": "2026-02-23T21:34:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Збірник/OK_Conference95 – копія.docx",
+      "extension": ".docx",
+      "sha256": "f4317cdf5e28ffaa6581c141dbb542a07d76c76aee1a29654fd810097b6d6e26",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "compiled_journal_directory",
+        "not_an_individual_submission",
+        "temporary_or_copy_name_clue"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 398035,
+      "title_detected": "METHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
+      "authors_detected": [
+        "Soloviov O. V.",
+        "TABLE OF CONTENTS",
+        "Резніков Роман Борисович"
+      ],
+      "modified_utc": "2026-02-21T14:32:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Збірник/test_jurnal.docx",
+      "extension": ".docx",
+      "sha256": "5a1554600dbdddaeec1769e17c3a2199b32b87e83b46626e58598a2118165f8f",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "compiled_journal_directory",
+        "not_an_individual_submission"
+      ],
+      "content_markers": [
+        "annotation",
+        "doi",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 393502,
+      "title_detected": "METHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
+      "authors_detected": [
+        "Soloviov O. V.",
+        "TABLE OF CONTENTS",
+        "Резніков Роман Борисович"
+      ],
+      "modified_utc": "2026-02-23T19:18:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Наукові секції.txt",
+      "extension": ".txt",
+      "sha256": "19e4f3d10e997f433962a26e79ffbb68ddefe8acdf13c7e7abbcb7ae0aef5ad9",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Сертифікат пустий Оксфорд.png",
+      "extension": ".png",
+      "sha256": "dd32d278a360ecd6a5bd25fc56c903dc5d08c8ce9959d1f0b265e137fdc81304",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "certificate_template_or_request"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Учасники/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.xlsx",
+      "extension": ".xlsx",
+      "sha256": "c982fd517b44189abb11f2449392dc2a1363b9b22789cfd6d0ac74a3ce897fa0",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Учасники/FillDocuments.xla",
+      "extension": ".xla",
+      "sha256": "a09ba391f3bfaf379ce5087cae373fad343f08d44f5ba6fa84a974721520dd9e",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Учасники/json_sorted_output/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.raw.json",
+      "extension": ".json",
+      "sha256": "a72c8eef4ef0ff34151c13dfc0bc08c42025a19db98dcf4347378dbbdc8e1d72",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Учасники/json_sorted_output/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.report.json",
+      "extension": ".json",
+      "sha256": "dd497a578a0f2345aeb3d68970fe5235448d6113c55b737aa88f5603e58eade9",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Учасники/json_sorted_output/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.sorted.json",
+      "extension": ".json",
+      "sha256": "f48a639d7f1de497f59224186bff92ea9507a0e328f0650dcab1cd4f181e8a15",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Учасники/Шаблоны/Сертифікат учасника.docx",
+      "extension": ".docx",
+      "sha256": "d4ad2e3a6f804cc93c6ef2277cb2282d981330ac6f2b2915339678fcbe02d0e0",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "certificate_template_or_request"
+      ],
+      "content_markers": [],
+      "text_length": 55,
+      "title_detected": "{Dates}{City}www.naukainfo.com",
+      "authors_detected": [],
+      "modified_utc": "2026-01-13T03:04:00Z",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Фон для розсилки Оксфорд.png",
+      "extension": ".png",
+      "sha256": "73859a94c8aab8370b647d01c0ba73fa1f4042743e82770f7d61e4731eed61ac",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "unsupported_non_article_extension"
+      ],
+      "content_markers": [],
+      "text_length": 0,
+      "title_detected": "",
+      "authors_detected": [],
+      "modified_utc": "",
+      "embedded_service_tail": false,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    },
+    {
+      "path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Інформаційний лист 95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.docx",
+      "extension": ".docx",
+      "sha256": "288193a1387bb2df3e95f76306a5abe89f7f934cab25321654378b172b4435ff",
+      "participant_group": "",
+      "participant_order": 1000000000,
+      "free_listener_folder": false,
+      "classification": "NON_ARTICLE",
+      "confidence": 0.99,
+      "reasons": [
+        "information_letter_content",
+        "outside_participant_folder"
+      ],
+      "content_markers": [
+        "annotation",
+        "keywords",
+        "references",
+        "udc"
+      ],
+      "text_length": 8990,
+      "title_detected": "Важливо! Якщо автори мають однаковий статус і загальне місце роботи (навчання), то оформлення проводиться відповідно до шаблону оформлення статті, розділяючи кожного автора комою;",
+      "authors_detected": [
+        "СЕКЦІЇ РОБОТИ КОНФЕРЕНЦІЇ:",
+        "ОФОРМЛЕННЯ СТАТТІ:"
+      ],
+      "modified_utc": "2025-12-19T15:41:00Z",
+      "embedded_service_tail": true,
+      "placeholder_count": 0,
+      "duplicate_of": ""
+    }
+  ],
+  "blockers": [],
+  "warnings": [
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/Тези Оксфорд.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/New_Губа, стаття по арттерапії.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Ягмуров Є.К. тези ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛ.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/New_Олексюк_тези.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/Креативні 〓ндустр〓〓〓 як чинник соціально.docx"
+  ],
+  "status": "PASS"
+}

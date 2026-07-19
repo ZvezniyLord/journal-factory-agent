@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "official_pdf_sha256": "fd16720e1573b4d95073b1f9a9cfc5823342dca26fb9a6ba2841136bde12e2d7",
+  "official_physical_page_count": 248,
+  "generated_physical_page_count": 248,
+  "physical_to_printed_offset": 2,
+  "article_start_pages_match_official": true,
+  "special_thanks": {
+    "required": true,
+    "official_physical_page": 7,
+    "generated_physical_page": 7,
+    "matched": true
+  },
+  "mappings": [
+    {
+      "ordinal": 1,
+      "bookmark": "JF_ARTICLE_001_START",
+      "official_title": "METHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
+      "official_physical_page": 8,
+      "generated_physical_page": 8,
+      "official_printed_page": 6,
+      "generated_printed_page": 6,
+      "matched": true
+    },
+    {
+      "ordinal": 2,
+      "bookmark": "JF_ARTICLE_002_START",
+      "official_title": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "official_physical_page": 15,
+      "generated_physical_page": 15,
+      "official_printed_page": 13,
+      "generated_printed_page": 13,
+      "matched": true
+    },
+    {
+      "ordinal": 3,
+      "bookmark": "JF_ARTICLE_003_START",
+      "official_title": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ",
+      "official_physical_page": 22,
+      "generated_physical_page": 22,
+      "official_printed_page": 20,
+      "generated_printed_page": 20,
+      "matched": true
+    },
+    {
+      "ordinal": 4,
+      "bookmark": "JF_ARTICLE_004_START",
+      "official_title": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+      "official_physical_page": 27,
+      "generated_physical_page": 27,
+      "official_printed_page": 25,
+      "generated_printed_page": 25,
+      "matched": true
+    },
+    {
+      "ordinal": 5,
+      "bookmark": "JF_ARTICLE_005_START",
+      "official_title": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "official_physical_page": 33,
+      "generated_physical_page": 33,
+      "official_printed_page": 31,
+      "generated_printed_page": 31,
+      "matched": true
+    },
+    {
+      "ordinal": 6,
+      "bookmark": "JF_ARTICLE_006_START",
+      "official_title": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ",
+      "official_physical_page": 38,
+      "generated_physical_page": 38,
+      "official_printed_page": 36,
+      "generated_printed_page": 36,
+      "matched": true
+    },
+    {
+      "ordinal": 7,
+      "bookmark": "JF_ARTICLE_007_START",
+      "official_title": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "official_physical_page": 42,
+      "generated_physical_page": 42,
+      "official_printed_page": 40,
+      "generated_printed_page": 40,
+      "matched": true
+    },
+    {
+      "ordinal": 8,
+      "bookmark": "JF_ARTICLE_008_START",
+      "official_title": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "official_physical_page": 51,
+      "generated_physical_page": 51,
+      "official_printed_page": 49,
+      "generated_printed_page": 49,
+      "matched": true
+    },
+    {
+      "ordinal": 9,
+      "bookmark": "JF_ARTICLE_009_START",
+      "official_title": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "official_physical_page": 56,
+      "generated_physical_page": 56,
+      "official_printed_page": 54,
+      "generated_printed_page": 54,
+      "matched": true
+    },
+    {
+      "ordinal": 10,
+      "bookmark": "JF_ARTICLE_010_START",
+      "official_title": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "official_physical_page": 61,
+      "generated_physical_page": 61,
+      "official_printed_page": 59,
+      "generated_printed_page": 59,
+      "matched": true
+    },
+    {
+      "ordinal": 11,
+      "bookmark": "JF_ARTICLE_011_START",
+      "official_title": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "official_physical_page": 67,
+      "generated_physical_page": 67,
+      "official_printed_page": 65,
+      "generated_printed_page": 65,
+      "matched": true
+    },
+    {
+      "ordinal": 12,
+      "bookmark": "JF_ARTICLE_012_START",
+      "official_title": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL",
+      "official_physical_page": 72,
+      "generated_physical_page": 72,
+      "official_printed_page": 70,
+      "generated_printed_page": 70,
+      "matched": true
+    },
+    {
+      "ordinal": 13,
+      "bookmark": "JF_ARTICLE_013_START",
+      "official_title": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ",
+      "official_physical_page": 76,
+      "generated_physical_page": 76,
+      "official_printed_page": 74,
+      "generated_printed_page": 74,
+      "matched": true
+    },
+    {
+      "ordinal": 14,
+      "bookmark": "JF_ARTICLE_014_START",
+      "official_title": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "official_physical_page": 83,
+      "generated_physical_page": 83,
+      "official_printed_page": 81,
+      "generated_printed_page": 81,
+      "matched": true
+    },
+    {
+      "ordinal": 15,
+      "bookmark": "JF_ARTICLE_015_START",
+      "official_title": "SPECIFICS OF THE METHODOLOGY OF TEACHING ENGLISH TO FOREIGN STUDENTS IN PRIMARY SCHOOLS OF THE KARLOVY VARY REGION",
+      "official_physical_page": 87,
+      "generated_physical_page": 87,
+      "official_printed_page": 85,
+      "generated_printed_page": 85,
+      "matched": true
+    },
+    {
+      "ordinal": 16,
+      "bookmark": "JF_ARTICLE_016_START",
+      "official_title": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+      "official_physical_page": 91,
+      "generated_physical_page": 91,
+      "official_printed_page": 89,
+      "generated_printed_page": 89,
+      "matched": true
+    },
+    {
+      "ordinal": 17,
+      "bookmark": "JF_ARTICLE_017_START",
+      "official_title": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "official_physical_page": 103,
+      "generated_physical_page": 103,
+      "official_printed_page": 101,
+      "generated_printed_page": 101,
+      "matched": true
+    },
+    {
+      "ordinal": 18,
+      "bookmark": "JF_ARTICLE_018_START",
+      "official_title": "ПІДЗЕМНА ШКОЛА: БЕЗПЕЧНИЙ ПРОСТІР ДЛЯ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ",
+      "official_physical_page": 113,
+      "generated_physical_page": 113,
+      "official_printed_page": 111,
+      "generated_printed_page": 111,
+      "matched": true
+    },
+    {
+      "ordinal": 19,
+      "bookmark": "JF_ARTICLE_019_START",
+      "official_title": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»",
+      "official_physical_page": 117,
+      "generated_physical_page": 117,
+      "official_printed_page": 115,
+      "generated_printed_page": 115,
+      "matched": true
+    },
+    {
+      "ordinal": 20,
+      "bookmark": "JF_ARTICLE_020_START",
+      "official_title": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "official_physical_page": 122,
+      "generated_physical_page": 122,
+      "official_printed_page": 120,
+      "generated_printed_page": 120,
+      "matched": true
+    },
+    {
+      "ordinal": 21,
+      "bookmark": "JF_ARTICLE_021_START",
+      "official_title": "ПИСАНКАРСТВО: ТИХА СИЛА ПРЕДКІВ",
+      "official_physical_page": 134,
+      "generated_physical_page": 134,
+      "official_printed_page": 132,
+      "generated_printed_page": 132,
+      "matched": true
+    },
+    {
+      "ordinal": 22,
+      "bookmark": "JF_ARTICLE_022_START",
+      "official_title": "ЗАКОРДОННИЙ ДОСВІД ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+      "official_physical_page": 138,
+      "generated_physical_page": 138,
+      "official_printed_page": 136,
+      "generated_printed_page": 136,
+      "matched": true
+    },
+    {
+      "ordinal": 23,
+      "bookmark": "JF_ARTICLE_023_START",
+      "official_title": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ",
+      "official_physical_page": 142,
+      "generated_physical_page": 142,
+      "official_printed_page": 140,
+      "generated_printed_page": 140,
+      "matched": true
+    },
+    {
+      "ordinal": 24,
+      "bookmark": "JF_ARTICLE_024_START",
+      "official_title": "ОСОБЛИВОСТІ ОРГАНІЗАЦІЇ ПСИХОЛОГО-ПЕДАГОГІЧНОЇ ПІДТРИМКИ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ В СУЧАСНІЙ ОСВІТІ",
+      "official_physical_page": 148,
+      "generated_physical_page": 148,
+      "official_printed_page": 146,
+      "generated_printed_page": 146,
+      "matched": true
+    },
+    {
+      "ordinal": 25,
+      "bookmark": "JF_ARTICLE_025_START",
+      "official_title": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "official_physical_page": 158,
+      "generated_physical_page": 158,
+      "official_printed_page": 156,
+      "generated_printed_page": 156,
+      "matched": true
+    },
+    {
+      "ordinal": 26,
+      "bookmark": "JF_ARTICLE_026_START",
+      "official_title": "АРТТЕРАПІЯ: ТВОРЧІСТЬ ЯК ЗАСІБ ПСИХОЛОГІЧНОЇ ПІДТРИМКИ УЧАСНИКІВ ОСВІТНЬОГО ПРОЦЕСУ",
+      "official_physical_page": 168,
+      "generated_physical_page": 168,
+      "official_printed_page": 166,
+      "generated_printed_page": 166,
+      "matched": true
+    },
+    {
+      "ordinal": 27,
+      "bookmark": "JF_ARTICLE_027_START",
+      "official_title": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ",
+      "official_physical_page": 175,
+      "generated_physical_page": 175,
+      "official_printed_page": 173,
+      "generated_printed_page": 173,
+      "matched": true
+    },
+    {
+      "ordinal": 28,
+      "bookmark": "JF_ARTICLE_028_START",
+      "official_title": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "official_physical_page": 187,
+      "generated_physical_page": 187,
+      "official_printed_page": 185,
+      "generated_printed_page": 185,
+      "matched": true
+    },
+    {
+      "ordinal": 29,
+      "bookmark": "JF_ARTICLE_029_START",
+      "official_title": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES",
+      "official_physical_page": 192,
+      "generated_physical_page": 192,
+      "official_printed_page": 190,
+      "generated_printed_page": 190,
+      "matched": true
+    },
+    {
+      "ordinal": 30,
+      "bookmark": "JF_ARTICLE_030_START",
+      "official_title": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ",
+      "official_physical_page": 197,
+      "generated_physical_page": 197,
+      "official_printed_page": 195,
+      "generated_printed_page": 195,
+      "matched": true
+    },
+    {
+      "ordinal": 31,
+      "bookmark": "JF_ARTICLE_031_START",
+      "official_title": "PULMONARY HEMORRHAGE: DIAGNOSTIC AND SURGICAL TACTICS AT THE MODERN LEVEL",
+      "official_physical_page": 206,
+      "generated_physical_page": 206,
+      "official_printed_page": 204,
+      "generated_printed_page": 204,
+      "matched": true
+    },
+    {
+      "ordinal": 32,
+      "bookmark": "JF_ARTICLE_032_START",
+      "official_title": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ",
+      "official_physical_page": 215,
+      "generated_physical_page": 215,
+      "official_printed_page": 213,
+      "generated_printed_page": 213,
+      "matched": true
+    },
+    {
+      "ordinal": 33,
+      "bookmark": "JF_ARTICLE_033_START",
+      "official_title": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "official_physical_page": 230,
+      "generated_physical_page": 230,
+      "official_printed_page": 228,
+      "generated_printed_page": 228,
+      "matched": true
+    },
+    {
+      "ordinal": 34,
+      "bookmark": "JF_ARTICLE_034_START",
+      "official_title": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 рр.)",
+      "official_physical_page": 242,
+      "generated_physical_page": 242,
+      "official_printed_page": 240,
+      "generated_printed_page": 240,
+      "matched": true
+    }
+  ]
+}

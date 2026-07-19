@@ -1,17 +1,18 @@
 {
-  "generated_at": "2026-07-19T05:08:32+03:00",
+  "generated_at": "2026-07-19T08:14:35+03:00",
   "conference_id": 95,
-  "iteration": 3,
+  "iteration": 4,
   "branch": "agent/journal-builder-95",
-  "implementation_commit": "5477cdc",
+  "implementation_commit": "d10792f",
   "typography_profile": "legacy_14pt",
   "inputs": {
     "raw_zip_sha256": "d86c0c33b96b321f2980993ecc6f3f91d1d67dea1b5cb21588984ec581b0c2a2",
     "etalon_sha256": "1cb62ff47a5145663270e616e722ba7a64131a4acf9e03df2376920f582c1409",
     "jurnal_dotx_sha256": "cd0978c8aa4521822351fecc3bb9ae05082ecc50bc8abf8bd325f92d6ae430a3",
-    "official_pdf_required": false
+    "official_pdf_required": true,
+    "official_pdf_sha256": "fd16720e1573b4d95073b1f9a9cfc5823342dca26fb9a6ba2841136bde12e2d7"
   },
-  "artifact_root": "artifacts/conferences/095/iteration-003",
+  "artifact_root": "artifacts/conferences/095/iteration-004",
   "state": "READY_FOR_REVIEW",
   "owner": "REVIEWER",
   "accepted": false,

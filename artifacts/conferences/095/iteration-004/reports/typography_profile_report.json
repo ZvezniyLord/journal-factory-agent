@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "profile": "legacy_14pt",
+  "body_font_size_pt": 14,
+  "half_points": 28,
+  "input": "build\\iteration-004-m\\Conference95\\workspace\\ETALON_WITH_JURNAL_STYLES.docx",
+  "output": "build\\iteration-004-m\\Conference95\\workspace\\ETALON_WITH_TYPOGRAPHY_PROFILE.docx",
+  "default_style_id": "a0",
+  "default_style_name": "Normal",
+  "preserved_specialized_style_sizes": true,
+  "direct_run_size_normalization_deferred_to_article_preparation": true
+}

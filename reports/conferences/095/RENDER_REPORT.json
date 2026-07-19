@@ -2,33 +2,34 @@
   "status": "PASS",
   "renderer": "Microsoft Word COM",
   "word_version": "16.0",
-  "input_docx": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\Conference95_generated.docx",
-  "input_docx_sha256": "3a5741f98e6dd59535f75d66d218660d92b3f8dee4e4c84b023dfcdcba26898e",
-  "output_pdf": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\Conference95_generated.pdf",
-  "output_pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203",
-  "word_field_count": 222,
+  "input_docx": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-004-m\\Conference95\\Conference95_generated.docx",
+  "input_docx_sha256": "20db8e79ad55fbe2df98383e646a5617e1a2e59b335274e132d8a71c6d0e93b5",
+  "output_pdf": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-004-m\\Conference95\\Conference95_generated.pdf",
+  "output_pdf_sha256": "eb6c3209ec96e65574dbffae7a501c49fb89ee82c84b39231db72ffc544c8eee",
+  "word_field_count": 128,
   "word_toc_count": 1,
-  "word_page_count": 237,
-  "pdf_page_count": 237,
+  "manual_official_toc": true,
+  "word_page_count": 248,
+  "pdf_page_count": 248,
   "stable_measurements_required": 2,
   "stable_measurements_achieved": 2,
   "stable_measurements": [
     {
       "iteration": 1,
-      "page_count": 237,
+      "page_count": 248,
       "toc_count": 1,
-      "toc_text_length": 4382,
+      "toc_text_length": 5323,
       "toc_start_page": 4,
-      "toc_end_page": 5,
+      "toc_end_page": 7,
       "stable_streak": 1
     },
     {
       "iteration": 2,
-      "page_count": 237,
+      "page_count": 248,
       "toc_count": 1,
-      "toc_text_length": 4382,
+      "toc_text_length": 5323,
       "toc_start_page": 4,
-      "toc_end_page": 5,
+      "toc_end_page": 7,
       "stable_streak": 2
     }
   ],
@@ -36,386 +37,290 @@
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t6",
+      "text": "ECONOMIC THEORY, MACRO-AND REGIONAL ECONOMY",
+      "page_number": 0
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "1.  Резніков Роман Борисович\t6\u000bMETHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
       "page_number": 6
     },
     {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES\t6",
-      "page_number": 6
-    },
-    {
       "level": 1,
       "style": "Зміст 1",
-      "text": "PSYCHOLOGY AND PSYCHIATRY\t10",
-      "page_number": 10
+      "text": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "Арттерапія: творчість як засіб психологічної підтримки  учасників освітнього процесу\t10",
-      "page_number": 10
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PEDAGOGY AND EDUCATION\t17",
-      "page_number": 17
+      "style": "Звичайний",
+      "text": "2.  Львович Арсеній Вячеславович\t13\u000bТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "page_number": 13
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "Specifics of the Methodology of Teaching English to Foreign Students in Primary Schools of the Karlovy Vary Region\t17",
-      "page_number": 17
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PHYSICAL AND MATHEMATICAL SCIENCES\t20",
-      "page_number": 20
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ\t20",
+      "style": "Звичайний",
+      "text": "3.  Ганзюк Світлана Михайлівна\t20\u000bФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ",
       "page_number": 20
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES\t24",
-      "page_number": 24
+      "text": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ\t24",
-      "page_number": 24
+      "style": "Звичайний",
+      "text": "4.  Федорак Володимир Васильович, Качмар Олександра Василівна, Стратієнко Іван Іванович\t25\u000bКРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+      "page_number": 25
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "5.  Долгальова Олена Вячеславівна, Туровський Ігор Володимирович\t31\u000bДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "page_number": 31
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY\t36",
-      "page_number": 36
+      "text": "SOCIAL WORK AND SOCIAL WELFARE",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ\t36",
+      "style": "Звичайний",
+      "text": "6.  Ординович Віктор Андрійович\t36\u000bРОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ",
       "page_number": 36
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "PHILOLOGY AND JOURNALISM\t40",
+      "text": "LAW AND INTERNATIONAL LAW",
+      "page_number": 0
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "7.  Цьось Юлія Станіславівна\t40\u000bТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
       "page_number": 40
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL\t40",
-      "page_number": 40
+      "style": "Звичайний",
+      "text": "8.  Ягмуров Єгор Костянтинович\t49\u000bЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "page_number": 49
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE\t44",
-      "page_number": 44
+      "text": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ\t44",
-      "page_number": 44
+      "style": "Звичайний",
+      "text": "9.  Нігальчук Єва Романівна\t54\u000bІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "page_number": 54
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY\t50",
-      "page_number": 50
+      "text": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА\t50",
-      "page_number": 50
+      "style": "Звичайний",
+      "text": "10.  Ящук Петро Володимирович\t59\u000bВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "page_number": 59
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES\t56",
-      "page_number": 56
+      "text": "PHYSICAL AND MATHEMATICAL SCIENCES",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 РР.)\t56",
-      "page_number": 56
+      "style": "Звичайний",
+      "text": "11.  Нігальчук Єва Романівна\t65\u000bПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "page_number": 65
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "PEDAGOGY AND EDUCATION\t62",
-      "page_number": 62
+      "text": "PHILOLOGY AND JOURNALISM",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ\t62",
-      "page_number": 62
+      "style": "Звичайний",
+      "text": "12.  Мартинюк Світлана Євгенівна\t70\u000bTHE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL",
+      "page_number": 70
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ\t75",
-      "page_number": 75
+      "style": "Звичайний",
+      "text": "13.  Шаповалова Алла Миколаївна\t74\u000bВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ",
+      "page_number": 74
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "Підземна школа: безпечний простір для дітей з особливими освітніми потребами.\t85",
+      "style": "Звичайний",
+      "text": "14.  Donii Nataliia Yevgeniivna, Honcharenko Oksana Hrygorivna\t81\u000bTHE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "page_number": 81
+    },
+    {
+      "level": 1,
+      "style": "Зміст 1",
+      "text": "PEDAGOGY AND EDUCATION",
+      "page_number": 0
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "15.  Bc. Oleksandra Lavrivska\t85\u000bSPECIFICS OF THE METHODOLOGY OF TEACHING ENGLISH TO FOREIGN STUDENTS IN PRIMARY SCHOOLS OF THE KARLOVY VARY REGION",
       "page_number": 85
     },
     {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "ECONOMIC THEORY, MACRO- AND REGIONAL ECONOMY\t89",
+      "level": 2,
+      "style": "Звичайний",
+      "text": "16.  Стрельченко Олена Олексіївна\t89\u000bМІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
       "page_number": 89
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises\t89",
-      "page_number": 89
+      "style": "Звичайний",
+      "text": "17.  Сидоренко Сергій Юрійович\t101\u000bЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "page_number": 101
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "18.  Пилипенко Наталія Вікторівна, Чібірєва Людмила Вікторівна\t111\u000bПІДЗЕМНА ШКОЛА: БЕЗПЕЧНИЙ ПРОСТІР ДЛЯ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ",
+      "page_number": 111
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "19.  Башкірова Наталія, Краус Орина\t115\u000bПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»",
+      "page_number": 115
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "20.  Панчук Ольга Іванівна\t120\u000bВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "page_number": 120
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "21.  Іванчикова Людмила Іванівна\t132\u000bПИСАНКАРСТВО: ТИХА СИЛА ПРЕДКІВ",
+      "page_number": 132
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "22.  Олексюк Наталія Степанівна, Гукалюк Андрій Ігорович\t136\u000bЗАКОРДОННИЙ ДОСВІД ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+      "page_number": 136
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "23.  Савіщенко Вікторія Миколаївна\t140\u000bГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ",
+      "page_number": 140
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "24.  Спиридонова Олександра Олександрівна, Зозуля Оксана Василівна\t146\u000bОСОБЛИВОСТІ ОРГАНІЗАЦІЇ ПСИХОЛОГО-ПЕДАГОГІЧНОЇ ПІДТРИМКИ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ В СУЧАСНІЙ ОСВІТІ",
+      "page_number": 146
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "25.  Добридень Алла Володимирівна, Самборко Інна Миколаївна\t156\u000bМЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "page_number": 156
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "PHILOSOPHY AND POLITICAL SCIENCE\t96",
-      "page_number": 96
+      "text": "PSYCHOLOGY AND PSYCHIATRY",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ\t96",
-      "page_number": 96
+      "style": "Звичайний",
+      "text": "26.  Наталія Губа\t166\u000bАРТТЕРАПІЯ: ТВОРЧІСТЬ ЯК ЗАСІБ ПСИХОЛОГІЧНОЇ ПІДТРИМКИ УЧАСНИКІВ ОСВІТНЬОГО ПРОЦЕСУ",
+      "page_number": 166
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "27.  Костишина Світлана Павлівна\t173\u000bЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ",
+      "page_number": 173
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "28.  Paios Yelyzaveta, Olena Lykholat\t185\u000bTHE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "page_number": 185
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t103",
-      "page_number": 103
+      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ\t103",
-      "page_number": 103
+      "style": "Звичайний",
+      "text": "29.  Bohdan Kravchenko\t190\u000bIMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES",
+      "page_number": 190
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "30.  Євтушенко Віталій Вячеславович, Серякова Ірина Юріївна, Крамарьов Сергій Олександрович, Палатна Людмила Олександрівна, Шпак Ірина Володимирівна, Воронов Олександр Олександрович\t195\u000bВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ",
+      "page_number": 195
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "31.  Petro Zamіatin, Vasyl Kritsak, Denis Zamіatin, Daria Lazebna, Аlina Vаkulenkо\t204\u000bPULMONARY HEMORRHAGE: DIAGNOSTIC AND SURGICAL TACTICS AT THE MODERN LEVEL",
+      "page_number": 204
+    },
+    {
+      "level": 2,
+      "style": "Звичайний",
+      "text": "32.  Обозна Вікторія Василівна, Красовська Катерина Олександрівна\t213\u000bАСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ",
+      "page_number": 213
     },
     {
       "level": 1,
       "style": "Зміст 1",
-      "text": "PEDAGOGY AND EDUCATION\t112",
-      "page_number": 112
+      "text": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "page_number": 0
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "Особливості організації психолого-педагогічної підтримки дітей з особливими освітніми потребами в сучасній освіті\t112",
-      "page_number": 112
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t122",
-      "page_number": 122
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "PULMONARY HEMORRHAGE: DIAGNOSTIC AND SURGICAL TACTICS AT THE MODERN LEVEL\t122",
-      "page_number": 122
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PHILOSOPHY AND POLITICAL SCIENCE\t130",
-      "page_number": 130
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM\t130",
-      "page_number": 130
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PEDAGOGY AND EDUCATION\t134",
-      "page_number": 134
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ\t134",
-      "page_number": 134
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PSYCHOLOGY AND PSYCHIATRY\t143",
-      "page_number": 143
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ.\t143",
-      "page_number": 143
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE\t154",
-      "page_number": 154
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ\t154",
-      "page_number": 154
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PEDAGOGY AND EDUCATION\t159",
-      "page_number": 159
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА  ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»\t159",
-      "page_number": 159
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ\t164",
-      "page_number": 164
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "Писанкарство: тиха сила предків\t176",
-      "page_number": 176
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "LAW AND INTERNATIONAL LAW\t180",
-      "page_number": 180
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАОВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ\t180",
-      "page_number": 180
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING\t188",
-      "page_number": 188
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ\t188",
-      "page_number": 188
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "LAW AND INTERNATIONAL LAW\t193",
-      "page_number": 193
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ\t193",
-      "page_number": 193
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING\t198",
-      "page_number": 198
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ\t198",
-      "page_number": 198
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "MEDICAL SCIENCES AND PUBLIC HEALTH\t205",
-      "page_number": 205
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ\t205",
-      "page_number": 205
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PSYCHOLOGY AND PSYCHIATRY\t219",
-      "page_number": 219
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH\t219",
-      "page_number": 219
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PEDAGOGY AND EDUCATION\t225",
-      "page_number": 225
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ЗАКОРДОННИЙ ДОСВІД  ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ  У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ\t225",
-      "page_number": 225
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "SOCIAL WORK AND SOCIAL WELFARE\t228",
+      "style": "Звичайний",
+      "text": "33.  Лисенко Ілля Сергійович\t228\u000b«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
       "page_number": 228
     },
     {
       "level": 2,
-      "style": "Зміст 2",
-      "text": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ\t228",
-      "page_number": 228
-    },
-    {
-      "level": 1,
-      "style": "Зміст 1",
-      "text": "PEDAGOGY AND EDUCATION\t231",
-      "page_number": 231
-    },
-    {
-      "level": 2,
-      "style": "Зміст 2",
-      "text": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ\t231",
-      "page_number": 231
+      "style": "Звичайний",
+      "text": "34.  Прибитько Іван Олександрович, Івкова Вікторія Юріївна\t240\u000bФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 рр.)",
+      "page_number": 240
     }
   ],
   "toc_style_names": {
@@ -423,188 +328,554 @@
     "1": "Зміст 1"
   },
   "toc_level_counts": {
-    "1": 30,
+    "1": 14,
     "2": 34
   },
   "article_bookmarks": [
     {
       "name": "JF_ARTICLE_001_START",
       "printed_page": 6,
-      "physical_page": 6
+      "physical_page": 8
     },
     {
       "name": "JF_ARTICLE_002_START",
-      "printed_page": 10,
-      "physical_page": 10
+      "printed_page": 13,
+      "physical_page": 15
     },
     {
       "name": "JF_ARTICLE_003_START",
-      "printed_page": 17,
-      "physical_page": 17
+      "printed_page": 20,
+      "physical_page": 22
     },
     {
       "name": "JF_ARTICLE_004_START",
-      "printed_page": 20,
-      "physical_page": 20
+      "printed_page": 25,
+      "physical_page": 27
     },
     {
       "name": "JF_ARTICLE_005_START",
-      "printed_page": 24,
-      "physical_page": 24
+      "printed_page": 31,
+      "physical_page": 33
     },
     {
       "name": "JF_ARTICLE_006_START",
       "printed_page": 36,
-      "physical_page": 36
+      "physical_page": 38
     },
     {
       "name": "JF_ARTICLE_007_START",
       "printed_page": 40,
-      "physical_page": 40
+      "physical_page": 42
     },
     {
       "name": "JF_ARTICLE_008_START",
-      "printed_page": 44,
-      "physical_page": 44
+      "printed_page": 49,
+      "physical_page": 51
     },
     {
       "name": "JF_ARTICLE_009_START",
-      "printed_page": 50,
-      "physical_page": 50
-    },
-    {
-      "name": "JF_ARTICLE_010_START",
-      "printed_page": 56,
+      "printed_page": 54,
       "physical_page": 56
     },
     {
+      "name": "JF_ARTICLE_010_START",
+      "printed_page": 59,
+      "physical_page": 61
+    },
+    {
       "name": "JF_ARTICLE_011_START",
-      "printed_page": 62,
-      "physical_page": 62
+      "printed_page": 65,
+      "physical_page": 67
     },
     {
       "name": "JF_ARTICLE_012_START",
-      "printed_page": 75,
-      "physical_page": 75
+      "printed_page": 70,
+      "physical_page": 72
     },
     {
       "name": "JF_ARTICLE_013_START",
-      "printed_page": 85,
-      "physical_page": 85
+      "printed_page": 74,
+      "physical_page": 76
     },
     {
       "name": "JF_ARTICLE_014_START",
-      "printed_page": 89,
-      "physical_page": 89
+      "printed_page": 81,
+      "physical_page": 83
     },
     {
       "name": "JF_ARTICLE_015_START",
-      "printed_page": 96,
-      "physical_page": 96
+      "printed_page": 85,
+      "physical_page": 87
     },
     {
       "name": "JF_ARTICLE_016_START",
-      "printed_page": 103,
-      "physical_page": 103
+      "printed_page": 89,
+      "physical_page": 91
     },
     {
       "name": "JF_ARTICLE_017_START",
-      "printed_page": 112,
-      "physical_page": 112
+      "printed_page": 101,
+      "physical_page": 103
     },
     {
       "name": "JF_ARTICLE_018_START",
-      "printed_page": 122,
-      "physical_page": 122
+      "printed_page": 111,
+      "physical_page": 113
     },
     {
       "name": "JF_ARTICLE_019_START",
-      "printed_page": 130,
-      "physical_page": 130
+      "printed_page": 115,
+      "physical_page": 117
     },
     {
       "name": "JF_ARTICLE_020_START",
-      "printed_page": 134,
-      "physical_page": 134
+      "printed_page": 120,
+      "physical_page": 122
     },
     {
       "name": "JF_ARTICLE_021_START",
-      "printed_page": 143,
-      "physical_page": 143
+      "printed_page": 132,
+      "physical_page": 134
     },
     {
       "name": "JF_ARTICLE_022_START",
-      "printed_page": 154,
-      "physical_page": 154
+      "printed_page": 136,
+      "physical_page": 138
     },
     {
       "name": "JF_ARTICLE_023_START",
-      "printed_page": 159,
-      "physical_page": 159
+      "printed_page": 140,
+      "physical_page": 142
     },
     {
       "name": "JF_ARTICLE_024_START",
-      "printed_page": 164,
-      "physical_page": 164
+      "printed_page": 146,
+      "physical_page": 148
     },
     {
       "name": "JF_ARTICLE_025_START",
-      "printed_page": 176,
-      "physical_page": 176
+      "printed_page": 156,
+      "physical_page": 158
     },
     {
       "name": "JF_ARTICLE_026_START",
-      "printed_page": 180,
-      "physical_page": 180
+      "printed_page": 166,
+      "physical_page": 168
     },
     {
       "name": "JF_ARTICLE_027_START",
-      "printed_page": 188,
-      "physical_page": 188
+      "printed_page": 173,
+      "physical_page": 175
     },
     {
       "name": "JF_ARTICLE_028_START",
-      "printed_page": 193,
-      "physical_page": 193
+      "printed_page": 185,
+      "physical_page": 187
     },
     {
       "name": "JF_ARTICLE_029_START",
-      "printed_page": 198,
-      "physical_page": 198
+      "printed_page": 190,
+      "physical_page": 192
     },
     {
       "name": "JF_ARTICLE_030_START",
-      "printed_page": 205,
-      "physical_page": 205
+      "printed_page": 195,
+      "physical_page": 197
     },
     {
       "name": "JF_ARTICLE_031_START",
-      "printed_page": 219,
-      "physical_page": 219
+      "printed_page": 204,
+      "physical_page": 206
     },
     {
       "name": "JF_ARTICLE_032_START",
-      "printed_page": 225,
-      "physical_page": 225
+      "printed_page": 213,
+      "physical_page": 215
     },
     {
       "name": "JF_ARTICLE_033_START",
       "printed_page": 228,
-      "physical_page": 228
+      "physical_page": 230
     },
     {
       "name": "JF_ARTICLE_034_START",
-      "printed_page": 231,
-      "physical_page": 231
+      "printed_page": 240,
+      "physical_page": 242
     }
   ],
+  "official_page_parity": {
+    "schema_version": 1,
+    "status": "PASS",
+    "official_pdf_sha256": "fd16720e1573b4d95073b1f9a9cfc5823342dca26fb9a6ba2841136bde12e2d7",
+    "official_physical_page_count": 248,
+    "generated_physical_page_count": 248,
+    "physical_to_printed_offset": 2,
+    "article_start_pages_match_official": true,
+    "special_thanks": {
+      "required": true,
+      "official_physical_page": 7,
+      "generated_physical_page": 7,
+      "matched": true
+    },
+    "mappings": [
+      {
+        "ordinal": 1,
+        "bookmark": "JF_ARTICLE_001_START",
+        "official_title": "METHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
+        "official_physical_page": 8,
+        "generated_physical_page": 8,
+        "official_printed_page": 6,
+        "generated_printed_page": 6,
+        "matched": true
+      },
+      {
+        "ordinal": 2,
+        "bookmark": "JF_ARTICLE_002_START",
+        "official_title": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+        "official_physical_page": 15,
+        "generated_physical_page": 15,
+        "official_printed_page": 13,
+        "generated_printed_page": 13,
+        "matched": true
+      },
+      {
+        "ordinal": 3,
+        "bookmark": "JF_ARTICLE_003_START",
+        "official_title": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ",
+        "official_physical_page": 22,
+        "generated_physical_page": 22,
+        "official_printed_page": 20,
+        "generated_printed_page": 20,
+        "matched": true
+      },
+      {
+        "ordinal": 4,
+        "bookmark": "JF_ARTICLE_004_START",
+        "official_title": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+        "official_physical_page": 27,
+        "generated_physical_page": 27,
+        "official_printed_page": 25,
+        "generated_printed_page": 25,
+        "matched": true
+      },
+      {
+        "ordinal": 5,
+        "bookmark": "JF_ARTICLE_005_START",
+        "official_title": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+        "official_physical_page": 33,
+        "generated_physical_page": 33,
+        "official_printed_page": 31,
+        "generated_printed_page": 31,
+        "matched": true
+      },
+      {
+        "ordinal": 6,
+        "bookmark": "JF_ARTICLE_006_START",
+        "official_title": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ",
+        "official_physical_page": 38,
+        "generated_physical_page": 38,
+        "official_printed_page": 36,
+        "generated_printed_page": 36,
+        "matched": true
+      },
+      {
+        "ordinal": 7,
+        "bookmark": "JF_ARTICLE_007_START",
+        "official_title": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+        "official_physical_page": 42,
+        "generated_physical_page": 42,
+        "official_printed_page": 40,
+        "generated_printed_page": 40,
+        "matched": true
+      },
+      {
+        "ordinal": 8,
+        "bookmark": "JF_ARTICLE_008_START",
+        "official_title": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+        "official_physical_page": 51,
+        "generated_physical_page": 51,
+        "official_printed_page": 49,
+        "generated_printed_page": 49,
+        "matched": true
+      },
+      {
+        "ordinal": 9,
+        "bookmark": "JF_ARTICLE_009_START",
+        "official_title": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+        "official_physical_page": 56,
+        "generated_physical_page": 56,
+        "official_printed_page": 54,
+        "generated_printed_page": 54,
+        "matched": true
+      },
+      {
+        "ordinal": 10,
+        "bookmark": "JF_ARTICLE_010_START",
+        "official_title": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+        "official_physical_page": 61,
+        "generated_physical_page": 61,
+        "official_printed_page": 59,
+        "generated_printed_page": 59,
+        "matched": true
+      },
+      {
+        "ordinal": 11,
+        "bookmark": "JF_ARTICLE_011_START",
+        "official_title": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+        "official_physical_page": 67,
+        "generated_physical_page": 67,
+        "official_printed_page": 65,
+        "generated_printed_page": 65,
+        "matched": true
+      },
+      {
+        "ordinal": 12,
+        "bookmark": "JF_ARTICLE_012_START",
+        "official_title": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL",
+        "official_physical_page": 72,
+        "generated_physical_page": 72,
+        "official_printed_page": 70,
+        "generated_printed_page": 70,
+        "matched": true
+      },
+      {
+        "ordinal": 13,
+        "bookmark": "JF_ARTICLE_013_START",
+        "official_title": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ",
+        "official_physical_page": 76,
+        "generated_physical_page": 76,
+        "official_printed_page": 74,
+        "generated_printed_page": 74,
+        "matched": true
+      },
+      {
+        "ordinal": 14,
+        "bookmark": "JF_ARTICLE_014_START",
+        "official_title": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+        "official_physical_page": 83,
+        "generated_physical_page": 83,
+        "official_printed_page": 81,
+        "generated_printed_page": 81,
+        "matched": true
+      },
+      {
+        "ordinal": 15,
+        "bookmark": "JF_ARTICLE_015_START",
+        "official_title": "SPECIFICS OF THE METHODOLOGY OF TEACHING ENGLISH TO FOREIGN STUDENTS IN PRIMARY SCHOOLS OF THE KARLOVY VARY REGION",
+        "official_physical_page": 87,
+        "generated_physical_page": 87,
+        "official_printed_page": 85,
+        "generated_printed_page": 85,
+        "matched": true
+      },
+      {
+        "ordinal": 16,
+        "bookmark": "JF_ARTICLE_016_START",
+        "official_title": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+        "official_physical_page": 91,
+        "generated_physical_page": 91,
+        "official_printed_page": 89,
+        "generated_printed_page": 89,
+        "matched": true
+      },
+      {
+        "ordinal": 17,
+        "bookmark": "JF_ARTICLE_017_START",
+        "official_title": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+        "official_physical_page": 103,
+        "generated_physical_page": 103,
+        "official_printed_page": 101,
+        "generated_printed_page": 101,
+        "matched": true
+      },
+      {
+        "ordinal": 18,
+        "bookmark": "JF_ARTICLE_018_START",
+        "official_title": "ПІДЗЕМНА ШКОЛА: БЕЗПЕЧНИЙ ПРОСТІР ДЛЯ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ",
+        "official_physical_page": 113,
+        "generated_physical_page": 113,
+        "official_printed_page": 111,
+        "generated_printed_page": 111,
+        "matched": true
+      },
+      {
+        "ordinal": 19,
+        "bookmark": "JF_ARTICLE_019_START",
+        "official_title": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»",
+        "official_physical_page": 117,
+        "generated_physical_page": 117,
+        "official_printed_page": 115,
+        "generated_printed_page": 115,
+        "matched": true
+      },
+      {
+        "ordinal": 20,
+        "bookmark": "JF_ARTICLE_020_START",
+        "official_title": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+        "official_physical_page": 122,
+        "generated_physical_page": 122,
+        "official_printed_page": 120,
+        "generated_printed_page": 120,
+        "matched": true
+      },
+      {
+        "ordinal": 21,
+        "bookmark": "JF_ARTICLE_021_START",
+        "official_title": "ПИСАНКАРСТВО: ТИХА СИЛА ПРЕДКІВ",
+        "official_physical_page": 134,
+        "generated_physical_page": 134,
+        "official_printed_page": 132,
+        "generated_printed_page": 132,
+        "matched": true
+      },
+      {
+        "ordinal": 22,
+        "bookmark": "JF_ARTICLE_022_START",
+        "official_title": "ЗАКОРДОННИЙ ДОСВІД ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+        "official_physical_page": 138,
+        "generated_physical_page": 138,
+        "official_printed_page": 136,
+        "generated_printed_page": 136,
+        "matched": true
+      },
+      {
+        "ordinal": 23,
+        "bookmark": "JF_ARTICLE_023_START",
+        "official_title": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ",
+        "official_physical_page": 142,
+        "generated_physical_page": 142,
+        "official_printed_page": 140,
+        "generated_printed_page": 140,
+        "matched": true
+      },
+      {
+        "ordinal": 24,
+        "bookmark": "JF_ARTICLE_024_START",
+        "official_title": "ОСОБЛИВОСТІ ОРГАНІЗАЦІЇ ПСИХОЛОГО-ПЕДАГОГІЧНОЇ ПІДТРИМКИ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ В СУЧАСНІЙ ОСВІТІ",
+        "official_physical_page": 148,
+        "generated_physical_page": 148,
+        "official_printed_page": 146,
+        "generated_printed_page": 146,
+        "matched": true
+      },
+      {
+        "ordinal": 25,
+        "bookmark": "JF_ARTICLE_025_START",
+        "official_title": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+        "official_physical_page": 158,
+        "generated_physical_page": 158,
+        "official_printed_page": 156,
+        "generated_printed_page": 156,
+        "matched": true
+      },
+      {
+        "ordinal": 26,
+        "bookmark": "JF_ARTICLE_026_START",
+        "official_title": "АРТТЕРАПІЯ: ТВОРЧІСТЬ ЯК ЗАСІБ ПСИХОЛОГІЧНОЇ ПІДТРИМКИ УЧАСНИКІВ ОСВІТНЬОГО ПРОЦЕСУ",
+        "official_physical_page": 168,
+        "generated_physical_page": 168,
+        "official_printed_page": 166,
+        "generated_printed_page": 166,
+        "matched": true
+      },
+      {
+        "ordinal": 27,
+        "bookmark": "JF_ARTICLE_027_START",
+        "official_title": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ",
+        "official_physical_page": 175,
+        "generated_physical_page": 175,
+        "official_printed_page": 173,
+        "generated_printed_page": 173,
+        "matched": true
+      },
+      {
+        "ordinal": 28,
+        "bookmark": "JF_ARTICLE_028_START",
+        "official_title": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+        "official_physical_page": 187,
+        "generated_physical_page": 187,
+        "official_printed_page": 185,
+        "generated_printed_page": 185,
+        "matched": true
+      },
+      {
+        "ordinal": 29,
+        "bookmark": "JF_ARTICLE_029_START",
+        "official_title": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES",
+        "official_physical_page": 192,
+        "generated_physical_page": 192,
+        "official_printed_page": 190,
+        "generated_printed_page": 190,
+        "matched": true
+      },
+      {
+        "ordinal": 30,
+        "bookmark": "JF_ARTICLE_030_START",
+        "official_title": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ",
+        "official_physical_page": 197,
+        "generated_physical_page": 197,
+        "official_printed_page": 195,
+        "generated_printed_page": 195,
+        "matched": true
+      },
+      {
+        "ordinal": 31,
+        "bookmark": "JF_ARTICLE_031_START",
+        "official_title": "PULMONARY HEMORRHAGE: DIAGNOSTIC AND SURGICAL TACTICS AT THE MODERN LEVEL",
+        "official_physical_page": 206,
+        "generated_physical_page": 206,
+        "official_printed_page": 204,
+        "generated_printed_page": 204,
+        "matched": true
+      },
+      {
+        "ordinal": 32,
+        "bookmark": "JF_ARTICLE_032_START",
+        "official_title": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ",
+        "official_physical_page": 215,
+        "generated_physical_page": 215,
+        "official_printed_page": 213,
+        "generated_printed_page": 213,
+        "matched": true
+      },
+      {
+        "ordinal": 33,
+        "bookmark": "JF_ARTICLE_033_START",
+        "official_title": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+        "official_physical_page": 230,
+        "generated_physical_page": 230,
+        "official_printed_page": 228,
+        "generated_printed_page": 228,
+        "matched": true
+      },
+      {
+        "ordinal": 34,
+        "bookmark": "JF_ARTICLE_034_START",
+        "official_title": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 рр.)",
+        "official_physical_page": 242,
+        "generated_physical_page": 242,
+        "official_printed_page": 240,
+        "generated_printed_page": 240,
+        "matched": true
+      }
+    ]
+  },
+  "golden_publication_parity": {
+    "required": true,
+    "status": "PASS"
+  },
+  "internal_consistency": {
+    "toc_article_entry_count": 34,
+    "article_bookmark_count": 34,
+    "toc_pages_match_generated_bookmarks": true
+  },
   "visual_qa": {
     "status": "PASS",
     "renderer": "PyMuPDF raster inspection of Microsoft Word PDF",
-    "pdf": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\Conference95_generated.pdf",
-    "pdf_sha256": "381e261a5e2b624477f6042cda6c6eba8ecc67bf30bd3d8029bba6b85bbc8203",
-    "inspected_page_count": 237,
-    "expected_page_count": 237,
+    "pdf": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-004-m\\Conference95\\Conference95_generated.pdf",
+    "pdf_sha256": "eb6c3209ec96e65574dbffae7a501c49fb89ee82c84b39231db72ffc544c8eee",
+    "inspected_page_count": 248,
+    "expected_page_count": 248,
     "all_pages_inspected": true,
     "representative_full_resolution_pages": [
       1,
@@ -613,15 +884,23 @@
       4,
       5,
       6,
-      59,
-      118,
-      177,
-      237
+      62,
+      124,
+      186,
+      248
     ],
     "blank_pages": [],
-    "footer_page_numbers_expected": 236,
-    "footer_page_numbers_present": 236,
+    "page_numbering": {
+      "physical_to_printed_offset": 2,
+      "first_numbered_physical_page": 3,
+      "first_printed_page": 1,
+      "numbered_section_index": 2,
+      "hide_numbers_before_numbered_section": true
+    },
+    "footer_page_numbers_expected": 246,
+    "footer_page_numbers_present": 246,
     "missing_footer_numbers": [],
+    "unexpected_footer_numbers": [],
     "title_page_number_hidden": true,
     "pages": [
       {
@@ -634,2367 +913,2476 @@
       },
       {
         "physical_page": 2,
-        "text_character_count": 749,
-        "content_character_count": 680,
-        "nonwhite_channel_ratio": 0.094884,
+        "text_character_count": 747,
+        "content_character_count": 681,
+        "nonwhite_channel_ratio": 0.09486,
+        "footer_numbers": [],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 3,
+        "text_character_count": 1668,
+        "content_character_count": 1584,
+        "nonwhite_channel_ratio": 0.140804,
+        "footer_numbers": [
+          1
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 4,
+        "text_character_count": 1387,
+        "content_character_count": 1259,
+        "nonwhite_channel_ratio": 0.173118,
         "footer_numbers": [
           2
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 3,
-        "text_character_count": 1676,
-        "content_character_count": 1575,
-        "nonwhite_channel_ratio": 0.141083,
+        "physical_page": 5,
+        "text_character_count": 1427,
+        "content_character_count": 1322,
+        "nonwhite_channel_ratio": 0.175326,
         "footer_numbers": [
           3
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 4,
-        "text_character_count": 11625,
-        "content_character_count": 11472,
-        "nonwhite_channel_ratio": 0.300834,
+        "physical_page": 6,
+        "text_character_count": 1726,
+        "content_character_count": 1572,
+        "nonwhite_channel_ratio": 0.206627,
         "footer_numbers": [
           4
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 5,
-        "text_character_count": 663,
-        "content_character_count": 644,
-        "nonwhite_channel_ratio": 0.01485,
+        "physical_page": 7,
+        "text_character_count": 1655,
+        "content_character_count": 1552,
+        "nonwhite_channel_ratio": 0.190351,
         "footer_numbers": [
           5
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 6,
-        "text_character_count": 1473,
-        "content_character_count": 1412,
-        "nonwhite_channel_ratio": 0.139895,
+        "physical_page": 8,
+        "text_character_count": 1564,
+        "content_character_count": 1509,
+        "nonwhite_channel_ratio": 0.150784,
         "footer_numbers": [
           6
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 7,
-        "text_character_count": 2116,
-        "content_character_count": 2055,
-        "nonwhite_channel_ratio": 0.18383,
+        "physical_page": 9,
+        "text_character_count": 2088,
+        "content_character_count": 2026,
+        "nonwhite_channel_ratio": 0.179973,
         "footer_numbers": [
           7
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 8,
-        "text_character_count": 1495,
-        "content_character_count": 1438,
-        "nonwhite_channel_ratio": 0.127581,
+        "physical_page": 10,
+        "text_character_count": 2259,
+        "content_character_count": 2199,
+        "nonwhite_channel_ratio": 0.194113,
         "footer_numbers": [
           8
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 9,
-        "text_character_count": 985,
-        "content_character_count": 934,
-        "nonwhite_channel_ratio": 0.161812,
+        "physical_page": 11,
+        "text_character_count": 2288,
+        "content_character_count": 2217,
+        "nonwhite_channel_ratio": 0.194623,
         "footer_numbers": [
           9
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 10,
-        "text_character_count": 1450,
-        "content_character_count": 1368,
-        "nonwhite_channel_ratio": 0.141673,
+        "physical_page": 12,
+        "text_character_count": 2303,
+        "content_character_count": 2245,
+        "nonwhite_channel_ratio": 0.198337,
         "footer_numbers": [
           10
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 11,
-        "text_character_count": 2179,
-        "content_character_count": 2098,
-        "nonwhite_channel_ratio": 0.214948,
+        "physical_page": 13,
+        "text_character_count": 1998,
+        "content_character_count": 1910,
+        "nonwhite_channel_ratio": 0.170649,
         "footer_numbers": [
           11
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 12,
-        "text_character_count": 1737,
-        "content_character_count": 1675,
-        "nonwhite_channel_ratio": 0.188461,
+        "physical_page": 14,
+        "text_character_count": 506,
+        "content_character_count": 490,
+        "nonwhite_channel_ratio": 0.041855,
         "footer_numbers": [
           12
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 13,
-        "text_character_count": 1053,
-        "content_character_count": 988,
-        "nonwhite_channel_ratio": 0.093768,
+        "physical_page": 15,
+        "text_character_count": 1329,
+        "content_character_count": 1269,
+        "nonwhite_channel_ratio": 0.138692,
         "footer_numbers": [
           13
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 14,
-        "text_character_count": 1409,
-        "content_character_count": 1345,
-        "nonwhite_channel_ratio": 0.12817,
+        "physical_page": 16,
+        "text_character_count": 1374,
+        "content_character_count": 1304,
+        "nonwhite_channel_ratio": 0.142629,
         "footer_numbers": [
           14
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 15,
-        "text_character_count": 1048,
-        "content_character_count": 983,
-        "nonwhite_channel_ratio": 0.092971,
+        "physical_page": 17,
+        "text_character_count": 1386,
+        "content_character_count": 1328,
+        "nonwhite_channel_ratio": 0.190614,
         "footer_numbers": [
           15
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 16,
-        "text_character_count": 807,
-        "content_character_count": 765,
-        "nonwhite_channel_ratio": 0.07949,
+        "physical_page": 18,
+        "text_character_count": 1538,
+        "content_character_count": 1492,
+        "nonwhite_channel_ratio": 0.143554,
         "footer_numbers": [
           16
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 17,
-        "text_character_count": 1845,
-        "content_character_count": 1755,
-        "nonwhite_channel_ratio": 0.173213,
+        "physical_page": 19,
+        "text_character_count": 951,
+        "content_character_count": 875,
+        "nonwhite_channel_ratio": 0.106737,
         "footer_numbers": [
           17
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 18,
-        "text_character_count": 1421,
-        "content_character_count": 1319,
-        "nonwhite_channel_ratio": 0.189091,
+        "physical_page": 20,
+        "text_character_count": 2158,
+        "content_character_count": 2068,
+        "nonwhite_channel_ratio": 0.20363,
         "footer_numbers": [
           18
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 19,
-        "text_character_count": 1199,
-        "content_character_count": 1094,
-        "nonwhite_channel_ratio": 0.108554,
+        "physical_page": 21,
+        "text_character_count": 795,
+        "content_character_count": 732,
+        "nonwhite_channel_ratio": 0.076097,
         "footer_numbers": [
           19
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 20,
-        "text_character_count": 1614,
-        "content_character_count": 1550,
-        "nonwhite_channel_ratio": 0.161624,
+        "physical_page": 22,
+        "text_character_count": 1496,
+        "content_character_count": 1424,
+        "nonwhite_channel_ratio": 0.144255,
         "footer_numbers": [
           20
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 21,
-        "text_character_count": 2137,
-        "content_character_count": 2074,
-        "nonwhite_channel_ratio": 0.200657,
+        "physical_page": 23,
+        "text_character_count": 2093,
+        "content_character_count": 2031,
+        "nonwhite_channel_ratio": 0.196751,
         "footer_numbers": [
           21
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 22,
-        "text_character_count": 1993,
-        "content_character_count": 1931,
-        "nonwhite_channel_ratio": 0.184293,
+        "physical_page": 24,
+        "text_character_count": 1904,
+        "content_character_count": 1810,
+        "nonwhite_channel_ratio": 0.176705,
         "footer_numbers": [
           22
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 23,
-        "text_character_count": 1588,
-        "content_character_count": 1497,
-        "nonwhite_channel_ratio": 0.149325,
+        "physical_page": 25,
+        "text_character_count": 1513,
+        "content_character_count": 1374,
+        "nonwhite_channel_ratio": 0.242902,
         "footer_numbers": [
           23
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 24,
-        "text_character_count": 1495,
-        "content_character_count": 1425,
-        "nonwhite_channel_ratio": 0.152585,
+        "physical_page": 26,
+        "text_character_count": 1413,
+        "content_character_count": 1359,
+        "nonwhite_channel_ratio": 0.130256,
         "footer_numbers": [
           24
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 25,
-        "text_character_count": 2177,
-        "content_character_count": 2062,
-        "nonwhite_channel_ratio": 0.199477,
+        "physical_page": 27,
+        "text_character_count": 1041,
+        "content_character_count": 984,
+        "nonwhite_channel_ratio": 0.112627,
         "footer_numbers": [
           25
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 26,
-        "text_character_count": 2153,
-        "content_character_count": 2073,
-        "nonwhite_channel_ratio": 0.198497,
+        "physical_page": 28,
+        "text_character_count": 2033,
+        "content_character_count": 1952,
+        "nonwhite_channel_ratio": 0.188246,
         "footer_numbers": [
           26
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 27,
-        "text_character_count": 2219,
-        "content_character_count": 2147,
-        "nonwhite_channel_ratio": 0.2085,
+        "physical_page": 29,
+        "text_character_count": 2057,
+        "content_character_count": 1973,
+        "nonwhite_channel_ratio": 0.200035,
         "footer_numbers": [
           27
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 28,
-        "text_character_count": 2252,
-        "content_character_count": 2188,
-        "nonwhite_channel_ratio": 0.211234,
+        "physical_page": 30,
+        "text_character_count": 1945,
+        "content_character_count": 1856,
+        "nonwhite_channel_ratio": 0.193858,
         "footer_numbers": [
           28
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 29,
-        "text_character_count": 2194,
-        "content_character_count": 2123,
-        "nonwhite_channel_ratio": 0.205471,
+        "physical_page": 31,
+        "text_character_count": 1762,
+        "content_character_count": 1671,
+        "nonwhite_channel_ratio": 0.161688,
         "footer_numbers": [
           29
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 30,
-        "text_character_count": 2183,
-        "content_character_count": 2113,
-        "nonwhite_channel_ratio": 0.20516,
+        "physical_page": 32,
+        "text_character_count": 345,
+        "content_character_count": 324,
+        "nonwhite_channel_ratio": 0.029723,
         "footer_numbers": [
           30
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 31,
-        "text_character_count": 2200,
-        "content_character_count": 2107,
-        "nonwhite_channel_ratio": 0.206954,
+        "physical_page": 33,
+        "text_character_count": 1528,
+        "content_character_count": 1449,
+        "nonwhite_channel_ratio": 0.148504,
         "footer_numbers": [
           31
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 32,
-        "text_character_count": 2115,
-        "content_character_count": 2053,
-        "nonwhite_channel_ratio": 0.199892,
+        "physical_page": 34,
+        "text_character_count": 2052,
+        "content_character_count": 1966,
+        "nonwhite_channel_ratio": 0.191036,
         "footer_numbers": [
           32
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 33,
-        "text_character_count": 2109,
-        "content_character_count": 1984,
-        "nonwhite_channel_ratio": 0.1933,
+        "physical_page": 35,
+        "text_character_count": 2049,
+        "content_character_count": 1958,
+        "nonwhite_channel_ratio": 0.192128,
         "footer_numbers": [
           33
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 34,
-        "text_character_count": 1950,
-        "content_character_count": 1863,
-        "nonwhite_channel_ratio": 0.17782,
+        "physical_page": 36,
+        "text_character_count": 1850,
+        "content_character_count": 1771,
+        "nonwhite_channel_ratio": 0.175094,
         "footer_numbers": [
           34
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 35,
-        "text_character_count": 909,
-        "content_character_count": 868,
-        "nonwhite_channel_ratio": 0.076838,
+        "physical_page": 37,
+        "text_character_count": 889,
+        "content_character_count": 854,
+        "nonwhite_channel_ratio": 0.079033,
         "footer_numbers": [
           35
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 36,
-        "text_character_count": 1653,
-        "content_character_count": 1589,
-        "nonwhite_channel_ratio": 0.172137,
+        "physical_page": 38,
+        "text_character_count": 1781,
+        "content_character_count": 1700,
+        "nonwhite_channel_ratio": 0.197325,
         "footer_numbers": [
           36
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 37,
-        "text_character_count": 2000,
-        "content_character_count": 1937,
-        "nonwhite_channel_ratio": 0.189075,
+        "physical_page": 39,
+        "text_character_count": 2104,
+        "content_character_count": 2041,
+        "nonwhite_channel_ratio": 0.254683,
         "footer_numbers": [
           37
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 38,
-        "text_character_count": 1985,
-        "content_character_count": 1878,
-        "nonwhite_channel_ratio": 0.182515,
+        "physical_page": 40,
+        "text_character_count": 2330,
+        "content_character_count": 2239,
+        "nonwhite_channel_ratio": 0.28321,
         "footer_numbers": [
           38
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 39,
-        "text_character_count": 1174,
-        "content_character_count": 1104,
-        "nonwhite_channel_ratio": 0.115818,
+        "physical_page": 41,
+        "text_character_count": 6,
+        "content_character_count": 2,
+        "nonwhite_channel_ratio": 0.002112,
         "footer_numbers": [
           39
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 40,
-        "text_character_count": 1510,
-        "content_character_count": 1435,
-        "nonwhite_channel_ratio": 0.275407,
+        "physical_page": 42,
+        "text_character_count": 1410,
+        "content_character_count": 1336,
+        "nonwhite_channel_ratio": 0.146424,
         "footer_numbers": [
           40
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 41,
-        "text_character_count": 2252,
-        "content_character_count": 2161,
-        "nonwhite_channel_ratio": 0.189936,
+        "physical_page": 43,
+        "text_character_count": 2064,
+        "content_character_count": 1994,
+        "nonwhite_channel_ratio": 0.194376,
         "footer_numbers": [
           41
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 42,
-        "text_character_count": 2192,
-        "content_character_count": 2094,
-        "nonwhite_channel_ratio": 0.183703,
+        "physical_page": 44,
+        "text_character_count": 2113,
+        "content_character_count": 2019,
+        "nonwhite_channel_ratio": 0.198082,
         "footer_numbers": [
           42
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 43,
-        "text_character_count": 300,
-        "content_character_count": 288,
-        "nonwhite_channel_ratio": 0.025666,
+        "physical_page": 45,
+        "text_character_count": 2100,
+        "content_character_count": 2024,
+        "nonwhite_channel_ratio": 0.197763,
         "footer_numbers": [
           43
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 44,
-        "text_character_count": 1041,
-        "content_character_count": 982,
-        "nonwhite_channel_ratio": 0.112572,
+        "physical_page": 46,
+        "text_character_count": 2116,
+        "content_character_count": 2028,
+        "nonwhite_channel_ratio": 0.194878,
         "footer_numbers": [
           44
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 45,
-        "text_character_count": 2105,
-        "content_character_count": 2041,
-        "nonwhite_channel_ratio": 0.196074,
+        "physical_page": 47,
+        "text_character_count": 2014,
+        "content_character_count": 1915,
+        "nonwhite_channel_ratio": 0.189059,
         "footer_numbers": [
           45
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 46,
-        "text_character_count": 2106,
-        "content_character_count": 2026,
-        "nonwhite_channel_ratio": 0.206643,
+        "physical_page": 48,
+        "text_character_count": 1767,
+        "content_character_count": 1661,
+        "nonwhite_channel_ratio": 0.166069,
         "footer_numbers": [
           46
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 47,
-        "text_character_count": 1955,
-        "content_character_count": 1868,
-        "nonwhite_channel_ratio": 0.188884,
+        "physical_page": 49,
+        "text_character_count": 1365,
+        "content_character_count": 1255,
+        "nonwhite_channel_ratio": 0.130849,
         "footer_numbers": [
           47
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 48,
-        "text_character_count": 1702,
-        "content_character_count": 1594,
-        "nonwhite_channel_ratio": 0.155797,
+        "physical_page": 50,
+        "text_character_count": 105,
+        "content_character_count": 97,
+        "nonwhite_channel_ratio": 0.009956,
         "footer_numbers": [
           48
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 49,
-        "text_character_count": 262,
-        "content_character_count": 246,
-        "nonwhite_channel_ratio": 0.022111,
+        "physical_page": 51,
+        "text_character_count": 1370,
+        "content_character_count": 1285,
+        "nonwhite_channel_ratio": 0.133614,
         "footer_numbers": [
           49
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 50,
-        "text_character_count": 1131,
-        "content_character_count": 1050,
-        "nonwhite_channel_ratio": 0.118534,
+        "physical_page": 52,
+        "text_character_count": 2040,
+        "content_character_count": 1954,
+        "nonwhite_channel_ratio": 0.189115,
         "footer_numbers": [
           50
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 51,
-        "text_character_count": 1920,
-        "content_character_count": 1856,
-        "nonwhite_channel_ratio": 0.177446,
+        "physical_page": 53,
+        "text_character_count": 2101,
+        "content_character_count": 2028,
+        "nonwhite_channel_ratio": 0.195292,
         "footer_numbers": [
           51
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 52,
-        "text_character_count": 2190,
-        "content_character_count": 2126,
-        "nonwhite_channel_ratio": 0.197955,
+        "physical_page": 54,
+        "text_character_count": 2030,
+        "content_character_count": 1944,
+        "nonwhite_channel_ratio": 0.188103,
         "footer_numbers": [
           52
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 53,
-        "text_character_count": 1911,
-        "content_character_count": 1848,
-        "nonwhite_channel_ratio": 0.174696,
+        "physical_page": 55,
+        "text_character_count": 874,
+        "content_character_count": 829,
+        "nonwhite_channel_ratio": 0.105573,
         "footer_numbers": [
           53
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 54,
-        "text_character_count": 1680,
-        "content_character_count": 1590,
-        "nonwhite_channel_ratio": 0.147531,
+        "physical_page": 56,
+        "text_character_count": 1585,
+        "content_character_count": 1513,
+        "nonwhite_channel_ratio": 0.165051,
         "footer_numbers": [
           54
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 55,
-        "text_character_count": 592,
-        "content_character_count": 562,
-        "nonwhite_channel_ratio": 0.050447,
+        "physical_page": 57,
+        "text_character_count": 1982,
+        "content_character_count": 1921,
+        "nonwhite_channel_ratio": 0.188015,
         "footer_numbers": [
           55
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 56,
-        "text_character_count": 1413,
-        "content_character_count": 1349,
-        "nonwhite_channel_ratio": 0.19483,
+        "physical_page": 58,
+        "text_character_count": 1784,
+        "content_character_count": 1695,
+        "nonwhite_channel_ratio": 0.163338,
         "footer_numbers": [
           56
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 57,
-        "text_character_count": 1929,
-        "content_character_count": 1858,
-        "nonwhite_channel_ratio": 0.235473,
+        "physical_page": 59,
+        "text_character_count": 1398,
+        "content_character_count": 1303,
+        "nonwhite_channel_ratio": 0.132839,
         "footer_numbers": [
           57
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 58,
-        "text_character_count": 1974,
-        "content_character_count": 1902,
-        "nonwhite_channel_ratio": 0.239188,
+        "physical_page": 60,
+        "text_character_count": 80,
+        "content_character_count": 75,
+        "nonwhite_channel_ratio": 0.007376,
         "footer_numbers": [
           58
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 59,
-        "text_character_count": 2077,
-        "content_character_count": 2013,
-        "nonwhite_channel_ratio": 0.250028,
+        "physical_page": 61,
+        "text_character_count": 1131,
+        "content_character_count": 1051,
+        "nonwhite_channel_ratio": 0.11847,
         "footer_numbers": [
           59
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 60,
-        "text_character_count": 1962,
-        "content_character_count": 1875,
-        "nonwhite_channel_ratio": 0.236167,
+        "physical_page": 62,
+        "text_character_count": 1921,
+        "content_character_count": 1857,
+        "nonwhite_channel_ratio": 0.177653,
         "footer_numbers": [
           60
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 61,
-        "text_character_count": 1333,
-        "content_character_count": 1240,
-        "nonwhite_channel_ratio": 0.162939,
+        "physical_page": 63,
+        "text_character_count": 2109,
+        "content_character_count": 2017,
+        "nonwhite_channel_ratio": 0.189609,
         "footer_numbers": [
           61
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 62,
-        "text_character_count": 1687,
-        "content_character_count": 966,
-        "nonwhite_channel_ratio": 0.15877,
+        "physical_page": 64,
+        "text_character_count": 1930,
+        "content_character_count": 1867,
+        "nonwhite_channel_ratio": 0.175126,
         "footer_numbers": [
           62
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 63,
-        "text_character_count": 2058,
-        "content_character_count": 1981,
-        "nonwhite_channel_ratio": 0.245939,
+        "physical_page": 65,
+        "text_character_count": 1606,
+        "content_character_count": 1534,
+        "nonwhite_channel_ratio": 0.143379,
         "footer_numbers": [
           63
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 64,
-        "text_character_count": 1961,
-        "content_character_count": 1878,
-        "nonwhite_channel_ratio": 0.232404,
+        "physical_page": 66,
+        "text_character_count": 741,
+        "content_character_count": 705,
+        "nonwhite_channel_ratio": 0.061806,
         "footer_numbers": [
           64
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 65,
-        "text_character_count": 1925,
-        "content_character_count": 1848,
-        "nonwhite_channel_ratio": 0.231305,
+        "physical_page": 67,
+        "text_character_count": 1613,
+        "content_character_count": 1539,
+        "nonwhite_channel_ratio": 0.161233,
         "footer_numbers": [
           65
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 66,
-        "text_character_count": 1927,
-        "content_character_count": 1845,
-        "nonwhite_channel_ratio": 0.233074,
+        "physical_page": 68,
+        "text_character_count": 2072,
+        "content_character_count": 1989,
+        "nonwhite_channel_ratio": 0.19377,
         "footer_numbers": [
           66
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 67,
-        "text_character_count": 1933,
-        "content_character_count": 1832,
-        "nonwhite_channel_ratio": 0.232293,
+        "physical_page": 69,
+        "text_character_count": 1944,
+        "content_character_count": 1884,
+        "nonwhite_channel_ratio": 0.179478,
         "footer_numbers": [
           67
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 68,
-        "text_character_count": 1464,
-        "content_character_count": 1402,
-        "nonwhite_channel_ratio": 0.190486,
+        "physical_page": 70,
+        "text_character_count": 1668,
+        "content_character_count": 1573,
+        "nonwhite_channel_ratio": 0.154583,
         "footer_numbers": [
           68
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 69,
-        "text_character_count": 1955,
-        "content_character_count": 1881,
-        "nonwhite_channel_ratio": 0.229535,
+        "physical_page": 71,
+        "text_character_count": 62,
+        "content_character_count": 56,
+        "nonwhite_channel_ratio": 0.005821,
         "footer_numbers": [
           69
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 70,
-        "text_character_count": 1834,
-        "content_character_count": 1747,
-        "nonwhite_channel_ratio": 0.223023,
+        "physical_page": 72,
+        "text_character_count": 1510,
+        "content_character_count": 1437,
+        "nonwhite_channel_ratio": 0.275542,
         "footer_numbers": [
           70
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 71,
-        "text_character_count": 1801,
-        "content_character_count": 1734,
-        "nonwhite_channel_ratio": 0.202115,
+        "physical_page": 73,
+        "text_character_count": 2245,
+        "content_character_count": 2142,
+        "nonwhite_channel_ratio": 0.188701,
         "footer_numbers": [
           71
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 72,
-        "text_character_count": 1957,
-        "content_character_count": 1885,
-        "nonwhite_channel_ratio": 0.222138,
+        "physical_page": 74,
+        "text_character_count": 2206,
+        "content_character_count": 2109,
+        "nonwhite_channel_ratio": 0.185449,
         "footer_numbers": [
           72
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 73,
-        "text_character_count": 2014,
-        "content_character_count": 1945,
-        "nonwhite_channel_ratio": 0.190741,
+        "physical_page": 75,
+        "text_character_count": 302,
+        "content_character_count": 290,
+        "nonwhite_channel_ratio": 0.025658,
         "footer_numbers": [
           73
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 74,
-        "text_character_count": 270,
-        "content_character_count": 259,
-        "nonwhite_channel_ratio": 0.035064,
+        "physical_page": 76,
+        "text_character_count": 1280,
+        "content_character_count": 1219,
+        "nonwhite_channel_ratio": 0.13273,
         "footer_numbers": [
           74
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 75,
-        "text_character_count": 1524,
-        "content_character_count": 1428,
-        "nonwhite_channel_ratio": 0.147308,
+        "physical_page": 77,
+        "text_character_count": 2019,
+        "content_character_count": 1953,
+        "nonwhite_channel_ratio": 0.18788,
         "footer_numbers": [
           75
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 76,
-        "text_character_count": 2025,
-        "content_character_count": 1951,
-        "nonwhite_channel_ratio": 0.19051,
+        "physical_page": 78,
+        "text_character_count": 2074,
+        "content_character_count": 2012,
+        "nonwhite_channel_ratio": 0.193834,
         "footer_numbers": [
           76
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 77,
-        "text_character_count": 2044,
-        "content_character_count": 1982,
-        "nonwhite_channel_ratio": 0.190685,
+        "physical_page": 79,
+        "text_character_count": 1979,
+        "content_character_count": 1892,
+        "nonwhite_channel_ratio": 0.184628,
         "footer_numbers": [
           77
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 78,
-        "text_character_count": 1912,
-        "content_character_count": 1852,
-        "nonwhite_channel_ratio": 0.18124,
+        "physical_page": 80,
+        "text_character_count": 2038,
+        "content_character_count": 1973,
+        "nonwhite_channel_ratio": 0.191323,
         "footer_numbers": [
           78
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 79,
-        "text_character_count": 1644,
-        "content_character_count": 1564,
-        "nonwhite_channel_ratio": 0.169658,
+        "physical_page": 81,
+        "text_character_count": 1628,
+        "content_character_count": 1528,
+        "nonwhite_channel_ratio": 0.164238,
         "footer_numbers": [
           79
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 80,
-        "text_character_count": 1723,
-        "content_character_count": 1627,
-        "nonwhite_channel_ratio": 0.170989,
+        "physical_page": 82,
+        "text_character_count": 1108,
+        "content_character_count": 1046,
+        "nonwhite_channel_ratio": 0.109721,
         "footer_numbers": [
           80
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 81,
-        "text_character_count": 1875,
-        "content_character_count": 1802,
-        "nonwhite_channel_ratio": 0.175342,
+        "physical_page": 83,
+        "text_character_count": 1539,
+        "content_character_count": 1475,
+        "nonwhite_channel_ratio": 0.13261,
         "footer_numbers": [
           81
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 82,
-        "text_character_count": 1862,
-        "content_character_count": 1790,
-        "nonwhite_channel_ratio": 0.176202,
+        "physical_page": 84,
+        "text_character_count": 2307,
+        "content_character_count": 2245,
+        "nonwhite_channel_ratio": 0.195516,
         "footer_numbers": [
           82
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 83,
-        "text_character_count": 1803,
-        "content_character_count": 1692,
-        "nonwhite_channel_ratio": 0.171069,
+        "physical_page": 85,
+        "text_character_count": 2341,
+        "content_character_count": 2279,
+        "nonwhite_channel_ratio": 0.195516,
         "footer_numbers": [
           83
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 84,
-        "text_character_count": 617,
-        "content_character_count": 581,
-        "nonwhite_channel_ratio": 0.057262,
+        "physical_page": 86,
+        "text_character_count": 1883,
+        "content_character_count": 1830,
+        "nonwhite_channel_ratio": 0.161624,
         "footer_numbers": [
           84
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 85,
-        "text_character_count": 1287,
-        "content_character_count": 1204,
-        "nonwhite_channel_ratio": 0.122176,
+        "physical_page": 87,
+        "text_character_count": 1756,
+        "content_character_count": 1676,
+        "nonwhite_channel_ratio": 0.165952,
         "footer_numbers": [
           85
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 86,
-        "text_character_count": 2205,
-        "content_character_count": 2130,
-        "nonwhite_channel_ratio": 0.203885,
+        "physical_page": 88,
+        "text_character_count": 1514,
+        "content_character_count": 1402,
+        "nonwhite_channel_ratio": 0.197197,
         "footer_numbers": [
           86
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 87,
-        "text_character_count": 1985,
-        "content_character_count": 1871,
-        "nonwhite_channel_ratio": 0.179603,
+        "physical_page": 89,
+        "text_character_count": 1169,
+        "content_character_count": 1065,
+        "nonwhite_channel_ratio": 0.105238,
         "footer_numbers": [
           87
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 88,
-        "text_character_count": 351,
-        "content_character_count": 331,
-        "nonwhite_channel_ratio": 0.031453,
+        "physical_page": 90,
+        "text_character_count": 37,
+        "content_character_count": 33,
+        "nonwhite_channel_ratio": 0.003053,
         "footer_numbers": [
           88
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 89,
-        "text_character_count": 1564,
-        "content_character_count": 1509,
-        "nonwhite_channel_ratio": 0.151031,
+        "physical_page": 91,
+        "text_character_count": 1375,
+        "content_character_count": 1309,
+        "nonwhite_channel_ratio": 0.189952,
         "footer_numbers": [
           89
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 90,
-        "text_character_count": 2177,
-        "content_character_count": 2103,
-        "nonwhite_channel_ratio": 0.187473,
+        "physical_page": 92,
+        "text_character_count": 1926,
+        "content_character_count": 1831,
+        "nonwhite_channel_ratio": 0.230364,
         "footer_numbers": [
           90
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 91,
-        "text_character_count": 2275,
-        "content_character_count": 2214,
-        "nonwhite_channel_ratio": 0.195747,
+        "physical_page": 93,
+        "text_character_count": 1813,
+        "content_character_count": 1738,
+        "nonwhite_channel_ratio": 0.220313,
         "footer_numbers": [
           91
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 92,
-        "text_character_count": 2439,
-        "content_character_count": 2367,
-        "nonwhite_channel_ratio": 0.207575,
+        "physical_page": 94,
+        "text_character_count": 2131,
+        "content_character_count": 2064,
+        "nonwhite_channel_ratio": 0.255623,
         "footer_numbers": [
           92
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 93,
-        "text_character_count": 2326,
-        "content_character_count": 2267,
-        "nonwhite_channel_ratio": 0.201039,
+        "physical_page": 95,
+        "text_character_count": 1974,
+        "content_character_count": 1895,
+        "nonwhite_channel_ratio": 0.235736,
         "footer_numbers": [
           93
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 94,
-        "text_character_count": 2074,
-        "content_character_count": 1986,
-        "nonwhite_channel_ratio": 0.176829,
+        "physical_page": 96,
+        "text_character_count": 1783,
+        "content_character_count": 1684,
+        "nonwhite_channel_ratio": 0.220767,
         "footer_numbers": [
           94
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 95,
-        "text_character_count": 152,
-        "content_character_count": 145,
-        "nonwhite_channel_ratio": 0.012466,
+        "physical_page": 97,
+        "text_character_count": 1563,
+        "content_character_count": 1498,
+        "nonwhite_channel_ratio": 0.201111,
         "footer_numbers": [
           95
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 96,
-        "text_character_count": 1285,
-        "content_character_count": 1212,
-        "nonwhite_channel_ratio": 0.132698,
+        "physical_page": 98,
+        "text_character_count": 1905,
+        "content_character_count": 1836,
+        "nonwhite_channel_ratio": 0.227805,
         "footer_numbers": [
           96
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 97,
-        "text_character_count": 2104,
-        "content_character_count": 2039,
-        "nonwhite_channel_ratio": 0.195938,
+        "physical_page": 99,
+        "text_character_count": 1884,
+        "content_character_count": 1810,
+        "nonwhite_channel_ratio": 0.224521,
         "footer_numbers": [
           97
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 98,
-        "text_character_count": 2070,
-        "content_character_count": 2006,
-        "nonwhite_channel_ratio": 0.193842,
+        "physical_page": 100,
+        "text_character_count": 1697,
+        "content_character_count": 1615,
+        "nonwhite_channel_ratio": 0.187728,
         "footer_numbers": [
           98
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 99,
-        "text_character_count": 2047,
-        "content_character_count": 1969,
-        "nonwhite_channel_ratio": 0.190837,
+        "physical_page": 101,
+        "text_character_count": 2065,
+        "content_character_count": 1998,
+        "nonwhite_channel_ratio": 0.221588,
         "footer_numbers": [
           99
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 100,
-        "text_character_count": 2031,
-        "content_character_count": 1963,
-        "nonwhite_channel_ratio": 0.190669,
+        "physical_page": 102,
+        "text_character_count": 1826,
+        "content_character_count": 1769,
+        "nonwhite_channel_ratio": 0.177047,
         "footer_numbers": [
           100
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 101,
-        "text_character_count": 1638,
-        "content_character_count": 1543,
-        "nonwhite_channel_ratio": 0.166438,
+        "physical_page": 103,
+        "text_character_count": 1525,
+        "content_character_count": 1431,
+        "nonwhite_channel_ratio": 0.147492,
         "footer_numbers": [
           101
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 102,
-        "text_character_count": 938,
-        "content_character_count": 891,
-        "nonwhite_channel_ratio": 0.093707,
+        "physical_page": 104,
+        "text_character_count": 2026,
+        "content_character_count": 1954,
+        "nonwhite_channel_ratio": 0.190478,
         "footer_numbers": [
           102
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 103,
-        "text_character_count": 1141,
-        "content_character_count": 1081,
-        "nonwhite_channel_ratio": 0.122216,
+        "physical_page": 105,
+        "text_character_count": 2051,
+        "content_character_count": 1979,
+        "nonwhite_channel_ratio": 0.190821,
         "footer_numbers": [
           103
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 104,
-        "text_character_count": 1935,
-        "content_character_count": 1869,
-        "nonwhite_channel_ratio": 0.180204,
+        "physical_page": 106,
+        "text_character_count": 1914,
+        "content_character_count": 1854,
+        "nonwhite_channel_ratio": 0.181288,
         "footer_numbers": [
           104
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 105,
-        "text_character_count": 2004,
-        "content_character_count": 1944,
-        "nonwhite_channel_ratio": 0.187736,
+        "physical_page": 107,
+        "text_character_count": 1694,
+        "content_character_count": 1610,
+        "nonwhite_channel_ratio": 0.177462,
         "footer_numbers": [
           105
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 106,
-        "text_character_count": 1679,
-        "content_character_count": 1608,
-        "nonwhite_channel_ratio": 0.165219,
+        "physical_page": 108,
+        "text_character_count": 1688,
+        "content_character_count": 1574,
+        "nonwhite_channel_ratio": 0.164517,
         "footer_numbers": [
           106
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 107,
-        "text_character_count": 1146,
-        "content_character_count": 1075,
-        "nonwhite_channel_ratio": 0.116023,
+        "physical_page": 109,
+        "text_character_count": 1804,
+        "content_character_count": 1723,
+        "nonwhite_channel_ratio": 0.167618,
         "footer_numbers": [
           107
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 108,
-        "text_character_count": 1014,
-        "content_character_count": 966,
-        "nonwhite_channel_ratio": 0.122973,
+        "physical_page": 110,
+        "text_character_count": 1941,
+        "content_character_count": 1868,
+        "nonwhite_channel_ratio": 0.184173,
         "footer_numbers": [
           108
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 109,
-        "text_character_count": 1263,
-        "content_character_count": 1206,
-        "nonwhite_channel_ratio": 0.152306,
+        "physical_page": 111,
+        "text_character_count": 1810,
+        "content_character_count": 1688,
+        "nonwhite_channel_ratio": 0.171492,
         "footer_numbers": [
           109
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 110,
-        "text_character_count": 1802,
-        "content_character_count": 1711,
-        "nonwhite_channel_ratio": 0.169783,
+        "physical_page": 112,
+        "text_character_count": 619,
+        "content_character_count": 583,
+        "nonwhite_channel_ratio": 0.057374,
         "footer_numbers": [
           110
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 111,
-        "text_character_count": 681,
-        "content_character_count": 640,
-        "nonwhite_channel_ratio": 0.059983,
+        "physical_page": 113,
+        "text_character_count": 1142,
+        "content_character_count": 1055,
+        "nonwhite_channel_ratio": 0.107845,
         "footer_numbers": [
           111
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 112,
-        "text_character_count": 1345,
-        "content_character_count": 1259,
-        "nonwhite_channel_ratio": 0.133519,
+        "physical_page": 114,
+        "text_character_count": 2190,
+        "content_character_count": 2117,
+        "nonwhite_channel_ratio": 0.202657,
         "footer_numbers": [
           112
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 113,
-        "text_character_count": 2016,
-        "content_character_count": 1942,
-        "nonwhite_channel_ratio": 0.185823,
+        "physical_page": 115,
+        "text_character_count": 1965,
+        "content_character_count": 1871,
+        "nonwhite_channel_ratio": 0.178838,
         "footer_numbers": [
           113
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 114,
-        "text_character_count": 2017,
-        "content_character_count": 1945,
-        "nonwhite_channel_ratio": 0.187712,
+        "physical_page": 116,
+        "text_character_count": 535,
+        "content_character_count": 507,
+        "nonwhite_channel_ratio": 0.047968,
         "footer_numbers": [
           114
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 115,
-        "text_character_count": 1709,
-        "content_character_count": 1600,
-        "nonwhite_channel_ratio": 0.171595,
+        "physical_page": 117,
+        "text_character_count": 1625,
+        "content_character_count": 1539,
+        "nonwhite_channel_ratio": 0.158587,
         "footer_numbers": [
           115
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 116,
-        "text_character_count": 1224,
-        "content_character_count": 1083,
-        "nonwhite_channel_ratio": 0.138277,
+        "physical_page": 118,
+        "text_character_count": 2102,
+        "content_character_count": 2018,
+        "nonwhite_channel_ratio": 0.203343,
         "footer_numbers": [
           116
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 117,
-        "text_character_count": 1741,
-        "content_character_count": 1638,
-        "nonwhite_channel_ratio": 0.174226,
+        "physical_page": 119,
+        "text_character_count": 2072,
+        "content_character_count": 2007,
+        "nonwhite_channel_ratio": 0.190406,
         "footer_numbers": [
           117
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 118,
-        "text_character_count": 1400,
-        "content_character_count": 1312,
-        "nonwhite_channel_ratio": 0.154904,
+        "physical_page": 120,
+        "text_character_count": 2099,
+        "content_character_count": 1994,
+        "nonwhite_channel_ratio": 0.202626,
         "footer_numbers": [
           118
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 119,
-        "text_character_count": 1981,
-        "content_character_count": 1887,
-        "nonwhite_channel_ratio": 0.184165,
+        "physical_page": 121,
+        "text_character_count": 1251,
+        "content_character_count": 1196,
+        "nonwhite_channel_ratio": 0.130888,
         "footer_numbers": [
           119
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 120,
-        "text_character_count": 1951,
-        "content_character_count": 1844,
-        "nonwhite_channel_ratio": 0.178485,
+        "physical_page": 122,
+        "text_character_count": 1654,
+        "content_character_count": 1574,
+        "nonwhite_channel_ratio": 0.153183,
         "footer_numbers": [
           120
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 121,
-        "text_character_count": 832,
-        "content_character_count": 783,
-        "nonwhite_channel_ratio": 0.077094,
+        "physical_page": 123,
+        "text_character_count": 2056,
+        "content_character_count": 1981,
+        "nonwhite_channel_ratio": 0.189282,
         "footer_numbers": [
           121
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 122,
-        "text_character_count": 911,
-        "content_character_count": 844,
-        "nonwhite_channel_ratio": 0.088707,
+        "physical_page": 124,
+        "text_character_count": 2053,
+        "content_character_count": 1992,
+        "nonwhite_channel_ratio": 0.188573,
         "footer_numbers": [
           122
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 123,
-        "text_character_count": 2263,
-        "content_character_count": 2198,
-        "nonwhite_channel_ratio": 0.190645,
+        "physical_page": 125,
+        "text_character_count": 2135,
+        "content_character_count": 2047,
+        "nonwhite_channel_ratio": 0.194806,
         "footer_numbers": [
           123
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 124,
-        "text_character_count": 2162,
-        "content_character_count": 2097,
-        "nonwhite_channel_ratio": 0.182675,
+        "physical_page": 126,
+        "text_character_count": 2019,
+        "content_character_count": 1958,
+        "nonwhite_channel_ratio": 0.187194,
         "footer_numbers": [
           124
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 125,
-        "text_character_count": 2374,
-        "content_character_count": 2309,
-        "nonwhite_channel_ratio": 0.201844,
+        "physical_page": 127,
+        "text_character_count": 2204,
+        "content_character_count": 2142,
+        "nonwhite_channel_ratio": 0.201956,
         "footer_numbers": [
           125
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 126,
-        "text_character_count": 2405,
-        "content_character_count": 2340,
-        "nonwhite_channel_ratio": 0.204539,
+        "physical_page": 128,
+        "text_character_count": 2107,
+        "content_character_count": 2035,
+        "nonwhite_channel_ratio": 0.191594,
         "footer_numbers": [
           126
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 127,
-        "text_character_count": 2344,
-        "content_character_count": 2279,
-        "nonwhite_channel_ratio": 0.19801,
+        "physical_page": 129,
+        "text_character_count": 2113,
+        "content_character_count": 2029,
+        "nonwhite_channel_ratio": 0.193116,
         "footer_numbers": [
           127
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 128,
-        "text_character_count": 2243,
-        "content_character_count": 2178,
-        "nonwhite_channel_ratio": 0.190024,
+        "physical_page": 130,
+        "text_character_count": 2153,
+        "content_character_count": 2079,
+        "nonwhite_channel_ratio": 0.198082,
         "footer_numbers": [
           128
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 129,
-        "text_character_count": 1871,
-        "content_character_count": 1796,
-        "nonwhite_channel_ratio": 0.16105,
+        "physical_page": 131,
+        "text_character_count": 1836,
+        "content_character_count": 1757,
+        "nonwhite_channel_ratio": 0.168941,
         "footer_numbers": [
           129
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 130,
-        "text_character_count": 1433,
-        "content_character_count": 1370,
-        "nonwhite_channel_ratio": 0.13253,
+        "physical_page": 132,
+        "text_character_count": 2019,
+        "content_character_count": 1924,
+        "nonwhite_channel_ratio": 0.18531,
         "footer_numbers": [
           130
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 131,
-        "text_character_count": 2329,
-        "content_character_count": 2264,
-        "nonwhite_channel_ratio": 0.197277,
+        "physical_page": 133,
+        "text_character_count": 936,
+        "content_character_count": 905,
+        "nonwhite_channel_ratio": 0.08559,
         "footer_numbers": [
           131
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 132,
-        "text_character_count": 2380,
-        "content_character_count": 2315,
-        "nonwhite_channel_ratio": 0.19856,
+        "physical_page": 134,
+        "text_character_count": 1585,
+        "content_character_count": 1519,
+        "nonwhite_channel_ratio": 0.147356,
         "footer_numbers": [
           132
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 133,
-        "text_character_count": 1962,
-        "content_character_count": 1906,
-        "nonwhite_channel_ratio": 0.168248,
+        "physical_page": 135,
+        "text_character_count": 2027,
+        "content_character_count": 1964,
+        "nonwhite_channel_ratio": 0.182723,
         "footer_numbers": [
           133
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 134,
-        "text_character_count": 1386,
-        "content_character_count": 1313,
-        "nonwhite_channel_ratio": 0.14251,
+        "physical_page": 136,
+        "text_character_count": 2016,
+        "content_character_count": 1953,
+        "nonwhite_channel_ratio": 0.18218,
         "footer_numbers": [
           134
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 135,
-        "text_character_count": 2045,
-        "content_character_count": 1960,
-        "nonwhite_channel_ratio": 0.19043,
+        "physical_page": 137,
+        "text_character_count": 359,
+        "content_character_count": 339,
+        "nonwhite_channel_ratio": 0.034426,
         "footer_numbers": [
           135
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 136,
-        "text_character_count": 2071,
-        "content_character_count": 2005,
-        "nonwhite_channel_ratio": 0.190574,
+        "physical_page": 138,
+        "text_character_count": 2217,
+        "content_character_count": 2105,
+        "nonwhite_channel_ratio": 0.255934,
         "footer_numbers": [
           136
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 137,
-        "text_character_count": 2095,
-        "content_character_count": 2029,
-        "nonwhite_channel_ratio": 0.19365,
+        "physical_page": 139,
+        "text_character_count": 3247,
+        "content_character_count": 3142,
+        "nonwhite_channel_ratio": 0.383531,
         "footer_numbers": [
           137
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 138,
-        "text_character_count": 2132,
-        "content_character_count": 2049,
-        "nonwhite_channel_ratio": 0.195229,
+        "physical_page": 140,
+        "text_character_count": 1457,
+        "content_character_count": 1391,
+        "nonwhite_channel_ratio": 0.15437,
         "footer_numbers": [
           138
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 139,
-        "text_character_count": 2102,
-        "content_character_count": 2027,
-        "nonwhite_channel_ratio": 0.193523,
+        "physical_page": 141,
+        "text_character_count": 139,
+        "content_character_count": 131,
+        "nonwhite_channel_ratio": 0.013221,
         "footer_numbers": [
           139
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 140,
-        "text_character_count": 1915,
-        "content_character_count": 1823,
-        "nonwhite_channel_ratio": 0.177629,
+        "physical_page": 142,
+        "text_character_count": 1721,
+        "content_character_count": 1626,
+        "nonwhite_channel_ratio": 0.179765,
         "footer_numbers": [
           140
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 141,
-        "text_character_count": 1857,
-        "content_character_count": 1782,
-        "nonwhite_channel_ratio": 0.175121,
+        "physical_page": 143,
+        "text_character_count": 2056,
+        "content_character_count": 1980,
+        "nonwhite_channel_ratio": 0.188812,
         "footer_numbers": [
           141
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 142,
-        "text_character_count": 1518,
-        "content_character_count": 1424,
-        "nonwhite_channel_ratio": 0.147096,
+        "physical_page": 144,
+        "text_character_count": 2152,
+        "content_character_count": 2067,
+        "nonwhite_channel_ratio": 0.198417,
         "footer_numbers": [
           142
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 143,
-        "text_character_count": 1825,
-        "content_character_count": 1742,
-        "nonwhite_channel_ratio": 0.208452,
+        "physical_page": 145,
+        "text_character_count": 1848,
+        "content_character_count": 1747,
+        "nonwhite_channel_ratio": 0.166614,
         "footer_numbers": [
           143
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 144,
-        "text_character_count": 2093,
-        "content_character_count": 2031,
-        "nonwhite_channel_ratio": 0.214964,
+        "physical_page": 146,
+        "text_character_count": 1943,
+        "content_character_count": 1847,
+        "nonwhite_channel_ratio": 0.178323,
         "footer_numbers": [
           144
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 145,
-        "text_character_count": 1837,
-        "content_character_count": 1749,
-        "nonwhite_channel_ratio": 0.21497,
+        "physical_page": 147,
+        "text_character_count": 589,
+        "content_character_count": 565,
+        "nonwhite_channel_ratio": 0.055509,
         "footer_numbers": [
           145
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 146,
-        "text_character_count": 1501,
-        "content_character_count": 1420,
-        "nonwhite_channel_ratio": 0.136277,
+        "physical_page": 148,
+        "text_character_count": 1491,
+        "content_character_count": 1372,
+        "nonwhite_channel_ratio": 0.143108,
         "footer_numbers": [
           146
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 147,
-        "text_character_count": 1314,
-        "content_character_count": 1252,
-        "nonwhite_channel_ratio": 0.135408,
+        "physical_page": 149,
+        "text_character_count": 2009,
+        "content_character_count": 1930,
+        "nonwhite_channel_ratio": 0.184859,
         "footer_numbers": [
           147
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 148,
-        "text_character_count": 1888,
-        "content_character_count": 1823,
-        "nonwhite_channel_ratio": 0.174736,
+        "physical_page": 150,
+        "text_character_count": 1982,
+        "content_character_count": 1905,
+        "nonwhite_channel_ratio": 0.183671,
         "footer_numbers": [
           148
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 149,
-        "text_character_count": 1771,
-        "content_character_count": 1692,
-        "nonwhite_channel_ratio": 0.206608,
+        "physical_page": 151,
+        "text_character_count": 1752,
+        "content_character_count": 1632,
+        "nonwhite_channel_ratio": 0.17574,
         "footer_numbers": [
           149
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 150,
-        "text_character_count": 1865,
-        "content_character_count": 1785,
-        "nonwhite_channel_ratio": 0.171699,
+        "physical_page": 152,
+        "text_character_count": 1365,
+        "content_character_count": 1218,
+        "nonwhite_channel_ratio": 0.158818,
         "footer_numbers": [
           150
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 151,
-        "text_character_count": 1898,
-        "content_character_count": 1831,
-        "nonwhite_channel_ratio": 0.172679,
+        "physical_page": 153,
+        "text_character_count": 1796,
+        "content_character_count": 1695,
+        "nonwhite_channel_ratio": 0.173444,
         "footer_numbers": [
           151
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 152,
-        "text_character_count": 1731,
-        "content_character_count": 1667,
-        "nonwhite_channel_ratio": 0.158938,
+        "physical_page": 154,
+        "text_character_count": 1534,
+        "content_character_count": 1383,
+        "nonwhite_channel_ratio": 0.164135,
         "footer_numbers": [
           152
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 153,
-        "text_character_count": 830,
-        "content_character_count": 797,
-        "nonwhite_channel_ratio": 0.077285,
+        "physical_page": 155,
+        "text_character_count": 1884,
+        "content_character_count": 1799,
+        "nonwhite_channel_ratio": 0.175732,
         "footer_numbers": [
           153
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 154,
-        "text_character_count": 1355,
-        "content_character_count": 1291,
-        "nonwhite_channel_ratio": 0.145642,
+        "physical_page": 156,
+        "text_character_count": 1939,
+        "content_character_count": 1847,
+        "nonwhite_channel_ratio": 0.178477,
         "footer_numbers": [
           154
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 155,
-        "text_character_count": 2058,
-        "content_character_count": 1967,
-        "nonwhite_channel_ratio": 0.192351,
+        "physical_page": 157,
+        "text_character_count": 499,
+        "content_character_count": 465,
+        "nonwhite_channel_ratio": 0.046964,
         "footer_numbers": [
           155
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 156,
-        "text_character_count": 2053,
-        "content_character_count": 1988,
-        "nonwhite_channel_ratio": 0.193459,
+        "physical_page": 158,
+        "text_character_count": 1582,
+        "content_character_count": 1494,
+        "nonwhite_channel_ratio": 0.151716,
         "footer_numbers": [
           156
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 157,
-        "text_character_count": 2043,
-        "content_character_count": 1959,
-        "nonwhite_channel_ratio": 0.193858,
+        "physical_page": 159,
+        "text_character_count": 2064,
+        "content_character_count": 1978,
+        "nonwhite_channel_ratio": 0.191937,
         "footer_numbers": [
           157
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 158,
-        "text_character_count": 894,
-        "content_character_count": 854,
-        "nonwhite_channel_ratio": 0.079349,
+        "physical_page": 160,
+        "text_character_count": 1991,
+        "content_character_count": 1914,
+        "nonwhite_channel_ratio": 0.181838,
         "footer_numbers": [
           158
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 159,
-        "text_character_count": 1415,
-        "content_character_count": 1341,
-        "nonwhite_channel_ratio": 0.14624,
+        "physical_page": 161,
+        "text_character_count": 2092,
+        "content_character_count": 2015,
+        "nonwhite_channel_ratio": 0.192128,
         "footer_numbers": [
           159
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 160,
-        "text_character_count": 2104,
-        "content_character_count": 2018,
-        "nonwhite_channel_ratio": 0.203694,
+        "physical_page": 162,
+        "text_character_count": 1993,
+        "content_character_count": 1921,
+        "nonwhite_channel_ratio": 0.183057,
         "footer_numbers": [
           160
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 161,
-        "text_character_count": 2094,
-        "content_character_count": 2026,
-        "nonwhite_channel_ratio": 0.193595,
+        "physical_page": 163,
+        "text_character_count": 1944,
+        "content_character_count": 1876,
+        "nonwhite_channel_ratio": 0.178554,
         "footer_numbers": [
           161
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 162,
-        "text_character_count": 2083,
-        "content_character_count": 1996,
-        "nonwhite_channel_ratio": 0.195213,
+        "physical_page": 164,
+        "text_character_count": 2059,
+        "content_character_count": 1976,
+        "nonwhite_channel_ratio": 0.191793,
         "footer_numbers": [
           162
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 163,
-        "text_character_count": 1468,
-        "content_character_count": 1387,
-        "nonwhite_channel_ratio": 0.155082,
+        "physical_page": 165,
+        "text_character_count": 1851,
+        "content_character_count": 1785,
+        "nonwhite_channel_ratio": 0.175304,
         "footer_numbers": [
           163
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 164,
-        "text_character_count": 1685,
-        "content_character_count": 1614,
-        "nonwhite_channel_ratio": 0.15661,
+        "physical_page": 166,
+        "text_character_count": 1417,
+        "content_character_count": 1323,
+        "nonwhite_channel_ratio": 0.137802,
         "footer_numbers": [
           164
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 165,
-        "text_character_count": 2024,
-        "content_character_count": 1936,
-        "nonwhite_channel_ratio": 0.18568,
+        "physical_page": 167,
+        "text_character_count": 115,
+        "content_character_count": 99,
+        "nonwhite_channel_ratio": 0.010086,
         "footer_numbers": [
           165
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 166,
-        "text_character_count": 2053,
-        "content_character_count": 1989,
-        "nonwhite_channel_ratio": 0.188493,
+        "physical_page": 168,
+        "text_character_count": 1451,
+        "content_character_count": 1371,
+        "nonwhite_channel_ratio": 0.141649,
         "footer_numbers": [
           166
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 167,
-        "text_character_count": 2217,
-        "content_character_count": 2138,
-        "nonwhite_channel_ratio": 0.203231,
+        "physical_page": 169,
+        "text_character_count": 2157,
+        "content_character_count": 2091,
+        "nonwhite_channel_ratio": 0.213522,
         "footer_numbers": [
           167
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 168,
-        "text_character_count": 2146,
-        "content_character_count": 2080,
-        "nonwhite_channel_ratio": 0.198895,
+        "physical_page": 170,
+        "text_character_count": 1756,
+        "content_character_count": 1694,
+        "nonwhite_channel_ratio": 0.19059,
         "footer_numbers": [
           168
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 169,
-        "text_character_count": 2147,
-        "content_character_count": 2082,
-        "nonwhite_channel_ratio": 0.196384,
+        "physical_page": 171,
+        "text_character_count": 1054,
+        "content_character_count": 991,
+        "nonwhite_channel_ratio": 0.093952,
         "footer_numbers": [
           169
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 170,
-        "text_character_count": 2178,
-        "content_character_count": 2113,
-        "nonwhite_channel_ratio": 0.197724,
+        "physical_page": 172,
+        "text_character_count": 1410,
+        "content_character_count": 1348,
+        "nonwhite_channel_ratio": 0.128282,
         "footer_numbers": [
           170
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 171,
-        "text_character_count": 2165,
-        "content_character_count": 2090,
-        "nonwhite_channel_ratio": 0.199884,
+        "physical_page": 173,
+        "text_character_count": 1049,
+        "content_character_count": 986,
+        "nonwhite_channel_ratio": 0.093051,
         "footer_numbers": [
           171
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 172,
-        "text_character_count": 2211,
-        "content_character_count": 2146,
-        "nonwhite_channel_ratio": 0.202777,
+        "physical_page": 174,
+        "text_character_count": 812,
+        "content_character_count": 768,
+        "nonwhite_channel_ratio": 0.079612,
         "footer_numbers": [
           172
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 173,
-        "text_character_count": 1856,
-        "content_character_count": 1778,
-        "nonwhite_channel_ratio": 0.171478,
+        "physical_page": 175,
+        "text_character_count": 1959,
+        "content_character_count": 1863,
+        "nonwhite_channel_ratio": 0.208317,
         "footer_numbers": [
           173
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 174,
-        "text_character_count": 2007,
-        "content_character_count": 1928,
-        "nonwhite_channel_ratio": 0.18492,
+        "physical_page": 176,
+        "text_character_count": 2054,
+        "content_character_count": 1993,
+        "nonwhite_channel_ratio": 0.211625,
         "footer_numbers": [
           174
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 175,
-        "text_character_count": 554,
-        "content_character_count": 533,
-        "nonwhite_channel_ratio": 0.051709,
+        "physical_page": 177,
+        "text_character_count": 1920,
+        "content_character_count": 1833,
+        "nonwhite_channel_ratio": 0.221636,
         "footer_numbers": [
           175
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 176,
-        "text_character_count": 1585,
-        "content_character_count": 1515,
-        "nonwhite_channel_ratio": 0.147476,
+        "physical_page": 178,
+        "text_character_count": 1580,
+        "content_character_count": 1498,
+        "nonwhite_channel_ratio": 0.143833,
         "footer_numbers": [
           176
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 177,
-        "text_character_count": 2027,
-        "content_character_count": 1961,
-        "nonwhite_channel_ratio": 0.18344,
+        "physical_page": 179,
+        "text_character_count": 1380,
+        "content_character_count": 1321,
+        "nonwhite_channel_ratio": 0.141035,
         "footer_numbers": [
           177
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 178,
-        "text_character_count": 2016,
-        "content_character_count": 1950,
-        "nonwhite_channel_ratio": 0.182085,
+        "physical_page": 180,
+        "text_character_count": 1685,
+        "content_character_count": 1625,
+        "nonwhite_channel_ratio": 0.156507,
         "footer_numbers": [
           178
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 179,
-        "text_character_count": 359,
-        "content_character_count": 336,
-        "nonwhite_channel_ratio": 0.03433,
+        "physical_page": 181,
+        "text_character_count": 1854,
+        "content_character_count": 1776,
+        "nonwhite_channel_ratio": 0.214832,
         "footer_numbers": [
           179
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 180,
-        "text_character_count": 1410,
-        "content_character_count": 1335,
-        "nonwhite_channel_ratio": 0.146782,
+        "physical_page": 182,
+        "text_character_count": 1784,
+        "content_character_count": 1706,
+        "nonwhite_channel_ratio": 0.163067,
         "footer_numbers": [
           180
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 181,
-        "text_character_count": 2145,
-        "content_character_count": 2078,
-        "nonwhite_channel_ratio": 0.202785,
+        "physical_page": 183,
+        "text_character_count": 1817,
+        "content_character_count": 1756,
+        "nonwhite_channel_ratio": 0.165067,
         "footer_numbers": [
           181
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 182,
-        "text_character_count": 2165,
-        "content_character_count": 2063,
-        "nonwhite_channel_ratio": 0.203128,
+        "physical_page": 184,
+        "text_character_count": 1881,
+        "content_character_count": 1815,
+        "nonwhite_channel_ratio": 0.172201,
         "footer_numbers": [
           182
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 183,
-        "text_character_count": 2113,
-        "content_character_count": 2046,
-        "nonwhite_channel_ratio": 0.198624,
+        "physical_page": 185,
+        "text_character_count": 578,
+        "content_character_count": 552,
+        "nonwhite_channel_ratio": 0.054122,
         "footer_numbers": [
           183
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 184,
-        "text_character_count": 2128,
-        "content_character_count": 2025,
-        "nonwhite_channel_ratio": 0.197588,
+        "physical_page": 186,
+        "text_character_count": 62,
+        "content_character_count": 50,
+        "nonwhite_channel_ratio": 0.00558,
         "footer_numbers": [
           184
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 185,
-        "text_character_count": 1999,
-        "content_character_count": 1912,
-        "nonwhite_channel_ratio": 0.18776,
+        "physical_page": 187,
+        "text_character_count": 1643,
+        "content_character_count": 1578,
+        "nonwhite_channel_ratio": 0.147723,
         "footer_numbers": [
           185
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 186,
-        "text_character_count": 1752,
-        "content_character_count": 1644,
-        "nonwhite_channel_ratio": 0.166165,
+        "physical_page": 188,
+        "text_character_count": 2186,
+        "content_character_count": 2126,
+        "nonwhite_channel_ratio": 0.183775,
         "footer_numbers": [
           186
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 187,
-        "text_character_count": 1324,
-        "content_character_count": 1229,
-        "nonwhite_channel_ratio": 0.128104,
+        "physical_page": 189,
+        "text_character_count": 1553,
+        "content_character_count": 1476,
+        "nonwhite_channel_ratio": 0.144224,
         "footer_numbers": [
           187
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 188,
-        "text_character_count": 1349,
-        "content_character_count": 1272,
-        "nonwhite_channel_ratio": 0.141019,
+        "physical_page": 190,
+        "text_character_count": 2176,
+        "content_character_count": 2116,
+        "nonwhite_channel_ratio": 0.186517,
         "footer_numbers": [
           188
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 189,
-        "text_character_count": 2101,
-        "content_character_count": 2036,
-        "nonwhite_channel_ratio": 0.197429,
+        "physical_page": 191,
+        "text_character_count": 1315,
+        "content_character_count": 1247,
+        "nonwhite_channel_ratio": 0.110898,
         "footer_numbers": [
           189
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 190,
-        "text_character_count": 2034,
-        "content_character_count": 1957,
-        "nonwhite_channel_ratio": 0.189864,
+        "physical_page": 192,
+        "text_character_count": 1475,
+        "content_character_count": 1415,
+        "nonwhite_channel_ratio": 0.140023,
         "footer_numbers": [
           190
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 191,
-        "text_character_count": 1365,
-        "content_character_count": 1244,
-        "nonwhite_channel_ratio": 0.238797,
+        "physical_page": 193,
+        "text_character_count": 2118,
+        "content_character_count": 2057,
+        "nonwhite_channel_ratio": 0.184197,
         "footer_numbers": [
           191
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 192,
-        "text_character_count": 1617,
-        "content_character_count": 1544,
-        "nonwhite_channel_ratio": 0.150127,
+        "physical_page": 194,
+        "text_character_count": 1492,
+        "content_character_count": 1446,
+        "nonwhite_channel_ratio": 0.128067,
         "footer_numbers": [
           192
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 193,
-        "text_character_count": 1260,
-        "content_character_count": 1187,
-        "nonwhite_channel_ratio": 0.132323,
+        "physical_page": 195,
+        "text_character_count": 828,
+        "content_character_count": 784,
+        "nonwhite_channel_ratio": 0.14768,
         "footer_numbers": [
           193
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 194,
-        "text_character_count": 2027,
-        "content_character_count": 1940,
-        "nonwhite_channel_ratio": 0.188549,
+        "physical_page": 196,
+        "text_character_count": 165,
+        "content_character_count": 155,
+        "nonwhite_channel_ratio": 0.014212,
         "footer_numbers": [
           194
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 195,
-        "text_character_count": 2179,
-        "content_character_count": 2101,
-        "nonwhite_channel_ratio": 0.20308,
+        "physical_page": 197,
+        "text_character_count": 1252,
+        "content_character_count": 1195,
+        "nonwhite_channel_ratio": 0.126696,
         "footer_numbers": [
           195
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 196,
-        "text_character_count": 2095,
-        "content_character_count": 2030,
-        "nonwhite_channel_ratio": 0.195922,
+        "physical_page": 198,
+        "text_character_count": 2010,
+        "content_character_count": 1941,
+        "nonwhite_channel_ratio": 0.187027,
         "footer_numbers": [
           196
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 197,
-        "text_character_count": 868,
-        "content_character_count": 810,
-        "nonwhite_channel_ratio": 0.104601,
+        "physical_page": 199,
+        "text_character_count": 2038,
+        "content_character_count": 1964,
+        "nonwhite_channel_ratio": 0.190454,
         "footer_numbers": [
           197
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 198,
-        "text_character_count": 1340,
-        "content_character_count": 1277,
-        "nonwhite_channel_ratio": 0.139784,
+        "physical_page": 200,
+        "text_character_count": 1643,
+        "content_character_count": 1560,
+        "nonwhite_channel_ratio": 0.167156,
         "footer_numbers": [
           198
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 199,
-        "text_character_count": 1377,
-        "content_character_count": 1304,
-        "nonwhite_channel_ratio": 0.142972,
+        "physical_page": 201,
+        "text_character_count": 1163,
+        "content_character_count": 1111,
+        "nonwhite_channel_ratio": 0.136986,
         "footer_numbers": [
           199
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 200,
-        "text_character_count": 1374,
-        "content_character_count": 1316,
-        "nonwhite_channel_ratio": 0.189872,
+        "physical_page": 202,
+        "text_character_count": 1209,
+        "content_character_count": 1157,
+        "nonwhite_channel_ratio": 0.147181,
         "footer_numbers": [
           200
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 201,
-        "text_character_count": 1539,
-        "content_character_count": 1490,
-        "nonwhite_channel_ratio": 0.144088,
+        "physical_page": 203,
+        "text_character_count": 1939,
+        "content_character_count": 1858,
+        "nonwhite_channel_ratio": 0.182289,
         "footer_numbers": [
           201
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 202,
-        "text_character_count": 979,
-        "content_character_count": 912,
-        "nonwhite_channel_ratio": 0.110172,
+        "physical_page": 204,
+        "text_character_count": 1337,
+        "content_character_count": 1272,
+        "nonwhite_channel_ratio": 0.121387,
         "footer_numbers": [
           202
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 203,
-        "text_character_count": 2198,
-        "content_character_count": 2123,
-        "nonwhite_channel_ratio": 0.207799,
+        "physical_page": 205,
+        "text_character_count": 45,
+        "content_character_count": 36,
+        "nonwhite_channel_ratio": 0.00393,
         "footer_numbers": [
           203
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 204,
-        "text_character_count": 707,
-        "content_character_count": 656,
-        "nonwhite_channel_ratio": 0.068565,
+        "physical_page": 206,
+        "text_character_count": 1121,
+        "content_character_count": 1053,
+        "nonwhite_channel_ratio": 0.098718,
         "footer_numbers": [
           204
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 205,
-        "text_character_count": 1453,
-        "content_character_count": 1389,
-        "nonwhite_channel_ratio": 0.149939,
+        "physical_page": 207,
+        "text_character_count": 2096,
+        "content_character_count": 2036,
+        "nonwhite_channel_ratio": 0.176394,
         "footer_numbers": [
           205
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 206,
-        "text_character_count": 1951,
-        "content_character_count": 1874,
-        "nonwhite_channel_ratio": 0.181001,
+        "physical_page": 208,
+        "text_character_count": 2145,
+        "content_character_count": 2085,
+        "nonwhite_channel_ratio": 0.182013,
         "footer_numbers": [
           206
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 207,
-        "text_character_count": 2004,
-        "content_character_count": 1939,
-        "nonwhite_channel_ratio": 0.179199,
+        "physical_page": 209,
+        "text_character_count": 2384,
+        "content_character_count": 2322,
+        "nonwhite_channel_ratio": 0.203168,
         "footer_numbers": [
           207
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 208,
-        "text_character_count": 2109,
-        "content_character_count": 2043,
-        "nonwhite_channel_ratio": 0.191172,
+        "physical_page": 210,
+        "text_character_count": 2321,
+        "content_character_count": 2259,
+        "nonwhite_channel_ratio": 0.196855,
         "footer_numbers": [
           208
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 209,
-        "text_character_count": 2085,
-        "content_character_count": 1994,
-        "nonwhite_channel_ratio": 0.193116,
+        "physical_page": 211,
+        "text_character_count": 2346,
+        "content_character_count": 2284,
+        "nonwhite_channel_ratio": 0.19805,
         "footer_numbers": [
           209
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 210,
-        "text_character_count": 1997,
-        "content_character_count": 1909,
-        "nonwhite_channel_ratio": 0.184667,
+        "physical_page": 212,
+        "text_character_count": 2256,
+        "content_character_count": 2194,
+        "nonwhite_channel_ratio": 0.190909,
         "footer_numbers": [
           210
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 211,
-        "text_character_count": 2077,
-        "content_character_count": 1983,
-        "nonwhite_channel_ratio": 0.192391,
+        "physical_page": 213,
+        "text_character_count": 1749,
+        "content_character_count": 1679,
+        "nonwhite_channel_ratio": 0.149428,
         "footer_numbers": [
           211
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 212,
-        "text_character_count": 2013,
-        "content_character_count": 1946,
-        "nonwhite_channel_ratio": 0.186883,
+        "physical_page": 214,
+        "text_character_count": 130,
+        "content_character_count": 122,
+        "nonwhite_channel_ratio": 0.011669,
         "footer_numbers": [
           212
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 213,
-        "text_character_count": 1881,
-        "content_character_count": 1807,
-        "nonwhite_channel_ratio": 0.17519,
+        "physical_page": 215,
+        "text_character_count": 1637,
+        "content_character_count": 1560,
+        "nonwhite_channel_ratio": 0.158938,
         "footer_numbers": [
           213
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 214,
-        "text_character_count": 1373,
-        "content_character_count": 1264,
-        "nonwhite_channel_ratio": 0.134754,
+        "physical_page": 216,
+        "text_character_count": 1746,
+        "content_character_count": 1662,
+        "nonwhite_channel_ratio": 0.160604,
         "footer_numbers": [
           214
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 215,
-        "text_character_count": 1821,
-        "content_character_count": 1736,
-        "nonwhite_channel_ratio": 0.165282,
+        "physical_page": 217,
+        "text_character_count": 1798,
+        "content_character_count": 1741,
+        "nonwhite_channel_ratio": 0.160827,
         "footer_numbers": [
           215
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 216,
-        "text_character_count": 2060,
-        "content_character_count": 1978,
-        "nonwhite_channel_ratio": 0.183695,
+        "physical_page": 218,
+        "text_character_count": 2010,
+        "content_character_count": 1947,
+        "nonwhite_channel_ratio": 0.179965,
         "footer_numbers": [
           216
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 217,
-        "text_character_count": 1919,
-        "content_character_count": 1789,
-        "nonwhite_channel_ratio": 0.167004,
+        "physical_page": 219,
+        "text_character_count": 2015,
+        "content_character_count": 1929,
+        "nonwhite_channel_ratio": 0.186301,
         "footer_numbers": [
           217
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 218,
-        "text_character_count": 1823,
-        "content_character_count": 1745,
-        "nonwhite_channel_ratio": 0.158571,
+        "physical_page": 220,
+        "text_character_count": 2029,
+        "content_character_count": 1929,
+        "nonwhite_channel_ratio": 0.187226,
         "footer_numbers": [
           218
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 219,
-        "text_character_count": 1406,
-        "content_character_count": 1346,
-        "nonwhite_channel_ratio": 0.136014,
+        "physical_page": 221,
+        "text_character_count": 2080,
+        "content_character_count": 1974,
+        "nonwhite_channel_ratio": 0.191363,
         "footer_numbers": [
           219
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 220,
-        "text_character_count": 2225,
-        "content_character_count": 2166,
-        "nonwhite_channel_ratio": 0.185927,
+        "physical_page": 222,
+        "text_character_count": 1855,
+        "content_character_count": 1782,
+        "nonwhite_channel_ratio": 0.1724,
         "footer_numbers": [
           220
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 221,
-        "text_character_count": 1162,
-        "content_character_count": 1090,
-        "nonwhite_channel_ratio": 0.109782,
+        "physical_page": 223,
+        "text_character_count": 1893,
+        "content_character_count": 1822,
+        "nonwhite_channel_ratio": 0.175453,
         "footer_numbers": [
           221
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 222,
-        "text_character_count": 2120,
-        "content_character_count": 2059,
-        "nonwhite_channel_ratio": 0.179973,
+        "physical_page": 224,
+        "text_character_count": 1613,
+        "content_character_count": 1510,
+        "nonwhite_channel_ratio": 0.158252,
         "footer_numbers": [
           222
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 223,
-        "text_character_count": 1956,
-        "content_character_count": 1879,
-        "nonwhite_channel_ratio": 0.166885,
+        "physical_page": 225,
+        "text_character_count": 1481,
+        "content_character_count": 1415,
+        "nonwhite_channel_ratio": 0.133455,
         "footer_numbers": [
           223
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 224,
-        "text_character_count": 29,
-        "content_character_count": 16,
-        "nonwhite_channel_ratio": 0.002001,
+        "physical_page": 226,
+        "text_character_count": 1882,
+        "content_character_count": 1770,
+        "nonwhite_channel_ratio": 0.167729,
         "footer_numbers": [
           224
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 225,
-        "text_character_count": 2077,
-        "content_character_count": 1968,
-        "nonwhite_channel_ratio": 0.242623,
+        "physical_page": 227,
+        "text_character_count": 1777,
+        "content_character_count": 1686,
+        "nonwhite_channel_ratio": 0.155837,
         "footer_numbers": [
           225
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 226,
-        "text_character_count": 3133,
-        "content_character_count": 3027,
-        "nonwhite_channel_ratio": 0.369901,
+        "physical_page": 228,
+        "text_character_count": 2025,
+        "content_character_count": 1932,
+        "nonwhite_channel_ratio": 0.176274,
         "footer_numbers": [
           226
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 227,
-        "text_character_count": 1864,
-        "content_character_count": 1785,
-        "nonwhite_channel_ratio": 0.200168,
+        "physical_page": 229,
+        "text_character_count": 753,
+        "content_character_count": 712,
+        "nonwhite_channel_ratio": 0.065926,
         "footer_numbers": [
           227
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 228,
-        "text_character_count": 1784,
-        "content_character_count": 1700,
-        "nonwhite_channel_ratio": 0.19715,
+        "physical_page": 230,
+        "text_character_count": 1492,
+        "content_character_count": 1412,
+        "nonwhite_channel_ratio": 0.151971,
         "footer_numbers": [
           228
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 229,
-        "text_character_count": 2121,
-        "content_character_count": 2051,
-        "nonwhite_channel_ratio": 0.256309,
+        "physical_page": 231,
+        "text_character_count": 2188,
+        "content_character_count": 2075,
+        "nonwhite_channel_ratio": 0.200577,
         "footer_numbers": [
           229
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 230,
-        "text_character_count": 2331,
-        "content_character_count": 2221,
-        "nonwhite_channel_ratio": 0.282597,
+        "physical_page": 232,
+        "text_character_count": 2154,
+        "content_character_count": 2075,
+        "nonwhite_channel_ratio": 0.198274,
         "footer_numbers": [
           230
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 231,
-        "text_character_count": 1613,
-        "content_character_count": 1543,
-        "nonwhite_channel_ratio": 0.173835,
+        "physical_page": 233,
+        "text_character_count": 2206,
+        "content_character_count": 2136,
+        "nonwhite_channel_ratio": 0.207344,
         "footer_numbers": [
           231
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 232,
-        "text_character_count": 2035,
-        "content_character_count": 1958,
-        "nonwhite_channel_ratio": 0.186724,
+        "physical_page": 234,
+        "text_character_count": 2244,
+        "content_character_count": 2182,
+        "nonwhite_channel_ratio": 0.210293,
         "footer_numbers": [
           232
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 233,
-        "text_character_count": 2134,
-        "content_character_count": 2070,
-        "nonwhite_channel_ratio": 0.197357,
+        "physical_page": 235,
+        "text_character_count": 2218,
+        "content_character_count": 2149,
+        "nonwhite_channel_ratio": 0.208261,
         "footer_numbers": [
           233
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 234,
-        "text_character_count": 1851,
-        "content_character_count": 1735,
-        "nonwhite_channel_ratio": 0.167267,
+        "physical_page": 236,
+        "text_character_count": 2107,
+        "content_character_count": 2000,
+        "nonwhite_channel_ratio": 0.19644,
         "footer_numbers": [
           234
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 235,
-        "text_character_count": 2009,
-        "content_character_count": 1922,
-        "nonwhite_channel_ratio": 0.18458,
+        "physical_page": 237,
+        "text_character_count": 2188,
+        "content_character_count": 2081,
+        "nonwhite_channel_ratio": 0.204794,
         "footer_numbers": [
           235
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 236,
-        "text_character_count": 663,
-        "content_character_count": 633,
-        "nonwhite_channel_ratio": 0.06234,
+        "physical_page": 238,
+        "text_character_count": 2174,
+        "content_character_count": 2088,
+        "nonwhite_channel_ratio": 0.20571,
         "footer_numbers": [
           236
         ],
         "visually_blank": false
       },
       {
-        "physical_page": 237,
-        "text_character_count": 1112,
-        "content_character_count": 1038,
-        "nonwhite_channel_ratio": 0.11686,
+        "physical_page": 239,
+        "text_character_count": 2108,
+        "content_character_count": 1985,
+        "nonwhite_channel_ratio": 0.192957,
         "footer_numbers": [
           237
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 240,
+        "text_character_count": 1828,
+        "content_character_count": 1729,
+        "nonwhite_channel_ratio": 0.166358,
+        "footer_numbers": [
+          238
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 241,
+        "text_character_count": 1126,
+        "content_character_count": 1071,
+        "nonwhite_channel_ratio": 0.094821,
+        "footer_numbers": [
+          239
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 242,
+        "text_character_count": 1570,
+        "content_character_count": 1482,
+        "nonwhite_channel_ratio": 0.200314,
+        "footer_numbers": [
+          240
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 243,
+        "text_character_count": 1968,
+        "content_character_count": 1889,
+        "nonwhite_channel_ratio": 0.241268,
+        "footer_numbers": [
+          241
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 244,
+        "text_character_count": 1949,
+        "content_character_count": 1859,
+        "nonwhite_channel_ratio": 0.233831,
+        "footer_numbers": [
+          242
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 245,
+        "text_character_count": 1981,
+        "content_character_count": 1909,
+        "nonwhite_channel_ratio": 0.240463,
+        "footer_numbers": [
+          243
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 246,
+        "text_character_count": 2025,
+        "content_character_count": 1921,
+        "nonwhite_channel_ratio": 0.242631,
+        "footer_numbers": [
+          244
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 247,
+        "text_character_count": 1196,
+        "content_character_count": 1119,
+        "nonwhite_channel_ratio": 0.147675,
+        "footer_numbers": [
+          245
+        ],
+        "visually_blank": false
+      },
+      {
+        "physical_page": 248,
+        "text_character_count": 1113,
+        "content_character_count": 1042,
+        "nonwhite_channel_ratio": 0.117043,
+        "footer_numbers": [
+          246
         ],
         "visually_blank": false
       }
     ],
     "blockers": []
   },
-  "toc_pagination_report": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-003-final-d\\Conference95\\reports\\toc_pagination_report.json",
+  "toc_pagination_report": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-004-m\\Conference95\\reports\\toc_pagination_report.json",
+  "official_page_parity_report": "C:\\Users\\Vint\\Desktop\\Галенко_Віталій_304ТН_варіант_5\\build\\iteration-004-m\\Conference95\\reports\\official_page_parity.json",
   "blockers": []
 }

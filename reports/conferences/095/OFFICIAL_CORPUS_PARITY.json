@@ -1,0 +1,1466 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "resolver": "PUBLICATION_ORDER_V1",
+  "official_pdf_sha256": "fd16720e1573b4d95073b1f9a9cfc5823342dca26fb9a6ba2841136bde12e2d7",
+  "official_article_count": 34,
+  "raw_article_count": 34,
+  "matched_count": 34,
+  "missing": [],
+  "extra": [],
+  "ambiguous": [],
+  "missing_count": 0,
+  "extra_count": 0,
+  "ambiguous_count": 0,
+  "official_section_count": 14,
+  "official_sections": [
+    "ECONOMIC THEORY, MACRO-AND REGIONAL ECONOMY",
+    "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+    "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+    "SOCIAL WORK AND SOCIAL WELFARE",
+    "LAW AND INTERNATIONAL LAW",
+    "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY",
+    "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY",
+    "PHYSICAL AND MATHEMATICAL SCIENCES",
+    "PHILOLOGY AND JOURNALISM",
+    "PHILOSOPHY AND POLITICAL SCIENCE",
+    "PEDAGOGY AND EDUCATION",
+    "PSYCHOLOGY AND PSYCHIATRY",
+    "MEDICAL SCIENCES AND PUBLIC HEALTH",
+    "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES"
+  ],
+  "source_order_was_publication_order": false,
+  "official_order_matches": true,
+  "official_sections_match": true,
+  "mappings": [
+    {
+      "official_ordinal": 1,
+      "official_section": "ECONOMIC THEORY, MACRO-AND REGIONAL ECONOMY",
+      "official_title": "METHODS FOR FORMING ENTERPRISE DEVELOPMENT STRATEGIES BASED ON DIGITAL TECHNOLOGIES UNDER GLOBAL CRISES",
+      "official_authors": [
+        "Резніков Роман Борисович"
+      ],
+      "official_printed_start_page": 6,
+      "official_physical_start_page": 8,
+      "source_article_id": "article-014",
+      "source_journal_order": 14,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/15 Резніков/Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises.docx",
+      "source_sha256": "f43da66e0c7096630365f6b96c565f27075c550e37919a1923f6b5618c66095b",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.524202,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-014",
+          "journal_order": 14,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-001",
+          "journal_order": 1,
+          "title_score": 0.475728,
+          "author_score": 0.47619,
+          "score": 0.475798
+        },
+        {
+          "article_id": "article-031",
+          "journal_order": 31,
+          "title_score": 0.478992,
+          "author_score": 0.341463,
+          "score": 0.458362
+        }
+      ]
+    },
+    {
+      "official_ordinal": 2,
+      "official_section": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "official_title": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "official_authors": [
+        "Львович Арсеній Вячеславович"
+      ],
+      "official_printed_start_page": 13,
+      "official_physical_start_page": 15,
+      "source_article_id": "article-029",
+      "source_journal_order": 29,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/Львович_Тези.docx",
+      "source_sha256": "e101b60842d3ca88561f7f81a83392e01e4941171ffccce4f6afe1e5e6990604",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.575807,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-029",
+          "journal_order": 29,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-022",
+          "journal_order": 22,
+          "title_score": 0.394904,
+          "author_score": 0.590164,
+          "score": 0.424193
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.407643,
+          "author_score": 0.5,
+          "score": 0.421497
+        }
+      ]
+    },
+    {
+      "official_ordinal": 3,
+      "official_section": "FINANCE AND BANKING; TAXATION, ACCOUNTING AND AUDITING",
+      "official_title": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ",
+      "official_authors": [
+        "Ганзюк Світлана Михайлівна"
+      ],
+      "official_printed_start_page": 20,
+      "official_physical_start_page": 22,
+      "source_article_id": "article-027",
+      "source_journal_order": 27,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Стаття.docx",
+      "source_sha256": "4f0ecfc3cb6f3d41f2efc73dcfcb0f993f61cadd02df32155f7a894c94041288",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.465051,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-027",
+          "journal_order": 27,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-024",
+          "journal_order": 24,
+          "title_score": 0.535714,
+          "author_score": 0.530612,
+          "score": 0.534949
+        },
+        {
+          "article_id": "article-015",
+          "journal_order": 15,
+          "title_score": 0.528571,
+          "author_score": 0.545455,
+          "score": 0.531104
+        }
+      ]
+    },
+    {
+      "official_ordinal": 4,
+      "official_section": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "official_title": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+      "official_authors": [
+        "Федорак Володимир Васильович",
+        "Качмар Олександра Василівна",
+        "Стратієнко Іван Іванович"
+      ],
+      "official_printed_start_page": 25,
+      "official_physical_start_page": 27,
+      "source_article_id": "article-008",
+      "source_journal_order": 8,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/New_Креативні 〓ндустр〓〓〓 як чинник соціально.docx",
+      "source_sha256": "8d5129946c459ed9811391a3709bf563e9c9e423f0ec4737a200008cee91d0af",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.519047,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-008",
+          "journal_order": 8,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-022",
+          "journal_order": 22,
+          "title_score": 0.470588,
+          "author_score": 0.539687,
+          "score": 0.480953
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.449198,
+          "author_score": 0.447651,
+          "score": 0.448966
+        }
+      ]
+    },
+    {
+      "official_ordinal": 5,
+      "official_section": "MANAGEMENT, PUBLIC ADMINISTRATION AND GOVERNANCE",
+      "official_title": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "official_authors": [
+        "Долгальова Олена Вячеславівна",
+        "Туровський Ігор Володимирович"
+      ],
+      "official_printed_start_page": 31,
+      "official_physical_start_page": 33,
+      "source_article_id": "article-022",
+      "source_journal_order": 22,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_тези.docx",
+      "source_sha256": "2be365e5cd3119eb1a9f098fb850b78102fee3b7284afd0099c707b1fac5b3f5",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.551836,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-022",
+          "journal_order": 22,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-020",
+          "journal_order": 20,
+          "title_score": 0.439791,
+          "author_score": 0.495614,
+          "score": 0.448164
+        },
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 0.42654,
+          "author_score": 0.48212,
+          "score": 0.434877
+        }
+      ]
+    },
+    {
+      "official_ordinal": 6,
+      "official_section": "SOCIAL WORK AND SOCIAL WELFARE",
+      "official_title": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ",
+      "official_authors": [
+        "Ординович Віктор Андрійович"
+      ],
+      "official_printed_start_page": 36,
+      "official_physical_start_page": 38,
+      "source_article_id": "article-033",
+      "source_journal_order": 33,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_тези.docx",
+      "source_sha256": "75c98b799dae01ad6c938dc8895ed9ecb06b2e349ed092fa9819c523b2fc37e1",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.534644,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-033",
+          "journal_order": 33,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 0.449438,
+          "author_score": 0.555556,
+          "score": 0.465356
+        },
+        {
+          "article_id": "article-012",
+          "journal_order": 12,
+          "title_score": 0.426396,
+          "author_score": 0.535714,
+          "score": 0.442794
+        }
+      ]
+    },
+    {
+      "official_ordinal": 7,
+      "official_section": "LAW AND INTERNATIONAL LAW",
+      "official_title": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "official_authors": [
+        "Цьось Юлія Станіславівна"
+      ],
+      "official_printed_start_page": 40,
+      "official_physical_start_page": 42,
+      "source_article_id": "article-026",
+      "source_journal_order": 26,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Тези_МНПК_Оксфорд_Цьось_06_08.02.2026.docx",
+      "source_sha256": "756151b9011c3d0442feeff1f01a75d8432e092e6abf34e1f2bf07b3774d5a35",
+      "title_score": 0.996169,
+      "author_score": 1.0,
+      "score": 0.996743,
+      "candidate_gap": 0.565631,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-026",
+          "journal_order": 26,
+          "title_score": 0.996169,
+          "author_score": 1.0,
+          "score": 0.996743
+        },
+        {
+          "article_id": "article-015",
+          "journal_order": 15,
+          "title_score": 0.425743,
+          "author_score": 0.461538,
+          "score": 0.431112
+        },
+        {
+          "article_id": "article-017",
+          "journal_order": 17,
+          "title_score": 0.395062,
+          "author_score": 0.612245,
+          "score": 0.427639
+        }
+      ]
+    },
+    {
+      "official_ordinal": 8,
+      "official_section": "LAW AND INTERNATIONAL LAW",
+      "official_title": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "official_authors": [
+        "Ягмуров Єгор Костянтинович"
+      ],
+      "official_printed_start_page": 49,
+      "official_physical_start_page": 51,
+      "source_article_id": "article-028",
+      "source_journal_order": 28,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Новий Документ Microsoft Word.docx",
+      "source_sha256": "4300910dc91c86804a94e17f006fd5fd8438ae6867dc60a43bd9de0fde815936",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.57398,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-028",
+          "journal_order": 28,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 0.417778,
+          "author_score": 0.472727,
+          "score": 0.42602
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.401786,
+          "author_score": 0.472727,
+          "score": 0.412427
+        }
+      ]
+    },
+    {
+      "official_ordinal": 9,
+      "official_section": "INSTITUTE OF LAW ENFORCEMENT, JUDICIAL SYSTEM AND NOTARY",
+      "official_title": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "official_authors": [
+        "Нігальчук Єва Романівна"
+      ],
+      "official_printed_start_page": 54,
+      "official_physical_start_page": 56,
+      "source_article_id": "article-006",
+      "source_journal_order": 6,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є.Р.стаття.docx",
+      "source_sha256": "301ab7ed516faea70c3d58aa0ea8ade93ec9df3c572fa967b5a2b88d5309331a",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.531935,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-006",
+          "journal_order": 6,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-004",
+          "journal_order": 4,
+          "title_score": 0.374194,
+          "author_score": 1.0,
+          "score": 0.468065
+        },
+        {
+          "article_id": "article-011",
+          "journal_order": 11,
+          "title_score": 0.425121,
+          "author_score": 0.5,
+          "score": 0.436353
+        }
+      ]
+    },
+    {
+      "official_ordinal": 10,
+      "official_section": "MILITARY SCIENCES, NATIONAL SECURITY AND STATE BORDER SECURITY",
+      "official_title": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "official_authors": [
+        "Ящук Петро Володимирович"
+      ],
+      "official_printed_start_page": 59,
+      "official_physical_start_page": 61,
+      "source_article_id": "article-009",
+      "source_journal_order": 9,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Теза 7.7.docx",
+      "source_sha256": "6d1faf42037efde5cf903e166731c70230e889c6f7088539a054122586c6fd6f",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.599591,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-009",
+          "journal_order": 9,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.392638,
+          "author_score": 0.444444,
+          "score": 0.400409
+        },
+        {
+          "article_id": "article-013",
+          "journal_order": 13,
+          "title_score": 0.390977,
+          "author_score": 0.37931,
+          "score": 0.389227
+        }
+      ]
+    },
+    {
+      "official_ordinal": 11,
+      "official_section": "PHYSICAL AND MATHEMATICAL SCIENCES",
+      "official_title": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "official_authors": [
+        "Нігальчук Єва Романівна"
+      ],
+      "official_printed_start_page": 65,
+      "official_physical_start_page": 67,
+      "source_article_id": "article-004",
+      "source_journal_order": 4,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. стаття.docx",
+      "source_sha256": "de335e889ed6911698b1a8550e74033c660f9bd6170421968120dccc043e813a",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.530161,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-004",
+          "journal_order": 4,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-020",
+          "journal_order": 20,
+          "title_score": 0.464516,
+          "author_score": 0.5,
+          "score": 0.469839
+        },
+        {
+          "article_id": "article-015",
+          "journal_order": 15,
+          "title_score": 0.447552,
+          "author_score": 0.470588,
+          "score": 0.451008
+        }
+      ]
+    },
+    {
+      "official_ordinal": 12,
+      "official_section": "PHILOLOGY AND JOURNALISM",
+      "official_title": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL",
+      "official_authors": [
+        "Мартинюк Світлана Євгенівна"
+      ],
+      "official_printed_start_page": 70,
+      "official_physical_start_page": 72,
+      "source_article_id": "article-007",
+      "source_journal_order": 7,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/УДК 373.docx",
+      "source_sha256": "8b65a0fcec77f61a9bde8903fdb53199bf381db9934cf08239e97a3855a8808c",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.425758,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-007",
+          "journal_order": 7,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-003",
+          "journal_order": 3,
+          "title_score": 0.60355,
+          "author_score": 0.408163,
+          "score": 0.574242
+        },
+        {
+          "article_id": "article-018",
+          "journal_order": 18,
+          "title_score": 0.48,
+          "author_score": 0.428571,
+          "score": 0.472286
+        }
+      ]
+    },
+    {
+      "official_ordinal": 13,
+      "official_section": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "official_title": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ",
+      "official_authors": [
+        "Шаповалова Алла Миколаївна"
+      ],
+      "official_printed_start_page": 74,
+      "official_physical_start_page": 76,
+      "source_article_id": "article-015",
+      "source_journal_order": 15,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Вибори в Україні в умовах повномасшт.війни_правові та політ.виклик.Шаповалова А.М..docx",
+      "source_sha256": "e92001c8abd506590b5f64a24b527199b24d233e13237c15aa49f9f9faf34028",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.537365,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-015",
+          "journal_order": 15,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-030",
+          "journal_order": 30,
+          "title_score": 0.454545,
+          "author_score": 0.508475,
+          "score": 0.462635
+        },
+        {
+          "article_id": "article-020",
+          "journal_order": 20,
+          "title_score": 0.382716,
+          "author_score": 0.666667,
+          "score": 0.425309
+        }
+      ]
+    },
+    {
+      "official_ordinal": 14,
+      "official_section": "PHILOSOPHY AND POLITICAL SCIENCE",
+      "official_title": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "official_authors": [
+        "Donii Nataliia Yevgeniivna",
+        "Honcharenko Oksana Hrygorivna"
+      ],
+      "official_printed_start_page": 81,
+      "official_physical_start_page": 83,
+      "source_article_id": "article-019",
+      "source_journal_order": 19,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Доній_Гончаренко_2026.docx",
+      "source_sha256": "03913014a289f2954d03c6f336e33c260acd761937d5de8a9c4f9dc27f800809",
+      "title_score": 1.0,
+      "author_score": 0.718182,
+      "score": 0.957727,
+      "candidate_gap": 0.517709,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-019",
+          "journal_order": 19,
+          "title_score": 1.0,
+          "author_score": 0.718182,
+          "score": 0.957727
+        },
+        {
+          "article_id": "article-003",
+          "journal_order": 3,
+          "title_score": 0.439024,
+          "author_score": 0.445652,
+          "score": 0.440019
+        },
+        {
+          "article_id": "article-018",
+          "journal_order": 18,
+          "title_score": 0.409091,
+          "author_score": 0.415476,
+          "score": 0.410049
+        }
+      ]
+    },
+    {
+      "official_ordinal": 15,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "SPECIFICS OF THE METHODOLOGY OF TEACHING ENGLISH TO FOREIGN STUDENTS IN PRIMARY SCHOOLS OF THE KARLOVY VARY REGION",
+      "official_authors": [
+        "Bc. Oleksandra Lavrivska"
+      ],
+      "official_printed_start_page": 85,
+      "official_physical_start_page": 87,
+      "source_article_id": "article-003",
+      "source_journal_order": 3,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Тези Алекс.docx",
+      "source_sha256": "6f8433de106c9e10dcb2d595d9e36542dfdb9269417a5fb104bb127387315696",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.562053,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-003",
+          "journal_order": 3,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-031",
+          "journal_order": 31,
+          "title_score": 0.451883,
+          "author_score": 0.358974,
+          "score": 0.437947
+        },
+        {
+          "article_id": "article-001",
+          "journal_order": 1,
+          "title_score": 0.434783,
+          "author_score": 0.4,
+          "score": 0.429565
+        }
+      ]
+    },
+    {
+      "official_ordinal": 16,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+      "official_authors": [
+        "Стрельченко Олена Олексіївна"
+      ],
+      "official_printed_start_page": 89,
+      "official_physical_start_page": 91,
+      "source_article_id": "article-011",
+      "source_journal_order": 11,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко Олена Олексіївна.docx",
+      "source_sha256": "9490b6596111dd8339ab148b5646b5abc80573e62bb6b8aaee65dbb57bd8c163",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.557361,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-011",
+          "journal_order": 11,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 0.438819,
+          "author_score": 0.464286,
+          "score": 0.442639
+        },
+        {
+          "article_id": "article-016",
+          "journal_order": 16,
+          "title_score": 0.425,
+          "author_score": 0.468085,
+          "score": 0.431463
+        }
+      ]
+    },
+    {
+      "official_ordinal": 17,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "official_authors": [
+        "Сидоренко Сергій Юрійович"
+      ],
+      "official_printed_start_page": 101,
+      "official_physical_start_page": 103,
+      "source_article_id": "article-012",
+      "source_journal_order": 12,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Стаття Цифрова зрілість Сидоренко С. Ю..docx",
+      "source_sha256": "2591eae01d7a6badf5374b716b7aeb132a9400212926a44b8a5f4ee288079637",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.576706,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-012",
+          "journal_order": 12,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.382609,
+          "author_score": 0.653846,
+          "score": 0.423294
+        },
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 0.398268,
+          "author_score": 0.5,
+          "score": 0.413528
+        }
+      ]
+    },
+    {
+      "official_ordinal": 18,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ПІДЗЕМНА ШКОЛА: БЕЗПЕЧНИЙ ПРОСТІР ДЛЯ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ",
+      "official_authors": [
+        "Пилипенко Наталія Вікторівна",
+        "Чібірєва Людмила Вікторівна"
+      ],
+      "official_printed_start_page": 111,
+      "official_physical_start_page": 113,
+      "source_article_id": "article-013",
+      "source_journal_order": 13,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/Заявка і стаття.docx",
+      "source_sha256": "7188b3d74b0cb6b3b2153b8e5f82c5211a1e1002bbb56f8564cb5d835f7e98f7",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.361885,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-013",
+          "journal_order": 13,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-017",
+          "journal_order": 17,
+          "title_score": 0.672566,
+          "author_score": 0.44289,
+          "score": 0.638115
+        },
+        {
+          "article_id": "article-016",
+          "journal_order": 16,
+          "title_score": 0.412371,
+          "author_score": 0.567708,
+          "score": 0.435672
+        }
+      ]
+    },
+    {
+      "official_ordinal": 19,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»",
+      "official_authors": [
+        "Башкірова Наталія",
+        "Краус Орина"
+      ],
+      "official_printed_start_page": 115,
+      "official_physical_start_page": 117,
+      "source_article_id": "article-023",
+      "source_journal_order": 23,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_стаття.docx",
+      "source_sha256": "a1c9ae0f16769c498716646f7b4e70e15b9feacdf03df4d50e17a7bc638f1d3e",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.560732,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-023",
+          "journal_order": 23,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 0.429907,
+          "author_score": 0.492317,
+          "score": 0.439268
+        },
+        {
+          "article_id": "article-002",
+          "journal_order": 2,
+          "title_score": 0.368421,
+          "author_score": 0.547619,
+          "score": 0.395301
+        }
+      ]
+    },
+    {
+      "official_ordinal": 20,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "official_authors": [
+        "Панчук Ольга Іванівна"
+      ],
+      "official_printed_start_page": 120,
+      "official_physical_start_page": 122,
+      "source_article_id": "article-024",
+      "source_journal_order": 24,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Стаття Панчук О. І.1.docx",
+      "source_sha256": "d5a9bc509fdf862df60f0004a943f41bb4889a07e94c0fd18c40a8431f06a737",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.557452,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-024",
+          "journal_order": 24,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 0.434211,
+          "author_score": 0.489796,
+          "score": 0.442548
+        },
+        {
+          "article_id": "article-010",
+          "journal_order": 10,
+          "title_score": 0.38806,
+          "author_score": 0.489796,
+          "score": 0.40332
+        }
+      ]
+    },
+    {
+      "official_ordinal": 21,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ПИСАНКАРСТВО: ТИХА СИЛА ПРЕДКІВ",
+      "official_authors": [
+        "Іванчикова Людмила Іванівна"
+      ],
+      "official_printed_start_page": 132,
+      "official_physical_start_page": 134,
+      "source_article_id": "article-025",
+      "source_journal_order": 25,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Стаття Іванчикова.docx",
+      "source_sha256": "a026a692ecad21092da481910e351be9cb533ce79a7dd05fb9ddc2da05118d25",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.58399,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-025",
+          "journal_order": 25,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-002",
+          "journal_order": 2,
+          "title_score": 0.413793,
+          "author_score": 0.428571,
+          "score": 0.41601
+        },
+        {
+          "article_id": "article-034",
+          "journal_order": 34,
+          "title_score": 0.394737,
+          "author_score": 0.516129,
+          "score": 0.412946
+        }
+      ]
+    },
+    {
+      "official_ordinal": 22,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ЗАКОРДОННИЙ ДОСВІД ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+      "official_authors": [
+        "Олексюк Наталія Степанівна",
+        "Гукалюк Андрій Ігорович"
+      ],
+      "official_printed_start_page": 136,
+      "official_physical_start_page": 138,
+      "source_article_id": "article-032",
+      "source_journal_order": 32,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_тези.docx",
+      "source_sha256": "3d0b2124ec488015ea648f21e4c5c6401bda509e2b5671a2d41a9a8c298eba64",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.568558,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-032",
+          "journal_order": 32,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-030",
+          "journal_order": 30,
+          "title_score": 0.426087,
+          "author_score": 0.461789,
+          "score": 0.431442
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.417062,
+          "author_score": 0.466415,
+          "score": 0.424465
+        }
+      ]
+    },
+    {
+      "official_ordinal": 23,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ",
+      "official_authors": [
+        "Савіщенко Вікторія Миколаївна"
+      ],
+      "official_printed_start_page": 140,
+      "official_physical_start_page": 142,
+      "source_article_id": "article-034",
+      "source_journal_order": 34,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_ТЕЗИ.docx",
+      "source_sha256": "7b9e34a96ad3b92d5d8771e3d711b7e6a8b6d41bd5ee006cd9248538a6278d8f",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.609051,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-034",
+          "journal_order": 34,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-020",
+          "journal_order": 20,
+          "title_score": 0.348485,
+          "author_score": 0.631579,
+          "score": 0.390949
+        },
+        {
+          "article_id": "article-030",
+          "journal_order": 30,
+          "title_score": 0.305882,
+          "author_score": 0.72,
+          "score": 0.368
+        }
+      ]
+    },
+    {
+      "official_ordinal": 24,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "ОСОБЛИВОСТІ ОРГАНІЗАЦІЇ ПСИХОЛОГО-ПЕДАГОГІЧНОЇ ПІДТРИМКИ ДІТЕЙ З ОСОБЛИВИМИ ОСВІТНІМИ ПОТРЕБАМИ В СУЧАСНІЙ ОСВІТІ",
+      "official_authors": [
+        "Спиридонова Олександра Олександрівна",
+        "Зозуля Оксана Василівна"
+      ],
+      "official_printed_start_page": 146,
+      "official_physical_start_page": 148,
+      "source_article_id": "article-017",
+      "source_journal_order": 17,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/стаття_Спиридонова_Зозуля.docx",
+      "source_sha256": "c953933edd88a92c2cd69184ebd521e3fe5880b5bb8f0a64758dbd04c98d5e57",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.501524,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-017",
+          "journal_order": 17,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-002",
+          "journal_order": 2,
+          "title_score": 0.523077,
+          "author_score": 0.359073,
+          "score": 0.498476
+        },
+        {
+          "article_id": "article-030",
+          "journal_order": 30,
+          "title_score": 0.421941,
+          "author_score": 0.678235,
+          "score": 0.460385
+        }
+      ]
+    },
+    {
+      "official_ordinal": 25,
+      "official_section": "PEDAGOGY AND EDUCATION",
+      "official_title": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "official_authors": [
+        "Добридень Алла Володимирівна",
+        "Самборко Інна Миколаївна"
+      ],
+      "official_printed_start_page": 156,
+      "official_physical_start_page": 158,
+      "source_article_id": "article-020",
+      "source_journal_order": 20,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/Добридень_Стаття.docx",
+      "source_sha256": "a68d94316944dfc88820bab08a19537327b5b4f2fc301e207391e6d777850ff4",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.541359,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-020",
+          "journal_order": 20,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-021",
+          "journal_order": 21,
+          "title_score": 0.457143,
+          "author_score": 0.467133,
+          "score": 0.458641
+        },
+        {
+          "article_id": "article-002",
+          "journal_order": 2,
+          "title_score": 0.416667,
+          "author_score": 0.285135,
+          "score": 0.396937
+        }
+      ]
+    },
+    {
+      "official_ordinal": 26,
+      "official_section": "PSYCHOLOGY AND PSYCHIATRY",
+      "official_title": "АРТТЕРАПІЯ: ТВОРЧІСТЬ ЯК ЗАСІБ ПСИХОЛОГІЧНОЇ ПІДТРИМКИ УЧАСНИКІВ ОСВІТНЬОГО ПРОЦЕСУ",
+      "official_authors": [
+        "Наталія Губа"
+      ],
+      "official_printed_start_page": 166,
+      "official_physical_start_page": 168,
+      "source_article_id": "article-002",
+      "source_journal_order": 2,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, стаття по арттерапії.docx",
+      "source_sha256": "c58abba9c8c7734ce3d4461b7453a447f8777d66549389b4eec51b03f6e7ce96",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.563686,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-002",
+          "journal_order": 2,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-021",
+          "journal_order": 21,
+          "title_score": 0.444444,
+          "author_score": 0.390244,
+          "score": 0.436314
+        },
+        {
+          "article_id": "article-030",
+          "journal_order": 30,
+          "title_score": 0.427184,
+          "author_score": 0.482759,
+          "score": 0.435521
+        }
+      ]
+    },
+    {
+      "official_ordinal": 27,
+      "official_section": "PSYCHOLOGY AND PSYCHIATRY",
+      "official_title": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ",
+      "official_authors": [
+        "Костишина Світлана Павлівна"
+      ],
+      "official_printed_start_page": 173,
+      "official_physical_start_page": 175,
+      "source_article_id": "article-021",
+      "source_journal_order": 21,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Жорстокість підлітків Костишина С.П..docx",
+      "source_sha256": "9c8d679f5802ec6a2c764cda4f1652ceaa03f7d4e6da2abe1cbe7cde7abda894",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.592881,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-021",
+          "journal_order": 21,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.412371,
+          "author_score": 0.377358,
+          "score": 0.407119
+        },
+        {
+          "article_id": "article-010",
+          "journal_order": 10,
+          "title_score": 0.350282,
+          "author_score": 0.490566,
+          "score": 0.371325
+        }
+      ]
+    },
+    {
+      "official_ordinal": 28,
+      "official_section": "PSYCHOLOGY AND PSYCHIATRY",
+      "official_title": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "official_authors": [
+        "Paios Yelyzaveta",
+        "Olena Lykholat"
+      ],
+      "official_printed_start_page": 185,
+      "official_physical_start_page": 187,
+      "source_article_id": "article-031",
+      "source_journal_order": 31,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Стаття_Paios.docx",
+      "source_sha256": "b3b28c60726011a8afc24574d049a1d158228ce0f303b1814670fb78c1ef7bd1",
+      "title_score": 1.0,
+      "author_score": 0.666667,
+      "score": 0.95,
+      "candidate_gap": 0.483955,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-031",
+          "journal_order": 31,
+          "title_score": 1.0,
+          "author_score": 0.666667,
+          "score": 0.95
+        },
+        {
+          "article_id": "article-001",
+          "journal_order": 1,
+          "title_score": 0.487395,
+          "author_score": 0.345064,
+          "score": 0.466045
+        },
+        {
+          "article_id": "article-018",
+          "journal_order": 18,
+          "title_score": 0.415459,
+          "author_score": 0.482759,
+          "score": 0.425554
+        }
+      ]
+    },
+    {
+      "official_ordinal": 29,
+      "official_section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "official_title": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES",
+      "official_authors": [
+        "Bohdan Kravchenko"
+      ],
+      "official_printed_start_page": 190,
+      "official_physical_start_page": 192,
+      "source_article_id": "article-001",
+      "source_journal_order": 1,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/New_Тези Оксфорд.docx",
+      "source_sha256": "365ab241df5b4825fd85fbb4a4800b51675aa2a760609d30adccf3f339cea6f2",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.585,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-001",
+          "journal_order": 1,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-018",
+          "journal_order": 18,
+          "title_score": 0.4,
+          "author_score": 0.5,
+          "score": 0.415
+        },
+        {
+          "article_id": "article-016",
+          "journal_order": 16,
+          "title_score": 0.144144,
+          "author_score": 0.444444,
+          "score": 0.189189
+        }
+      ]
+    },
+    {
+      "official_ordinal": 30,
+      "official_section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "official_title": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ",
+      "official_authors": [
+        "Євтушенко Віталій Вячеславович",
+        "Серякова Ірина Юріївна",
+        "Крамарьов Сергій Олександрович",
+        "Палатна Людмила Олександрівна",
+        "Шпак Ірина Володимирівна",
+        "Воронов Олександр Олександрович"
+      ],
+      "official_printed_start_page": 195,
+      "official_physical_start_page": 197,
+      "source_article_id": "article-016",
+      "source_journal_order": 16,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко стаття.docx",
+      "source_sha256": "5cd15ec7071159b8af2f59aa7ecf7343792d3ea4ee18f1c74c7e2e176acf075b",
+      "title_score": 1.0,
+      "author_score": 0.85226,
+      "score": 0.977839,
+      "candidate_gap": 0.560023,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-016",
+          "journal_order": 16,
+          "title_score": 1.0,
+          "author_score": 0.85226,
+          "score": 0.977839
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.410714,
+          "author_score": 0.45806,
+          "score": 0.417816
+        },
+        {
+          "article_id": "article-030",
+          "journal_order": 30,
+          "title_score": 0.386831,
+          "author_score": 0.557895,
+          "score": 0.412491
+        }
+      ]
+    },
+    {
+      "official_ordinal": 31,
+      "official_section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "official_title": "PULMONARY HEMORRHAGE: DIAGNOSTIC AND SURGICAL TACTICS AT THE MODERN LEVEL",
+      "official_authors": [
+        "Petro Zamіatin",
+        "Vasyl Kritsak",
+        "Denis Zamіatin",
+        "Daria Lazebna",
+        "Аlina Vаkulenkо"
+      ],
+      "official_printed_start_page": 204,
+      "official_physical_start_page": 206,
+      "source_article_id": "article-018",
+      "source_journal_order": 18,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/1- Oxford.Замятін П.М. стаття .docx",
+      "source_sha256": "cff1a8b79e29293d7afad04f214004b25c84e690785660f5e8cb5c28b26683ab",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.846619,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-018",
+          "journal_order": 18,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-010",
+          "journal_order": 10,
+          "title_score": 0.1125,
+          "author_score": 0.38504,
+          "score": 0.153381
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.101695,
+          "author_score": 0.407114,
+          "score": 0.147508
+        }
+      ]
+    },
+    {
+      "official_ordinal": 32,
+      "official_section": "MEDICAL SCIENCES AND PUBLIC HEALTH",
+      "official_title": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ",
+      "official_authors": [
+        "Обозна Вікторія Василівна",
+        "Красовська Катерина Олександрівна"
+      ],
+      "official_printed_start_page": 213,
+      "official_physical_start_page": 215,
+      "source_article_id": "article-030",
+      "source_journal_order": 30,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Стаття Обозна-Красовська_.docx",
+      "source_sha256": "fc073f5e7397625659e5ddd498cd2eb71f0aebe1d41627011ac53e49857a3772",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.573093,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-030",
+          "journal_order": 30,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 0.436681,
+          "author_score": 0.371517,
+          "score": 0.426907
+        },
+        {
+          "article_id": "article-010",
+          "journal_order": 10,
+          "title_score": 0.358491,
+          "author_score": 0.6,
+          "score": 0.394717
+        }
+      ]
+    },
+    {
+      "official_ordinal": 33,
+      "official_section": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "official_title": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "official_authors": [
+        "Лисенко Ілля Сергійович"
+      ],
+      "official_printed_start_page": 228,
+      "official_physical_start_page": 230,
+      "source_article_id": "article-005",
+      "source_journal_order": 5,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/Стаття_Лисенко_Ілля.docx",
+      "source_sha256": "dfbf5eea3fb69061feadafd5d43eee6ce17ed156c20ee7128ea384901f880ab1",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 0.603656,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-005",
+          "journal_order": 5,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        },
+        {
+          "article_id": "article-010",
+          "journal_order": 10,
+          "title_score": 0.373057,
+          "author_score": 0.528302,
+          "score": 0.396344
+        }
+      ]
+    },
+    {
+      "official_ordinal": 34,
+      "official_section": "HISTORY, ARCHAEOLOGY AND CULTURAL STUDIES",
+      "official_title": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 рр.)",
+      "official_authors": [
+        "Прибитько Іван Олександрович",
+        "Івкова Вікторія Юріївна"
+      ],
+      "official_printed_start_page": 240,
+      "official_physical_start_page": 242,
+      "source_article_id": "article-010",
+      "source_journal_order": 10,
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/New_Прибитько.docx",
+      "source_sha256": "aaf8e0c45ef44274d7d5e6a35e8c65f9d4c2dbc791f84a734553097ba1dbdb99",
+      "title_score": 1.0,
+      "author_score": 1.0,
+      "score": 1.0,
+      "candidate_gap": 1.0,
+      "status": "MATCHED",
+      "alternatives": [
+        {
+          "article_id": "article-010",
+          "journal_order": 10,
+          "title_score": 1.0,
+          "author_score": 1.0,
+          "score": 1.0
+        }
+      ]
+    }
+  ],
+  "blockers": []
+}
