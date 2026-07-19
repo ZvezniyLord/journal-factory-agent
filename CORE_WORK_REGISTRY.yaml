@@ -1,0 +1,166 @@
+schema_version: 1
+registry_rules:
+  source_of_truth: CORE_WORK_REGISTRY.yaml
+  lock_field: in_progress
+  free_value: false
+  locked_value: true
+  read_when_locked: true
+  modify_when_locked: false
+  claim_requires_fresh_main: true
+  release_required_after_work: true
+  stale_lock_policy: "Do not clear another agent's lock automatically. Mark the situation BLOCKED and ask the user unless the lock owner explicitly releases it or the user authorizes recovery."
+  atomic_claim_protocol:
+    - "Fetch origin/main and verify the local branch is current."
+    - "Read this complete file immediately before claiming."
+    - "Confirm the selected core has in_progress: false."
+    - "Set in_progress: true and fill lock_owner, lock_session, claimed_at_utc, branch, work_item, and allowed_write_scope."
+    - "Commit and push the claim before modifying implementation files."
+    - "Fetch origin/main again and verify the pushed registry still names this session as owner."
+    - "If the claim conflicts or another owner appears, stop with BLOCKED and do not modify that core."
+  release_protocol:
+    - "Run focused tests, the full test suite, real-run checks, artifact inspection, architecture review, and repository acceptance."
+    - "Update last_result, last_commit, notes, and completed_at_utc."
+    - "Set in_progress: false and clear lock_owner, lock_session, claimed_at_utc, branch, work_item, and allowed_write_scope."
+    - "Commit and push the release as the final action of the work cycle."
+    - "Verify origin/main contains in_progress: false for the released core."
+  failure_protocol:
+    - "When work is interrupted, do not silently leave the lock ambiguous."
+    - "Record status: blocked or interrupted, explain the reason in notes, and keep or release the lock according to user instruction."
+    - "Never clear a lock owned by another chat merely because it appears old."
+
+selection_aliases:
+  "workspace": workspace_driver
+  "workspace driver": workspace_driver
+  "робочий простір": workspace_driver
+  "udc": udc_detection
+  "удк": udc_detection
+  "ядро удк": udc_detection
+  "виявлення удк": udc_detection
+
+cores:
+  workspace_driver:
+    display_name: "Workspace Driver Core"
+    description: "Paths, run identity, canonical workspace creation, path/action/report registries, and persisted workspace state."
+    roadmap_reference: "docs/BUSINESS_LOGIC_AND_ROADMAP.md#71-workspace-driver-core"
+    phase: 1
+    development_case: "Create and validate the local workspace through the browser-facing Phase 1 flow."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: "Current approved implementation begins here."
+
+  browser_ui:
+    display_name: "Browser UI Core"
+    description: "Root index.html, operator interaction, status presentation, and API integration without domain business logic."
+    roadmap_reference: "docs/BUSINESS_LOGIC_AND_ROADMAP.md#72-browser-ui-core"
+    phase: 1
+    development_case: "Provide the single human entry point for Phase 1 workspace creation and status."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: null
+
+  udc_detection:
+    display_name: "UDC Detection Core"
+    description: "Detect, classify, locate, normalize, and report UDC/УДК blocks in article files without silently guessing."
+    roadmap_reference: "docs/BUSINESS_LOGIC_AND_ROADMAP.md#78-marker-knowledge-core"
+    phase: future
+    development_case: "Teach the system to recognize UDC/УДК markers and values in multilingual article documents, preserve source object references, assign confidence, and report unresolved cases."
+    depends_on:
+      - workspace_driver
+      - source_discovery
+      - article_segmentation
+      - marker_knowledge
+    acceptance_outline:
+      - "Recognizes УДК, UDC, punctuation and spacing variants using deterministic rules first."
+      - "Returns the exact source paragraph/object reference and normalized UDC value."
+      - "Does not confuse author identifiers, DOI, classification numbers, or arbitrary numeric prefixes with UDC."
+      - "Produces confidence, evidence, warnings, and unresolved status."
+      - "Preserves unknown content and never edits source files in place."
+      - "Includes multilingual fixtures and negative tests before implementation."
+      - "Runs real DOCX inspection and artifact verification before acceptance."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: "Not approved for implementation during Phase 1. A request to work on УДК resolves to this core, but the agent must still verify phase approval before claiming it."
+
+  source_discovery:
+    display_name: "Source Discovery Core"
+    description: "Recursive deterministic classification of source files and ambiguity reporting."
+    roadmap_reference: "docs/BUSINESS_LOGIC_AND_ROADMAP.md#73-source-discovery-core"
+    phase: future
+    development_case: "Discover and classify source assets without guessing."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: null
+
+  article_segmentation:
+    display_name: "Article Segmentation Core"
+    description: "Split articles into logical blocks while preserving order and object relationships."
+    roadmap_reference: "docs/BUSINESS_LOGIC_AND_ROADMAP.md#79-article-segmentation-core"
+    phase: future
+    development_case: "Identify header, body, annotations, keywords, tables, figures, captions, references, and unknown blocks."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: null
+
+  marker_knowledge:
+    display_name: "Marker Knowledge Core"
+    description: "Register and classify recurring multilingual structural markers with deterministic evidence."
+    roadmap_reference: "docs/BUSINESS_LOGIC_AND_ROADMAP.md#78-marker-knowledge-core"
+    phase: future
+    development_case: "Recognize repeated structural labels such as UDC, annotations, keywords, tables, figures, and references."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: null
