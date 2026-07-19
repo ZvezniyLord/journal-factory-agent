@@ -32,12 +32,47 @@ selection_aliases:
   "workspace": workspace_driver
   "workspace driver": workspace_driver
   "робочий простір": workspace_driver
+  "orchestrator": orchestrator_core
+  "orchestrator core": orchestrator_core
+  "оркестратор": orchestrator_core
+  "ядро оркестратора": orchestrator_core
   "udc": udc_detection
   "удк": udc_detection
   "ядро удк": udc_detection
   "виявлення удк": udc_detection
 
 cores:
+  orchestrator_core:
+    display_name: "Orchestrator Core"
+    description: "Deterministic pipeline conductor for core registration, dependency checks, routing, run state, transitions, retries, pause/resume, typed invocation contracts, action logging, and failure routing."
+    roadmap_reference: "docs/CORE_DEVELOPMENT_PROTOCOL.md#core-architecture-separation"
+    phase: 1
+    development_case: "Create the domain-only orchestration foundation and a thin root command menu without implementing Dashboard, document, registry, matching, or LLM domain logic."
+    depends_on:
+      - workspace_driver
+    passport_path: "cores/orchestrator_core/CORE.md"
+    development_plan_path: "cores/orchestrator_core/DEVELOPMENT_PLAN.md"
+    acceptance_outline:
+      - "Registers typed core descriptors and rejects duplicate or invalid registrations deterministically."
+      - "Validates declared dependencies before invocation and routes only through explicit core ports."
+      - "Enforces legal run-state transitions, pause/resume contracts, bounded retries, and failure routes."
+      - "Emits typed invocation requests/results and append-only action records without embedding another core's domain logic."
+      - "Keeps LLM access behind a future explicit LLM Core port and structured request/response contract."
+      - "Provides only a thin root HTML command menu for start and Orchestrator state presentation."
+      - "Includes automated tests, a real smoke launch, artifact inspection, and manual test instructions."
+    status: planned
+    in_progress: false
+    lock_owner: null
+    lock_session: null
+    claimed_at_utc: null
+    branch: null
+    work_item: null
+    allowed_write_scope: []
+    last_result: null
+    last_commit: null
+    completed_at_utc: null
+    notes: "Registered as a Phase 1 deterministic foundation. Dashboard Core and LLM Core remain separate."
+
   workspace_driver:
     display_name: "Workspace Driver Core"
     description: "Paths, run identity, canonical workspace creation, path/action/report registries, and persisted workspace state."
