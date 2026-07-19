@@ -2,47 +2,39 @@
   "protocol_version": 1,
   "conference_id": 95,
   "iteration": 2,
-  "state": "CHANGES_REQUESTED",
-  "owner": "CODEX",
+  "state": "READY_FOR_REVIEW",
+  "owner": "REVIEWER",
   "work_branch": "agent/journal-builder-95",
   "typography_profile": "legacy_14pt",
   "golden_pdf_required": false,
   "goal": "Зібрати з реального RAW Conference 95 готові DOCX і PDF та довести builder до внутрішніх fidelity, structure, render, TOC і pagination gates.",
-  "last_codex_commit": "057025f54886053f07fd00f97582a57240a4b084",
-  "review_findings": [
+  "last_codex_commit": "2d799e3be0aaf1151aaed4e43748256e1e8f20d9",
+  "review_findings": [],
+  "addressed_review_findings": [
     {
-      "severity": "BLOCKER",
       "code": "MANIFEST_SOURCE_MISSING",
-      "evidence": "Реальний ZIP успішно розпаковано; archive_inventory містить 139 файлів, але article_manifest порожній і має blocker manifest_source_missing.",
-      "required_fix": "Builder повинен автоматично створювати article manifest із RAW, коли готового manifest.json немає."
+      "status": "FIXED",
+      "evidence": "AUTO_INVENTORY_V1 створив manifest із 34 MATCHED статей і нульовим числом manifest blockers."
     },
     {
-      "severity": "HIGH",
       "code": "CANDIDATE_CLASSIFICATION_TOO_BROAD",
-      "evidence": "Інформаційні листи та анкети .doc/.docx позначаються як article_candidate.",
-      "required_fix": "Додати детерміновану класифікацію службових документів, анкет, квитанцій, дублікатів і справжніх статей."
+      "status": "FIXED",
+      "evidence": "139 файлів класифіковано як 34 ARTICLE, 6 DUPLICATE і 99 NON_ARTICLE; службові форми та attachments не потрапили у journal order."
     },
     {
-      "severity": "MEDIUM",
       "code": "REPOSITORY_CLEANUP_REQUIRED",
-      "evidence": "У локальному checkout залишаються сторонні release-каталоги та накопичені тимчасові файли.",
-      "required_fix": "Виконати контрольовану чистку за coordination/CLEANUP_POLICY.md без видалення потрібних компонентів."
+      "status": "FIXED",
+      "evidence": "reports/repository_cleanup_inventory.json опубліковано; два сторонні Release-AI-Editor каталоги та доведені кеші видалено окремим комітом 7fdfa47."
     }
   ],
   "next_action": {
-    "id": "CONF95-ITER-002",
+    "id": "REVIEW-CONF95-ITER-002",
     "instructions": [
-      "Прочитати coordination/LOOP.md і coordination/CLEANUP_POLICY.md з upstream/agent/journal-control.",
-      "Оновити agent/journal-builder-95 та підтвердити commit 057025f як базу реального RAW-запуску.",
-      "Реалізувати auto-manifest fallback: коли явного manifest немає, інвентаризувати RAW і сформувати ordered article manifest із доказами confidence/provenance.",
-      "Відсіяти анкети, інформаційні листи, квитанції, сертифікати, службові PDF/DOC, тимчасові файли й дублікати. Не використовувати filename як єдиний доказ.",
-      "Використати структуру папок учасників, витягнутий текст, авторів, назви, маркери УДК/DOI/анотації/джерел та наявний Conference95.docx лише як локальний QA reference, не як джерело для копіювання журналу.",
-      "Для неоднозначних пар повертати REVIEW/BLOCKED, а не вгадувати. Додати fixtures і regression-тести для реальних failure classes Conference 95.",
-      "Виконати контрольовану чистку репозиторію: спочатку створити reports/repository_cleanup_inventory.json, потім видалити тільки доведено сторонні/тимчасові файли; окремий український commit.",
-      "Повторювати build із реальним ZIP і legacy_14pt, доки pipeline не перейде за manifest gate або не виявить наступний точний blocker.",
-      "Якщо manifest проходить, продовжити автоматичне складання DOCX і рендер PDF без ручного редагування.",
-      "Запушити код, тести та дозволені generated artifacts/reports. RAW zip і сирі статті не комітити.",
-      "Оновити CYCLE_STATE.json до READY_FOR_REVIEW, owner REVIEWER, додати commit SHA, тести, артефакти, blockers і метрики manifest."
+      "Перевірити commit 2d799e3be0aaf1151aaed4e43748256e1e8f20d9 у гілці agent/journal-builder-95.",
+      "Перевірити auto-manifest, evidence, cleanup inventory, fidelity і відсутність conference_id patches.",
+      "Відкрити згенеровані DOCX/PDF та звірити reports/toc_pagination_report.json і reports/render_report.json.",
+      "Не вважати технічний Word render PASS доказом проходження TOC, front matter або pagination gates.",
+      "За наявності дефектів збільшити iteration, записати CHANGES_REQUESTED, owner CODEX і конкретний next_action; ACCEPTED встановлює лише Reviewer."
     ]
   },
   "required_artifacts": [
@@ -52,6 +44,12 @@
     "artifacts/conferences/095/iteration-002/reports/article_manifest.json",
     "artifacts/conferences/095/iteration-002/reports/manifest_evidence.json",
     "artifacts/conferences/095/iteration-002/reports/journal_builder_gate.json",
+    "artifacts/conferences/095/iteration-002/reports/fidelity_report.json",
+    "artifacts/conferences/095/iteration-002/reports/render_report.json",
+    "artifacts/conferences/095/iteration-002/reports/toc_pagination_report.json",
+    "artifacts/conferences/095/iteration-002/reports/FILES.sha256",
+    "artifacts/conferences/095/iteration-002/Conference95_generated.docx",
+    "artifacts/conferences/095/iteration-002/Conference95_generated.pdf",
     "reports/repository_cleanup_inventory.json"
   ],
   "acceptance_gates": {
@@ -70,16 +68,62 @@
     "clean_rebuild": true
   },
   "codex_result": {
-    "commit": "057025f54886053f07fd00f97582a57240a4b084",
-    "tests": "52 passed in 5.62s",
+    "commit": "2d799e3be0aaf1151aaed4e43748256e1e8f20d9",
+    "commits": [
+      "a5406de Додати автоматичне формування маніфесту з RAW",
+      "7fdfa47 Виконати контрольовану чистку репозиторію",
+      "104358f Посилити fidelity та рендер реального журналу",
+      "2d799e3 Опублікувати артефакти другої ітерації Conference 95"
+    ],
+    "tests": "61 passed in 2.12s; compile check PASS",
     "raw_archive_found": true,
-    "golden_pdf_found": false,
-    "official_docx_found": true,
-    "status": "BUILD BLOCKED",
-    "blocker": "manifest:manifest_source_missing"
+    "golden_pdf_required": false,
+    "status": "REVIEW_ARTIFACTS_READY",
+    "production_ready": false,
+    "manifest_metrics": {
+      "inventory_files": 139,
+      "articles": 34,
+      "matched": 34,
+      "duplicates": 6,
+      "non_articles": 99,
+      "review_or_blocked": 0,
+      "legacy_doc_requested": 14,
+      "legacy_doc_extracted": 14,
+      "manifest_sha256": "4d96467f7809e681874ad243e023b1b8748c4925758a0a70d6d32d3930351c0c"
+    },
+    "quality": {
+      "fidelity": "PASS",
+      "object_loss": 0,
+      "clean_rebuild": "PASS",
+      "word_pdf_render": "PASS",
+      "visual_pages_inspected": 241,
+      "article_start_pages_resolved": 34,
+      "toc": "BLOCKED",
+      "continuous_pagination": "BLOCKED",
+      "front_matter": "BLOCKED"
+    },
+    "artifacts": {
+      "docx": "artifacts/conferences/095/iteration-002/Conference95_generated.docx",
+      "docx_sha256": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
+      "pdf": "artifacts/conferences/095/iteration-002/Conference95_generated.pdf",
+      "pdf_sha256": "2d1948c1c3d4d77a07da0e13051efab4f07857eacfb2a0524c08aa36119d3645",
+      "pdf_pages": 241
+    },
+    "blockers": [
+      "front_matter_not_parameterized_for_conference_95",
+      "toc_field_missing",
+      "toc_entries_missing:34",
+      "continuous_pagination_missing_for_pdf_pages_1_89"
+    ],
+    "known_defects": [
+      "Front matter містить взаємно суперечливі дані New York / Cambridge / Conference 91 замість Conference 95.",
+      "TOC page містить лише заголовок; наступна сторінка порожня.",
+      "Видима нумерація починається на PDF-сторінці 90 як printed page 1.",
+      "Номери та пробіли у section headings не нормалізовані."
+    ]
   },
   "reviewer_result": {
-    "decision": "CHANGES_REQUESTED",
-    "reason": "Потрібен загальний auto-manifest і точніша класифікація RAW; відсутність golden PDF не блокує ітерацію."
+    "decision": "PENDING",
+    "reason": "Codex передав iteration 2 для архітектурного та артефактного рев’ю; ACCEPTED не встановлено."
   }
 }
