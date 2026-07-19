@@ -60,14 +60,19 @@ cores:
       - "Keeps LLM access behind a future explicit LLM Core port and structured request/response contract."
       - "Provides only a thin root HTML command menu for start and Orchestrator state presentation."
       - "Includes automated tests, a real smoke launch, artifact inspection, and manual test instructions."
-    status: planned
-    in_progress: false
-    lock_owner: null
-    lock_session: null
-    claimed_at_utc: null
-    branch: null
-    work_item: null
-    allowed_write_scope: []
+    status: in_progress
+    in_progress: true
+    lock_owner: "codex-root"
+    lock_session: "orchestrator-core-20260719T202446Z-0edc8fe"
+    claimed_at_utc: "2026-07-19T20:24:46Z"
+    branch: "main"
+    work_item: "Create the Orchestrator passport and detailed plan, then implement and smoke-test the deterministic conductor plus its thin root command menu."
+    allowed_write_scope:
+      - "cores/orchestrator_core/CORE.md"
+      - "cores/orchestrator_core/DEVELOPMENT_PLAN.md"
+      - "journal_factory/orchestrator_core/**"
+      - "tests/orchestrator_core/**"
+      - "index.html"
     last_result: null
     last_commit: null
     completed_at_utc: null
