@@ -1,0 +1,413 @@
+{
+  "generated_at": "2026-07-19T03:13:03+03:00",
+  "conference_id": 95,
+  "iteration": 2,
+  "status": "BLOCKED",
+  "pdf_page_count": 241,
+  "toc": {
+    "status": "BLOCKED",
+    "heading_pages": [
+      4
+    ],
+    "word_toc_count": 0,
+    "expected_article_entry_count": 34,
+    "actual_article_entry_count": 0,
+    "missing_article_entry_count": 34
+  },
+  "article_start_pages": [
+    {
+      "article_id": "article-001",
+      "journal_order": 1,
+      "title": "Impact of Tobacco and Nicotine Products on Dental Implant Outcomes: Clinical Risks and Preventive Strategies",
+      "pdf_start_page": 6,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "c67d625da6a8a45b8e43cff7af591f75b7f6dc8f420c9869b3d2150d24479e06"
+    },
+    {
+      "article_id": "article-002",
+      "journal_order": 2,
+      "title": "Арттерапія: творчість як засіб психологічної підтримки учасників освітнього процесу",
+      "pdf_start_page": 11,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "a84049e6eaedd70248bcb6ba1c0b2981af8bf2d0288e1c8c9787457680f2c215"
+    },
+    {
+      "article_id": "article-003",
+      "journal_order": 3,
+      "title": "Specifics of the Methodology of Teaching English to Foreign Students in Primary Schools of the Karlovy Vary Region",
+      "pdf_start_page": 18,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "807560a15fa3669c733bf0ac0354e93b969837c1a7ee73822e907e31c8278058"
+    },
+    {
+      "article_id": "article-004",
+      "journal_order": 4,
+      "title": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "pdf_start_page": 21,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "cab42830d25ef7d5f4d041579bb992095661e0e1db0aa54fe4e903b9945e8099"
+    },
+    {
+      "article_id": "article-005",
+      "journal_order": 5,
+      "title": "БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "pdf_start_page": 25,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "a70c91e27ba7bd4835027657834687c1c8322b4c22653da96941c9678eaa1b00"
+    },
+    {
+      "article_id": "article-006",
+      "journal_order": 6,
+      "title": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "pdf_start_page": 37,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "86caa63b8c0ef81dd6e5778d7b95c72929b63e816f35a535d2e7f249246c12ee"
+    },
+    {
+      "article_id": "article-007",
+      "journal_order": 7,
+      "title": "The Role of Digital Tools in Teaching English at Secondary School",
+      "pdf_start_page": 41,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "7673d1421f1c8c9b8ff9fc57ffb7f6c7ed9c17aa3cd5a2e09bd6b69896cc72e9"
+    },
+    {
+      "article_id": "article-008",
+      "journal_order": 8,
+      "title": "Креативні індустрії як чинник соціально-економічного розвитку Карпатського регіону",
+      "pdf_start_page": 45,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "c5108350a1fb20126b91abe1d19221602c2a8aa7362aca4789bab4423a1b8cd3"
+    },
+    {
+      "article_id": "article-009",
+      "journal_order": 9,
+      "title": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "pdf_start_page": 51,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "fbd5c3f13f91acae23075eb266fad0fb1d64d98e37c32aeb37f86363c3427adc"
+    },
+    {
+      "article_id": "article-010",
+      "journal_order": 10,
+      "title": "Фактори формування державотворчих уявлень у махновському повстанському русі (1917–1921 рр.)",
+      "pdf_start_page": 57,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "a7f58038194c4abe9f356761dc812cb3a52282566caaeb3dd457bec95d3a28c7"
+    },
+    {
+      "article_id": "article-011",
+      "journal_order": 11,
+      "title": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+      "pdf_start_page": 63,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "e334747a297dad1f6ee9710b473f592d709ecf537a0f9dc048fdeba6511f303f"
+    },
+    {
+      "article_id": "article-012",
+      "journal_order": 12,
+      "title": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "pdf_start_page": 76,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "815ff16e83854fe44f351dc1403012344e36fe8dc7e772583874648b864fc18d"
+    },
+    {
+      "article_id": "article-013",
+      "journal_order": 13,
+      "title": "Підземна школа: безпечний простір для дітей з особливими освітніми потребами.",
+      "pdf_start_page": 86,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "6ac84ff48c5fc9ea909853bc9841527799c059a4495c4c5860cdcff1416618cb"
+    },
+    {
+      "article_id": "article-014",
+      "journal_order": 14,
+      "title": "Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises",
+      "pdf_start_page": 91,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "db3e651530d8a9089041a54360ce877a25ea9f7b003471725924aaf8f16405a4"
+    },
+    {
+      "article_id": "article-015",
+      "journal_order": 15,
+      "title": "Вибори в Україні в умовах повномасштабної війни: правові та політичні виклики",
+      "pdf_start_page": 98,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "6a3bad27da9a4bb5576b9444b621f07aa3337df21361a2c293d449ee3f5cd633"
+    },
+    {
+      "article_id": "article-016",
+      "journal_order": 16,
+      "title": "Визначення оптимальних порогових значень маркеру E-селектину для ураження серцево-судинної системи при COVID-19 у дітей",
+      "pdf_start_page": 105,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "b89f18ff3a8d42132d12816124c9fbe1e557c40be4cc1f6bf5034467e4b135a1"
+    },
+    {
+      "article_id": "article-017",
+      "journal_order": 17,
+      "title": "Особливості організації психолого-педагогічної підтримки дітей з особливими освітніми потребами в сучасній освіті",
+      "pdf_start_page": 114,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "98c7b664ae2e9859035e8d92c1d58d518239af57b7155044ede96feb00bf4dd1"
+    },
+    {
+      "article_id": "article-018",
+      "journal_order": 18,
+      "title": "Pulmonary hemorrhage: diagnostic and surgical tactics At the modern level",
+      "pdf_start_page": 124,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "c934a779061e7ed148733c17a10c717ab8dabe8d91a924e0da5824ea537d7d47"
+    },
+    {
+      "article_id": "article-019",
+      "journal_order": 19,
+      "title": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "pdf_start_page": 133,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "eaaf42fc6694677e066b56700bdb1fbd8c4367acfa34b62b06b20b402c527759"
+    },
+    {
+      "article_id": "article-020",
+      "journal_order": 20,
+      "title": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "pdf_start_page": 137,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "1733a5676034fca21f33e963ee80fd679706a32838e7cee2300a5bd78990faa5"
+    },
+    {
+      "article_id": "article-021",
+      "journal_order": 21,
+      "title": "Жорстокість серед підлітків як актуальна проблема сучасного світу: пошук ефективних рішень.",
+      "pdf_start_page": 146,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "160c3082a7f18ee7273fca14a2f5a2e56452df50daff8ccde53169b8cfc93daf"
+    },
+    {
+      "article_id": "article-022",
+      "journal_order": 22,
+      "title": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "pdf_start_page": 157,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "2fa5c7ac9f73ad5e046b795d8db8046aa285120ff31b0ed730d2f2da46e731f0"
+    },
+    {
+      "article_id": "article-023",
+      "journal_order": 23,
+      "title": "Перший досвід підготовки лікарів -інтернів за спеціальністю «Лабораторна діагностика, вірусологія, мікробіологія",
+      "pdf_start_page": 162,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "850b6e628b702005cf18fb528366cc54ed931a3d559d159b498befb3eebd7ef3"
+    },
+    {
+      "article_id": "article-024",
+      "journal_order": 24,
+      "title": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "pdf_start_page": 167,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "175f0424cb9c2f34013a7e9ec5f737ecb1791f5150c66a59e19b55c5e8eadc88"
+    },
+    {
+      "article_id": "article-025",
+      "journal_order": 25,
+      "title": "Писанкарство: тиха сила предків",
+      "pdf_start_page": 179,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "613ad465c70464b403c7bf988862202a6ea2df919f2b5657da2ed574e6f04c2a"
+    },
+    {
+      "article_id": "article-026",
+      "journal_order": 26,
+      "title": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАОВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "pdf_start_page": 183,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "8d376a62986016a22dd356899e3fbed4492503db486e9393900d1316db55dd99"
+    },
+    {
+      "article_id": "article-027",
+      "journal_order": 27,
+      "title": "Формування депозитного портфеля банківських установ в умовах війни",
+      "pdf_start_page": 191,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "c9edab23a43746efde6c070bb22907eebe8f2cfd50d84758c47b460603367a29"
+    },
+    {
+      "article_id": "article-028",
+      "journal_order": 28,
+      "title": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "pdf_start_page": 196,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "c821843e215a48524f537563435623613506fff2d3e6864a04ed006793b37479"
+    },
+    {
+      "article_id": "article-029",
+      "journal_order": 29,
+      "title": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "pdf_start_page": 201,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "1b83fa8f629e6af4561f93404fba731c1f4298782c047f9c6e947eb79e3d70aa"
+    },
+    {
+      "article_id": "article-030",
+      "journal_order": 30,
+      "title": "Аспекти психосоціальної взаємодії акушерки із жінками з тривожно-фобічними розладами у перинатальному періоді в умовах війни",
+      "pdf_start_page": 208,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "3b56e3c1cad432ab2ca86bb7d66e98e26582dab50de710f173a1148a75bef304"
+    },
+    {
+      "article_id": "article-031",
+      "journal_order": 31,
+      "title": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "pdf_start_page": 222,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "b8a7ba0922f5d3741b3886e53e500047411595f4f6ff2107104ac3400863509e"
+    },
+    {
+      "article_id": "article-032",
+      "journal_order": 32,
+      "title": "Закордонний досвід формування соціальної компетентності у майбутніх викладачів закладів професійної освіти",
+      "pdf_start_page": 228,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "6a0ecdcc1771147bd55269994a41a5c228f9f8d359009699afaddbb8c20b072c"
+    },
+    {
+      "article_id": "article-033",
+      "journal_order": 33,
+      "title": "Роль громади у процесі соціальної реінтеграції ветеранів / ветеранок війни",
+      "pdf_start_page": 231,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "a613ea1f206f89f4215f665c8b4b002b76de69f9932f0c24c83c66f3202b9bd6"
+    },
+    {
+      "article_id": "article-034",
+      "journal_order": 34,
+      "title": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ",
+      "pdf_start_page": 235,
+      "match_status": "MATCHED",
+      "evidence": "ordered source-snapshot text probe",
+      "probe_sha256": "4eee13c254b3d2e8d57e66e70edaeac898079a2d435b5a0d90f5baadf848dc93"
+    }
+  ],
+  "article_start_resolution": {
+    "status": "PASS",
+    "resolved_count": 34,
+    "expected_count": 34,
+    "first_article_pdf_page": 6,
+    "last_article_pdf_page": 235
+  },
+  "pagination": {
+    "status": "BLOCKED",
+    "docx_section_count": 4,
+    "footer_part_count": 1,
+    "footer_fields": [
+      {
+        "part": "word/footer1.xml",
+        "field_instruction": "PAGE   \\* MERGEFORMAT"
+      }
+    ],
+    "sections": [
+      {
+        "section": 1,
+        "page_number_start": null,
+        "explicit_footer_relationships": []
+      },
+      {
+        "section": 2,
+        "page_number_start": null,
+        "explicit_footer_relationships": []
+      },
+      {
+        "section": 3,
+        "page_number_start": 1,
+        "explicit_footer_relationships": [
+          "rId15"
+        ]
+      },
+      {
+        "section": 4,
+        "page_number_start": null,
+        "explicit_footer_relationships": []
+      }
+    ],
+    "observed_visible_numbering": {
+      "first_numbered_pdf_page": 90,
+      "printed_number_on_first_numbered_page": 1,
+      "last_pdf_page": 241,
+      "printed_number_on_last_page": 152,
+      "method": "visual inspection of all 241 rendered pages"
+    },
+    "continuous_from_first_journal_page": false
+  },
+  "front_matter": {
+    "status": "BLOCKED",
+    "expected_from_raw_provenance": {
+      "conference_id": 95,
+      "location": "Oxford, United Kingdom",
+      "dates": "February 6-8, 2026"
+    },
+    "observed_stale_markers": [
+      {
+        "pages": [
+          1
+        ],
+        "text": "June 12-14, 2026; New York, USA"
+      },
+      {
+        "pages": [
+          2,
+          3,
+          241
+        ],
+        "text": "January 19-21, 2026; Cambridge, United Kingdom"
+      },
+      {
+        "pages": [
+          2,
+          3,
+          241
+        ],
+        "text": "conference?id=91 / conf-91-2026"
+      }
+    ]
+  },
+  "blockers": [
+    "front_matter_not_parameterized_for_conference_95",
+    "toc_field_missing",
+    "toc_entries_missing:34",
+    "continuous_pagination_missing_for_pdf_pages_1_89"
+  ]
+}

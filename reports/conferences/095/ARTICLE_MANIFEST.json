@@ -1,0 +1,2060 @@
+{
+  "manifest_source": "AUTO:archive_inventory",
+  "manifest_sha256": "4d96467f7809e681874ad243e023b1b8748c4925758a0a70d6d32d3930351c0c",
+  "generation_mode": "AUTO_INVENTORY_V1",
+  "evidence_report": "manifest_evidence.json",
+  "articles": [
+    {
+      "article_id": "article-001",
+      "journal_order": 1,
+      "section_id": "Медичні науки та громадське здоров’я",
+      "section_raw": "Медичні науки та громадське здоров’я",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/New_Тези Оксфорд.docx",
+      "source_extension": ".docx",
+      "source_sha256": "365ab241df5b4825fd85fbb4a4800b51675aa2a760609d30adccf3f339cea6f2",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/Анкета учасника.doc",
+      "application_sha256": "158ac6d3ce989d92e271b8f252e9851d09b216ea5d79d8c1de732157f3b484fe",
+      "authors_manifest": [
+        "Bohdan Kravchenko"
+      ],
+      "authors_detected": [
+        "Bohdan Kravchenko"
+      ],
+      "title_manifest": "Impact of Tobacco and Nicotine Products on Dental Implant Outcomes: Clinical Risks and Preventive Strategies",
+      "title_detected": "IMPACT OF TOBACCO AND NICOTINE PRODUCTS ON DENTAL IMPLANT OUTCOMES: CLINICAL RISKS AND PREVENTIVE STRATEGIES",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "1 Кравченко",
+        "participant_order": 1,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-002",
+      "journal_order": 2,
+      "section_id": "Психологія та психіатрія",
+      "section_raw": "35. Психологія та психіатрія",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, стаття по арттерапії.docx",
+      "source_extension": ".docx",
+      "source_sha256": "c58abba9c8c7734ce3d4461b7453a447f8777d66549389b4eec51b03f6e7ce96",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/Губа, заявка.docx",
+      "application_sha256": "28741133e76423506b12b822d60140c4e8dbe443f636399db319ed6ee02fcb71",
+      "authors_manifest": [
+        "Nataliya Huba"
+      ],
+      "authors_detected": [
+        "Наталія Губа"
+      ],
+      "title_manifest": "Арттерапія: творчість як засіб психологічної підтримки учасників освітнього процесу",
+      "title_detected": "Зачепилівської селищної ради",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "2 Губа",
+        "participant_order": 2,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-003",
+      "journal_order": 3,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Тези Алекс.docx",
+      "source_extension": ".docx",
+      "source_sha256": "6f8433de106c9e10dcb2d595d9e36542dfdb9269417a5fb104bb127387315696",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/3 Лаврівська/Анкета учасника.doc",
+      "application_sha256": "54dba9feb42d3950b1b6dc05ff2ac8cc25ddfb080843af23f6a49a0c08aa0e6b",
+      "authors_manifest": [
+        "Oleksandra Lavrivska"
+      ],
+      "authors_detected": [
+        "Bc. Oleksandra Lavrivska"
+      ],
+      "title_manifest": "Specifics of the Methodology of Teaching English to Foreign Students in Primary Schools of the Karlovy Vary Region",
+      "title_detected": "Specifics of the Methodology of Teaching English to Foreign Students in Primary Schools of the Karlovy Vary Region",
+      "language": "en",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "3 Лаврівська",
+        "participant_order": 3,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-004",
+      "journal_order": 4,
+      "section_id": "Фізико-математичні науки",
+      "section_raw": "29. Фізико-математичні науки",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. стаття.docx",
+      "source_extension": ".docx",
+      "source_sha256": "de335e889ed6911698b1a8550e74033c660f9bd6170421968120dccc043e813a",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/4 Нігальчук/Нігальчук Є. Р. анкета.docx",
+      "application_sha256": "69e3ea84596d0fd68559b386772973f230d7bd8e1314a949e9a847de65240dbf",
+      "authors_manifest": [
+        "Yeva Nihalchuk"
+      ],
+      "authors_detected": [
+        "Нігальчук Єва Романівна"
+      ],
+      "title_manifest": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "title_detected": "ПЕДАГОГІЧНІ МОЖЛИВОСТІ ЦИФРОВИХ ОСВІТНІХ РЕСУРСІВ У ВИВЧЕННІ ПОХІДНОЇ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "4 Нігальчук",
+        "participant_order": 4,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-005",
+      "journal_order": 5,
+      "section_id": "Історія, археологія та культурологія",
+      "section_raw": "Історія, археологія та культурологія",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/Стаття_Лисенко_Ілля.docx",
+      "source_extension": ".docx",
+      "source_sha256": "dfbf5eea3fb69061feadafd5d43eee6ce17ed156c20ee7128ea384901f880ab1",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/5 Лисенко/АНКЕТА УЧАСНИКА_Лисенко.docx",
+      "application_sha256": "f75d9b475516f3b1f49af9d087ecf90cbf42f6102a477d2510df9ca03f459f96",
+      "authors_manifest": [
+        "Illia Lysenko"
+      ],
+      "authors_detected": [
+        "Лисенко Ілля Сергійович"
+      ],
+      "title_manifest": "БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "title_detected": "«БЛАТ» ЯК НЕФОРМАЛЬНА ПРАКТИКА У РАДЯНСЬКІЙ СИСТЕМІ РОЗПОДІЛУ МАТЕРІАЛЬНИХ БЛАГ: СОЦІАЛЬНО-ІСТОРИЧНИЙ АСПЕКТ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "5 Лисенко",
+        "participant_order": 5,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-006",
+      "journal_order": 6,
+      "section_id": "Інститут правоохоронної діяльності, судова система та нотаріат",
+      "section_raw": "9. Інститут правоохоронної діяльності, судова система та нотаріат",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є.Р.стаття.docx",
+      "source_extension": ".docx",
+      "source_sha256": "301ab7ed516faea70c3d58aa0ea8ade93ec9df3c572fa967b5a2b88d5309331a",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/6 Нігальчук/Нігальчук Є. Р. анкета.docx",
+      "application_sha256": "7edee49dcfa30087f57de32c54e4ba03fd936fe546884eb552d0ad85bdf88ed2",
+      "authors_manifest": [
+        "Yeva Nihalchuk"
+      ],
+      "authors_detected": [
+        "Нігальчук Єва Романівна"
+      ],
+      "title_manifest": "ІМПЛЕМЕНТАЦІЯ СТАНДАРТІВ ЄСПЛ У ДІЯЛЬНІСТЬ СУДІВ УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "title_detected": "УКРАЇНИ В МЕЖАХ КРИМІНАЛЬНОГО ПРОЦЕСУ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "6 Нігальчук",
+        "participant_order": 6,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-007",
+      "journal_order": 7,
+      "section_id": "Філологія та журналістика",
+      "section_raw": "Філологія та журналістика",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/УДК 373.docx",
+      "source_extension": ".docx",
+      "source_sha256": "8b65a0fcec77f61a9bde8903fdb53199bf381db9934cf08239e97a3855a8808c",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/7 Мартинюк/АНКЕТА УЧАСНИКА1.docx",
+      "application_sha256": "22625c2f47a84d56c5343d28eed7070352ad6f5398c761f8df03b027a54ea933",
+      "authors_manifest": [
+        "Svitlana Martyniuk"
+      ],
+      "authors_detected": [
+        "Мартинюк Світлана Євгенівна"
+      ],
+      "title_manifest": "The Role of Digital Tools in Teaching English at Secondary School",
+      "title_detected": "THE ROLE OF DIGITAL TOOLS IN TEACHING ENGLISH AT SECONDARY SCHOOL",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "7 Мартинюк",
+        "participant_order": 7,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-008",
+      "journal_order": 8,
+      "section_id": "Менеджмент, публічне управління та адміністрування або 41. Культура та мистецтво",
+      "section_raw": "5.Менеджмент, публічне управління та адміністрування або 41. Культура та мистецтво",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/New_Креативні 〓ндустр〓〓〓 як чинник соціально.docx",
+      "source_extension": ".docx",
+      "source_sha256": "8d5129946c459ed9811391a3709bf563e9c9e423f0ec4737a200008cee91d0af",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/Анкета-заявка.до конференц〓〓〓.doc",
+      "application_sha256": "c937a449db04a1603bc93cd15813bd79172e60a934060662559f2cf49d3da1da",
+      "authors_manifest": [
+        "Oleksandra Kachmar",
+        "Volodymyr Fedorak",
+        "Ivan Stratienko"
+      ],
+      "authors_detected": [
+        "Федорак Володимир Васильович",
+        "Качмар Олександра Василівна",
+        "Стратієнко Іван Іванович"
+      ],
+      "title_manifest": "Креативні індустрії як чинник соціально-економічного розвитку Карпатського регіону",
+      "title_detected": "КРЕАТИВНІ ІНДУСТРІЇ ЯК ЧИННИК СОЦІАЛЬНО-ЕКОНОМІЧНОГО РОЗВИТКУ КАРПАТСЬКОГО РЕГІОНУ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "8 Качмар",
+        "participant_order": 8,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-009",
+      "journal_order": 9,
+      "section_id": "Воєнні науки, національна безпека та безпека державного кордону",
+      "section_raw": "Воєнні науки, національна безпека та безпека державного кордону",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Теза 7.7.docx",
+      "source_extension": ".docx",
+      "source_sha256": "6d1faf42037efde5cf903e166731c70230e889c6f7088539a054122586c6fd6f",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/9 Ящук (індивідуальний ДОІ)/Заява на тезу 7.7.doc",
+      "application_sha256": "63fc1591b94d1fd3e8535639aefc4e458928107a774a7f71d695013dce2e686d",
+      "authors_manifest": [
+        "Petro Yashchuk"
+      ],
+      "authors_detected": [
+        "Ящук Петро Володимирович"
+      ],
+      "title_manifest": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "title_detected": "ВІТАЛЬНА БЕЗПЕКА ЯК АНТРОПОЦЕНТРИЧНА ГУМАНІТАРНА ПАРАДИГМА",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "9 Ящук (індивідуальний ДОІ)",
+        "participant_order": 9,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-010",
+      "journal_order": 10,
+      "section_id": "Історія, археологія та культурологія",
+      "section_raw": "39. Історія, археологія та культурологія",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/New_Прибитько.docx",
+      "source_extension": ".docx",
+      "source_sha256": "aaf8e0c45ef44274d7d5e6a35e8c65f9d4c2dbc791f84a734553097ba1dbdb99",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько (2).docx",
+      "application_sha256": "61b748d1fc91a5647d25fb7975a430cf06e662e861a0f1e4db7ed5ed11c42272",
+      "authors_manifest": [
+        "Ivan Prybytko",
+        "Victoriia Ivkova"
+      ],
+      "authors_detected": [
+        "Прибитько Іван Олександрович",
+        "Івкова Вікторія Юріївна"
+      ],
+      "title_manifest": "Фактори формування державотворчих уявлень у махновському повстанському русі (1917–1921 рр.)",
+      "title_detected": "ФАКТОРИ ФОРМУВАННЯ ДЕРЖАВОТВОРЧИХ УЯВЛЕНЬ У МАХНОВСЬКОМУ ПОВСТАНСЬКОМУ РУСІ (1917–1921 РР.)",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "10 Прибитько, Івкова",
+        "participant_order": 10,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-011",
+      "journal_order": 11,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "34. Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко Олена Олексіївна.docx",
+      "source_extension": ".docx",
+      "source_sha256": "9490b6596111dd8339ab148b5646b5abc80573e62bb6b8aaee65dbb57bd8c163",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/11 Стрельченко/Стрельченко О.О..doc",
+      "application_sha256": "70ba64deb3df216e5f69ea6ed56bd5d30ff485895ae441b6d9c44cf5baf78aa7",
+      "authors_manifest": [
+        "Strelchenko Olena"
+      ],
+      "authors_detected": [
+        "Стрельченко Олена Олексіївна"
+      ],
+      "title_manifest": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+      "title_detected": "МІНІМУЗЕЙ «УКРАЇНСЬКА СВІТЛИЦЯ» — ЯК ОСЕРЕДОК ДЛЯ ВИХОВАННЯ НАЦІОНАЛЬНОЇ ІДЕНТИЧНОСТІ ТА НАЦІОНАЛЬНО-ПАТРІОТИЧНОГО ВИХОВАННЯ ДОШКІЛЬНЯТ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "11 Стрельченко",
+        "participant_order": 11,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-012",
+      "journal_order": 12,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "34. Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Стаття Цифрова зрілість Сидоренко С. Ю..docx",
+      "source_extension": ".docx",
+      "source_sha256": "2591eae01d7a6badf5374b716b7aeb132a9400212926a44b8a5f4ee288079637",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/13 Сидоренко/Анкета учасника.docx",
+      "application_sha256": "62aeffce2194bd4a734f858df8ab07a6591893cf0b67409347779187c211f17d",
+      "authors_manifest": [
+        "Serhii Sydorenko"
+      ],
+      "authors_detected": [
+        "Сидоренко Сергій Юрійович"
+      ],
+      "title_manifest": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "title_detected": "ЦИФРОВА ЗРІЛІСТЬ ЗАКЛАДУ ПРОФЕСІЙНО-ТЕХНІЧНОЇ ОСВІТИ ЯК РЕЗУЛЬТАТ ІНТЕГРАЦІЇ LEARNING MANAGEMENT SYSTEMS У СИСТЕМУ УПРАВЛІННЯ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "13 Сидоренко",
+        "participant_order": 13,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-013",
+      "journal_order": 13,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/Заявка і стаття.docx",
+      "source_extension": ".docx",
+      "source_sha256": "7188b3d74b0cb6b3b2153b8e5f82c5211a1e1002bbb56f8564cb5d835f7e98f7",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/14 Пилипенко/Заявка і стаття.docx",
+      "application_sha256": "7188b3d74b0cb6b3b2153b8e5f82c5211a1e1002bbb56f8564cb5d835f7e98f7",
+      "authors_manifest": [
+        "Nataliia Pylypenko",
+        "Liudmyla Chibirieva"
+      ],
+      "authors_detected": [
+        "Пилипенко Наталія Вікторівна",
+        "Чібірєва Людмила Вікторівна"
+      ],
+      "title_manifest": "Підземна школа: безпечний простір для дітей з особливими освітніми потребами.",
+      "title_detected": "Харківської міської ради»",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.9,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.9,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "14 Пилипенко",
+        "participant_order": 14,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "embedded_application_tail_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references"
+        ],
+        "embedded_service_tail": true
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": [
+        "embedded_application_tail_requires_preparation"
+      ]
+    },
+    {
+      "article_id": "article-014",
+      "journal_order": 14,
+      "section_id": "",
+      "section_raw": "",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/15 Резніков/Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises.docx",
+      "source_extension": ".docx",
+      "source_sha256": "f43da66e0c7096630365f6b96c565f27075c550e37919a1923f6b5618c66095b",
+      "application_path": "",
+      "application_sha256": "",
+      "authors_manifest": [
+        "Резніков Роман Борисович"
+      ],
+      "authors_detected": [
+        "Резніков Роман Борисович"
+      ],
+      "title_manifest": "Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises",
+      "title_detected": "Methods for Forming Enterprise Development Strategies Based on Digital Technologies under Global Crises",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "15 Резніков",
+        "participant_order": 15,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": false
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-015",
+      "journal_order": 15,
+      "section_id": "Філософія та політологія",
+      "section_raw": "Філософія та політологія",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Вибори в Україні в умовах повномасшт.війни_правові та політ.виклик.Шаповалова А.М..docx",
+      "source_extension": ".docx",
+      "source_sha256": "e92001c8abd506590b5f64a24b527199b24d233e13237c15aa49f9f9faf34028",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/17 Шаповалова/Інформаційний лист       м. Оксфорд.docx",
+      "application_sha256": "66f753bfabcedfaa2b0cf5ff6cdd67050d9313ec72c107f2355ce1f9d8b35581",
+      "authors_manifest": [
+        "Shapovalova Alla"
+      ],
+      "authors_detected": [
+        "Шаповалова Алла Миколаївна"
+      ],
+      "title_manifest": "Вибори в Україні в умовах повномасштабної війни: правові та політичні виклики",
+      "title_detected": "ВИБОРИ В УКРАЇНІ В УМОВАХ ПОВНОМАСШТАБНОЇ ВІЙНИ: ПРАВОВІ ТА ПОЛІТИЧНІ ВИКЛИКИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "17 Шаповалова",
+        "participant_order": 17,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-016",
+      "journal_order": 16,
+      "section_id": "Медичні науки та громадське здоров’я",
+      "section_raw": "36.Медичні науки та громадське здоров’я",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко стаття.docx",
+      "source_extension": ".docx",
+      "source_sha256": "5cd15ec7071159b8af2f59aa7ecf7343792d3ea4ee18f1c74c7e2e176acf075b",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/18 Євтушенко/Євтушенко Анкета-заявка.doc",
+      "application_sha256": "79c4dc5e0aca1366bcae3892d3106efba2dac736ee4f571b30e4bc5127541b6a",
+      "authors_manifest": [
+        "Vitalii Yevtushenko",
+        "Iryna Seriakova",
+        "Sergiy Kramarov",
+        "Liudmyla Palatna",
+        "Iryna Shpak"
+      ],
+      "authors_detected": [
+        "Євтушенко Віталій Вячеславович"
+      ],
+      "title_manifest": "Визначення оптимальних порогових значень маркеру E-селектину для ураження серцево-судинної системи при COVID-19 у дітей",
+      "title_detected": "ВИЗНАЧЕННЯ ОПТИМАЛЬНИХ ПОРОГОВИХ ЗНАЧЕНЬ МАРКЕРУ Е-СЕЛЕКТИНУ ДЛЯ УРАЖЕННЯ СЕРЦЕВО-СУДИННОЇ СИСТЕМИ ПРИ COVID-19 У ДІТЕЙ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 0.992,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "18 Євтушенко",
+        "participant_order": 18,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-017",
+      "journal_order": 17,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "34. Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/стаття_Спиридонова_Зозуля.docx",
+      "source_extension": ".docx",
+      "source_sha256": "c953933edd88a92c2cd69184ebd521e3fe5880b5bb8f0a64758dbd04c98d5e57",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/19 Спиридонова/Анкета-заявка_ Спиридонова_Зозуля.doc",
+      "application_sha256": "71f4df79f26422524b27d8f3842569abe84efb9a4e6e1688368a6dc63e2efa55",
+      "authors_manifest": [
+        "Spyridonova Oleksandra"
+      ],
+      "authors_detected": [
+        "Спиридонова Олександра Олександрівна",
+        "Зозуля Оксана Василівна"
+      ],
+      "title_manifest": "Особливості організації психолого-педагогічної підтримки дітей з особливими освітніми потребами в сучасній освіті",
+      "title_detected": "Особливості організації психолого-педагогічної підтримки дітей з особливими освітніми потребами в сучасній освіті",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "19 Спиридонова",
+        "participant_order": 19,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-018",
+      "journal_order": 18,
+      "section_id": "Медичні науки та громадське здоров’я",
+      "section_raw": "36. Медичні науки та громадське здоров’я",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/1- Oxford.Замятін П.М. стаття .docx",
+      "source_extension": ".docx",
+      "source_sha256": "cff1a8b79e29293d7afad04f214004b25c84e690785660f5e8cb5c28b26683ab",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/20 Замятін/2-OXford-Замятін П.М.-Анкета учасників .docx",
+      "application_sha256": "36cbe9c4b34f591ffeebc31999ae333626ce74fc718ef1e7d174ae036e5fe3fb",
+      "authors_manifest": [
+        "Pеtrо Zamіatin",
+        "Vasyl Kritsak",
+        "Denis Zamіatin",
+        "Daria Lazebna",
+        "Alina Vakulenko"
+      ],
+      "authors_detected": [
+        "Petro Zamіatin"
+      ],
+      "title_manifest": "Pulmonary hemorrhage: diagnostic and surgical tactics At the modern level",
+      "title_detected": "AT THE MODERN LEVEL",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "20 Замятін",
+        "participant_order": 20,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-019",
+      "journal_order": 19,
+      "section_id": "Філософія та політологія",
+      "section_raw": "32. Філософія та політологія",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Доній_Гончаренко_2026.docx",
+      "source_extension": ".docx",
+      "source_sha256": "03913014a289f2954d03c6f336e33c260acd761937d5de8a9c4f9dc27f800809",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/22 Доній/Заявка м. Оксфорд, Велика Британія, 6-8 лютого 2026 року.docx",
+      "application_sha256": "f2a12ba6ead2a4ef34f5c466a0cf0639e5db935606414ae9d5dbe80a84efe588",
+      "authors_manifest": [
+        "Nataliia Donii"
+      ],
+      "authors_detected": [
+        "Donii Nataliia Yevgeniivna"
+      ],
+      "title_manifest": "THE UNFREEDOM AS A VALUE FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "title_detected": "FOR INDIVIDUALS PRONE TO RECIDIVISM",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "22 Доній",
+        "participant_order": 22,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-020",
+      "journal_order": 20,
+      "section_id": "",
+      "section_raw": "",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/23 Самборко/Добридень_Стаття.docx",
+      "source_extension": ".docx",
+      "source_sha256": "a68d94316944dfc88820bab08a19537327b5b4f2fc301e207391e6d777850ff4",
+      "application_path": "",
+      "application_sha256": "",
+      "authors_manifest": [
+        "Добридень Алла Володимирівна",
+        "Самборко Інна Миколаївна"
+      ],
+      "authors_detected": [
+        "Добридень Алла Володимирівна",
+        "Самборко Інна Миколаївна"
+      ],
+      "title_manifest": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "title_detected": "МЕНТАЛЬНЕ ЗДОРОВ’Я МОЛОДШИХ ШКОЛЯРІВ ЯК ПЕДАГОГІЧНА ПРОБЛЕМА СУЧАСНОЇ ПОЧАТКОВОЇ ШКОЛИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "23 Самборко",
+        "participant_order": 23,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": false
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-021",
+      "journal_order": 21,
+      "section_id": "Психологія та психіатрія",
+      "section_raw": "Психологія та психіатрія",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Жорстокість підлітків Костишина С.П..docx",
+      "source_extension": ".docx",
+      "source_sha256": "9c8d679f5802ec6a2c764cda4f1652ceaa03f7d4e6da2abe1cbe7cde7abda894",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/24 Костишина/Анкета-заявка КостишинаС.П..doc",
+      "application_sha256": "0c32869e16d54de5636bdfb2def85f21b15cc8b95c535296fddf12f6ecc720e3",
+      "authors_manifest": [
+        "Svitlana Kostyshyna"
+      ],
+      "authors_detected": [
+        "Костишина Світлана Павлівна"
+      ],
+      "title_manifest": "Жорстокість серед підлітків як актуальна проблема сучасного світу: пошук ефективних рішень.",
+      "title_detected": "ЖОРСТОКІСТЬ СЕРЕД ПІДЛІТКІВ ЯК АКТУАЛЬНА ПРОБЛЕМА СУЧАСНОГО СВІТУ: ПОШУК ЕФЕКТИВНИХ РІШЕНЬ.",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "24 Костишина",
+        "participant_order": 24,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-022",
+      "journal_order": 22,
+      "section_id": "Менеджмент, публічне управління та адміністрування",
+      "section_raw": "5. Менеджмент, публічне управління та адміністрування",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_тези.docx",
+      "source_extension": ".docx",
+      "source_sha256": "2be365e5cd3119eb1a9f098fb850b78102fee3b7284afd0099c707b1fac5b3f5",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/25 Туровський/Долгальова_Туровський_Анкета учасників конференції (2).docx",
+      "application_sha256": "3802bd29681d0a3bcd1025a85899bb7a33a417f7be3829102ee16361d5129b3c",
+      "authors_manifest": [
+        "Olena Dolgalova",
+        "Ihor Turovskyi"
+      ],
+      "authors_detected": [
+        "Долгальова Олена Вячеславівна",
+        "Туровський Ігор Володимирович"
+      ],
+      "title_manifest": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "title_detected": "ДЕРЖАВНА КАДРОВА ПОЛІТИКА У СФЕРІ ОХОРОНИ ЗДОРОВ’Я ЯК ЧИННИК СТРАТЕГІЧНОГО УПРАВЛІННЯ ЛЮДСЬКИМИ РЕСУРСАМИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "25 Туровський",
+        "participant_order": 25,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-023",
+      "journal_order": 23,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "34. Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_стаття.docx",
+      "source_extension": ".docx",
+      "source_sha256": "a1c9ae0f16769c498716646f7b4e70e15b9feacdf03df4d50e17a7bc638f1d3e",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/26 Башкірова/Bashkirova_анкета учасника.docx",
+      "application_sha256": "b5862264fad66092f3a8563784b8918731341b5666b0504454349f5f2f2403eb",
+      "authors_manifest": [
+        "Nataliia Bashkirova",
+        "Oryna Kraus"
+      ],
+      "authors_detected": [
+        "Башкірова Наталія",
+        "Краус Орина"
+      ],
+      "title_manifest": "Перший досвід підготовки лікарів -інтернів за спеціальністю «Лабораторна діагностика, вірусологія, мікробіологія",
+      "title_detected": "ПЕРШИЙ ДОСВІД ПІДГОТОВКИ ЛІКАРІВ -ІНТЕРНІВ ЗА СПЕЦІАЛЬНІСТЮ «ЛАБОРАТОРНА ДІАГНОСТИКА, ВІРУСОЛОГІЯ, МІКРОБІОЛОГІЯ»",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "26 Башкірова",
+        "participant_order": 26,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-024",
+      "journal_order": 24,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Стаття Панчук О. І.1.docx",
+      "source_extension": ".docx",
+      "source_sha256": "d5a9bc509fdf862df60f0004a943f41bb4889a07e94c0fd18c40a8431f06a737",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/29 Панчук/Анкета-заявка.doc",
+      "application_sha256": "1d9725df2c975fa23c9be7a228f50e78df02156de90182e51e4b9d507dde6a6b",
+      "authors_manifest": [
+        "Olha Panchuk"
+      ],
+      "authors_detected": [
+        "Панчук Ольга Іванівна"
+      ],
+      "title_manifest": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "title_detected": "ВПЛИВ БАТЬКІВ НА ФОРМУВАННЯ ОСОБИСТОСТІ ДИТИНИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "29 Панчук",
+        "participant_order": 29,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-025",
+      "journal_order": 25,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Стаття Іванчикова.docx",
+      "source_extension": ".docx",
+      "source_sha256": "a026a692ecad21092da481910e351be9cb533ce79a7dd05fb9ddc2da05118d25",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/31 Іванчикова/Анкета-заявка Іванчикова.doc",
+      "application_sha256": "c08bc783b686adf8bd6710d17ebaf5e0945030bb50288b7578fae8cb73f6e425",
+      "authors_manifest": [
+        "Liudmyla Ivanchikova"
+      ],
+      "authors_detected": [
+        "Іванчикова Людмила Іванівна"
+      ],
+      "title_manifest": "Писанкарство: тиха сила предків",
+      "title_detected": "Писанкарство: тиха сила предків",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "31 Іванчикова",
+        "participant_order": 31,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-026",
+      "journal_order": 26,
+      "section_id": "Право та міжнародне право",
+      "section_raw": "8. Право та міжнародне право",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Тези_МНПК_Оксфорд_Цьось_06_08.02.2026.docx",
+      "source_extension": ".docx",
+      "source_sha256": "756151b9011c3d0442feeff1f01a75d8432e092e6abf34e1f2bf07b3774d5a35",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/32 Цьось/Анкета-заява Цьось.docx",
+      "application_sha256": "f2c08d0b7d10be7a7a32c3a5b31572c349922bf5b3fac0248d9f2712122ee1d5",
+      "authors_manifest": [
+        "Yulia Tsos"
+      ],
+      "authors_detected": [
+        "Цьось Юлія Станіславівна"
+      ],
+      "title_manifest": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАОВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "title_detected": "ТРАНСФОРМАЦІЯ АДМІНІСТРАТИВНОГО-ПРАОВОВГО РЕГУЛЮВАННЯ ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ЗА МОБІЛІЗАЦІЄЮ В УМОВАХ ВОЄННОГО СТАНУ В УКРАЇНІ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "32 Цьось",
+        "participant_order": 32,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-027",
+      "journal_order": 27,
+      "section_id": "Фінанси та банківська справа; оподаткування, облік і аудит",
+      "section_raw": "3. Фінанси та банківська справа; оподаткування, облік і аудит",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Стаття.docx",
+      "source_extension": ".docx",
+      "source_sha256": "4f0ecfc3cb6f3d41f2efc73dcfcb0f993f61cadd02df32155f7a894c94041288",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/33 Ганзюк/Ганзюк С._Анкета.docx",
+      "application_sha256": "656c8fa824c87e07fe5c5ba537ec50728755707e3afc24fd2490e48b8a0b043f",
+      "authors_manifest": [
+        "Hanziuk Svitlana",
+        "Lutsenko Kateryna"
+      ],
+      "authors_detected": [
+        "Ганзюк Світлана Михайлівна",
+        "Луценко Катерина Геннадіївна"
+      ],
+      "title_manifest": "Формування депозитного портфеля банківських установ в умовах війни",
+      "title_detected": "ФОРМУВАННЯ ДЕПОЗИТНОГО ПОРТФЕЛЯ БАНКІВСЬКИХ УСТАНОВ В УМОВАХ ВІЙНИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "33 Ганзюк",
+        "participant_order": 33,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-028",
+      "journal_order": 28,
+      "section_id": "Право та міжнародне право",
+      "section_raw": "Право та міжнародне право",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Новий Документ Microsoft Word.docx",
+      "source_extension": ".docx",
+      "source_sha256": "4300910dc91c86804a94e17f006fd5fd8438ae6867dc60a43bd9de0fde815936",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Ягмуров Є.К. АНКЕТА УЧАСНИКА.doc",
+      "application_sha256": "3031db2bd92dbaac9170216f510e833e5b9e6cf32156f87e8d717420c0cf4701",
+      "authors_manifest": [
+        "Yahmurov Yehor"
+      ],
+      "authors_detected": [
+        "Ягмуров Єгор Костянтинович"
+      ],
+      "title_manifest": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "title_detected": "ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛОГІЙ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "34 Ягмуров",
+        "participant_order": 34,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-029",
+      "journal_order": 29,
+      "section_id": "Фінанси та банківська справа; оподаткування, облік і аудит",
+      "section_raw": "3. Фінанси та банківська справа; оподаткування, облік і аудит",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/Львович_Тези.docx",
+      "source_extension": ".docx",
+      "source_sha256": "e101b60842d3ca88561f7f81a83392e01e4941171ffccce4f6afe1e5e6990604",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/35 Львович/АНКЕТА УЧАСНИКА_Львович.doc",
+      "application_sha256": "0bff08fd20146ce71332f83f498ea6f9b39ceb6a9ac477e4095d949b18af4876",
+      "authors_manifest": [
+        "Arsenii Lvovych"
+      ],
+      "authors_detected": [
+        "Львович Арсеній Вячеславович"
+      ],
+      "title_manifest": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "title_detected": "ТРАНСФОРМАЦІЯ ГЛОБАЛЬНИХ ОФШОРНИХ ФІНАНСОВИХ ПОТОКІВ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "35 Львович",
+        "participant_order": 35,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-030",
+      "journal_order": 30,
+      "section_id": "Медичні науки та громадське здоров’я",
+      "section_raw": "36. Медичні науки та громадське здоров’я",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Стаття Обозна-Красовська_.docx",
+      "source_extension": ".docx",
+      "source_sha256": "fc073f5e7397625659e5ddd498cd2eb71f0aebe1d41627011ac53e49857a3772",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/37 Обозна/Вікторія Обозна Анкета_.doc",
+      "application_sha256": "6e7b35debef7a892f076fe4fbb4e10fcf217c8a5c2df970b03b2d4d08868bec2",
+      "authors_manifest": [
+        "Viktoriia Obozna",
+        "Katerina Krasovska"
+      ],
+      "authors_detected": [
+        "Обозна Вікторія Василівна",
+        "Красовська Катерина Олександрівна"
+      ],
+      "title_manifest": "Аспекти психосоціальної взаємодії акушерки із жінками з тривожно-фобічними розладами у перинатальному періоді в умовах війни",
+      "title_detected": "АСПЕКТИ ПСИХОСОЦІАЛЬНОЇ ВЗАЄМОДІЇ АКУШЕРКИ ІЗ ЖІНКАМИ З ТРИВОЖНО-ФОБІЧНИМИ РОЗЛАДАМИ У ПЕРИНАТАЛЬНОМУ ПЕРІОДІ В УМОВАХ ВІЙНИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "37 Обозна",
+        "participant_order": 37,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-031",
+      "journal_order": 31,
+      "section_id": "Психологія та психіатрія",
+      "section_raw": "35. Психологія та психіатрія",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Стаття_Paios.docx",
+      "source_extension": ".docx",
+      "source_sha256": "b3b28c60726011a8afc24574d049a1d158228ce0f303b1814670fb78c1ef7bd1",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/38 Пайос/Анкета_Paios.docx",
+      "application_sha256": "846a02694a260393e65b1deb202fb8c281c5be2e0ce183cbe0be35a6c3775608",
+      "authors_manifest": [
+        "Yelyzaveta Paios"
+      ],
+      "authors_detected": [
+        "Yelyzaveta Paios"
+      ],
+      "title_manifest": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "title_detected": "THE PSYCHOLOGICAL FEATURES OF THE RELATIONSHIP BETWEEN EMOTIONAL INTELLIGENCE AND BEHAVIORAL STRATEGIES IN CONFLICT SITUATIONS DURING YOUTH",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "38 Пайос",
+        "participant_order": 38,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_requires_group_resolution",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-032",
+      "journal_order": 32,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "34.Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_тези.docx",
+      "source_extension": ".docx",
+      "source_sha256": "3d0b2124ec488015ea648f21e4c5c6401bda509e2b5671a2d41a9a8c298eba64",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/Олексюк_заявка.docx",
+      "application_sha256": "ab0d7b1db8036ccaad84988533c9d50a91aa45ec634e55a28a95734c09482183",
+      "authors_manifest": [
+        "Nataliya Oleksiuk",
+        "Andriy Gukalyuk",
+        "Ilya Belma"
+      ],
+      "authors_detected": [
+        "Олексюк Наталія Степанівна",
+        "Гукалюк Андрій Ігорович",
+        "ЗАКОРДОННИЙ ДОСВІД",
+        "ФОРМУВАННЯ СОЦІАЛЬНОЇ КОМПЕТЕНТНОСТІ"
+      ],
+      "title_manifest": "Закордонний досвід формування соціальної компетентності у майбутніх викладачів закладів професійної освіти",
+      "title_detected": "У МАЙБУТНІХ ВИКЛАДАЧІВ ЗАКЛАДІВ ПРОФЕСІЙНОЇ ОСВІТИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "39 Олексюк",
+        "participant_order": 39,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "doi",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-033",
+      "journal_order": 33,
+      "section_id": "Соціальна робота та соціальне забезпечення",
+      "section_raw": "6.Соціальна робота та соціальне забезпечення",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_тези.docx",
+      "source_extension": ".docx",
+      "source_sha256": "75c98b799dae01ad6c938dc8895ed9ecb06b2e349ed092fa9819c523b2fc37e1",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/40 Ординович/Ординович_заявка.docx",
+      "application_sha256": "cae44ea6894ade97547f0be7ed67b32777fba87d82d2e97adb6836a53d168466",
+      "authors_manifest": [
+        "Victor Ordynovych"
+      ],
+      "authors_detected": [
+        "Ординович Віктор Андрійович"
+      ],
+      "title_manifest": "Роль громади у процесі соціальної реінтеграції ветеранів / ветеранок війни",
+      "title_detected": "РОЛЬ ГРОМАДИ У ПРОЦЕСІ СОЦІАЛЬНОЇ РЕІНТЕГРАЦІЇ ВЕТЕРАНІВ/ВЕТЕРАНОК ВІЙНИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "40 Ординович",
+        "participant_order": 40,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "article_id": "article-034",
+      "journal_order": 34,
+      "section_id": "Педагогіка та освіта",
+      "section_raw": "34. Педагогіка та освіта",
+      "participation_type": "article",
+      "source_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_ТЕЗИ.docx",
+      "source_extension": ".docx",
+      "source_sha256": "7b9e34a96ad3b92d5d8771e3d711b7e6a8b6d41bd5ee006cd9248538a6278d8f",
+      "application_path": "95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/42 Савіщенко/САВІЩЕНКО_АНКЕТА.docx",
+      "application_sha256": "ea78844ffd4fb0ab7e8441ba02a1d292983bc87787e37695cf7a5aef88a3767f",
+      "authors_manifest": [
+        "Viktoriia Savishchenko"
+      ],
+      "authors_detected": [
+        "Савіщенко Вікторія Миколаївна"
+      ],
+      "title_manifest": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ",
+      "title_detected": "ГЕНЕЗИС ФЕНОМЕНА НАУКОВОГО ПІЗНАННЯ ПЕДАГОГІКИ",
+      "language": "uk",
+      "article_candidate": true,
+      "match_status": "MATCHED",
+      "match_score": 0.94,
+      "author_score": 1.0,
+      "title_score": 1.0,
+      "confidence": 0.94,
+      "provenance": {
+        "generation": "AUTO_INVENTORY_V1",
+        "participant_group": "42 Савіщенко",
+        "participant_order": 42,
+        "identity_sources": [
+          "article_visible_text",
+          "participant_folder",
+          "application_record"
+        ],
+        "selection_reasons": [
+          "article_structure_markers",
+          "title_detected",
+          "author_identity_detected",
+          "selected_once_for_participant_group"
+        ],
+        "content_markers": [
+          "annotation",
+          "keywords",
+          "references",
+          "udc"
+        ],
+        "embedded_service_tail": false
+      },
+      "evidence": {
+        "author_match": true,
+        "title_match": true,
+        "filename_used_for_match": false,
+        "folder_used_as_supporting_evidence": true,
+        "application_record_used": true
+      },
+      "blockers": [],
+      "warnings": []
+    }
+  ],
+  "article_count": 34,
+  "free_listeners": [],
+  "free_listener_count": 0,
+  "blockers": [],
+  "warnings": [
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/1 Кравченко/Тези Оксфорд.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/10 Прибитько, Івкова/Прибитько.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/2 Губа/New_Губа, стаття по арттерапії.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/34 Ягмуров/Ягмуров Є.К. тези ЕВОЛЮЦІЯ ЗАГРОЗ КОНФІДЕНЦІЙНОСТІ ТА АРХІТЕКТУРНІ ВИКЛИКИ ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ У КОНТЕКСТІ ІННОВАЦІЙНИХ ТЕХНОЛ.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/39 Олексюк/New_Олексюк_тези.docx",
+    "duplicate_excluded:95_м_Оксфорд,_Велика_Британія,_6_8_лютого_2026_року/95 м. Оксфорд, Велика Британія, 6-8 лютого 2026 року/Заявки/8 Качмар/Креативні 〓ндустр〓〓〓 як чинник соціально.docx"
+  ],
+  "manifest_status": "PASS"
+}

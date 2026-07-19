@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-07-19T03:15:01+03:00",
+  "status": "BLOCKED",
+  "production_ready": false,
+  "blockers": [
+    "front_matter_not_parameterized_for_conference_95",
+    "toc_field_missing",
+    "toc_entries_missing:34",
+    "continuous_pagination_missing_for_pdf_pages_1_89"
+  ],
+  "known_defects": [
+    "Front matter contains mutually inconsistent stale conference metadata.",
+    "TOC page contains only its heading and the following page is blank.",
+    "Visible page numbering begins on PDF page 90 as printed page 1 instead of covering the journal continuously.",
+    "Section heading numbering and spacing are inconsistent because raw section labels are not normalized."
+  ]
+}

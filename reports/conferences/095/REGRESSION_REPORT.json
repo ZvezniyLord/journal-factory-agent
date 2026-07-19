@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-07-19T03:15:01+03:00",
+  "status": "PASS",
+  "tests_passed": 61,
+  "tests_failed": 0,
+  "command": ".venv\\Scripts\\python -m pytest -p no:cacheprovider",
+  "compile_check": "PASS",
+  "clean_rebuild": {
+    "status": "PASS",
+    "manifest_articles_identical": true,
+    "manifest_sha256": "4d96467f7809e681874ad243e023b1b8748c4925758a0a70d6d32d3930351c0c",
+    "stable_snapshot_fields": {
+      "visible_text": true,
+      "paragraph_order": true,
+      "table_cells": true,
+      "textboxes": true,
+      "media_hashes": true,
+      "chart_payload_hashes": true,
+      "embedding_hashes": true,
+      "tables": true,
+      "images": true,
+      "charts": true,
+      "drawings": true,
+      "equations": true,
+      "OLE": true,
+      "shapes": true,
+      "page_breaks": true,
+      "section_breaks": true
+    },
+    "docx_container_sha256": {
+      "rebuild_a": "7164a0963978809e1140642013d7f5620f08ce95b0d040d87675ace1662587c8",
+      "rebuild_b": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
+      "byte_identical": false,
+      "note": "OpenXML ZIP container metadata is nondeterministic; semantic and payload gates are identical."
+    }
+  }
+}

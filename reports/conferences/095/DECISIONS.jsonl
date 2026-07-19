@@ -1,0 +1,4 @@
+{"timestamp": "2026-07-19T03:15:01+03:00", "decision": "AUTO_MANIFEST", "reason": "manifest.json absent; deterministic evidence classifier used", "conference_specific_rule": false}
+{"timestamp": "2026-07-19T03:15:01+03:00", "decision": "LEGACY_DOC_READ_ONLY", "reason": "short isolated Word COM sessions avoid path-length and session-state nondeterminism", "conference_specific_rule": false}
+{"timestamp": "2026-07-19T03:15:01+03:00", "decision": "OFFICIAL_PDF_NOT_REQUIRED", "reason": "iteration contract explicitly waives publication parity", "conference_specific_rule": false}
+{"timestamp": "2026-07-19T03:15:01+03:00", "decision": "READY_FOR_REVIEW_NOT_ACCEPTED", "reason": "DOCX/PDF exist, but front matter, TOC, and continuous pagination remain blocked", "conference_specific_rule": false}

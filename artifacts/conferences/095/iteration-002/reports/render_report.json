@@ -1,0 +1,49 @@
+{
+  "status": "BLOCKED",
+  "renderer": "Microsoft Word COM",
+  "word_version": "16.0",
+  "input_docx": "artifacts/conferences/095/iteration-002/Conference95_generated.docx",
+  "input_docx_sha256": "b4fd0b75361e73a206d7c491fffe0d5da63814c9fda4e85a4506fa910b0f73f5",
+  "output_pdf": "artifacts/conferences/095/iteration-002/Conference95_generated.pdf",
+  "output_pdf_sha256": "2d1948c1c3d4d77a07da0e13051efab4f07857eacfb2a0524c08aa36119d3645",
+  "word_field_count": 92,
+  "word_toc_count": 0,
+  "word_page_count": 241,
+  "pdf_page_count": 241,
+  "blockers": [
+    "front_matter_not_parameterized_for_conference_95",
+    "toc_field_missing",
+    "toc_entries_missing:34",
+    "continuous_pagination_missing_for_pdf_pages_1_89"
+  ],
+  "technical_render_status": "PASS",
+  "visual_qa": {
+    "status": "BLOCKED",
+    "renderer": "PyMuPDF raster inspection of Microsoft Word PDF",
+    "inspected_page_count": 241,
+    "expected_page_count": 241,
+    "all_pages_inspected": true,
+    "representative_full_resolution_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      25,
+      63,
+      105,
+      162,
+      231,
+      241
+    ],
+    "article_content_rendering": "PASS",
+    "observations": [
+      "All article pages render legibly; tables, charts, figures, links, and Cyrillic/Latin glyphs are visible.",
+      "Front matter contains mutually inconsistent stale conference metadata.",
+      "TOC page contains only its heading and the following page is blank.",
+      "Visible page numbering begins on PDF page 90 as printed page 1 instead of covering the journal continuously.",
+      "Section heading numbering and spacing are inconsistent because raw section labels are not normalized."
+    ]
+  }
+}
