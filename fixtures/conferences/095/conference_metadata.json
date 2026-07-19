@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "conference_id": 95,
+  "event_title": "Oxford International Science Forum",
+  "dates": "February 6-8, 2026",
+  "location": "Oxford, United Kingdom",
+  "conference_url": "https://naukainfo.com/conference?id=95",
+  "doi_url": "https://doi.org/10.64828/conf-95-2026",
+  "isbn": "978-617-8680-40-4",
+  "udc": "001.3-048.35:0/9](06)",
+  "typography_profile": "legacy_14pt",
+  "template_replacements": [
+    {
+      "source": "Science in the Modern World",
+      "target": "{event_title}",
+      "preserve_case": true
+    },
+    {
+      "source": "June 12-14, 2026",
+      "target": "{dates}",
+      "preserve_case": true
+    },
+    {
+      "source": "January 19-21, 2026",
+      "target": "{dates}",
+      "preserve_case": true
+    },
+    {
+      "source": "New York, USA",
+      "target": "{location}",
+      "preserve_case": true
+    },
+    {
+      "source": "Cambridge, United Kingdom",
+      "target": "{location}",
+      "preserve_case": true
+    },
+    {
+      "source": "https://naukainfo.com/conference?id=91",
+      "target": "{conference_url}"
+    },
+    {
+      "source": "https://doi.org/10.64828/conf-91-2026",
+      "target": "{doi_url}"
+    },
+    {
+      "source": "978-617-8680-36-7",
+      "target": "{isbn}"
+    }
+  ],
+  "dynamic_fields": [
+    {
+      "placeholder": "0000000",
+      "field": "NUMPAGES"
+    }
+  ],
+  "service_layout": {
+    "trim_trailing_empty_paragraphs": true,
+    "preceding_empty_paragraph_font": [
+      {
+        "marker": "{location}",
+        "font_size_pt": 1
+      }
+    ]
+  },
+  "required_markers": [
+    "{event_title}",
+    "{dates}",
+    "{location}",
+    "{conference_url}",
+    "{doi_url}",
+    "{isbn}"
+  ],
+  "stale_markers": [
+    "Science in the Modern World",
+    "June 12-14, 2026",
+    "January 19-21, 2026",
+    "New York, USA",
+    "Cambridge, United Kingdom",
+    "conference?id=91",
+    "conf-91-2026",
+    "978-617-8680-36-7"
+  ],
+  "provenance": [
+    {
+      "field": "event_title,dates,location,conference_url,isbn",
+      "source": "https://naukainfo.com/conference?id=95 and RAW participant manifest",
+      "confidence": 1.0
+    },
+    {
+      "field": "doi_url",
+      "source": "conference identifier convention confirmed by official Conference 95 page",
+      "confidence": 0.99
+    },
+    {
+      "field": "udc",
+      "source": "ETALON-JOURNAL.docx publication-level UDC",
+      "confidence": 0.95
+    },
+    {
+      "field": "typography_profile",
+      "source": "owner editorial rule in fixtures/conferences/095/build_profile.json",
+      "confidence": 1.0
+    }
+  ]
+}

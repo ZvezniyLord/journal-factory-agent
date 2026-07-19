@@ -90,7 +90,9 @@ def cmd_build_journal(args: argparse.Namespace) -> int:
         source_pack=args.source_pack,
         output_root=args.output,
         typography_profile=args.typography_profile,
+        conference_config_path=args.conference_config,
         typography_profiles_path=args.typography_profiles,
+        section_catalog_path=args.section_catalog,
     )
     print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
     return 0 if result["status"] == "DRAFT_BUILT" else 2
@@ -110,7 +112,13 @@ def cmd_analyze_conference(args: argparse.Namespace) -> int:
 
 
 def cmd_render_journal(args: argparse.Namespace) -> int:
-    result = render_docx_to_pdf(args.docx, args.pdf, args.report)
+    result = render_docx_to_pdf(
+        args.docx,
+        args.pdf,
+        args.report,
+        expected_article_count=args.expected_articles,
+        expected_first_article_page=args.expected_first_article_page,
+    )
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if result["status"] == "PASS" else 2
 
@@ -161,6 +169,17 @@ def main() -> int:
         type=Path,
         default=Path("config/typography_profiles.json"),
     )
+    journal.add_argument(
+        "--conference-config",
+        type=Path,
+        required=True,
+        help="Explicit conference metadata; never inferred from conference id",
+    )
+    journal.add_argument(
+        "--section-catalog",
+        type=Path,
+        default=Path("config/section_catalog.json"),
+    )
     journal.add_argument("--output", type=Path, default=Path("build/journal_builder"))
     journal.set_defaults(func=cmd_build_journal)
 
@@ -168,6 +187,8 @@ def main() -> int:
     render.add_argument("--docx", type=Path, required=True)
     render.add_argument("--pdf", type=Path, required=True)
     render.add_argument("--report", type=Path, required=True)
+    render.add_argument("--expected-articles", type=int)
+    render.add_argument("--expected-first-article-page", type=int)
     render.set_defaults(func=cmd_render_journal)
 
     analyze = sub.add_parser("analyze-conference")

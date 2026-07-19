@@ -10,9 +10,16 @@ import sys
 from pypdf import PdfReader
 
 from .archive_workspace import sha256_file
+from .publication_audit import audit_pdf_pages, build_toc_pagination_report
 
 
-def render_docx_to_pdf(docx_path: Path, pdf_path: Path, report_path: Path) -> dict[str, Any]:
+def render_docx_to_pdf(
+    docx_path: Path,
+    pdf_path: Path,
+    report_path: Path,
+    expected_article_count: int | None = None,
+    expected_first_article_page: int | None = None,
+) -> dict[str, Any]:
     docx_path = docx_path.resolve()
     pdf_path = pdf_path.resolve()
     report_path = report_path.resolve()
@@ -35,26 +42,114 @@ $word.AutomationSecurity = 3
 $document = $null
 try {
   $document = $word.Documents.Open($env:JF_RENDER_DOCX)
-  $fieldCount = $document.Fields.Count
-  $tocCount = $document.TablesOfContents.Count
-  foreach ($toc in $document.TablesOfContents) { [void]$toc.Update() }
-  foreach ($section in $document.Sections) {
-    foreach ($header in $section.Headers) {
-      if ($header.Exists -and $header.Range.Fields.Count -gt 0) { [void]$header.Range.Fields.Update() }
+  $listSeparator = (Get-Culture).TextInfo.ListSeparator
+  $tocStyleMapping = "SECTION${listSeparator}1${listSeparator}Назва1${listSeparator}2"
+  foreach ($toc in $document.TablesOfContents) {
+    $toc.Range.Fields.Item(1).Code.Text = " TOC \h \z \t `"${tocStyleMapping}`" "
+  }
+  $measurements = @()
+  $stableCount = 0
+  $previousKey = ''
+  for ($iteration = 1; $iteration -le 6; $iteration++) {
+    [void]$document.Repaginate()
+    foreach ($field in $document.Fields) {
+      # Do not update author-supplied HYPERLINK fields: Word can block while
+      # resolving external targets. TOC is updated through its own collection.
+      if ($field.Type -eq 26) { [void]$field.Update() }
     }
-    foreach ($footer in $section.Footers) {
-      if ($footer.Exists -and $footer.Range.Fields.Count -gt 0) { [void]$footer.Range.Fields.Update() }
+    foreach ($toc in $document.TablesOfContents) { [void]$toc.Update() }
+    foreach ($builtinStyle in @(-20, -21)) {
+      try {
+        $tocStyle = $document.Styles.Item($builtinStyle)
+        $tocStyle.Font.Name = 'Times New Roman'
+        $tocStyle.Font.Size = 8
+        $tocStyle.ParagraphFormat.SpaceBefore = 0
+        $tocStyle.ParagraphFormat.SpaceAfter = 0
+        $tocStyle.ParagraphFormat.LineSpacingRule = 0
+      } catch {
+        # Word creates built-in TOC styles lazily; the next pass retries.
+      }
+    }
+    [void]$document.Repaginate()
+    $pageCount = $document.ComputeStatistics(2)
+    $tocCount = $document.TablesOfContents.Count
+    $tocTextLength = 0
+    $tocStartPage = 0
+    $tocEndPage = 0
+    if ($tocCount -gt 0) {
+      $tocRange = $document.TablesOfContents.Item(1).Range
+      $tocTextLength = $tocRange.Text.Length
+      $tocStart = $document.Range($tocRange.Start, $tocRange.Start)
+      $tocEnd = $document.Range($tocRange.End - 1, $tocRange.End - 1)
+      $tocStartPage = $tocStart.Information(3)
+      $tocEndPage = $tocEnd.Information(3)
+    }
+    $key = "${pageCount}|${tocCount}|${tocTextLength}|${tocStartPage}|${tocEndPage}"
+    if ($key -eq $previousKey) { $stableCount++ } else { $stableCount = 1 }
+    $previousKey = $key
+    $measurements += [pscustomobject]@{
+      iteration = $iteration
+      page_count = $pageCount
+      toc_count = $tocCount
+      toc_text_length = $tocTextLength
+      toc_start_page = $tocStartPage
+      toc_end_page = $tocEndPage
+      stable_streak = $stableCount
+    }
+    if ($stableCount -ge 2) { break }
+  }
+  $document.Save()
+  $tocStyleNames = @{}
+  foreach ($level in @(1, 2)) {
+    try { $tocStyleNames[[string]$level] = [string]$document.Styles.Item(-19 - $level).NameLocal } catch {}
+  }
+  $tocEntries = @()
+  foreach ($toc in $document.TablesOfContents) {
+    foreach ($paragraph in $toc.Range.Paragraphs) {
+      $styleName = ''
+      try { $styleName = [string]$paragraph.Style.NameLocal } catch { $styleName = [string]$paragraph.Style }
+      $entryText = ([string]$paragraph.Range.Text).Trim([char]13, [char]7, [char]32)
+      $level = 0
+      foreach ($candidateLevel in @(1, 2)) {
+        if ($tocStyleNames[[string]$candidateLevel] -eq $styleName) { $level = $candidateLevel }
+      }
+      if ($level -eq 0 -and $styleName -match '(?i)(?:toc|зміст)\s*(\d+)') { $level = [int]$Matches[1] }
+      $pageNumber = 0
+      if ($entryText -match "`t(\d+)\s*$") { $pageNumber = [int]$Matches[1] }
+      if ($entryText) {
+        $tocEntries += [pscustomobject]@{
+          level = $level
+          style = $styleName
+          text = $entryText
+          page_number = $pageNumber
+        }
+      }
     }
   }
-  if ($tocCount -gt 0) { $document.Save() }
+  $articleBookmarks = @()
+  foreach ($bookmark in $document.Bookmarks) {
+    if ($bookmark.Name -like 'JF_ARTICLE_*_START') {
+      $bookmarkStart = $document.Range($bookmark.Start, $bookmark.Start)
+      $articleBookmarks += [pscustomobject]@{
+        name = [string]$bookmark.Name
+        printed_page = [int]$bookmarkStart.Information(1)
+        physical_page = [int]$bookmarkStart.Information(3)
+      }
+    }
+  }
   $document.ExportAsFixedFormat($env:JF_RENDER_PDF, 17)
   $pageCount = $document.ComputeStatistics(2)
   [pscustomobject]@{
     word_version = $word.Version
-    field_count = $fieldCount
-    toc_count = $tocCount
+    field_count = $document.Fields.Count
+    toc_count = $document.TablesOfContents.Count
     page_count = $pageCount
-  } | ConvertTo-Json | Set-Content -Encoding UTF8 $env:JF_RENDER_HOST_REPORT
+    stable_measurements = $measurements
+    stable_measurements_achieved = $stableCount
+    toc_entries = $tocEntries
+    toc_style_names = $tocStyleNames
+    article_bookmarks = $articleBookmarks
+  } | ConvertTo-Json -Depth 8 | Set-Content -Encoding UTF8 $env:JF_RENDER_HOST_REPORT
 } finally {
   if ($null -ne $document) { $document.Close(0) }
   $word.Quit()
@@ -77,7 +172,7 @@ try {
             ],
             capture_output=True,
             text=True,
-            timeout=300,
+            timeout=600,
             env=env,
             check=False,
         )
@@ -111,6 +206,59 @@ try {
     if word_pages and pdf_pages and word_pages != pdf_pages:
         blockers.append(f"page_count_mismatch:{word_pages}:{pdf_pages}")
 
+    toc_count = int(host.get("toc_count") or 0)
+    stable_achieved = int(host.get("stable_measurements_achieved") or 0)
+    toc_entries = host.get("toc_entries") or []
+    if isinstance(toc_entries, dict):
+        toc_entries = [toc_entries]
+    article_bookmarks = host.get("article_bookmarks") or []
+    if isinstance(article_bookmarks, dict):
+        article_bookmarks = [article_bookmarks]
+    level_two_entries = [item for item in toc_entries if int(item.get("level") or 0) == 2]
+    article_bookmarks = sorted(article_bookmarks, key=lambda item: str(item.get("name") or ""))
+    if toc_count == 0:
+        blockers.append("word_toc_missing")
+    if stable_achieved < 2:
+        blockers.append(f"word_layout_not_stable:{stable_achieved}:required=2")
+    if expected_article_count is not None:
+        if len(level_two_entries) != expected_article_count:
+            blockers.append(
+                f"toc_article_entry_count:{len(level_two_entries)}:expected={expected_article_count}"
+            )
+        if len(article_bookmarks) != expected_article_count:
+            blockers.append(
+                f"article_bookmark_count:{len(article_bookmarks)}:expected={expected_article_count}"
+            )
+    if expected_first_article_page is not None and article_bookmarks:
+        first_printed = int(article_bookmarks[0].get("printed_page") or 0)
+        first_physical = int(article_bookmarks[0].get("physical_page") or 0)
+        if first_printed != expected_first_article_page or first_physical != expected_first_article_page:
+            blockers.append(
+                f"first_article_page:{first_physical}:{first_printed}:expected={expected_first_article_page}"
+            )
+    for bookmark in article_bookmarks:
+        physical = int(bookmark.get("physical_page") or 0)
+        printed = int(bookmark.get("printed_page") or 0)
+        if physical != printed:
+            blockers.append(
+                f"page_number_discontinuity:{bookmark.get('name')}:{physical}:{printed}"
+            )
+    if len(level_two_entries) == len(article_bookmarks):
+        for entry, bookmark in zip(level_two_entries, article_bookmarks):
+            toc_page = int(entry.get("page_number") or 0)
+            printed = int(bookmark.get("printed_page") or 0)
+            if toc_page != printed:
+                blockers.append(
+                    f"toc_page_mismatch:{bookmark.get('name')}:{toc_page}:{printed}"
+                )
+
+    visual_report = audit_pdf_pages(pdf_path, expected_page_count=pdf_pages) if pdf_path.is_file() else {
+        "status": "BLOCKED",
+        "blockers": ["pdf_missing"],
+    }
+    if visual_report.get("status") != "PASS":
+        blockers.extend(f"visual_qa:{item}" for item in visual_report.get("blockers") or [])
+    toc_pagination_path = report_path.with_name("toc_pagination_report.json")
     report = {
         "status": "PASS" if not blockers else "BLOCKED",
         "renderer": "Microsoft Word COM",
@@ -120,12 +268,33 @@ try {
         "output_pdf": str(pdf_path),
         "output_pdf_sha256": sha256_file(pdf_path) if pdf_path.is_file() else "",
         "word_field_count": int(host.get("field_count") or 0),
-        "word_toc_count": int(host.get("toc_count") or 0),
+        "word_toc_count": toc_count,
         "word_page_count": word_pages,
         "pdf_page_count": pdf_pages,
+        "stable_measurements_required": 2,
+        "stable_measurements_achieved": stable_achieved,
+        "stable_measurements": host.get("stable_measurements") or [],
+        "toc_entries": toc_entries,
+        "toc_style_names": host.get("toc_style_names") or {},
+        "toc_level_counts": {
+            str(level): sum(int(item.get("level") or 0) == level for item in toc_entries)
+            for level in (1, 2)
+        },
+        "article_bookmarks": article_bookmarks,
+        "visual_qa": visual_report,
+        "toc_pagination_report": str(toc_pagination_path),
         "blockers": blockers,
     }
-    return _write_report(report_path, report)
+    _write_report(report_path, report)
+    build_toc_pagination_report(
+        docx_path,
+        report,
+        visual_report,
+        toc_pagination_path,
+        expected_article_count=expected_article_count,
+        expected_first_article_page=expected_first_article_page,
+    )
+    return report
 
 
 def _blocked_report(docx_path: Path, pdf_path: Path, blockers: list[str]) -> dict[str, Any]:
@@ -141,6 +310,13 @@ def _blocked_report(docx_path: Path, pdf_path: Path, blockers: list[str]) -> dic
         "word_toc_count": 0,
         "word_page_count": 0,
         "pdf_page_count": 0,
+        "stable_measurements_required": 2,
+        "stable_measurements_achieved": 0,
+        "stable_measurements": [],
+        "toc_entries": [],
+        "toc_style_names": {},
+        "toc_level_counts": {"1": 0, "2": 0},
+        "article_bookmarks": [],
         "blockers": blockers,
     }
 

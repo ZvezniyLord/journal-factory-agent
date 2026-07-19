@@ -8,12 +8,16 @@ import json
 from .archive_workspace import prepare_archive_workspace, sha256_file
 from .article_preparation import prepare_article_source
 from .builder_fidelity import audit_sources_in_final
+from .conference_metadata import load_conference_metadata
 from .config import AppConfig, ensure_dirs
 from .document_composer import compose_articles_into_etalon
 from .manifest import build_article_manifest
 from .preflight import run_preflight, write_preflight
 from .source_snapshot import create_source_snapshot, snapshot_docx
+from .section_normalization import resolve_article_sections
+from .service_pages import audit_front_matter, materialize_service_pages
 from .style_bridge import merge_template_styles
+from .typography_audit import audit_effective_typography
 from .typography_profile import apply_typography_profile
 
 
@@ -25,7 +29,9 @@ def run_journal_builder(
     source_pack: Path,
     output_root: Path,
     typography_profile: str,
+    conference_config_path: Path,
     typography_profiles_path: Path = Path("config/typography_profiles.json"),
+    section_catalog_path: Path = Path("config/section_catalog.json"),
 ) -> dict[str, Any]:
     """Build a real DOCX draft from RAW articles with fail-closed fidelity gates."""
     build_dir = output_root / f"Conference{conference_id}"
@@ -42,6 +48,21 @@ def run_journal_builder(
     ensure_dirs(config)
 
     blockers: list[str] = []
+    try:
+        conference_metadata = load_conference_metadata(conference_config_path)
+    except Exception as exc:  # noqa: BLE001
+        blockers.append(f"conference_metadata_exception:{type(exc).__name__}:{exc}")
+        return _finish(config, conference_id, blockers, None, None, None, None)
+    if conference_metadata["conference_id"] != conference_id:
+        blockers.append(
+            f"conference_metadata_id_mismatch:{conference_metadata['conference_id']}:{conference_id}"
+        )
+    if conference_metadata["typography_profile"] != typography_profile:
+        blockers.append(
+            f"typography_profile_config_mismatch:{conference_metadata['typography_profile']}:{typography_profile}"
+        )
+    if blockers:
+        return _finish(config, conference_id, blockers, None, None, None, None)
     preflight = run_preflight(config)
     write_preflight(config, preflight)
     if preflight["status"] != "READY":
@@ -64,6 +85,22 @@ def run_journal_builder(
         manifest["articles"],
         key=lambda item: (item.get("journal_order") is None, item.get("journal_order") or 10**9),
     )
+    try:
+        section_report = resolve_article_sections(
+            ordered_articles,
+            workspace_source,
+            section_catalog_path,
+        )
+    except Exception as exc:  # noqa: BLE001
+        blockers.append(f"section_normalization_exception:{type(exc).__name__}:{exc}")
+        return _finish(config, conference_id, blockers, manifest, None, None, None)
+    _write_json(reports_dir / "section_normalization_report.json", section_report)
+    if section_report["status"] != "PASS":
+        blockers.extend(f"section:{item}" for item in section_report["blockers"])
+        return _finish(config, conference_id, blockers, manifest, None, None, None)
+    sections_by_article = {
+        item["article_id"]: item for item in section_report["articles"]
+    }
     source_snapshots: list[dict[str, Any]] = []
     compose_jobs: list[dict[str, Any]] = []
     preparation_reports: list[dict[str, Any]] = []
@@ -119,8 +156,11 @@ def run_journal_builder(
             {
                 "article_id": article["article_id"],
                 "source_file": str(prepared_file),
-                "section": article.get("section_raw") or article.get("section_id") or "",
+                "section": sections_by_article[article["article_id"]]["display_title"],
+                "section_key": sections_by_article[article["article_id"]]["canonical_key"],
+                "section_order": sections_by_article[article["article_id"]]["section_order"],
                 "journal_order": article.get("journal_order"),
+                "title_bookmark": preparation_report.get("title_bookmark"),
             }
         )
 
@@ -160,9 +200,24 @@ def run_journal_builder(
         blockers.append(f"typography_profile_exception:{type(exc).__name__}:{exc}")
         return _finish(config, conference_id, blockers, manifest, style_report, None, None)
 
+    service_master = build_dir / "workspace" / "ETALON_WITH_CONFERENCE_METADATA.docx"
+    try:
+        front_matter_report = materialize_service_pages(
+            typography_master,
+            service_master,
+            conference_metadata,
+            reports_dir / "front_matter_materialization_report.json",
+        )
+    except Exception as exc:  # noqa: BLE001
+        blockers.append(f"front_matter_exception:{type(exc).__name__}:{exc}")
+        return _finish(config, conference_id, blockers, manifest, style_report, None, None)
+    if front_matter_report["status"] != "PASS":
+        blockers.extend(f"front_matter:{item}" for item in front_matter_report["blockers"])
+        return _finish(config, conference_id, blockers, manifest, style_report, None, None)
+
     output_docx = build_dir / f"Conference{conference_id}_generated.docx"
     try:
-        compose_report = compose_articles_into_etalon(typography_master, compose_jobs, output_docx)
+        compose_report = compose_articles_into_etalon(service_master, compose_jobs, output_docx)
     except Exception as exc:  # noqa: BLE001
         blockers.append(f"compose_exception:{type(exc).__name__}:{exc}")
         return _finish(config, conference_id, blockers, manifest, style_report, None, None)
@@ -171,6 +226,23 @@ def run_journal_builder(
     if compose_report["status"] != "PASS":
         blockers.extend(f"compose:{item}" for item in compose_report.get("blockers", []))
         return _finish(config, conference_id, blockers, manifest, style_report, compose_report, None)
+
+    final_front_matter_report = audit_front_matter(
+        output_docx,
+        conference_metadata,
+        reports_dir / "front_matter_audit.json",
+    )
+    if final_front_matter_report["status"] != "PASS":
+        blockers.extend(f"front_matter_audit:{item}" for item in final_front_matter_report["blockers"])
+
+    typography_audit = audit_effective_typography(
+        output_docx,
+        typography_profiles_path,
+        typography_profile,
+        reports_dir / "typography_audit.json",
+    )
+    if typography_audit["status"] != "PASS":
+        blockers.extend(f"typography_audit:{item}" for item in typography_audit["blockers"])
 
     final_snapshot = snapshot_docx(output_docx, output_docx.parent)
     _write_json(reports_dir / "final_docx_snapshot.json", final_snapshot)
@@ -193,6 +265,11 @@ def run_journal_builder(
         compose_report,
         fidelity_report,
         output_docx=output_docx,
+        quality_reports={
+            "front_matter": final_front_matter_report,
+            "sections": section_report,
+            "typography": typography_audit,
+        },
     )
 
 
@@ -205,6 +282,7 @@ def _finish(
     compose_report: dict[str, Any] | None,
     fidelity_report: dict[str, Any] | None,
     output_docx: Path | None = None,
+    quality_reports: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     build_succeeded = output_docx is not None and output_docx.is_file() and not blockers
     status = "DRAFT_BUILT" if build_succeeded else "BUILD BLOCKED"
@@ -221,11 +299,11 @@ def _finish(
         "body_font_size_pt": typography_report.get("body_font_size_pt") if typography_report else None,
         "compose_status": compose_report.get("status") if compose_report else None,
         "fidelity_status": fidelity_report.get("status") if fidelity_report else None,
+        "front_matter_status": (quality_reports or {}).get("front_matter", {}).get("status"),
+        "section_normalization_status": (quality_reports or {}).get("sections", {}).get("status"),
+        "typography_audit_status": (quality_reports or {}).get("typography", {}).get("status"),
         "blockers": blockers,
         "required_next_gates": [
-            "HEADER_NORMALIZATION_PLAN",
-            "DIRECT_RUN_FONT_SIZE_AUDIT",
-            "TOC_GENERATION",
             "DOCX_TO_PDF_RENDER",
             "PAGINATION_CONVERGENCE",
             "PUBLICATION_PARITY",
