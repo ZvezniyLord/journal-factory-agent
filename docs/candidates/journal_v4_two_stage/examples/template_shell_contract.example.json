@@ -1,0 +1,34 @@
+{
+  "contract_version": "1.0",
+  "template_id": "ETALON-JOURNAL",
+  "template_file": "02_TEMPLATES_REQUIRED/ETALON-JOURNAL.docx",
+  "content_slot": {
+    "locator_type": "content_control_tag",
+    "tag": "JOURNAL_CONTENT_SLOT",
+    "insert_sequence": [
+      "conference_toc",
+      "page_break",
+      "draft_article_body"
+    ]
+  },
+  "protected_prefix": {
+    "policy": "opaque_immutable_no_runtime_scan"
+  },
+  "protected_suffix": {
+    "policy": "opaque_immutable_no_runtime_scan"
+  },
+  "runtime_policy": {
+    "allowed_operations": [
+      "copy_template_to_workspace",
+      "resolve_exact_slot_by_tag",
+      "replace_exact_content_slot_only"
+    ],
+    "forbidden_operations": [
+      "scan_protected_pages",
+      "normalize_whole_master_document",
+      "modify_sections_headers_footers_page_numbering",
+      "rebuild_cover",
+      "rebuild_last_page"
+    ]
+  }
+}
