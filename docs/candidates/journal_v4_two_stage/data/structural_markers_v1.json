@@ -1,0 +1,321 @@
+{
+  "corpus": {
+    "scope": "all conference materials locally available in the project workspace at analysis time",
+    "conferences": {
+      "133": {
+        "article_units": 27,
+        "source_type": "published reference PDF"
+      },
+      "136": {
+        "article_units": 24,
+        "source_type": "source archive"
+      },
+      "138": {
+        "article_units": 28,
+        "source_type": "source archive"
+      }
+    },
+    "article_units_total": 79,
+    "analysis_date": "2026-07-22",
+    "selection_note": "Application/payment files were excluded; one article unit per accepted source folder was selected. Legacy DOC article files were converted only for text-marker analysis."
+  },
+  "thresholds": {
+    "universal_family_min_percent": 90.0,
+    "common_family_min_percent": 70.0
+  },
+  "marker_families": {
+    "udc": {
+      "tier": "A_UNIVERSAL_90_PLUS",
+      "articles_with_marker": 72,
+      "article_units_total": 79,
+      "percent": 91.1,
+      "by_conference": {
+        "133": {
+          "present": 27,
+          "total": 27,
+          "percent": 100.0
+        },
+        "136": {
+          "present": 18,
+          "total": 24,
+          "percent": 75.0
+        },
+        "138": {
+          "present": 27,
+          "total": 28,
+          "percent": 96.4
+        }
+      },
+      "known_variants": [
+        "УДК",
+        "UDC"
+      ],
+      "use": "hard boundary evidence"
+    },
+    "doi": {
+      "tier": "C_OPTIONAL_BELOW_70",
+      "articles_with_marker": 38,
+      "article_units_total": 79,
+      "percent": 48.1,
+      "by_conference": {
+        "133": {
+          "present": 12,
+          "total": 27,
+          "percent": 44.4
+        },
+        "136": {
+          "present": 9,
+          "total": 24,
+          "percent": 37.5
+        },
+        "138": {
+          "present": 17,
+          "total": 28,
+          "percent": 60.7
+        }
+      },
+      "known_variants": [
+        "DOI",
+        "https://doi.org/"
+      ],
+      "use": "conditional evidence only"
+    },
+    "annotation": {
+      "tier": "B_COMMON_70_TO_89_9",
+      "articles_with_marker": 61,
+      "article_units_total": 79,
+      "percent": 77.2,
+      "by_conference": {
+        "133": {
+          "present": 20,
+          "total": 27,
+          "percent": 74.1
+        },
+        "136": {
+          "present": 18,
+          "total": 24,
+          "percent": 75.0
+        },
+        "138": {
+          "present": 23,
+          "total": 28,
+          "percent": 82.1
+        }
+      },
+      "known_variants": [
+        "Анотація",
+        "Анотація статті",
+        "Abstract",
+        "Annotation"
+      ],
+      "use": "strong supporting evidence"
+    },
+    "keywords": {
+      "tier": "B_COMMON_70_TO_89_9",
+      "articles_with_marker": 65,
+      "article_units_total": 79,
+      "percent": 82.3,
+      "by_conference": {
+        "133": {
+          "present": 21,
+          "total": 27,
+          "percent": 77.8
+        },
+        "136": {
+          "present": 19,
+          "total": 24,
+          "percent": 79.2
+        },
+        "138": {
+          "present": 25,
+          "total": 28,
+          "percent": 89.3
+        }
+      },
+      "known_variants": [
+        "Ключові слова",
+        "Keywords",
+        "Keyword",
+        "Key words"
+      ],
+      "use": "strong supporting evidence"
+    },
+    "references": {
+      "tier": "A_UNIVERSAL_90_PLUS",
+      "articles_with_marker": 74,
+      "article_units_total": 79,
+      "percent": 93.7,
+      "by_conference": {
+        "133": {
+          "present": 26,
+          "total": 27,
+          "percent": 96.3
+        },
+        "136": {
+          "present": 22,
+          "total": 24,
+          "percent": 91.7
+        },
+        "138": {
+          "present": 26,
+          "total": 28,
+          "percent": 92.9
+        }
+      },
+      "known_variants": [
+        "СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ",
+        "СПИСОК ВИКОРИСТАНОЇ ЛІТЕРАТУРИ",
+        "СПИСОК ЛІТЕРАТУРИ",
+        "REFERENCES",
+        "BIBLIOGRAPHY",
+        "Liste der verwendeten Quellen",
+        "Джерела"
+      ],
+      "use": "hard boundary evidence"
+    },
+    "conclusions": {
+      "tier": "C_OPTIONAL_BELOW_70",
+      "articles_with_marker": 8,
+      "article_units_total": 79,
+      "percent": 10.1,
+      "by_conference": {
+        "133": {
+          "present": 1,
+          "total": 27,
+          "percent": 3.7
+        },
+        "136": {
+          "present": 2,
+          "total": 24,
+          "percent": 8.3
+        },
+        "138": {
+          "present": 5,
+          "total": 28,
+          "percent": 17.9
+        }
+      },
+      "known_variants": [
+        "Висновок",
+        "Висновки",
+        "Conclusion",
+        "Conclusions"
+      ],
+      "use": "conditional evidence only"
+    },
+    "table_label": {
+      "tier": "C_OPTIONAL_BELOW_70",
+      "articles_with_marker": 19,
+      "article_units_total": 79,
+      "percent": 24.1,
+      "by_conference": {
+        "133": {
+          "present": 7,
+          "total": 27,
+          "percent": 25.9
+        },
+        "136": {
+          "present": 5,
+          "total": 24,
+          "percent": 20.8
+        },
+        "138": {
+          "present": 7,
+          "total": 28,
+          "percent": 25.0
+        }
+      },
+      "known_variants": [
+        "Таблиця",
+        "Table"
+      ],
+      "use": "conditional evidence only"
+    },
+    "figure_label": {
+      "tier": "C_OPTIONAL_BELOW_70",
+      "articles_with_marker": 14,
+      "article_units_total": 79,
+      "percent": 17.7,
+      "by_conference": {
+        "133": {
+          "present": 3,
+          "total": 27,
+          "percent": 11.1
+        },
+        "136": {
+          "present": 6,
+          "total": 24,
+          "percent": 25.0
+        },
+        "138": {
+          "present": 5,
+          "total": 28,
+          "percent": 17.9
+        }
+      },
+      "known_variants": [
+        "Рис.",
+        "Рисунок",
+        "Figure",
+        "Fig."
+      ],
+      "use": "conditional evidence only"
+    },
+    "source_note": {
+      "tier": "C_OPTIONAL_BELOW_70",
+      "articles_with_marker": 3,
+      "article_units_total": 79,
+      "percent": 3.8,
+      "by_conference": {
+        "133": {
+          "present": 0,
+          "total": 27,
+          "percent": 0.0
+        },
+        "136": {
+          "present": 2,
+          "total": 24,
+          "percent": 8.3
+        },
+        "138": {
+          "present": 1,
+          "total": 28,
+          "percent": 3.6
+        }
+      },
+      "known_variants": [
+        "Джерело:",
+        "Source:"
+      ],
+      "use": "conditional evidence only"
+    },
+    "orcid": {
+      "tier": "C_OPTIONAL_BELOW_70",
+      "articles_with_marker": 15,
+      "article_units_total": 79,
+      "percent": 19.0,
+      "by_conference": {
+        "133": {
+          "present": 4,
+          "total": 27,
+          "percent": 14.8
+        },
+        "136": {
+          "present": 2,
+          "total": 24,
+          "percent": 8.3
+        },
+        "138": {
+          "present": 9,
+          "total": 28,
+          "percent": 32.1
+        }
+      },
+      "known_variants": [
+        "ORCID",
+        "orcid.org"
+      ],
+      "use": "conditional evidence only"
+    }
+  }
+}
