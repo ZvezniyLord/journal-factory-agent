@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "run_id": "run-138-example",
+  "article_id": "article-001",
+  "source": {
+    "file_name": "example.docx",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "source_order": 1
+  },
+  "normalization": {
+    "stage": "stage_1_mechanical",
+    "font_size_pt": 11,
+    "line_spacing": 1.0,
+    "content_mutations": 0
+  },
+  "blocks": [
+    {
+      "block_id": "b0001",
+      "zone": "identifier.udc",
+      "subtype": "UDC",
+      "order": 0,
+      "source_locator": {
+        "container": "body",
+        "start_index": 0,
+        "end_index": 0,
+        "table_index": null,
+        "row_index": null,
+        "cell_index": null,
+        "relationship_id": null
+      },
+      "text": "УДК 001.3",
+      "text_sha256": "2d5f2d38323aeac97db0d73be59523188966b123daf337faf1cedd909f73b1c9",
+      "confidence": 1.0,
+      "decision_source": "deterministic_marker",
+      "evidence": [
+        "marker:^УДК",
+        "position:article_front"
+      ],
+      "status": "resolved"
+    },
+    {
+      "block_id": "b0002",
+      "zone": "header.person",
+      "subtype": "author_name",
+      "order": 1,
+      "source_locator": {
+        "container": "body",
+        "start_index": 1,
+        "end_index": 1,
+        "table_index": null,
+        "row_index": null,
+        "cell_index": null,
+        "relationship_id": null
+      },
+      "text": "Приклад Автор",
+      "text_sha256": "41b4b7a0ec43e18e87d60c89912a2a30d1a3d3400acb23bb4f70812174384962",
+      "confidence": 0.94,
+      "decision_source": "registry_evidence",
+      "evidence": [
+        "registry_author_match",
+        "position:article_front"
+      ],
+      "status": "resolved"
+    },
+    {
+      "block_id": "b0003",
+      "zone": "header.institution",
+      "subtype": "affiliation",
+      "order": 2,
+      "source_locator": {
+        "container": "body",
+        "start_index": 2,
+        "end_index": 2,
+        "table_index": null,
+        "row_index": null,
+        "cell_index": null,
+        "relationship_id": null
+      },
+      "text": "Прикладний університет",
+      "text_sha256": "29c59838b1650258c24da1aa1098b4aaa41eaa5903b8ae80b27fc5877bc03522",
+      "confidence": 0.96,
+      "decision_source": "corpus_evidence",
+      "evidence": [
+        "institution_lexicon:університет",
+        "adjacent_to_person"
+      ],
+      "status": "resolved"
+    },
+    {
+      "block_id": "b0004",
+      "zone": "header.title",
+      "subtype": "article_title",
+      "order": 3,
+      "source_locator": {
+        "container": "body",
+        "start_index": 3,
+        "end_index": 3,
+        "table_index": null,
+        "row_index": null,
+        "cell_index": null,
+        "relationship_id": null
+      },
+      "text": "ПРИКЛАД НАЗВИ СТАТТІ",
+      "text_sha256": "195742fd1417e9620f1961d81265daee426fd1b05fffe26aadbf2e1ac750bf3b",
+      "confidence": 0.93,
+      "decision_source": "deterministic_position",
+      "evidence": [
+        "all_caps",
+        "between_header_and_annotation"
+      ],
+      "status": "resolved"
+    },
+    {
+      "block_id": "b0005",
+      "zone": "body.annotation",
+      "subtype": "uk",
+      "order": 4,
+      "source_locator": {
+        "container": "body",
+        "start_index": 4,
+        "end_index": 4,
+        "table_index": null,
+        "row_index": null,
+        "cell_index": null,
+        "relationship_id": null
+      },
+      "text": "Анотація. Приклад тексту.",
+      "text_sha256": "9596bf962752b007a65d49712da30b286292304a69e64a5a6af50d4c83f34efa",
+      "confidence": 1.0,
+      "decision_source": "deterministic_marker",
+      "evidence": [
+        "marker:^Анотація."
+      ],
+      "status": "resolved"
+    },
+    {
+      "block_id": "b0006",
+      "zone": "references.heading",
+      "subtype": "uk",
+      "order": 5,
+      "source_locator": {
+        "container": "body",
+        "start_index": 20,
+        "end_index": 20,
+        "table_index": null,
+        "row_index": null,
+        "cell_index": null,
+        "relationship_id": null
+      },
+      "text": "СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ:",
+      "text_sha256": "38609bb6c2988e60835f88f5e08bea9f9a73fc43e0dbfbfe7dd186a0016c722e",
+      "confidence": 1.0,
+      "decision_source": "deterministic_marker",
+      "evidence": [
+        "marker_family:references"
+      ],
+      "status": "resolved"
+    }
+  ],
+  "people": [
+    {
+      "person_id": "p001",
+      "name_block_ids": [
+        "b0002"
+      ],
+      "degree_block_ids": [],
+      "academic_title_block_ids": [],
+      "position_block_ids": [],
+      "institution_block_ids": [
+        "b0003"
+      ],
+      "location_block_ids": [],
+      "identifier_block_ids": [],
+      "confidence": 0.94
+    }
+  ],
+  "unresolved": [],
+  "status": "PASS"
+}
