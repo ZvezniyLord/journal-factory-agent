@@ -1,0 +1,13 @@
+{
+  "candidate_version": "4.0.0-draft.1",
+  "status": "candidate-not-active",
+  "created_at": "2026-07-22",
+  "replaces_active_release": false,
+  "activation_requires": "explicit operator approval plus implementation regression tests",
+  "entrypoint": "skills/journal/SKILL.md",
+  "contracts": [
+    "schemas/template_shell_contract.schema.json",
+    "schemas/article_technical_zones.schema.json"
+  ],
+  "corpus_database": "data/structural_markers_v1.json"
+}

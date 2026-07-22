@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://naukainfo.local/schemas/template-shell-contract.schema.json",
+  "title": "Journal template shell contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "template_id",
+    "content_slot",
+    "protected_prefix",
+    "protected_suffix",
+    "runtime_policy"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "template_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "template_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "content_slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locator_type",
+        "tag",
+        "insert_sequence"
+      ],
+      "properties": {
+        "locator_type": {
+          "type": "string",
+          "enum": [
+            "content_control_tag",
+            "bookmark_name"
+          ]
+        },
+        "tag": {
+          "type": "string",
+          "minLength": 1
+        },
+        "insert_sequence": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "conference_toc"
+            },
+            {
+              "const": "page_break"
+            },
+            {
+              "const": "draft_article_body"
+            }
+          ],
+          "items": false
+        }
+      }
+    },
+    "protected_prefix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy"
+      ],
+      "properties": {
+        "policy": {
+          "const": "opaque_immutable_no_runtime_scan"
+        }
+      }
+    },
+    "protected_suffix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policy"
+      ],
+      "properties": {
+        "policy": {
+          "const": "opaque_immutable_no_runtime_scan"
+        }
+      }
+    },
+    "runtime_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed_operations",
+        "forbidden_operations"
+      ],
+      "properties": {
+        "allowed_operations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "contains": {
+            "const": "replace_exact_content_slot_only"
+          }
+        },
+        "forbidden_operations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "allOf": [
+            {
+              "contains": {
+                "const": "scan_protected_pages"
+              }
+            },
+            {
+              "contains": {
+                "const": "normalize_whole_master_document"
+              }
+            },
+            {
+              "contains": {
+                "const": "modify_sections_headers_footers_page_numbering"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

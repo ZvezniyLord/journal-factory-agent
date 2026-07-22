@@ -1,0 +1,70 @@
+{
+  "package": "JOURNAL_SKILL_V4_TWO_STAGE_DRAFT",
+  "files": [
+    {
+      "path": "ACTIVE_RELEASE_CANDIDATE.json",
+      "bytes": 458,
+      "sha256": "254ce65f78438001b658c10ca16f1e2fe2a7f113293186e9975805fc92caf786"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 623,
+      "sha256": "c2195998d752db5e9a17cd14519d140b806b3d890cdc09a68e7659a11c3234ad"
+    },
+    {
+      "path": "EXECUTIVE_REPORT.md",
+      "bytes": 1596,
+      "sha256": "43d4e1807ff7763dcda4f09d0f6ee9728e736a0e98249550dbf8278f7894b68b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1364,
+      "sha256": "79bbd61079c0665c01a4d47812dfaac285647f6e2564cd2da95498f36036c885"
+    },
+    {
+      "path": "data/structural_markers_v1.json",
+      "bytes": 7344,
+      "sha256": "dff88a37a69dff25134fb57b2c3b0a3108bf8efecf79febd57ac53b5f982ac5f"
+    },
+    {
+      "path": "docs/CORPUS_MARKER_ANALYSIS.md",
+      "bytes": 2306,
+      "sha256": "85497cc9fec5772e9986948b47eeb7c9d5b28425995f845683ac9bff8fc54ac8"
+    },
+    {
+      "path": "docs/JOURNAL_V4_TWO_STAGE_PIPELINE.md",
+      "bytes": 3783,
+      "sha256": "33e69f5789ef552e852003e191d0b9ee5b48bb2666b39232b0740920808addb1"
+    },
+    {
+      "path": "examples/article_technical_zones.example.json",
+      "bytes": 4869,
+      "sha256": "a387abdaafa876075a9adb368a213a6d55d893eec03f5b8778f487d7792eeda5"
+    },
+    {
+      "path": "examples/template_shell_contract.example.json",
+      "bytes": 876,
+      "sha256": "7a15798e845b031d13d924840da2182107d66695a16e6ab8851652069708cd87"
+    },
+    {
+      "path": "schemas/article_technical_zones.schema.json",
+      "bytes": 7776,
+      "sha256": "dad3f989a3ef5c5aa3d7365b70249652b3eb961aa8490d915fc88204e6e02e80"
+    },
+    {
+      "path": "schemas/template_shell_contract.schema.json",
+      "bytes": 2945,
+      "sha256": "e97728503f32b7e8f38b23a62564c09229eda1d95f245825d3affff0a15b6643"
+    },
+    {
+      "path": "skills/journal/SKILL.md",
+      "bytes": 8431,
+      "sha256": "3ea39f254450f38a52c77facff866f64da999bbe6e50971883ec8491fc0a2ef1"
+    },
+    {
+      "path": "tests/ACCEPTANCE.md",
+      "bytes": 1377,
+      "sha256": "b8ae2d11e3e1609f56ecea8c2cbab389769e08dba37c8ea6c7f65b86daab3332"
+    }
+  ]
+}

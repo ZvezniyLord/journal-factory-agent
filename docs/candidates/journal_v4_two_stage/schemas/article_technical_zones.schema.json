@@ -1,0 +1,330 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://naukainfo.local/schemas/article-technical-zones.schema.json",
+  "title": "Article technical zones",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "article_id",
+    "source",
+    "normalization",
+    "blocks",
+    "people",
+    "unresolved",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "article_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_name",
+        "sha256",
+        "source_order"
+      ],
+      "properties": {
+        "file_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_order": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stage",
+        "font_size_pt",
+        "line_spacing",
+        "content_mutations"
+      ],
+      "properties": {
+        "stage": {
+          "const": "stage_1_mechanical"
+        },
+        "font_size_pt": {
+          "const": 11
+        },
+        "line_spacing": {
+          "const": 1.0
+        },
+        "content_mutations": {
+          "type": "integer",
+          "const": 0
+        }
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "block_id",
+          "zone",
+          "order",
+          "source_locator",
+          "text_sha256",
+          "confidence",
+          "decision_source",
+          "evidence",
+          "status"
+        ],
+        "properties": {
+          "block_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "zone": {
+            "type": "string",
+            "enum": [
+              "identifier.udc",
+              "identifier.doi",
+              "header.person",
+              "header.degree",
+              "header.academic_title",
+              "header.position",
+              "header.institution",
+              "header.department",
+              "header.location",
+              "header.orcid",
+              "header.contact",
+              "header.supervisor",
+              "header.language_supervisor",
+              "header.title",
+              "body.annotation",
+              "body.keywords",
+              "body.section_heading",
+              "body.paragraph",
+              "object.table",
+              "object.table_caption",
+              "object.figure",
+              "object.figure_caption",
+              "object.source_note",
+              "references.heading",
+              "references.entry",
+              "unknown"
+            ]
+          },
+          "subtype": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "source_locator": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "container",
+              "start_index",
+              "end_index"
+            ],
+            "properties": {
+              "container": {
+                "type": "string",
+                "enum": [
+                  "body",
+                  "table_cell",
+                  "textbox",
+                  "header",
+                  "footer",
+                  "drawing_text",
+                  "other"
+                ]
+              },
+              "start_index": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "end_index": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "table_index": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "row_index": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "cell_index": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "relationship_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "decision_source": {
+            "type": "string",
+            "enum": [
+              "deterministic_marker",
+              "deterministic_position",
+              "registry_evidence",
+              "corpus_evidence",
+              "llm_review",
+              "operator_review",
+              "unresolved"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "resolved",
+              "review",
+              "unresolved"
+            ]
+          }
+        }
+      }
+    },
+    "people": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "person_id",
+          "name_block_ids",
+          "degree_block_ids",
+          "academic_title_block_ids",
+          "position_block_ids",
+          "institution_block_ids",
+          "location_block_ids",
+          "identifier_block_ids",
+          "confidence"
+        ],
+        "properties": {
+          "person_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name_block_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "degree_block_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "academic_title_block_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "position_block_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "institution_block_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "location_block_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "identifier_block_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "REVIEW",
+        "BLOCKED"
+      ]
+    }
+  }
+}
