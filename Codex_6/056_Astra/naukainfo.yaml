@@ -1,0 +1,80 @@
+profile: naukainfo
+version: 1
+
+workspace:
+  clean_room: true
+  deny_parent_project_code: true
+  require_explicit_external_input_allowlist: true
+
+front_matter:
+  immutable_until: "TABLE OF CONTENTS"
+  verify_normalized_xml: true
+  verify_render_diff: true
+
+body:
+  font: "Times New Roman"
+  size_pt: 11
+  line_spacing: 1.0
+  space_after_pt: 0
+  first_line_cm: 1.0
+
+tables:
+  size_pt: 10
+  line_spacing: 1.15
+  first_line_cm: 0.0
+
+toc:
+  include_scientific_supervisors: true
+
+contacts:
+  publish_email: false
+  remove_phone: false
+  remove_telegram: false
+  remove_viber: false
+  remove_whatsapp: false
+
+references:
+  paragraph_style: "REFER"
+  heading_style: "REF-TITLE"
+  restart_each_article: true
+  first_number: 1
+  continuation_lines_unnumbered: true
+  require_word_acceptance_test: true
+
+udc:
+  ukrainian_prefix: "УДК"
+  english_prefix: "UDC"
+
+doi:
+  prefix: "10.64828"
+  invent_when_missing: false
+
+ordering:
+  article_order_within_section: "excel"
+  section_order_source: "config"
+
+free_listeners:
+  article_required: false
+  output_block: "SPECIAL THANKS"
+
+hermes:
+  enabled: true
+  advisory_only: true
+  strict_json: true
+  cache: true
+  auto_accept_confidence: 0.95
+  review_confidence: 0.80
+  max_retries: 2
+
+qa:
+  require_content_integrity: true
+  require_formatting_integrity: true
+  require_object_integrity: true
+  require_bibliography_integrity: true
+  require_toc_integrity: true
+  require_front_matter_integrity: true
+  require_visual_qa: true
+  statuses:
+    - PASS
+    - PASS_WITH_WARNINGS
+    - BLOCKED
