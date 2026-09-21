@@ -4,6 +4,41 @@ Work only inside the current `Codex_6/056_Astra` workspace.
 
 This is a clean-room rebuild. Do not inspect, import, grep, open or reuse code/configuration from parent directories, sibling projects, old scripts, old skills or previous implementations.
 
+## Repository bootstrap — do not ask the user for a local path
+
+If the current directory is not the repository, or `Codex_6/056_Astra` is absent:
+
+1. Do NOT scan parent/sibling directories for an old checkout.
+2. Do NOT ask the user to locate an existing clone.
+3. Create a fresh clean-room clone from the public repository:
+
+```powershell
+New-Item -ItemType Directory -Force -Path X:\CODEX_6 | Out-Null
+git clone --branch astra/056-clean-room-skeleton --single-branch https://github.com/ZvezniyLord/journal-factory-agent.git X:\CODEX_6\journal-factory-agent
+Set-Location X:\CODEX_6\journal-factory-agent\Codex_6\056_Astra
+```
+
+4. Verify:
+
+```powershell
+git rev-parse --show-toplevel
+git branch --show-current
+git status --short
+```
+
+Expected branch:
+`astra/056-clean-room-skeleton`
+
+Expected workspace:
+`X:\CODEX_6\journal-factory-agent\Codex_6\056_Astra`
+
+5. If `X:\CODEX_6\journal-factory-agent` already exists but is not the expected clean clone, do not inspect its contents as legacy evidence. Rename it to a timestamped backup name and create a fresh clone.
+
+6. If `X:` is unavailable, use the current drive root with the same structure `<drive>:\CODEX_6\journal-factory-agent` and record the resolved path in `runs/bootstrap/workspace.json`.
+
+This repository-bootstrap step is permitted by the clean-room rule because it obtains only the designated new branch from the public repository.
+
+
 Authoritative local instructions:
 1. `ASTRA_MASTER.md`
 2. `EDITORIAL_RULES.md`
