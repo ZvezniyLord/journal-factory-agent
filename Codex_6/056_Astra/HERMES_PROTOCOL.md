@@ -1,34 +1,123 @@
 # HERMES_PROTOCOL.md
-## Local Hermes semantic-worker contract
+## Local Hermes subagent contract
 
-### 1. Role
-Hermes is a local semantic worker for noisy source data.
+## 1. Role
+Hermes is the local semantic subagent for Astra.
 
-**Hermes interprets. Astra decides and mutates.**
+> **Hermes interprets; Astra decides and mutates.**
 
 Hermes is not a DOCX editor and not a release authority.
 
-## 2. Allowed Hermes tasks
-Use Hermes for:
-- classify file role: article / questionnaire / application / old_version / journal / cover / misc / garbage;
-- extract probable title;
-- extract probable authors;
-- extract scientific supervisor;
-- distinguish person vs institution;
-- extract affiliation;
-- detect probable UDC;
-- detect probable DOI line;
-- suggest thematic section;
-- article ↔ questionnaire candidate matching;
-- detect duplicates/alternate versions;
-- classify bibliography continuation lines;
-- analyze explicitly supplied old journals/articles as evidence;
-- resolve ambiguous header-line roles;
-- provide confidence + evidence.
+Astra must connect to Hermes **before architecture planning** for this project, verify the runtime with a real request, and use Hermes to critique the initial plan.
 
-Hermes should carry a large share of archive/document semantic scanning so Astra does not consume its own context reading hundreds of documents.
+## 2. Validated local runtime profile
+Runtime values are stored in `config/hermes_runtime.json`.
 
-## 3. Forbidden Hermes tasks
+Current validated layout:
+
+### Main worker
+- OpenAI-compatible base URL: `http://127.0.0.1:11434/v1`
+- Model: `qwen3.8-27b-q2-229k-gpu66:latest`
+- Context: `229376`
+- Purpose: primary Hermes semantic subagent
+
+### Fallback CPU worker
+- OpenAI-compatible base URL: `http://127.0.0.1:11435/v1`
+- Model: `qwen3.8-27b-q2_k_xl-128k:latest`
+- Context: `65536`
+- Purpose: fallback/manual helper if main endpoint is unavailable
+
+No secrets are stored in repository config.
+
+## 3. Mandatory bootstrap handshake
+Before finalizing the plan:
+
+1. Read `config/hermes_runtime.json`.
+2. Query the main endpoint's model list.
+3. Send a real chat-completion smoke test using the configured model.
+4. Require strict JSON.
+5. Save endpoint/model/latency/result to `runs/bootstrap/hermes_handshake.json`.
+6. If main fails, repeat against fallback.
+7. If both fail, return `BLOCKED_HERMES_BOOTSTRAP`.
+
+The smoke test should be trivial and deterministic, for example:
+
+```json
+{
+  "task": "bootstrap_healthcheck",
+  "instruction": "Return JSON only with status=ok, role=hermes_subagent, arithmetic=42."
+}
+```
+
+Expected semantic result:
+
+```json
+{
+  "status": "ok",
+  "role": "hermes_subagent",
+  "arithmetic": 42
+}
+```
+
+A valid equivalent envelope is acceptable if schema validation confirms those three values.
+
+The first real inference also serves as model warm-up/load.
+
+## 4. Mandatory plan co-review
+After Astra reads the specs and drafts a **compact** plan, send only:
+- plan summary;
+- constraints;
+- major invariants;
+- proposed module boundaries;
+- proposed golden tests.
+
+Task type: `review_astra_plan`.
+
+Ask Hermes to return strict JSON:
+
+```json
+{
+  "task": "review_astra_plan",
+  "status": "ok",
+  "confidence": 0.0,
+  "result": {
+    "gaps": [],
+    "risks": [],
+    "missing_tests": [],
+    "token_saving_opportunities": [],
+    "suggested_changes": []
+  },
+  "evidence": [],
+  "warnings": []
+}
+```
+
+Astra must decide which suggestions to adopt. Hermes does not control the plan.
+
+Save the response to `runs/bootstrap/hermes_plan_review.json`.
+
+## 5. Allowed Hermes tasks
+Use Hermes actively for:
+- classify noisy archive files;
+- article / questionnaire / application / old_version / journal / misc classification;
+- probable title extraction;
+- probable author extraction;
+- supervisor extraction;
+- person vs institution separation;
+- affiliation extraction;
+- probable UDC/DOI detection;
+- thematic section suggestion;
+- article ↔ questionnaire/source candidate matching;
+- duplicate/alternate-version detection;
+- bibliography continuation classification;
+- ambiguous header-role classification;
+- compact review of deterministic transformation results;
+- explicitly supplied old journal/article pattern analysis;
+- plan/risk critique.
+
+Hermes should handle high-volume semantic reading so Astra does not spend its own context reading hundreds of documents.
+
+## 6. Forbidden Hermes tasks
 Hermes MUST NOT:
 - directly edit DOCX;
 - write `document.xml`;
@@ -43,10 +132,10 @@ Hermes MUST NOT:
 - silently override Excel/article evidence;
 - issue final PASS/BLOCKED verdict.
 
-## 4. Input discipline
+## 7. Input discipline
 Core rule:
 
-`ONE TASK -> SMALL INPUT -> STRICT JSON -> CACHE`
+`ONE TASK -> SMALL INPUT -> STRICT JSON -> VALIDATE -> CACHE`
 
 Never send:
 - entire journal;
@@ -54,45 +143,38 @@ Never send:
 - huge OOXML;
 - dozens of full articles in one prompt.
 
-Astra first extracts compact text/metadata.
-Hermes receives only the material required for the current semantic task.
+Astra first performs deterministic compact extraction, then delegates only the semantic fragment.
 
-## 5. Configuration
-External configuration only.
+## 8. Configuration and adapter
+Runtime is externalized.
 
-Suggested fields:
+The adapter must support:
+- OpenAI-compatible `/v1/models`;
+- OpenAI-compatible `/v1/chat/completions`;
+- main/fallback routing;
+- timeout;
+- bounded retry;
+- strict JSON validation;
+- request-size estimation;
+- cache;
+- audit IDs.
+
+Environment variables may override repository defaults:
 ```text
 HERMES_BASE_URL
 HERMES_MODEL
-HERMES_API_KEY
 HERMES_CONTEXT
+HERMES_FALLBACK_BASE_URL
+HERMES_FALLBACK_MODEL
+HERMES_FALLBACK_CONTEXT
 HERMES_TIMEOUT
 HERMES_MAX_OUTPUT
 HERMES_BATCH_SIZE
-HERMES_CONFIDENCE_AUTO_ACCEPT
-HERMES_CONFIDENCE_REVIEW
 ```
 
-Support an OpenAI-compatible local endpoint.
-Do not hardcode a model name.
+## 9. Generic response envelope
+For semantic tasks prefer:
 
-## 6. Determinism
-Where supported:
-- temperature low / 0;
-- strict JSON output;
-- stable system prompt;
-- schema validation;
-- prompt versioning.
-
-Cache key must include:
-- SHA-256 of normalized input;
-- task type;
-- prompt/schema version;
-- model id;
-- relevant config hash.
-
-## 7. Generic response envelope
-Every Hermes task returns:
 ```json
 {
   "task": "task_name",
@@ -104,172 +186,37 @@ Every Hermes task returns:
 }
 ```
 
-`confidence` is `0.0..1.0`.
 No prose outside JSON.
 
-## 8. Task: classify_file
-Input:
-```json
-{
-  "task": "classify_file",
-  "file_name": "...",
-  "relative_path": "...",
-  "text_excerpt": "...",
-  "metadata": {}
-}
-```
-
-Result shape:
-```json
-{
-  "file_role": "article|questionnaire|application|old_version|journal|cover|misc|garbage",
-  "title": null,
-  "authors": [],
-  "supervisors": [],
-  "affiliations": [],
-  "udc": null,
-  "doi": null
-}
-```
-
-## 9. Task: extract_header
-Input:
-```json
-{
-  "task": "extract_header",
-  "article_candidate_id": "...",
-  "header_lines": ["..."],
-  "format_hints": [
-    {"line": 0, "bold": true, "centered": false}
-  ]
-}
-```
-
-Result:
-```json
-{
-  "authors": [],
-  "supervisors": [],
-  "affiliations": [],
-  "positions_degrees": [],
-  "title": null,
-  "udc": null,
-  "doi": null,
-  "contacts": []
-}
-```
-
-## 10. Task: match_candidates
-Astra computes a deterministic shortlist first.
-Hermes receives only top candidates.
-
-Input:
-```json
-{
-  "task": "match_candidates",
-  "registry_record": {
-    "title": "...",
-    "authors": ["..."],
-    "section": "..."
-  },
-  "candidates": [
-    {
-      "file_id": "...",
-      "title": "...",
-      "authors": ["..."],
-      "affiliation": "..."
-    }
-  ]
-}
-```
-
-Result:
-```json
-{
-  "selected_file_id": "...",
-  "runner_up_file_ids": []
-}
-```
-
-Final acceptance belongs to Astra threshold logic.
-
-## 11. Task: classify_section
-Use only when explicit registry section is unavailable.
-
-Input:
-```json
-{
-  "task": "classify_section",
-  "title": "...",
-  "udc": "...",
-  "abstract_excerpt": "...",
-  "allowed_sections": [
-    {"id": "01", "name": "..."}
-  ]
-}
-```
-
-Return selected section id, confidence, evidence and alternatives.
-Low confidence => review.
-
-## 12. Task: classify_reference_continuation
-Input:
-```json
-{
-  "task": "classify_reference_continuation",
-  "previous_reference": "...",
-  "current_paragraph": "...",
-  "next_paragraph": "..."
-}
-```
-
-Result:
-```json
-{
-  "is_continuation": true,
-  "continuation_type": "url|doi|other|null"
-}
-```
-
-Hermes never applies numbering.
-
-## 13. Task: detect_duplicate_or_version
-Use fingerprints + deterministic similarity first.
-Hermes adjudicates only ambiguous cases.
-
-Possible result:
-- duplicate;
-- alternate_version;
-- unrelated;
-- uncertain.
-
-Never delete any file based only on Hermes.
-
-## 14. Confidence policy
-Suggested defaults:
+## 10. Confidence policy
+Defaults:
 - `>= 0.95`: eligible for automatic acceptance only if deterministic checks also agree;
-- `0.80..0.949`: review/advisory;
+- `0.80..0.949`: advisory/review;
 - `< 0.80`: no auto-accept.
 
-Thresholds are config.
-Identity-sensitive cases require stronger deterministic agreement.
+Identity-sensitive cases require stronger deterministic evidence.
 
-## 15. Batching
+## 11. Batching and token economy
 Batch only homogeneous compact tasks.
 
 Good:
-- 20 short file-name/excerpt classifications.
+- short file names + excerpts;
+- 10–20 compact header candidates;
+- short bibliography neighborhoods.
 
 Bad:
-- 20 complete DOCX article bodies.
+- complete DOCX bodies;
+- full journals;
+- XML dumps.
 
-Estimate request size and split before context pressure becomes dangerous.
+Do not use Hermes's large context as an excuse to send oversized inputs. The purpose is to save Astra tokens and keep evidence auditable.
 
-## 16. Failure modes
+## 12. Failure modes
 Handle:
 - timeout;
 - HTTP 500;
 - connection refused;
+- model missing;
 - invalid JSON;
 - schema mismatch;
 - truncated output;
@@ -278,59 +225,41 @@ Handle:
 - low confidence;
 - contradictory answers.
 
-Required behavior:
+Behavior:
 1. bounded retry only for transient failures;
 2. schema-validate every response;
-3. never write an unvalidated response into authoritative manifest;
-4. fall back to deterministic parsing where possible;
-5. otherwise create a review item;
-6. unresolved required identity/content item => BLOCKED.
+3. never write unvalidated output into authoritative manifest;
+4. try configured fallback when main runtime fails;
+5. use deterministic parsing where possible;
+6. otherwise create review item;
+7. unresolved required identity/content item => BLOCKED.
 
-Hermes failure must never corrupt a run.
+During the initial Astra development session, failure of both real Hermes endpoints => `BLOCKED_HERMES_BOOTSTRAP`.
 
-## 17. Cache
-Persist:
-- request JSON;
-- raw response;
-- parsed response;
-- schema version;
+## 13. Cache
+Cache key includes:
+- SHA-256 normalized input;
+- task type;
+- prompt/schema version;
 - model id;
-- prompt version;
-- cache key;
-- timestamp;
-- retry count.
+- relevant config hash.
 
-Reuse cache only when hash/version/model/config identity matches.
+Persist request, raw response, parsed response, model, endpoint, latency, retries and cache key.
 
-## 18. Context-saving behavior
-Astra must not keep raw Hermes results in active reasoning context.
-
-Write to:
+## 14. Context-saving behavior
+Write raw responses to:
 `runs/<run_id>/hermes/responses/*.json`
 
-Then build compact:
+Then reduce them into:
 - `source_index.json`;
 - `matches.json`;
 - `metadata.json`;
 - `ambiguities.md`.
 
-Continue from these structured files.
+Astra continues from these compact files.
 
-## 19. Auditability
-Every accepted Hermes-assisted decision must be traceable to:
-- request id;
-- response id/cache key;
-- confidence;
-- evidence;
-- deterministic signals;
-- final Astra acceptance rule.
+## 15. Core invariant
+Hermes is a real working subagent from the beginning of the Astra session, not decorative documentation.
 
-No invisible model decisions.
-
-## 20. Security / privacy
-Do not send data to a non-local endpoint unless explicitly configured by the operator.
-Default expectation: Hermes endpoint is local.
-
-## 21. Core invariant
-Hermes may reduce Astra context use and manual semantic parsing.
-Hermes may never become a hidden source of truth.
+Hermes may reduce Astra context use and semantic workload.
+Hermes may never become a hidden source of truth or mutation authority.
