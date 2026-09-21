@@ -1,5 +1,5 @@
 profile: naukainfo
-version: 1
+version: 2
 
 workspace:
   clean_room: true
@@ -59,12 +59,22 @@ free_listeners:
 
 hermes:
   enabled: true
+  startup_required: true
+  use_as_subagent: true
+  runtime_config: "config/hermes_runtime.json"
+  bootstrap_smoke_test_required: true
+  plan_review_required: true
   advisory_only: true
   strict_json: true
   cache: true
   auto_accept_confidence: 0.95
   review_confidence: 0.80
   max_retries: 2
+  token_economy:
+    delegate_noisy_archive_scanning: true
+    delegate_ambiguous_semantics: true
+    prohibit_full_journal_prompts: true
+    persist_raw_responses_to_disk: true
 
 qa:
   require_content_integrity: true
