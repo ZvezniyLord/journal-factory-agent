@@ -1,8 +1,12 @@
 [project]
 name = "astra-journal"
-version = "0.0.1"
+version = "0.0.2"
 requires-python = ">=3.11"
 description = "Clean-room NAukaInfo journal factory"
 
+[project.scripts]
+astra-hermes-bootstrap = "astra_journal.bootstrap:main"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["src"]
