@@ -1,6 +1,34 @@
 # 056 Astra — clean-room NAukaInfo journal factory
 
-Public review skeleton for the new Codex 6 Astra implementation.
+Public clean-room implementation workspace.
+
+## If the local folder is only a normal folder, not a Git checkout
+
+That is supported.
+
+Default local target:
+
+`X:\CODEX_5.5_redactor\Codex_6\056_Astra`
+
+The repository branch remains the source of code/spec updates. The local folder can be synchronized without cloning the whole repository.
+
+### One-shot sync + Hermes bootstrap
+
+Run the public `REMOTE_BOOTSTRAP.ps1` from this branch, or download it and execute it.
+
+It will:
+
+1. download the current `astra/056-clean-room-skeleton` branch;
+2. copy only `Codex_6/056_Astra` into the local target;
+3. keep local `runs/` and `output/` state;
+4. run the real local Hermes handshake.
+
+The actual Hermes client/bootstrap code is in:
+
+- `src/astra_journal/hermes_client.py`
+- `src/astra_journal/bootstrap.py`
+- `scripts/bootstrap_hermes.ps1`
+- `scripts/sync_from_github.ps1`
 
 ## Read in this order
 
@@ -14,20 +42,14 @@ Public review skeleton for the new Codex 6 Astra implementation.
 
 ## Mandatory behavior
 
-Astra must connect to the real local Hermes runtime **before finalizing its architecture plan**.
+The implementation must connect to the real local Hermes runtime before finalizing its architecture plan.
 
-It must:
-- test the main Hermes endpoint;
-- warm the model with a strict-JSON healthcheck;
-- fall back to the CPU worker if needed;
-- save the handshake;
-- send its compact plan to Hermes for critique;
-- incorporate valid suggestions;
-- then continue implementation with Hermes as a semantic subagent.
+Current validated local profile is defined in `config/hermes_runtime.json`.
 
-Astra must not read old project code outside this workspace.
+Hermes is used for semantic workload and token/context economy.
+Deterministic Python/OOXML/Word code remains the mutation and release authority.
+
+## Clean-room rule
+
+Do not inspect old project code outside this workspace.
 Explicitly supplied old documents may be used as data/evidence only.
-
-## Workspace
-
-All new implementation, tests, run state and outputs belong under this directory.
