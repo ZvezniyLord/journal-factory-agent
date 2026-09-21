@@ -1,0 +1,55 @@
+{
+  "source": "validated HermesOffice runtime profile",
+  "profile": "naukainfo_astra",
+  "main": {
+    "openai_base_url": "http://127.0.0.1:11434/v1",
+    "model": "qwen3.8-27b-q2-229k-gpu66:latest",
+    "context": 229376,
+    "role": "primary_semantic_subagent"
+  },
+  "fallback": {
+    "openai_base_url": "http://127.0.0.1:11435/v1",
+    "model": "qwen3.8-27b-q2_k_xl-128k:latest",
+    "context": 65536,
+    "role": "cpu_fallback_semantic_subagent"
+  },
+  "bootstrap": {
+    "required": true,
+    "try_main_then_fallback": true,
+    "models_path": "/models",
+    "chat_path": "/chat/completions",
+    "temperature": 0,
+    "max_output_tokens": 256,
+    "smoke_request": {
+      "task": "bootstrap_healthcheck",
+      "instruction": "Return JSON only with status=ok, role=hermes_subagent, arithmetic=42."
+    },
+    "expected": {
+      "status": "ok",
+      "role": "hermes_subagent",
+      "arithmetic": 42
+    },
+    "handshake_output": "runs/bootstrap/hermes_handshake.json"
+  },
+  "planning": {
+    "review_required": true,
+    "task": "review_astra_plan",
+    "max_plan_lines": 100,
+    "review_output": "runs/bootstrap/hermes_plan_review.json"
+  },
+  "limits": {
+    "batch_size": 20,
+    "timeout_seconds": 120,
+    "max_output_tokens": 4096,
+    "max_concurrent_requests": 1
+  },
+  "policy": {
+    "strict_json": true,
+    "cache": true,
+    "advisory_only": true,
+    "never_mutate_docx": true,
+    "never_issue_release_verdict": true,
+    "do_not_send_full_journal": true,
+    "do_not_send_large_ooxml": true
+  }
+}
