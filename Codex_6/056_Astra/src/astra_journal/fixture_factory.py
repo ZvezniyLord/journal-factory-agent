@@ -11,6 +11,12 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt
 
+from .reference_numbering import (
+    bind_reference_numbering,
+    create_article_reference_num,
+    ensure_shared_reference_abstract_num,
+)
+
 
 _TINY_PNG = base64.b64decode(
     "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Wl2s7sAAAAASUVORK5CYII="
@@ -40,66 +46,6 @@ def _configure_body_style(style) -> None:
     pf.line_spacing = 1.0
     pf.space_after = Pt(0)
     pf.first_line_indent = Cm(1)
-
-
-def _add_numbering_instance(doc: Document, *, abstract_id: int, num_id: int) -> int:
-    numbering = doc.part.numbering_part.element
-
-    abstract = OxmlElement("w:abstractNum")
-    abstract.set(qn("w:abstractNumId"), str(abstract_id))
-    multi = OxmlElement("w:multiLevelType")
-    multi.set(qn("w:val"), "singleLevel")
-    abstract.append(multi)
-
-    lvl = OxmlElement("w:lvl")
-    lvl.set(qn("w:ilvl"), "0")
-    start = OxmlElement("w:start")
-    start.set(qn("w:val"), "1")
-    num_fmt = OxmlElement("w:numFmt")
-    num_fmt.set(qn("w:val"), "decimal")
-    lvl_text = OxmlElement("w:lvlText")
-    lvl_text.set(qn("w:val"), "%1.")
-    suff = OxmlElement("w:suff")
-    suff.set(qn("w:val"), "tab")
-    ppr = OxmlElement("w:pPr")
-    tabs = OxmlElement("w:tabs")
-    tab = OxmlElement("w:tab")
-    tab.set(qn("w:val"), "num")
-    tab.set(qn("w:pos"), "720")
-    tabs.append(tab)
-    ind = OxmlElement("w:ind")
-    ind.set(qn("w:left"), "720")
-    ind.set(qn("w:hanging"), "360")
-    ppr.extend([tabs, ind])
-    lvl.extend([start, num_fmt, lvl_text, suff, ppr])
-    abstract.append(lvl)
-    numbering.append(abstract)
-
-    num = OxmlElement("w:num")
-    num.set(qn("w:numId"), str(num_id))
-    abstract_ref = OxmlElement("w:abstractNumId")
-    abstract_ref.set(qn("w:val"), str(abstract_id))
-    override = OxmlElement("w:lvlOverride")
-    override.set(qn("w:ilvl"), "0")
-    start_override = OxmlElement("w:startOverride")
-    start_override.set(qn("w:val"), "1")
-    override.append(start_override)
-    num.extend([abstract_ref, override])
-    numbering.append(num)
-    return num_id
-
-
-def _bind_numbering(paragraph, num_id: int) -> None:
-    ppr = paragraph._p.get_or_add_pPr()
-    numpr = ppr.find(qn("w:numPr"))
-    if numpr is None:
-        numpr = OxmlElement("w:numPr")
-        ppr.append(numpr)
-    ilvl = OxmlElement("w:ilvl")
-    ilvl.set(qn("w:val"), "0")
-    num = OxmlElement("w:numId")
-    num.set(qn("w:val"), str(num_id))
-    numpr.extend([ilvl, num])
 
 
 def _add_hyperlink(paragraph, text: str, url: str) -> None:
@@ -134,6 +80,7 @@ def create_golden_fixture(path: str | Path) -> Path:
     refer = _ensure_style(doc, "REFER")
     ref_title = _ensure_style(doc, "REF-TITLE")
     section = _ensure_style(doc, "SECTION", size_pt=24)
+    reference_plan = ensure_shared_reference_abstract_num(doc)
 
     p = doc.add_paragraph("FRONT MATTER SENTINEL — MUST REMAIN UNCHANGED")
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -141,7 +88,7 @@ def create_golden_fixture(path: str | Path) -> Path:
     doc.add_paragraph("TABLE OF CONTENTS")
     doc.add_page_break()
 
-    for article_index, num_id in ((1, 101), (2, 102)):
+    for article_index in (1, 2):
         doc.add_paragraph(f"SECTION {article_index}", style=section)
         doc.add_paragraph(f"UDC 001.{article_index}")
         doc.add_paragraph(f"Author {article_index}")
@@ -182,17 +129,13 @@ def create_golden_fixture(path: str | Path) -> Path:
             png_path.unlink(missing_ok=True)
 
         doc.add_paragraph("REFERENCES", style=ref_title)
-        _add_numbering_instance(
-            doc,
-            abstract_id=100 + article_index,
-            num_id=num_id,
-        )
+        num_id = create_article_reference_num(doc, reference_plan)
         for ref_index in range(1, 3):
             rp = doc.add_paragraph(
                 f"Reference {article_index}.{ref_index}",
                 style=refer,
             )
-            _bind_numbering(rp, num_id)
+            bind_reference_numbering(rp, num_id)
 
         continuation = doc.add_paragraph(
             f"https://doi.org/10.0000/example-{article_index}",
