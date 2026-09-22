@@ -1,0 +1,17 @@
+version: 1
+
+production:
+  # Set this once to the existing NAukaInfo journals root on drive N:.
+  # Do not guess or auto-discover a different folder.
+  root: null
+  require_drive: "N:"
+  folder_pattern: "{conference_number}"
+  create_folder_if_missing: true
+  overwrite_existing: false
+  final_filename_pattern: "{conference_number}-final.docx"
+  unresolved_conference_number_policy: "BLOCKED"
+  unavailable_root_policy: "BLOCKED"
+
+artifacts:
+  keep_run_artifacts_in_workspace: true
+  copy_qa_report_to_final_folder: false
