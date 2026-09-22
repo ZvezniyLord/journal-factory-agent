@@ -129,6 +129,31 @@ Do not arbitrarily restructure the header.
 Institution is not an author.
 Supervisor is not automatically a coauthor.
 
+## 7A. Mandatory article block order
+
+For every normalized article, the canonical top-of-article order is:
+
+1. UDC / УДК;
+2. author header block;
+3. article title;
+4. article content.
+
+The author header block may contain, in its appropriate source-derived order:
+- author(s);
+- degree/academic status;
+- position;
+- department;
+- institution;
+- city/country;
+- scientific supervisor where applicable;
+- ORCID where present.
+
+Do not move an institution into AUTHOR. Do not promote a scientific supervisor to coauthor.
+
+If source material places these blocks in a different order, Astra must classify them by role and reposition the blocks into this canonical order while preserving their text and local emphasis, except for approved editorial normalization.
+
+ABSTRACT / KEYWORDS, when present in the source or required by a configured journal profile, belong after TITLE and before the main BODY. Astra must not invent substantive abstract or keyword content merely to satisfy layout.
+
 ## 8. Scientific supervisors
 Store separately:
 ```json
@@ -176,9 +201,14 @@ Format:
 One line, no brackets/quotes.
 
 If missing:
-- use deterministic/local resources where possible;
-- Hermes may advise;
-- final insertion must be validated and auditable.
+- the journal build must attempt UDC completion rather than silently leaving the field absent;
+- use deterministic/local UDC resources/rules where available;
+- Hermes may advise on semantic subject classification;
+- the final code path must validate and record the inserted UDC in the manifest/audit;
+- unresolved or low-confidence UDC must become a review/blocking item according to run policy, never an invented silent guess.
+
+### Missing UDC completion
+For the NAukaInfo production profile, a required article with no UDC/УДК line is not release-ready until a UDC value is supplied or explicitly waived by run configuration.
 
 ## 11. DOI
 NAukaInfo DOI prefix: `10.64828`.
@@ -324,6 +354,27 @@ Section-title cells in the TOC/table must be centered inside the cell:
 - this alignment must survive Microsoft Word save-close-reopen validation.
 
 Render-check every page with tables.
+
+## 15A. Table and figure caption normalization
+
+Astra must detect and classify table and figure captions even when authors use inconsistent labels, spacing or punctuation.
+
+Recognized table-caption families include equivalents of:
+- Таблиця / Table / Таблица.
+
+Recognized figure-caption families include equivalents of:
+- Рис. / Рисунок / Мал. / Малюнок / Figure / Fig.
+
+For each detected caption:
+- keep the caption attached to the correct table/figure;
+- preserve the caption's semantic text and numbering;
+- normalize label, punctuation, alignment, spacing and style to the configured NAukaInfo/template caption standard;
+- do not convert caption text into ordinary BODY text;
+- do not accidentally include caption numbering in bibliography/list numbering;
+- do not renumber figures/tables unless the run profile explicitly requires deterministic renumbering;
+- if a caption cannot be associated confidently with its object, create a review issue instead of guessing.
+
+The exact canonical caption appearance is configuration/template-owned, not invented by Hermes.
 
 ## 16. Images and drawings
 Preserve images/drawings, order, aspect ratio, captions, relationships and meaningful anchoring/insertion order.
