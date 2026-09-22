@@ -15,7 +15,7 @@ def _norm(value: Any) -> str:
 
 COLUMN_ALIASES = {
     "id": ("id", "№", "номер", "код", "ідентифікатор"),
-    "authors": ("автор", "автори", "піб", "прізвище ім'я", "participant", "author"),
+    "authors": ("автор", "автори", "піб", "имя", "ім'я", "прізвище ім'я", "participant", "author"),
     "title": ("назва", "назва статті", "назва тез", "тема", "title", "article title"),
     "section": ("секція", "розділ", "section"),
     "free_listener": ("вільний слухач", "слухач", "free listener"),
