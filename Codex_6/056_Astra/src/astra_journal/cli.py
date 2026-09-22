@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from .docx_inspector import inspect_docx_source
+from .production_intake import IntakeBlocked, extract_and_inventory, write_intake_result
 from .excel_registry import inspect_excel_registry
 from .fixture_factory import create_golden_fixture
 from .word_list_probe import WordListProbeUnavailable, probe_reference_list_values
@@ -29,6 +30,15 @@ def main() -> int:
     audit = sub.add_parser("audit-docx", help="Audit DOCX style/reopen stability risks")
     audit.add_argument("docx", type=Path)
     audit.add_argument("--json", dest="json_path", type=Path)
+
+    intake = sub.add_parser(
+        "intake-archive",
+        help="Extract and inventory a production archive without mutating source files",
+    )
+    intake.add_argument("archive", type=Path)
+    intake.add_argument("--run-dir", type=Path, required=True)
+    intake.add_argument("--seven-zip", default="7z")
+    intake.add_argument("--json", dest="json_path", type=Path)
 
     inspect_source = sub.add_parser(
         "inspect-source",
@@ -76,6 +86,32 @@ def main() -> int:
         if args.json_path:
             write_report(args.json_path, report)
         print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.command == "intake-archive":
+        try:
+            result = extract_and_inventory(
+                args.archive,
+                args.run_dir,
+                seven_zip_executable=args.seven_zip,
+            )
+        except IntakeBlocked as exc:
+            print(json.dumps({"status": "BLOCKED", "error": str(exc)}, ensure_ascii=False))
+            return 4
+        payload = {
+            "archive_path": result.archive_path,
+            "conference_number": result.conference_number,
+            "extracted_root": result.extracted_root,
+            "registry_candidates": result.registry_candidates,
+            "article_candidates": result.article_candidates,
+            "questionnaire_candidates": result.questionnaire_candidates,
+            "template_candidates": result.template_candidates,
+            "warnings": result.warnings,
+            "inventory": [item.__dict__ for item in result.inventory],
+        }
+        if args.json_path:
+            write_intake_result(args.json_path, result)
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
         return 0
 
     if args.command == "inspect-source":
