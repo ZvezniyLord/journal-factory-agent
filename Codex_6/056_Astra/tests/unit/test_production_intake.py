@@ -28,3 +28,9 @@ def test_zip_inventory(tmp_path: Path) -> None:
     assert result.conference_number == "153"
     assert result.registry_candidates
     assert result.article_candidates
+
+
+def test_detect_conference_number_ignores_year() -> None:
+    assert detect_conference_number(
+        "153_м_Харків,_Україна,_3 5_вересня_2026_року.rar"
+    ) == "153"
