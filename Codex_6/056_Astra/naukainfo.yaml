@@ -76,7 +76,7 @@ references:
   first_number: 1
   continuation_lines_unnumbered: true
   require_word_acceptance_test: true
-  numbering_strategy: "independent_num_id_with_start_override"
+  numbering_strategy: "shared_abstract_num_with_per_article_num_and_restart_override"
 
 udc:
   ukrainian_prefix: "УДК"
