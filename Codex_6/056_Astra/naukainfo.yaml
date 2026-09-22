@@ -88,6 +88,25 @@ hermes:
     prohibit_full_journal_prompts: true
     persist_raw_responses_to_disk: true
 
+word_stability:
+  reopen_roundtrip_required: true
+  forbid_global_normal_mutation: true
+  forbid_auto_redefine_in_canonical_body_styles: true
+  forbid_theme_font_dependency_in_canonical_body_styles: true
+  explicit_font_slots:
+    - ascii
+    - hAnsi
+    - eastAsia
+    - cs
+  canonical_font: "Times New Roman"
+  body_style_id: "ASTRA_BODY"
+  canonical_style_ids:
+    - "ASTRA_BODY"
+    - "SECTION"
+    - "REF-TITLE"
+    - "REFER"
+  section_footer_distance_consistency_required: true
+
 visual_qa:
   required: true
   final_release_renderer: "word_com"
