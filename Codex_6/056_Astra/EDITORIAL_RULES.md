@@ -368,6 +368,21 @@ Never normalize body by changing `Normal`.
 
 Normalize only target roles after the immutable front-matter boundary.
 
+## 24A. Word reopen stability — release-blocking
+
+A journal is not stable merely because it looks correct immediately after mutation.
+
+Before final PASS:
+- canonical body styles must not contain `w:autoRedefine`;
+- canonical body styles must explicitly define `ascii`, `hAnsi`, `eastAsia` and `cs` font slots;
+- canonical body styles must not depend on `asciiTheme` / `hAnsiTheme` / theme-font fallbacks;
+- body alignment/spacing/indent must be explicit in the intended role/style, not accidentally inherited from `Normal`;
+- do not repair this by globally changing `Normal`;
+- section/footer distances used by the journal body must be deliberate and validated;
+- if Microsoft Word is available, perform a save-close-reopen roundtrip and compare effective formatting/rendering before release.
+
+If the document visibly changes after a Word save/reopen, final status is BLOCKED.
+
 ## 25. Final report
 `qa/report.md` must include:
 - participant count;
