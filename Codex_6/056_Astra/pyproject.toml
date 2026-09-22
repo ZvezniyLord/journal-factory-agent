@@ -1,8 +1,17 @@
 [project]
 name = "astra-journal"
-version = "0.0.2"
+version = "0.0.3"
 requires-python = ">=3.11"
 description = "Clean-room NAukaInfo journal factory"
+dependencies = [
+  "lxml>=5.0",
+  "python-docx>=1.1",
+  "PyYAML>=6.0",
+  "jsonschema>=4.23"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
 
 [project.scripts]
 astra-hermes-bootstrap = "astra_journal.bootstrap:main"
