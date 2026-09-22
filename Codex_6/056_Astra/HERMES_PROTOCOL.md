@@ -133,6 +133,8 @@ Hermes MUST NOT:
 - invent missing metadata;
 - silently override Excel/article evidence;
 - issue final PASS/BLOCKED verdict.
+- create or update persistent agent skills outside the Astra workspace;
+- treat self-improvement memories/skills as authoritative project rules.
 
 ## 7. Input discipline
 Core rule:
