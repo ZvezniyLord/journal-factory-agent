@@ -25,19 +25,27 @@ def build_manifest(
     source_records = source_index.get("records", [])
     materials: list[dict[str, Any]] = []
     issues: list[dict[str, Any]] = []
+    skipped_blank_rows = 0
+    title_to_first: dict[tuple[str, str], dict[str, Any]] = {}
 
     for row in excel_report.get("rows", []):
         semantic = row.get("semantic", {})
         excel_row = row.get("excel_row")
-        title = semantic.get("title")
+        title_raw = semantic.get("title")
         authors = semantic.get("authors")
         section = semantic.get("section")
-        free_listener = _truthy(semantic.get("free_listener"))
+        title_text = "" if title_raw is None else str(title_raw).strip()
+        section_text = "" if section is None else str(section).strip()
+        free_listener = (
+            _truthy(semantic.get("free_listener"))
+            or title_text.casefold()
+            in {"вільний слухач", "вiльний слухач", "villnij sluhach", "free listener"}
+        )
 
         item = {
             "excel_row": excel_row,
             "authors_raw": authors,
-            "title_raw": title,
+            "title_raw": title_raw,
             "section_raw": section,
             "free_listener": free_listener,
             "matched_source": None,
@@ -46,12 +54,19 @@ def build_manifest(
             "match_candidates": [],
         }
 
+        # Ignore empty template tail rows: they are not participants.
+        if not free_listener and not title_text and (
+            authors is None or not str(authors).strip()
+        ) and section is None:
+            skipped_blank_rows += 1
+            continue
+
         if free_listener:
             item["match_status"] = "FREE_LISTENER"
             materials.append(item)
             continue
 
-        if not title:
+        if not title_text:
             item["match_status"] = "REVIEW"
             issues.append({
                 "code": "MISSING_REGISTRY_TITLE",
@@ -60,8 +75,18 @@ def build_manifest(
             materials.append(item)
             continue
 
+        # Repeated title+section rows represent coauthors of the same material,
+        # not duplicate publication materials.
+        pair_key = (title_text, section_text)
+        first = title_to_first.get(pair_key)
+        if first is not None:
+            item["match_status"] = "COAUTHOR"
+            item["coauthor_of"] = first.get("matched_source")
+            materials.append(item)
+            continue
+
         result = deterministic_match(
-            str(title),
+            title_text,
             source_records,
             auto_accept=auto_accept,
         )
@@ -69,13 +94,14 @@ def build_manifest(
         item["matched_source"] = result.get("match")
         item["match_score"] = result.get("score")
         item["match_candidates"] = result.get("candidates", [])
+        title_to_first[pair_key] = item
         materials.append(item)
 
         if result["status"] != "MATCHED":
             issues.append({
                 "code": "ARTICLE_MATCH_REVIEW",
                 "excel_row": excel_row,
-                "title": title,
+                "title": title_text,
                 "status": result["status"],
                 "candidates": result.get("candidates", []),
             })
@@ -102,8 +128,10 @@ def build_manifest(
         "issues": issues,
         "summary": {
             "matched": sum(1 for x in materials if x["match_status"] == "MATCHED"),
+            "coauthors": sum(1 for x in materials if x["match_status"] == "COAUTHOR"),
             "free_listeners": sum(1 for x in materials if x["match_status"] == "FREE_LISTENER"),
             "review": sum(1 for x in materials if x["match_status"] in {"REVIEW", "UNMATCHED"}),
+            "skipped_blank_rows": skipped_blank_rows,
             "unused_sources": len(unused_sources),
         },
     }
