@@ -1,0 +1,62 @@
+version: 1
+
+roles:
+  - SECTION_TITLE
+  - DOI
+  - UDC
+  - AUTHOR
+  - SUPERVISOR
+  - AFFILIATION
+  - POSITION_DEGREE
+  - ORCID
+  - TITLE
+  - ABSTRACT
+  - KEYWORDS
+  - BODY
+  - SUBHEADING
+  - TABLE_CAPTION
+  - TABLE_SOURCE
+  - FIGURE_CAPTION
+  - FIGURE_SOURCE
+  - REF_TITLE
+  - REFERENCE
+  - REFERENCE_CONTINUATION
+  - SPECIAL_THANKS
+  - OTHER
+
+identity:
+  split_person_when_possible:
+    - surname
+    - given_name
+    - patronymic_or_middle_name
+  preserve_original_display_order: true
+  institution_is_never_author: true
+  supervisor_is_never_coauthor_by_inference: true
+  degree_position_is_not_part_of_person_name: true
+  orcid_is_not_part_of_person_name: true
+
+canonical_headings:
+  bibliography:
+    uk: "СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ"
+    en: "REFERENCES"
+
+caption_prefixes:
+  table:
+    - "Таблиця"
+    - "Table"
+    - "Таблица"
+  figure:
+    - "Рис."
+    - "Рисунок"
+    - "Figure"
+    - "Fig."
+    - "Мал."
+    - "Малюнок"
+
+hermes:
+  advisory_only: true
+  must_return_confidence: true
+  must_return_evidence: true
+  never_invent_person_parts: true
+  never_merge_person_and_organization: true
+  never_promote_supervisor_to_author: true
