@@ -192,20 +192,26 @@ Rules:
 - record DOI status in manifest and QA.
 
 ## 12. Sections and ordering
-Section order comes from config/template.
+Section order comes from the configured canonical section list.
 
-Priority:
-1. explicit Excel/manifest section;
-2. configured rule;
-3. semantic classification if missing;
+Mandatory NAukaInfo rules:
+- section headings in the final journal are **English only**;
+- Ukrainian/Russian/local-language section labels from Excel or source files are treated only as matching evidence and must be mapped to a configured canonical English section name;
+- do not invent an English translation when no approved mapping exists: unresolved mapping => review/BLOCKED according to run requirements;
+- one canonical English section heading per section;
+- section order follows config;
+- article order inside each section follows Excel registry order unless an explicit run override exists;
+- TOC section order and body section order must be identical;
+- each intended article appears exactly once;
+- start each article on a new page when profile/template requires it.
+
+Priority for assigning an article to a section:
+1. explicit Excel/manifest section mapped to canonical English section;
+2. configured deterministic mapping;
+3. Hermes semantic classification if the section is missing/ambiguous;
 4. low confidence => review.
 
-Hermes may advise but may not force a low-confidence section.
-
-One section heading per section.
-Inside section default to Excel order.
-Every intended article appears exactly once.
-Start each article on a new page when profile/template requires it.
+Hermes may advise but may not create a new canonical section name or reorder the registry on its own.
 
 ## 13. TOC
 Generate from structured metadata + actual final article order.
@@ -231,6 +237,27 @@ Recognize:
 - equivalent language variants.
 
 Prefer semantic detection, not one exact literal.
+
+### 14.1A Canonical bibliography heading normalization
+
+When a bibliography heading is clearly identifiable, normalize non-standard, misspelled or synonymous variants to the canonical NAukaInfo heading.
+
+Canonical output:
+- Ukrainian article: `СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ`;
+- English article: `REFERENCES`.
+
+Examples that should be recognized and normalized when they are clearly bibliography headings:
+- `ЛІТЕРАТУРА`;
+- `СПИСОК ЛІТЕРАТУРИ`;
+- `ВИКОРИСТАНІ ДЖЕРЕЛА`;
+- `БІБЛІОГРАФІЯ`;
+- `REFERENCE`;
+- `REFERENS`;
+- `REFERENSES`;
+- `BIBLIOGRAPHY`;
+- `LIST OF REFERENCES`.
+
+Do not rewrite arbitrary occurrences of words like "reference" inside scientific body text. Heading normalization must operate only on a classified `REF_TITLE` paragraph.
 
 ### 14.2 `REFER` must be real
 A visible style label alone is insufficient.
