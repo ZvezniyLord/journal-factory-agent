@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Astra 056 is not yet a production journal builder. It is at the end of foundation hardening / beginning of blocking golden-test work.
+Astra 056 is not yet a complete production journal builder. Foundation hardening and the first blocking golden/Word tests are now passing; implementation has moved into production intake and manifest construction.
 
 ### Completed and locally validated
 - clean-room path guard;
@@ -13,7 +13,8 @@ Astra 056 is not yet a production journal builder. It is at the end of foundatio
 - deterministic Hermes disk cache;
 - workspace-local virtual environment bootstrap;
 - local sync provenance;
-- 11 foundation tests passed on the operator PC;
+- foundation test suite passed on the operator PC;
+- Word-stable REFERENCES restart strategy B validated after two consecutive Word COM roundtrips;
 - explicit Word COM final-release policy;
 - explicit REFER numbering strategy in config;
 - DOCX style/reopen-risk inspector;
@@ -23,12 +24,19 @@ Astra 056 is not yet a production journal builder. It is at the end of foundatio
 ### New production incident incorporated
 A real conference journal demonstrated save/close/reopen formatting drift caused by mixed style inheritance, autoRedefine and theme-font fallbacks. This is now a release-blocking Word-stability requirement.
 
+### Implemented / in progress
+- synthetic golden DOCX fixture;
+- Excel registry inspector;
+- DOCX forensic inspector;
+- title-first article matcher;
+- production archive intake/inventory;
+- production run/destination model;
+- deterministic paragraph-role classifier.
+
 ### Not completed
-- golden DOCX fixture generators;
-- Excel registry parser;
-- DOC/DOCX forensic extractor;
-- article/questionnaire/source matcher;
-- production role classifier;
+- legacy DOC conversion in production intake;
+- full manifest builder across Excel + sources + questionnaires;
+- production role classifier integration;
 - canonical article normalization;
 - reference engine;
 - OOXML multi-article merge engine;
@@ -40,14 +48,15 @@ A real conference journal demonstrated save/close/reopen formatting drift caused
 
 ## Next blocking milestone
 
-Do not attempt a real archive-to-journal release yet.
+Do not attempt a final archive-to-journal release yet.
 
 Next:
 1. sync newest branch to local 056_Asttra;
 2. run all tests;
-3. validate Word COM roundtrip helper on the repaired conference 153 journal or a copy;
-4. build synthetic golden fixtures;
-5. implement intake + Excel + DOCX inspector;
-6. only then expose astra-journal build.
+3. run production intake on the real conference 153 archive;
+4. identify the Excel registry and all article/questionnaire candidates;
+5. build title-first matches and ambiguity report;
+6. integrate role classification, missing-UDC detection and section mapping;
+7. then implement normalization/merge/TOC and expose astra-journal build.
 
 Hermes remains semantic subagent. Deterministic Python/OOXML code remains mutation authority.
