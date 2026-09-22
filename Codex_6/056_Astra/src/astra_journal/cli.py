@@ -10,6 +10,7 @@ from .production_intake import IntakeBlocked, extract_and_inventory, write_intak
 from .source_index import build_source_index, write_source_index
 from .excel_registry import inspect_excel_registry
 from .fixture_factory import create_golden_fixture
+from .manifest_builder import build_manifest, write_manifest
 from .word_list_probe import WordListProbeUnavailable, probe_reference_list_values
 from .word_roundtrip import WordComUnavailable, roundtrip_word, write_roundtrip_report
 from .word_stability import inspect_docx, write_report
@@ -72,6 +73,15 @@ def main() -> int:
     inspect_excel.add_argument("--sheet")
     inspect_excel.add_argument("--header-row", type=int, default=1)
     inspect_excel.add_argument("--json", dest="json_path", type=Path)
+
+    manifest = sub.add_parser(
+        "build-manifest",
+        help="Build production manifest from Excel report + source index JSON",
+    )
+    manifest.add_argument("excel_json", type=Path)
+    manifest.add_argument("source_index_json", type=Path)
+    manifest.add_argument("--json", dest="json_path", type=Path, required=True)
+    manifest.add_argument("--auto-accept", type=float, default=0.96)
 
     fixture = sub.add_parser(
         "make-golden-fixture",
@@ -163,6 +173,18 @@ def main() -> int:
         )
         _write_optional(args.json_path, report)
         print(json.dumps(report, ensure_ascii=False, indent=2, default=str))
+        return 0
+
+    if args.command == "build-manifest":
+        excel_report = json.loads(args.excel_json.read_text(encoding="utf-8"))
+        source_index = json.loads(args.source_index_json.read_text(encoding="utf-8"))
+        payload = build_manifest(
+            excel_report,
+            source_index,
+            auto_accept=args.auto_accept,
+        )
+        write_manifest(args.json_path, payload)
+        print(json.dumps(payload, ensure_ascii=False, indent=2, default=str))
         return 0
 
     if args.command == "make-golden-fixture":
