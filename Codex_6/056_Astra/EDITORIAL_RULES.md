@@ -289,6 +289,13 @@ Release-blocking:
 ## 15. Tables
 Preserve count, rows, columns, merged cells, text, numeric values, captions, source lines, local emphasis, alignment, borders and meaningful shading.
 Do not convert tables to plain text.
+
+Section-title cells in the TOC/table must be centered inside the cell:
+- horizontal alignment: center;
+- vertical alignment: center;
+- no accidental left alignment after save/reopen;
+- this alignment must survive Microsoft Word save-close-reopen validation.
+
 Render-check every page with tables.
 
 ## 16. Images and drawings
