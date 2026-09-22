@@ -43,6 +43,11 @@ contacts:
 references:
   paragraph_style: "REFER"
   heading_style: "REF-TITLE"
+  reference_heading_normalization:
+    enabled: true
+    ukrainian: "СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ"
+    english: "REFERENCES"
+    recognize_common_misspellings: true
   restart_each_article: true
   first_number: 1
   continuation_lines_unnumbered: true
@@ -60,6 +65,10 @@ doi:
 ordering:
   article_order_within_section: "excel"
   section_order_source: "config"
+  section_names_language: "en"
+  section_headings_english_only: true
+  section_mapping_config: "config/sections.yaml"
+  unresolved_section_mapping_policy: "review"
 
 free_listeners:
   article_required: false
