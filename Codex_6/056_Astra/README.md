@@ -2,29 +2,26 @@
 
 Public clean-room implementation workspace.
 
-## If the local folder is only a normal folder, not a Git checkout
+## Local folder
 
-That is supported.
+The actual local project folder currently used by the operator is:
 
-Default local target:
+`X:\CODEX_5.5_redactor\Codex_6\056_Asttra`
 
-`X:\CODEX_5.5_redactor\Codex_6\056_Astra`
+The double `tt` in `Asttra` is intentional for the existing local folder.  
+The repository source path remains:
 
-The repository branch remains the source of code/spec updates. The local folder can be synchronized without cloning the whole repository.
+`Codex_6/056_Astra`
 
-### One-shot sync + Hermes bootstrap
+The local folder does not need to be a Git checkout.
 
-Run the public `REMOTE_BOOTSTRAP.ps1` from this branch, or download it and execute it.
+## One-shot sync + Hermes bootstrap
 
-It will:
+`REMOTE_BOOTSTRAP.ps1` downloads the current public branch, copies only the repository workspace `Codex_6/056_Astra` into the local folder `056_Asttra`, preserves local `runs/` and `output/`, then runs the real Hermes handshake.
 
-1. download the current `astra/056-clean-room-skeleton` branch;
-2. copy only `Codex_6/056_Astra` into the local target;
-3. keep local `runs/` and `output/` state;
-4. run the real local Hermes handshake.
+Implementation files include:
 
-The actual Hermes client/bootstrap code is in:
-
+- `src/astra_journal/path_guard.py`
 - `src/astra_journal/hermes_client.py`
 - `src/astra_journal/bootstrap.py`
 - `scripts/bootstrap_hermes.ps1`
@@ -44,12 +41,10 @@ The actual Hermes client/bootstrap code is in:
 
 The implementation must connect to the real local Hermes runtime before finalizing its architecture plan.
 
-Current validated local profile is defined in `config/hermes_runtime.json`.
-
-Hermes is used for semantic workload and token/context economy.
-Deterministic Python/OOXML/Word code remains the mutation and release authority.
+Hermes handles bounded semantic workload and saves Astra/orchestrator context.
+Deterministic Python/OOXML/Word code remains mutation and release authority.
 
 ## Clean-room rule
 
-Do not inspect old project code outside this workspace.
+Do not inspect old project code outside the local `056_Asttra` workspace.
 Explicitly supplied old documents may be used as data/evidence only.
