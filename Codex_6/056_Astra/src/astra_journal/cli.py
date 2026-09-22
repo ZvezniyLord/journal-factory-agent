@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
+from .word_roundtrip import WordComUnavailable, roundtrip_word, write_roundtrip_report
 from .word_stability import inspect_docx, write_report
 
 
@@ -15,6 +16,15 @@ def main() -> int:
     audit.add_argument("docx", type=Path)
     audit.add_argument("--json", dest="json_path", type=Path)
 
+    roundtrip = sub.add_parser(
+        "word-roundtrip",
+        help="Save-close-reopen a DOCX through Microsoft Word COM",
+    )
+    roundtrip.add_argument("source", type=Path)
+    roundtrip.add_argument("destination", type=Path)
+    roundtrip.add_argument("--json", dest="json_path", type=Path)
+    roundtrip.add_argument("--visible", action="store_true")
+
     args = parser.parse_args()
 
     if args.command == "audit-docx":
@@ -22,6 +32,22 @@ def main() -> int:
         if args.json_path:
             args.json_path.parent.mkdir(parents=True, exist_ok=True)
             write_report(args.json_path, report)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.command == "word-roundtrip":
+        try:
+            report = roundtrip_word(
+                args.source,
+                args.destination,
+                visible=args.visible,
+            )
+        except WordComUnavailable as exc:
+            print(json.dumps({"status": "BLOCKED", "error": str(exc)}, ensure_ascii=False))
+            return 3
+        if args.json_path:
+            args.json_path.parent.mkdir(parents=True, exist_ok=True)
+            write_roundtrip_report(args.json_path, report)
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 0
 
