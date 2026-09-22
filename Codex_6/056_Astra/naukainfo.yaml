@@ -5,6 +5,10 @@ workspace:
   clean_room: true
   deny_parent_project_code: true
   require_explicit_external_input_allowlist: true
+  archive_safety:
+    block_zip_slip: true
+    reject_absolute_paths: true
+    reject_parent_segments: true
 
 front_matter:
   immutable_until: "TABLE OF CONTENTS"
@@ -26,6 +30,8 @@ tables:
 
 toc:
   include_scientific_supervisors: true
+  verify_field_structure: true
+  verify_body_order: true
 
 contacts:
   publish_email: false
@@ -72,6 +78,10 @@ hermes:
   auto_accept_confidence: 0.95
   review_confidence: 0.80
   max_retries: 2
+  local_only_by_default: true
+  allowed_hosts:
+    - "127.0.0.1"
+    - "localhost"
   token_economy:
     delegate_noisy_archive_scanning: true
     delegate_ambiguous_semantics: true
@@ -96,3 +106,15 @@ qa:
     - PASS
     - PASS_WITH_WARNINGS
     - BLOCKED
+  allowed_warnings:
+    - "HERMES_NONAUTHORITATIVE_ADVISORY"
+    - "OPTIONAL_OLD_EVIDENCE_UNAVAILABLE"
+  blocking_codes:
+    - "TEXT_LOSS"
+    - "OBJECT_LOSS"
+    - "FRONT_MATTER_MUTATION"
+    - "REFER_BINDING_INVALID"
+    - "REFERENCE_RESTART_INVALID"
+    - "TOC_BODY_MISMATCH"
+    - "WORD_COM_UNAVAILABLE"
+    - "UNRESOLVED_REQUIRED_IDENTITY"
