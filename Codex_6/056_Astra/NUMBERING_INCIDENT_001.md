@@ -35,3 +35,23 @@ D. C plus explicit lvlOverride/startOverride=1 on each per-article num.
 The accepted production strategy is whichever survives Word COM roundtrip and Word-visible ListFormat.ListValue probes.
 
 Do not optimize for pretty numbering.xml. Optimize for stable Microsoft Word behavior.
+
+
+## Resolution
+
+Resolved by Strategy B and validated on Microsoft Word.
+
+Production rule:
+- one shared abstractNum for the canonical REFERENCES list definition;
+- one distinct w:num per article;
+- first article uses the shared abstract start=1 without a redundant override;
+- every subsequent article w:num uses explicit lvlOverride/startOverride=1.
+
+Observed Word-visible values after two consecutive SaveAs2 -> Close -> Reopen cycles:
+- article 1: 1, 2;
+- article 2: 1, 2;
+- article 3: 1, 2.
+
+Continuation DOI/URL paragraphs remained unnumbered.
+
+Strategies using separate structurally identical abstractNum definitions are rejected because Microsoft Word may deduplicate them and merge the logical lists.
