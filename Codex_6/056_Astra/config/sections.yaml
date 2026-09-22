@@ -1,0 +1,24 @@
+version: 1
+
+policy:
+  final_section_language: "en"
+  english_only: true
+  article_order_within_section: "excel"
+  section_order: "listed_below"
+  unresolved_mapping: "review"
+
+# Fill with the approved canonical English section names for a concrete journal.
+# Example shape:
+#
+# sections:
+#   - id: "education"
+#     canonical_name: "PEDAGOGICAL SCIENCES"
+#     aliases:
+#       - "ПЕДАГОГІЧНІ НАУКИ"
+#       - "Педагогічні науки"
+#       - "ПЕДАГОГИЧЕСКИЕ НАУКИ"
+#
+# Astra/Hermes may match aliases to a canonical_name,
+# but may not invent new section names or reorder this list.
+
+sections: []
