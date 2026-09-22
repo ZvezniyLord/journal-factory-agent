@@ -1,5 +1,5 @@
 param(
-    [string]$Target = "X:\CODEX_5.5_redactor\Codex_6\056_Astra",
+    [string]$Target = "X:\CODEX_5.5_redactor\Codex_6\056_Asttra",
     [string]$Branch = "astra/056-clean-room-skeleton"
 )
 
@@ -29,7 +29,6 @@ try {
     $source = Split-Path $marker.FullName -Parent
     New-Item -ItemType Directory -Force -Path $Target | Out-Null
 
-    # Overlay repository-managed files. Keep local runtime/output state.
     $excludeDirs = @("runs", "output")
     Get-ChildItem -Path $source -Force | ForEach-Object {
         if ($excludeDirs -contains $_.Name) {
@@ -44,8 +43,8 @@ try {
         }
     }
 
-    Write-Host "Synced to: $Target"
-    Write-Host "Next: $Target\scripts\bootstrap_hermes.ps1"
+    Write-Host "Synced repository workspace into local folder: $Target"
+    Write-Host "Repository source folder is Codex_6\056_Astra; local folder name may remain 056_Asttra."
 }
 finally {
     if (Test-Path $tmp) {
