@@ -4,8 +4,10 @@ import argparse
 import json
 from pathlib import Path
 
+from .doc_converter import DocConversionBlocked, convert_doc_to_docx
 from .docx_inspector import inspect_docx_source
 from .production_intake import IntakeBlocked, extract_and_inventory, write_intake_result
+from .source_index import build_source_index, write_source_index
 from .excel_registry import inspect_excel_registry
 from .fixture_factory import create_golden_fixture
 from .word_list_probe import WordListProbeUnavailable, probe_reference_list_values
@@ -39,6 +41,20 @@ def main() -> int:
     intake.add_argument("--run-dir", type=Path, required=True)
     intake.add_argument("--seven-zip", default="7z")
     intake.add_argument("--json", dest="json_path", type=Path)
+
+    convert_doc = sub.add_parser(
+        "convert-doc",
+        help="Convert a legacy .doc working copy to .docx using Microsoft Word",
+    )
+    convert_doc.add_argument("source", type=Path)
+    convert_doc.add_argument("destination", type=Path)
+
+    source_index = sub.add_parser(
+        "source-index",
+        help="Build compact DOCX source index for matching/Hermes",
+    )
+    source_index.add_argument("root", type=Path)
+    source_index.add_argument("--json", dest="json_path", type=Path)
 
     inspect_source = sub.add_parser(
         "inspect-source",
@@ -111,6 +127,22 @@ def main() -> int:
         }
         if args.json_path:
             write_intake_result(args.json_path, result)
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.command == "convert-doc":
+        try:
+            output = convert_doc_to_docx(args.source, args.destination)
+        except DocConversionBlocked as exc:
+            print(json.dumps({"status": "BLOCKED", "error": str(exc)}, ensure_ascii=False))
+            return 5
+        print(json.dumps({"status": "PASS", "output": str(output)}, ensure_ascii=False))
+        return 0
+
+    if args.command == "source-index":
+        payload = build_source_index(args.root)
+        if args.json_path:
+            write_source_index(args.json_path, payload)
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         return 0
 
