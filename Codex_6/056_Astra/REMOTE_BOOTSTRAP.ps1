@@ -1,5 +1,5 @@
 param(
-    [string]$Target = "X:\CODEX_5.5_redactor\Codex_6\056_Astra"
+    [string]$Target = "X:\CODEX_5.5_redactor\Codex_6\056_Asttra"
 )
 
 $ErrorActionPreference = "Stop"
