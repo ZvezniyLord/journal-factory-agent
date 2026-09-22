@@ -7,6 +7,7 @@ from pathlib import Path
 from .docx_inspector import inspect_docx_source
 from .excel_registry import inspect_excel_registry
 from .fixture_factory import create_golden_fixture
+from .word_list_probe import WordListProbeUnavailable, probe_reference_list_values
 from .word_roundtrip import WordComUnavailable, roundtrip_word, write_roundtrip_report
 from .word_stability import inspect_docx, write_report
 
@@ -52,6 +53,13 @@ def main() -> int:
     )
     fixture.add_argument("output", type=Path)
 
+    probe = sub.add_parser(
+        "word-list-probe",
+        help="Read Word-visible list values for REFER paragraphs",
+    )
+    probe.add_argument("docx", type=Path)
+    probe.add_argument("--json", dest="json_path", type=Path)
+
     roundtrip = sub.add_parser(
         "word-roundtrip",
         help="Save-close-reopen a DOCX through Microsoft Word COM",
@@ -92,6 +100,16 @@ def main() -> int:
     if args.command == "make-golden-fixture":
         output = create_golden_fixture(args.output)
         print(json.dumps({"status": "PASS", "output": str(output)}, ensure_ascii=False))
+        return 0
+
+    if args.command == "word-list-probe":
+        try:
+            report = probe_reference_list_values(args.docx)
+        except WordListProbeUnavailable as exc:
+            print(json.dumps({"status": "BLOCKED", "error": str(exc)}, ensure_ascii=False))
+            return 3
+        _write_optional(args.json_path, report)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
         return 0
 
     if args.command == "word-roundtrip":
