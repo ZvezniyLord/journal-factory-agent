@@ -81,10 +81,12 @@ Ask Hermes to return strict JSON:
   "status": "ok",
   "confidence": 0.0,
   "result": {
+    "blockers": [],
     "gaps": [],
     "risks": [],
     "missing_tests": [],
     "token_saving_opportunities": [],
+    "hermes_delegation_improvements": [],
     "suggested_changes": []
   },
   "evidence": [],
@@ -154,10 +156,13 @@ The adapter must support:
 - main/fallback routing;
 - timeout;
 - bounded retry;
-- strict JSON validation;
+- strict per-task JSON-schema validation;
+- confidence-range validation;
 - request-size estimation;
 - cache;
 - audit IDs.
+
+Retry, fallback, schema validation, caching and audit IDs are deterministic Python responsibilities, never Hermes judgement.
 
 Environment variables may override repository defaults:
 ```text
