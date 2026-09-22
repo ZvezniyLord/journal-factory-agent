@@ -16,6 +16,22 @@ front_matter:
   c14n_diagnostic_only: true
   verify_render_diff: true
 
+article_structure:
+  canonical_top_order:
+    - "UDC"
+    - "AUTHOR_HEADER"
+    - "TITLE"
+    - "ARTICLE_CONTENT"
+  author_header_roles:
+    - "AUTHOR"
+    - "POSITION_DEGREE"
+    - "AFFILIATION"
+    - "SUPERVISOR"
+    - "ORCID"
+  abstract_keywords_position: "after_title_before_body_when_present"
+  reorder_misplaced_top_blocks: true
+  preserve_text_during_reorder: true
+
 body:
   font: "Times New Roman"
   size_pt: 11
@@ -27,6 +43,14 @@ tables:
   size_pt: 10
   line_spacing: 1.15
   first_line_cm: 0.0
+
+caption_policy:
+  normalize_table_captions: true
+  normalize_figure_captions: true
+  canonical_format_source: "template_or_config"
+  preserve_caption_text: true
+  preserve_existing_object_number: true
+  unresolved_object_association_policy: "review"
 
 toc:
   include_scientific_supervisors: true
@@ -57,6 +81,10 @@ references:
 udc:
   ukrainian_prefix: "УДК"
   english_prefix: "UDC"
+  generate_when_missing: true
+  hermes_semantic_advice_allowed: true
+  require_validation: true
+  missing_required_policy: "review"
 
 doi:
   prefix: "10.64828"
