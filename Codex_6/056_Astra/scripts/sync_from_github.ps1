@@ -43,8 +43,23 @@ try {
         }
     }
 
+    $bootstrapDir = Join-Path $Target "runs\bootstrap"
+    New-Item -ItemType Directory -Force -Path $bootstrapDir | Out-Null
+    $syncState = @{
+        status = "PASS"
+        source_repository = $repo
+        source_branch = $Branch
+        source_path = "Codex_6/056_Astra"
+        local_target = $Target
+        runs_preserved = $true
+        output_preserved = $true
+        timestamp_utc = [DateTime]::UtcNow.ToString("o")
+    } | ConvertTo-Json -Depth 3
+    Set-Content -Path (Join-Path $bootstrapDir "sync_state.json") -Value $syncState -Encoding UTF8
+
     Write-Host "Synced repository workspace into local folder: $Target"
     Write-Host "Repository source folder is Codex_6\056_Astra; local folder name may remain 056_Asttra."
+    Write-Host "Runtime provenance: $bootstrapDir\sync_state.json"
 }
 finally {
     if (Test-Path $tmp) {
