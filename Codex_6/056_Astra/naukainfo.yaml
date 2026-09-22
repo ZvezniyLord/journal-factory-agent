@@ -1,5 +1,5 @@
 profile: naukainfo
-version: 2
+version: 3
 
 workspace:
   clean_room: true
@@ -8,7 +8,8 @@ workspace:
 
 front_matter:
   immutable_until: "TABLE OF CONTENTS"
-  verify_normalized_xml: true
+  lexical_fingerprint_required: true
+  c14n_diagnostic_only: true
   verify_render_diff: true
 
 body:
@@ -40,6 +41,7 @@ references:
   first_number: 1
   continuation_lines_unnumbered: true
   require_word_acceptance_test: true
+  numbering_strategy: "independent_num_id_with_start_override"
 
 udc:
   ukrainian_prefix: "УДК"
@@ -75,6 +77,12 @@ hermes:
     delegate_ambiguous_semantics: true
     prohibit_full_journal_prompts: true
     persist_raw_responses_to_disk: true
+
+visual_qa:
+  required: true
+  final_release_renderer: "word_com"
+  preview_renderer: "libreoffice"
+  word_com_unavailable_policy: "BLOCKED"
 
 qa:
   require_content_integrity: true
