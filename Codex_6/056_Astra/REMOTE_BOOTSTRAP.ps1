@@ -12,9 +12,15 @@ Write-Host "Fetching Astra sync script..."
 Invoke-WebRequest -Uri $syncUrl -OutFile $tmpScript -UseBasicParsing
 
 & powershell -ExecutionPolicy Bypass -File $tmpScript -Target $Target -Branch $branch
-if ($LASTEXITCODE -ne 0) {
-    exit $LASTEXITCODE
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+$setup = Join-Path $Target "scripts\setup_local_env.ps1"
+if (-not (Test-Path $setup)) {
+    throw "Environment setup script missing after sync: $setup"
 }
+
+& powershell -ExecutionPolicy Bypass -File $setup -ProjectRoot $Target
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 $bootstrap = Join-Path $Target "scripts\bootstrap_hermes.ps1"
 if (-not (Test-Path $bootstrap)) {
