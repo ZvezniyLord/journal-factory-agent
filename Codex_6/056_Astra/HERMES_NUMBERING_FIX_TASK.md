@@ -32,9 +32,11 @@ Sync the latest branch:
 
 `astra/056-clean-room-skeleton`
 
-Expected current branch head at task creation:
+The synced branch must contain at least commit:
 
-`3516611eba69c57e43a915f8e3b0aa93f015cad3`
+`c23b9327a21d44c9541f3fd1673e299ea3d55992`
+
+Do not require an exact HEAD match because this task file itself and later fixes may advance the branch.
 
 After sync read only:
 - `NUMBERING_INCIDENT_001.md`
@@ -46,6 +48,8 @@ After sync read only:
 - the numbering-related code/tests.
 
 Do not summarize the whole folder.
+
+Do not patch, rewrite or create persistent Hermes self-improvement skills during this task. Treat any previous self-improvement write as non-authoritative runtime residue, not as project state.
 
 ## Experiment matrix
 
