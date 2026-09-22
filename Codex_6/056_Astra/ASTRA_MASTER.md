@@ -188,7 +188,9 @@ Do not build the full production pipeline until these pass:
 11. `Normal` is not globally mutated;
 12. Hermes timeout/500/invalid JSON cannot corrupt deterministic pipeline;
 13. duplicate article insertion is blocked;
-14. missing object/text causes BLOCKED, not PASS.
+14. missing object/text causes BLOCKED, not PASS;
+15. canonical body styles have no autoRedefine/theme-font dependency;
+16. save-close-reopen Word roundtrip does not change effective formatting/layout.
 
 ## 9. Word/OOXML rules
 DOCX is a ZIP package of related XML parts.
@@ -265,9 +267,10 @@ A run is done only when:
 15. TOC
 16. integrity validators
 17. Word COM adapter
-18. visual QA
-19. CLI
-20. full end-to-end run
+18. Word reopen/style-stability validator
+19. visual QA
+20. CLI
+21. full end-to-end run
 
 ## 13. Final instruction
 Read:
