@@ -46,6 +46,12 @@ def _sha256(path: Path) -> str:
 
 def detect_conference_number(name: str) -> str:
     matches = re.findall(r"(?<!\d)(\d{3,})(?!\d)", name)
+    # Ignore obvious year-like values so names such as
+    # "153 ... 2026 ... .rar" resolve to conference 153.
+    matches = [
+        m for m in matches
+        if not (len(m) == 4 and m[:2] in {"19", "20"})
+    ]
     if not matches:
         raise IntakeBlocked("UNRESOLVED_CONFERENCE_NUMBER")
     first = matches[0]
