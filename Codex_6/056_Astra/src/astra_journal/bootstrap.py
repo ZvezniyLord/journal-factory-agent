@@ -110,6 +110,8 @@ def run_handshake(root: Path) -> tuple[dict[str, Any], int]:
             if valid:
                 result = {
                     "status": "PASS",
+                    "provenance": "local_runtime_handshake",
+                    "generated_by": "astra_journal.bootstrap",
                     "selected_worker": key,
                     "selected_base_url": endpoint.base_url,
                     "selected_model": endpoint.model,
@@ -132,6 +134,8 @@ def run_handshake(root: Path) -> tuple[dict[str, Any], int]:
 
     result = {
         "status": "BLOCKED_HERMES_BOOTSTRAP",
+        "provenance": "local_runtime_handshake",
+        "generated_by": "astra_journal.bootstrap",
         "created_at": _utc_now(),
         "host": platform.node(),
         "python": sys.version,
