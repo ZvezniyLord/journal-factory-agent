@@ -98,7 +98,15 @@ def build_article_semantic_packet(
             f"Semantic packet exceeds hard limit {max_chars} chars after trimming"
         )
 
-    packet["input_chars"] = encoded_len()
+    packet["input_chars"] = 0
+    final_size = encoded_len()
+    packet["input_chars"] = final_size
+    final_size = encoded_len()
+    if final_size > max_chars:
+        raise ValueError(
+            f"Semantic packet exceeds hard limit {max_chars} chars with metadata"
+        )
+    packet["input_chars"] = final_size
     return packet
 
 
