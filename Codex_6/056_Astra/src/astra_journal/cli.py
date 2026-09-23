@@ -8,6 +8,7 @@ from .doc_converter import DocConversionBlocked, convert_doc_to_docx
 from .docx_inspector import inspect_docx_source
 from .production_intake import IntakeBlocked, extract_and_inventory, write_intake_result
 from .source_index import build_source_index, write_source_index
+from .semantic_audit_runner import SemanticAuditBlocked, run_stateless_semantic_audit
 from .excel_registry import inspect_excel_registry
 from .fixture_factory import create_golden_fixture
 from .manifest_builder import build_manifest, write_manifest
@@ -49,6 +50,15 @@ def main() -> int:
     )
     convert_doc.add_argument("source", type=Path)
     convert_doc.add_argument("destination", type=Path)
+
+    semantic_audit = sub.add_parser(
+        "semantic-audit",
+        help="Run resumable stateless one-article Hermes semantic audit",
+    )
+    semantic_audit.add_argument("manifest_json", type=Path)
+    semantic_audit.add_argument("source_index_json", type=Path)
+    semantic_audit.add_argument("--run-dir", type=Path, required=True)
+    semantic_audit.add_argument("--root", type=Path)
 
     source_index = sub.add_parser(
         "source-index",
@@ -148,6 +158,35 @@ def main() -> int:
             return 5
         print(json.dumps({"status": "PASS", "output": str(output)}, ensure_ascii=False))
         return 0
+
+    if args.command == "semantic-audit":
+        root = (
+            args.root.resolve()
+            if args.root is not None
+            else Path(__file__).resolve().parents[2]
+        )
+        try:
+            payload = run_stateless_semantic_audit(
+                root=root,
+                manifest_path=args.manifest_json,
+                source_index_path=args.source_index_json,
+                run_dir=args.run_dir,
+            )
+        except SemanticAuditBlocked as exc:
+            print(json.dumps({"status": "BLOCKED", "error": str(exc)}, ensure_ascii=False))
+            return 6
+        summary = {
+            "status": payload.get("status"),
+            "architecture": payload.get("architecture"),
+            "article_count": payload.get("article_count"),
+            "completed": payload.get("completed"),
+            "cached": payload.get("cached"),
+            "failed": payload.get("failed"),
+            "semantic_audit": str(Path(args.run_dir) / "semantic_audit.json"),
+            "ambiguities": str(Path(args.run_dir) / "ambiguities.md"),
+        }
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        return 0 if payload.get("status") == "PASS" else 7
 
     if args.command == "source-index":
         payload = build_source_index(args.root)
