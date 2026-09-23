@@ -7,6 +7,8 @@ from zipfile import ZipFile
 
 from docx import Document
 
+from .role_classifier import deterministic_role
+
 
 def _run_record(run) -> dict[str, Any]:
     font = run.font
@@ -41,6 +43,55 @@ def _paragraph_record(paragraph, index: int) -> dict[str, Any]:
     }
 
 
+def _compact_semantic_record(record: dict[str, Any]) -> dict[str, Any]:
+    text = str(record.get("text", ""))
+    runs = record.get("runs", [])
+    alpha = [ch for ch in text if ch.isalpha()]
+    uppercase_ratio = (
+        sum(1 for ch in alpha if ch.isupper()) / len(alpha)
+        if alpha else 0.0
+    )
+    return {
+        "index": record.get("index"),
+        "text": text[:600],
+        "style_name": record.get("style_name"),
+        "num_id": record.get("num_id"),
+        "ilvl": record.get("ilvl"),
+        "all_bold": bool(runs) and all(r.get("bold") is True for r in runs if r.get("text")),
+        "any_bold": any(r.get("bold") is True for r in runs),
+        "any_italic": any(r.get("italic") is True for r in runs),
+        "uppercase_ratio": round(uppercase_ratio, 3),
+    }
+
+
+def _semantic_signals(paragraphs: list[dict[str, Any]]) -> dict[str, Any]:
+    head = [_compact_semantic_record(p) for p in paragraphs[:24]]
+    tail = [_compact_semantic_record(p) for p in paragraphs[-18:]]
+
+    role_hits: list[dict[str, Any]] = []
+    role_counts: dict[str, int] = {}
+    for record in paragraphs:
+        guess = deterministic_role(str(record.get("text", "")))
+        if guess is None:
+            continue
+        role_name = guess.role.value
+        role_counts[role_name] = role_counts.get(role_name, 0) + 1
+        if len(role_hits) < 80:
+            compact = _compact_semantic_record(record)
+            compact["role"] = role_name
+            compact["confidence"] = guess.confidence
+            compact["evidence"] = list(guess.evidence)
+            role_hits.append(compact)
+
+    return {
+        "head": head,
+        "tail": tail,
+        "role_hits": role_hits,
+        "role_counts": role_counts,
+        "role_hits_truncated": sum(role_counts.values()) > len(role_hits),
+    }
+
+
 def inspect_docx_source(path: str | Path, *, excerpt_paragraphs: int = 80) -> dict[str, Any]:
     file_path = Path(path)
     document = Document(file_path)
@@ -67,4 +118,5 @@ def inspect_docx_source(path: str | Path, *, excerpt_paragraphs: int = 80) -> di
         "hyperlink_count": hyperlink_count,
         "text_sha256": hashlib.sha256(full_text.encode("utf-8")).hexdigest(),
         "excerpt": paragraphs[:excerpt_paragraphs],
+        "semantic_signals": _semantic_signals(paragraphs),
     }
