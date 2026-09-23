@@ -201,9 +201,6 @@ def run_stateless_semantic_audit(
             source,
             max_chars=max_input_chars,
         )
-        # Coauthors are small registry evidence and belong in the packet.
-        packet["registry"]["coauthors_raw"] = packet_item["coauthors_raw"]
-
         key = make_cache_key(
             normalized_input=packet,
             task="article_semantic_audit",
