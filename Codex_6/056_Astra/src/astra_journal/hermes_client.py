@@ -97,10 +97,49 @@ class HermesEndpoint:
     model: str
     context: int
     role: str
+    request_overrides: dict[str, Any] | None = None
 
     @property
     def normalized_base_url(self) -> str:
         return self.base_url.rstrip("/")
+
+
+def build_chat_payload(
+    endpoint: HermesEndpoint,
+    *,
+    task: str,
+    instruction: str,
+    max_tokens: int,
+) -> dict[str, Any]:
+    payload: dict[str, Any] = {
+        "model": endpoint.model,
+        "temperature": 0,
+        "max_tokens": max_tokens,
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "You are Hermes, a local semantic subagent. "
+                    "Return JSON only."
+                ),
+            },
+            {
+                "role": "user",
+                "content": json.dumps(
+                    {"task": task, "instruction": instruction},
+                    ensure_ascii=False,
+                ),
+            },
+        ],
+    }
+    if endpoint.request_overrides:
+        # Repository configuration may set OpenAI-compatible server options,
+        # e.g. chat_template_kwargs.enable_thinking=false for Qwen chat
+        # templates. Core fields remain controlled by Astra.
+        for key, value in endpoint.request_overrides.items():
+            if key not in {"model", "messages", "max_tokens"}:
+                payload[key] = value
+    return payload
 
 
 class HermesClient:
@@ -129,27 +168,12 @@ class HermesClient:
         instruction: str,
         max_tokens: int = 512,
     ) -> tuple[dict[str, Any], dict[str, Any], float]:
-        payload = {
-            "model": self.endpoint.model,
-            "temperature": 0,
-            "max_tokens": max_tokens,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": (
-                        "You are Hermes, a local semantic subagent. "
-                        "Return JSON only."
-                    ),
-                },
-                {
-                    "role": "user",
-                    "content": json.dumps(
-                        {"task": task, "instruction": instruction},
-                        ensure_ascii=False,
-                    ),
-                },
-            ],
-        }
+        payload = build_chat_payload(
+            self.endpoint,
+            task=task,
+            instruction=instruction,
+            max_tokens=max_tokens,
+        )
         raw, elapsed = _request_json(
             f"{self.endpoint.normalized_base_url}/chat/completions",
             method="POST",
@@ -158,10 +182,31 @@ class HermesClient:
             api_key=self.api_key,
         )
         try:
-            content = raw["choices"][0]["message"]["content"]
-        except (KeyError, IndexError, TypeError) as exc:
+            message = raw["choices"][0]["message"]
+            content = message.get("content")
+        except (KeyError, IndexError, TypeError, AttributeError) as exc:
             raise HermesError(
                 f"Unexpected OpenAI-compatible response shape: {json.dumps(raw)[:1000]}"
             ) from exc
+        if content is None or not str(content).strip():
+            finish_reason = None
+            reasoning_present = False
+            try:
+                finish_reason = raw["choices"][0].get("finish_reason")
+                reasoning_present = bool(
+                    message.get("reasoning_content")
+                    or message.get("reasoning")
+                    or message.get("analysis")
+                )
+            except Exception:
+                pass
+            suffix = (
+                f"; finish_reason={finish_reason!r}"
+                f"; hidden_reasoning_present={reasoning_present}"
+            )
+            raise HermesError(
+                "Hermes returned empty visible content" + suffix
+            )
+
         parsed = extract_json_object(str(content))
         return parsed, raw, elapsed
