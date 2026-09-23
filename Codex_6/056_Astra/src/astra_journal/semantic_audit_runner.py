@@ -89,7 +89,7 @@ def _write_ambiguities(path: Path, payload: dict[str, Any]) -> None:
     for record in payload.get("articles", []):
         result = record.get("result") or {}
         ambiguities = result.get("ambiguities") or []
-        if record.get("status") not in {"ok", "cached"} or ambiguities:
+        if record.get("status") not in {"ok", "cached", "deferred"} or ambiguities:
             lines.append(f"## {record.get('source_path')}")
             lines.append(f"- status: {record.get('status')}")
             if record.get("error"):
