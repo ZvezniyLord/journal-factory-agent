@@ -60,3 +60,25 @@ Next:
 7. then implement normalization/merge/TOC and expose astra-journal build.
 
 Hermes remains semantic subagent. Deterministic Python/OOXML code remains mutation authority.
+
+
+## Stateless semantic-audit architecture
+
+Long interactive Hermes sessions on the real conference 153 intake repeatedly reached large pinned contexts and provider instability. Production semantics has therefore been moved out of accumulated controller-chat context.
+
+Implemented:
+- bounded semantic signals extracted deterministically from each DOCX;
+- one article per direct OpenAI-compatible Hermes request;
+- no previous article messages carried into the next request;
+- hard request/output limits;
+- sequential requests only;
+- strict article-semantic JSON envelope validation;
+- disk cache for successful article calls;
+- checkpoint after every article;
+- resumable micro-batches of at most 3 new article requests per controller process;
+- compact controller output only;
+- full per-article responses remain on disk;
+- provider failure does not require restarting completed articles.
+
+Real validation task:
+`HERMES_153_STATELESS_TEST.md`
