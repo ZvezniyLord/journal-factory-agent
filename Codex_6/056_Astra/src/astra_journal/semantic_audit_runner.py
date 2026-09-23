@@ -106,6 +106,7 @@ def run_stateless_semantic_audit(
     manifest_path: str | Path,
     source_index_path: str | Path,
     run_dir: str | Path,
+    max_new_articles: int | None = None,
 ) -> dict[str, Any]:
     project_root = Path(root).resolve()
     run_root = Path(run_dir).resolve()
@@ -119,7 +120,13 @@ def run_stateless_semantic_audit(
     timeout = float(limits.get("timeout_seconds", 120))
     max_output = int(limits.get("article_semantic_max_output_tokens", 1200))
     max_input_chars = int(limits.get("article_semantic_max_input_chars", 16000))
-    max_retries = int(limits.get("article_semantic_max_retries", 1))
+    max_request_chars = int(limits.get("article_semantic_max_request_chars", 20000))
+    max_retries = int(limits.get("article_semantic_max_retries", 0))
+    if max_new_articles is None:
+        max_new_articles = int(
+            limits.get("article_semantic_max_new_articles_per_process", 3)
+        )
+    max_new_articles = max(1, int(max_new_articles))
 
     if int(limits.get("article_semantic_batch_size", 1)) != 1:
         raise SemanticAuditBlocked("ARTICLE_SEMANTIC_BATCH_SIZE_MUST_BE_1")
@@ -166,8 +173,11 @@ def run_stateless_semantic_audit(
         "cached": 0,
         "failed": 0,
         "articles": [],
+        "max_new_articles_this_process": max_new_articles,
+        "new_requests_this_process": 0,
     }
 
+    new_requests = 0
     for ordinal, item in enumerate(matched, start=1):
         source_path = str(item.get("matched_source") or "")
         source = records_by_path.get(source_path)
@@ -232,7 +242,25 @@ def run_stateless_semantic_audit(
                 _write_ambiguities(ambiguities_path, output)
                 continue
 
+        if new_requests >= max_new_articles:
+            record_out["status"] = "deferred"
+            output["articles"].append(record_out)
+            continue
+
         instruction = article_semantic_instruction(packet)
+        if len(instruction) > max_request_chars:
+            record_out["status"] = "fail"
+            record_out["error"] = (
+                f"SEMANTIC_REQUEST_TOO_LARGE:{len(instruction)}>{max_request_chars}"
+            )
+            output["failed"] += 1
+            output["articles"].append(record_out)
+            _atomic_json(audit_path, output)
+            _write_ambiguities(ambiguities_path, output)
+            continue
+
+        new_requests += 1
+        output["new_requests_this_process"] = new_requests
         try:
             routed = router.chat_json(
                 task="article_semantic_audit",
@@ -285,13 +313,16 @@ def run_stateless_semantic_audit(
         _atomic_json(audit_path, output)
         _write_ambiguities(ambiguities_path, output)
 
-    output["status"] = (
-        "PASS"
-        if output["failed"] == 0 and output["completed"] == len(matched)
-        else "PASS_WITH_REVIEW"
-        if output["completed"] > 0
-        else "BLOCKED"
-    )
+    output["remaining"] = max(0, len(matched) - output["completed"])
+    if output["remaining"] == 0 and output["failed"] == 0:
+        output["status"] = "PASS"
+    elif output["completed"] > 0 and output["remaining"] > 0:
+        output["status"] = "INCOMPLETE"
+    elif output["failed"] > 0:
+        output["status"] = "BLOCKED"
+    else:
+        output["status"] = "INCOMPLETE"
+
     _atomic_json(audit_path, output)
     _write_ambiguities(ambiguities_path, output)
     return output
