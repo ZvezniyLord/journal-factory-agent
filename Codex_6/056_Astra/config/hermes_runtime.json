@@ -41,7 +41,11 @@
     "batch_size": 20,
     "timeout_seconds": 120,
     "max_output_tokens": 4096,
-    "max_concurrent_requests": 1
+    "max_concurrent_requests": 1,
+    "article_semantic_batch_size": 1,
+    "article_semantic_max_input_chars": 16000,
+    "article_semantic_max_output_tokens": 1200,
+    "article_semantic_max_retries": 1
   },
   "policy": {
     "strict_json": true,
@@ -50,6 +54,10 @@
     "never_mutate_docx": true,
     "never_issue_release_verdict": true,
     "do_not_send_full_journal": true,
-    "do_not_send_large_ooxml": true
+    "do_not_send_large_ooxml": true,
+    "stateless_article_calls": true,
+    "interactive_chat_is_controller_only": true,
+    "never_accumulate_article_context": true,
+    "persist_each_article_result": true
   }
 }
