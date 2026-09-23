@@ -8,7 +8,11 @@ from typing import Any
 
 from .bootstrap import load_runtime
 from .hermes.cache import DiskHermesCache, make_cache_key
-from .hermes.envelope import EnvelopeValidationError, validate_envelope
+from .hermes.envelope import (
+    EnvelopeValidationError,
+    normalize_envelope,
+    validate_envelope,
+)
 from .hermes.routing import HermesRouter
 from .hermes_client import HermesEndpoint, HermesError
 from .semantic_packets import (
@@ -279,8 +283,12 @@ def run_stateless_semantic_audit(
                 instruction=instruction,
                 max_tokens=max_output,
             )
-            parsed = validate_envelope(
+            normalized = normalize_envelope(
                 routed.parsed,
+                expected_task="article_semantic_audit",
+            )
+            parsed = validate_envelope(
+                normalized,
                 expected_task="article_semantic_audit",
             )
             response_payload = {
