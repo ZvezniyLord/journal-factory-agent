@@ -12,7 +12,8 @@
       },
       "response_format": {
         "type": "json_object"
-      }
+      },
+      "reasoning_effort": "none"
     }
   },
   "fallback": {
@@ -26,7 +27,8 @@
       },
       "response_format": {
         "type": "json_object"
-      }
+      },
+      "reasoning_effort": "none"
     }
   },
   "bootstrap": {
@@ -76,6 +78,8 @@
     "stateless_article_calls": true,
     "interactive_chat_is_controller_only": true,
     "never_accumulate_article_context": true,
-    "persist_each_article_result": true
+    "persist_each_article_result": true,
+    "semantic_provider_requires_visible_json": true,
+    "semantic_provider_reasoning_must_be_disabled": true
   }
 }
