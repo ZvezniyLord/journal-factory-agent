@@ -59,6 +59,7 @@ def main() -> int:
     semantic_audit.add_argument("source_index_json", type=Path)
     semantic_audit.add_argument("--run-dir", type=Path, required=True)
     semantic_audit.add_argument("--root", type=Path)
+    semantic_audit.add_argument("--max-new-articles", type=int)
 
     source_index = sub.add_parser(
         "source-index",
@@ -171,6 +172,7 @@ def main() -> int:
                 manifest_path=args.manifest_json,
                 source_index_path=args.source_index_json,
                 run_dir=args.run_dir,
+                max_new_articles=args.max_new_articles,
             )
         except SemanticAuditBlocked as exc:
             print(json.dumps({"status": "BLOCKED", "error": str(exc)}, ensure_ascii=False))
@@ -182,11 +184,13 @@ def main() -> int:
             "completed": payload.get("completed"),
             "cached": payload.get("cached"),
             "failed": payload.get("failed"),
+            "remaining": payload.get("remaining"),
+            "new_requests_this_process": payload.get("new_requests_this_process"),
             "semantic_audit": str(Path(args.run_dir) / "semantic_audit.json"),
             "ambiguities": str(Path(args.run_dir) / "ambiguities.md"),
         }
         print(json.dumps(summary, ensure_ascii=False, indent=2))
-        return 0 if payload.get("status") == "PASS" else 7
+        return 0 if payload.get("status") in {"PASS", "INCOMPLETE"} else 7
 
     if args.command == "source-index":
         payload = build_source_index(args.root)
