@@ -44,7 +44,7 @@
     "max_concurrent_requests": 1,
     "article_semantic_batch_size": 1,
     "article_semantic_max_input_chars": 16000,
-    "article_semantic_max_output_tokens": 1200,
+    "article_semantic_max_output_tokens": 900,
     "article_semantic_max_retries": 0,
     "article_semantic_max_request_chars": 20000,
     "article_semantic_max_new_articles_per_process": 3
