@@ -56,6 +56,10 @@ def build_article_semantic_packet(
         "registry": {
             "excel_row": manifest_item.get("excel_row"),
             "authors_raw": _compact_text(manifest_item.get("authors_raw"), 400),
+            "coauthors_raw": [
+                _compact_text(x, 400)
+                for x in manifest_item.get("coauthors_raw", [])[:10]
+            ],
             "title_raw": _compact_text(manifest_item.get("title_raw"), 500),
             "section_raw": _compact_text(manifest_item.get("section_raw"), 300),
         },
