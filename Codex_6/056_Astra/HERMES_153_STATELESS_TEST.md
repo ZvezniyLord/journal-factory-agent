@@ -45,6 +45,14 @@ Then regenerate the manifest using the existing Excel report:
 
 `.venv\Scripts\python.exe -m astra_journal.cli build-manifest runs\153_real_intake\excel.json runs\153_real_intake\source_index.json --json runs\153_real_intake\manifest.json`
 
+## Provider mode requirement
+
+Astra sends both:
+- `reasoning_effort: "none"`;
+- `chat_template_kwargs.enable_thinking: false`.
+
+If a current llama.cpp build still returns empty visible content with hidden reasoning and `finish_reason=length`, stop the test and report `SEMANTIC_PROVIDER_REASONING_NOT_DISABLED`. Do not waste larger token budgets. The semantic worker then requires a server started in non-reasoning mode (for example a llama.cpp server configured with reasoning disabled) before production semantic audit can proceed.
+
 ## Stateless semantic audit
 
 Do NOT read all articles into the interactive Hermes conversation.
