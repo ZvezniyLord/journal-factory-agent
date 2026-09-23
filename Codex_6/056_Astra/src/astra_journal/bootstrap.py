@@ -33,6 +33,7 @@ def _endpoint_from(runtime: dict[str, Any], key: str) -> HermesEndpoint:
         model=cfg["model"],
         context=int(cfg["context"]),
         role=cfg.get("role", key),
+        request_overrides=cfg.get("request_overrides"),
     )
 
 
