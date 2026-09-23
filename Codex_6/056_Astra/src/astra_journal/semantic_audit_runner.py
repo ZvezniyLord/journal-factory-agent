@@ -206,11 +206,21 @@ def run_stateless_semantic_audit(
 
         packet_item = dict(item)
         packet_item["coauthors_raw"] = _coauthors_for(item, materials)
-        packet = build_article_semantic_packet(
-            packet_item,
-            source,
-            max_chars=max_input_chars,
-        )
+        try:
+            packet = build_article_semantic_packet(
+                packet_item,
+                source,
+                max_chars=max_input_chars,
+            )
+        except ValueError as exc:
+            record_out["status"] = "fail"
+            record_out["error"] = str(exc)
+            output["failed"] += 1
+            output["articles"].append(record_out)
+            _atomic_json(audit_path, output)
+            _write_ambiguities(ambiguities_path, output)
+            break
+
         key = make_cache_key(
             normalized_input=packet,
             task="article_semantic_audit",
@@ -261,6 +271,7 @@ def run_stateless_semantic_audit(
 
         new_requests += 1
         output["new_requests_this_process"] = new_requests
+        call_failed = False
         try:
             routed = router.chat_json(
                 task="article_semantic_audit",
@@ -307,19 +318,21 @@ def run_stateless_semantic_audit(
             record_out["status"] = "fail"
             record_out["error"] = str(exc)
             output["failed"] += 1
+            call_failed = True
 
         output["articles"].append(record_out)
         # Checkpoint after EVERY article. A provider crash never loses completed work.
         _atomic_json(audit_path, output)
         _write_ambiguities(ambiguities_path, output)
+        if call_failed:
+            output["stopped_early_after_failure"] = True
+            break
 
     output["remaining"] = max(0, len(matched) - output["completed"])
-    if output["remaining"] == 0 and output["failed"] == 0:
-        output["status"] = "PASS"
-    elif output["completed"] > 0 and output["remaining"] > 0:
-        output["status"] = "INCOMPLETE"
-    elif output["failed"] > 0:
+    if output["failed"] > 0:
         output["status"] = "BLOCKED"
+    elif output["remaining"] == 0:
+        output["status"] = "PASS"
     else:
         output["status"] = "INCOMPLETE"
 
