@@ -23,6 +23,7 @@ def test_build_chat_payload_applies_safe_request_overrides() -> None:
         request_overrides={
             "chat_template_kwargs": {"enable_thinking": False},
             "response_format": {"type": "json_object"},
+            "reasoning_effort": "none",
             "model": "must-not-override",
             "max_tokens": 99999,
         },
@@ -37,3 +38,4 @@ def test_build_chat_payload_applies_safe_request_overrides() -> None:
     assert payload["max_tokens"] == 123
     assert payload["chat_template_kwargs"]["enable_thinking"] is False
     assert payload["response_format"] == {"type": "json_object"}
+    assert payload["reasoning_effort"] == "none"
