@@ -5,13 +5,29 @@
     "openai_base_url": "http://127.0.0.1:11434/v1",
     "model": "qwen3.8-27b-q2-229k-gpu66:latest",
     "context": 229376,
-    "role": "primary_semantic_subagent"
+    "role": "primary_semantic_subagent",
+    "request_overrides": {
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    }
   },
   "fallback": {
     "openai_base_url": "http://127.0.0.1:11435/v1",
     "model": "qwen3.8-27b-q2_k_xl-128k:latest",
     "context": 65536,
-    "role": "cpu_fallback_semantic_subagent"
+    "role": "cpu_fallback_semantic_subagent",
+    "request_overrides": {
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    }
   },
   "bootstrap": {
     "required": true,
@@ -39,12 +55,12 @@
   },
   "limits": {
     "batch_size": 20,
-    "timeout_seconds": 120,
+    "timeout_seconds": 180,
     "max_output_tokens": 4096,
     "max_concurrent_requests": 1,
     "article_semantic_batch_size": 1,
     "article_semantic_max_input_chars": 16000,
-    "article_semantic_max_output_tokens": 900,
+    "article_semantic_max_output_tokens": 1200,
     "article_semantic_max_retries": 0,
     "article_semantic_max_request_chars": 20000,
     "article_semantic_max_new_articles_per_process": 3
