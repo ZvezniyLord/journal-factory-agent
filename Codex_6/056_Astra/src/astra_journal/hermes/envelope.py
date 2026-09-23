@@ -116,3 +116,56 @@ def validate_envelope(payload: dict[str, Any], *, expected_task: str | None = No
             ) from exc
 
     return payload
+
+
+def normalize_envelope(
+    payload: dict[str, Any],
+    *,
+    expected_task: str,
+) -> dict[str, Any]:
+    """Normalize a useful but incomplete model response into the generic envelope.
+
+    This is intentionally conservative: omitted status/confidence/evidence/warnings
+    never become an automatic PASS. Missing metadata is filled with review-safe
+    defaults and an explicit warning, while the semantic result itself is preserved.
+    """
+    if not isinstance(payload, dict):
+        raise EnvelopeValidationError("Hermes response must be an object")
+
+    normalized = dict(payload)
+    warnings = list(normalized.get("warnings") or [])
+    missing: list[str] = []
+
+    if not normalized.get("task"):
+        normalized["task"] = expected_task
+        missing.append("task")
+
+    if "result" not in normalized:
+        # Some models return the task-specific fields at the top level.
+        task_schema = TASK_RESULT_SCHEMAS.get(expected_task)
+        if task_schema:
+            known = set(task_schema.get("properties", {}).keys())
+            result = {k: v for k, v in normalized.items() if k in known}
+            if result:
+                normalized["result"] = result
+                missing.append("result_wrapper")
+
+    if "status" not in normalized:
+        normalized["status"] = "review"
+        missing.append("status")
+    if "confidence" not in normalized:
+        normalized["confidence"] = 0.0
+        missing.append("confidence")
+    if "evidence" not in normalized:
+        normalized["evidence"] = []
+        missing.append("evidence")
+    if "warnings" not in normalized:
+        normalized["warnings"] = warnings
+        missing.append("warnings")
+
+    if missing:
+        normalized["warnings"] = list(normalized.get("warnings") or []) + [
+            "MODEL_ENVELOPE_NORMALIZED_MISSING:" + ",".join(missing)
+        ]
+
+    return normalized
