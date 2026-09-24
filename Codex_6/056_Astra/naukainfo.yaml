@@ -1,0 +1,176 @@
+profile: naukainfo
+version: 3
+
+workspace:
+  clean_room: true
+  deny_parent_project_code: true
+  require_explicit_external_input_allowlist: true
+  archive_safety:
+    block_zip_slip: true
+    reject_absolute_paths: true
+    reject_parent_segments: true
+
+front_matter:
+  immutable_until: "TABLE OF CONTENTS"
+  lexical_fingerprint_required: true
+  c14n_diagnostic_only: true
+  verify_render_diff: true
+
+article_structure:
+  canonical_top_order:
+    - "UDC"
+    - "AUTHOR_HEADER"
+    - "TITLE"
+    - "ARTICLE_CONTENT"
+  author_header_roles:
+    - "AUTHOR"
+    - "POSITION_DEGREE"
+    - "AFFILIATION"
+    - "SUPERVISOR"
+    - "ORCID"
+  abstract_keywords_position: "after_title_before_body_when_present"
+  reorder_misplaced_top_blocks: true
+  preserve_text_during_reorder: true
+
+body:
+  font: "Times New Roman"
+  size_pt: 11
+  line_spacing: 1.0
+  space_after_pt: 0
+  first_line_cm: 1.0
+
+tables:
+  size_pt: 10
+  line_spacing: 1.15
+  first_line_cm: 0.0
+
+caption_policy:
+  normalize_table_captions: true
+  normalize_figure_captions: true
+  canonical_format_source: "template_or_config"
+  preserve_caption_text: true
+  preserve_existing_object_number: true
+  unresolved_object_association_policy: "review"
+
+toc:
+  include_scientific_supervisors: true
+  verify_field_structure: true
+  verify_body_order: true
+
+contacts:
+  publish_email: false
+  remove_phone: false
+  remove_telegram: false
+  remove_viber: false
+  remove_whatsapp: false
+
+references:
+  paragraph_style: "REFER"
+  heading_style: "REF-TITLE"
+  reference_heading_normalization:
+    enabled: true
+    ukrainian: "СПИСОК ВИКОРИСТАНИХ ДЖЕРЕЛ"
+    english: "REFERENCES"
+    recognize_common_misspellings: true
+  restart_each_article: true
+  first_number: 1
+  continuation_lines_unnumbered: true
+  require_word_acceptance_test: true
+  numbering_strategy: "shared_abstract_num_with_per_article_num_and_restart_override"
+
+udc:
+  ukrainian_prefix: "УДК"
+  english_prefix: "UDC"
+  generate_when_missing: true
+  hermes_semantic_advice_allowed: true
+  require_validation: true
+  missing_required_policy: "review"
+
+doi:
+  prefix: "10.64828"
+  invent_when_missing: false
+
+ordering:
+  article_order_within_section: "excel"
+  section_order_source: "config"
+  section_names_language: "en"
+  section_headings_english_only: true
+  section_mapping_config: "config/sections.yaml"
+  unresolved_section_mapping_policy: "review"
+
+free_listeners:
+  article_required: false
+  output_block: "SPECIAL THANKS"
+
+hermes:
+  enabled: true
+  startup_required: true
+  use_as_subagent: true
+  runtime_config: "config/hermes_runtime.json"
+  bootstrap_smoke_test_required: true
+  plan_review_required: true
+  advisory_only: true
+  strict_json: true
+  cache: true
+  auto_accept_confidence: 0.95
+  review_confidence: 0.80
+  max_retries: 2
+  local_only_by_default: true
+  allowed_hosts:
+    - "127.0.0.1"
+    - "localhost"
+  token_economy:
+    delegate_noisy_archive_scanning: true
+    delegate_ambiguous_semantics: true
+    prohibit_full_journal_prompts: true
+    persist_raw_responses_to_disk: true
+
+word_stability:
+  reopen_roundtrip_required: true
+  forbid_global_normal_mutation: true
+  forbid_auto_redefine_in_canonical_body_styles: true
+  forbid_theme_font_dependency_in_canonical_body_styles: true
+  explicit_font_slots:
+    - ascii
+    - hAnsi
+    - eastAsia
+    - cs
+  canonical_font: "Times New Roman"
+  body_style_id: "ASTRA_BODY"
+  canonical_style_ids:
+    - "ASTRA_BODY"
+    - "SECTION"
+    - "REF-TITLE"
+    - "REFER"
+  section_footer_distance_consistency_required: true
+
+visual_qa:
+  required: true
+  final_release_renderer: "word_com"
+  preview_renderer: "libreoffice"
+  word_com_unavailable_policy: "BLOCKED"
+
+qa:
+  require_content_integrity: true
+  require_formatting_integrity: true
+  require_object_integrity: true
+  require_bibliography_integrity: true
+  require_toc_integrity: true
+  require_front_matter_integrity: true
+  require_visual_qa: true
+  statuses:
+    - PASS
+    - PASS_WITH_WARNINGS
+    - BLOCKED
+  allowed_warnings:
+    - "HERMES_NONAUTHORITATIVE_ADVISORY"
+    - "OPTIONAL_OLD_EVIDENCE_UNAVAILABLE"
+  blocking_codes:
+    - "TEXT_LOSS"
+    - "OBJECT_LOSS"
+    - "FRONT_MATTER_MUTATION"
+    - "REFER_BINDING_INVALID"
+    - "REFERENCE_RESTART_INVALID"
+    - "TOC_BODY_MISMATCH"
+    - "WORD_COM_UNAVAILABLE"
+    - "UNRESOLVED_REQUIRED_IDENTITY"
